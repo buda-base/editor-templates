@@ -3,29 +3,9 @@
 # imports: http://purl.bdrc.io/ontology/core/
 # prefix: PersonShapes
 
-@prefix Binding: <http://purl.bdrc.io/ontology/types/Binding/> .
-@prefix ChineseMonastic: <http://purl.bdrc.io/ontology/roles/ChineseMonastic/> .
-@prefix Creator: <http://purl.bdrc.io/ontology/roles/Creator/> .
-@prefix DateIndication: <http://purl.bdrc.io/ontology/types/DateIndication/> .
-@prefix FEMCScheme: <http://purl.bdrc.io/resource/FEMCScheme/> .
-@prefix Identifier: <http://purl.bdrc.io/ontology/types/Identifier/> .
-@prefix LangScript: <http://purl.bdrc.io/ontology/types/LangScript/> .
-@prefix Language: <http://purl.bdrc.io/ontology/types/Language/> .
-@prefix LineageType: <http://purl.bdrc.io/ontology/types/LineageType/> .
-@prefix Material: <http://purl.bdrc.io/ontology/types/Material/> .
-@prefix PaginationType: <http://purl.bdrc.io/ontology/types/PaginationType/> .
 @prefix PersonShapes: <http://purl.bdrc.io/ontology/shapes/core/PersonShapes/> .
-@prefix PlaceType: <http://purl.bdrc.io/ontology/types/PlaceType/> .
-@prefix PrintMethodScheme: <http://purl.bdrc.io/resource/PrintMethodScheme/> .
-@prefix Script: <http://purl.bdrc.io/ontology/types/Script/> .
-@prefix Taxonomy: <http://purl.bdrc.io/ontology/types/Taxonomy/> .
-@prefix Tradition: <http://purl.bdrc.io/ontology/types/Tradition/> .
-@prefix Transliteration: <http://purl.bdrc.io/ontology/types/Transliteration/> .
-@prefix WorkPartType: <http://purl.bdrc.io/ontology/types/WorkPartType/> .
-@prefix WorkType: <http://purl.bdrc.io/ontology/types/WorkType/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda: <http://purl.bdrc.io/admin.data/> .
-@prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdg: <http://purl.bdrc.io/graph/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
@@ -51,6 +31,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bds:AssociatedPersonsPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Kinshp relations"@en ;
+  sh:order "3"^^xsd:decimal ;
+.
 bds:FemaleShape
   a sh:NodeShape ;
   rdfs:label "Female Shape"@en ;
@@ -66,7 +51,8 @@ bds:IdentityPropertyGroup
 bds:KinshipPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Kinshp relations"@en ;
-  sh:order "3"^^xsd:decimal ;
+  sh:group bds:AssociatedPersonsPropertyGroup ;
+  sh:order "0"^^xsd:decimal ;
 .
 bds:MaleShape
   a sh:NodeShape ;
@@ -77,7 +63,7 @@ bds:MaleShape
 .
 bds:PersonNamePropertyGroup
   a sh:PropertyGroup ;
-  rdfs:label "Kinshp relations"@en ;
+  rdfs:label "Name relations"@en ;
 .
 bds:PersonNameShape
   a sh:NodeShape ;
@@ -91,7 +77,7 @@ bds:PersonNameShape-personNameLabel
   sh:path rdfs:label ;
   dash:editor dash:TextAreaWithLangEditor ;
   dash:singleLine true ;
-  sh:class bdo:Person ;
+  sh:datatype rdf:langString ;
   sh:description "this Person has a name given by the label."@en ;
   sh:group bds:PersonNamePropertyGroup ;
   sh:maxCount 1 ;
@@ -438,9 +424,35 @@ bds:PersonShape-personName
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal ;
 .
+bds:PersonShape-personStudentOf
+  a sh:PropertyShape ;
+  sh:path bdo:personStudentOf ;
+  dash:editor dash:InstancesSelectEditor ;
+  sh:class bdo:Person ;
+  sh:description "this Person may have zero or more teachers."@en ;
+  sh:group bds:StudentTeacherPropertyGroup ;
+  sh:name "student of"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:PersonShape-personTeacherOf
+  a sh:PropertyShape ;
+  sh:path bdo:personTeacherOf ;
+  dash:editor dash:InstancesSelectEditor ;
+  sh:class bdo:Person ;
+  sh:description "this Person may have zero or more students."@en ;
+  sh:group bds:StudentTeacherPropertyGroup ;
+  sh:name "teacher of"@en ;
+  sh:order "1"^^xsd:decimal ;
+.
 PersonShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
   owl:imports bdo: ;
   owl:versionInfo "SHACL constraints for Person" ;
+.
+bds:StudentTeacherPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Student/Teacher relations"@en ;
+  sh:group bds:AssociatedPersonsPropertyGroup ;
+  sh:order "1"^^xsd:decimal ;
 .
