@@ -1,10 +1,9 @@
 # baseURI: http://purl.bdrc.io/ontology/shapes/core/EventShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/adm/types/Access
 # imports: http://purl.bdrc.io/ontology/core/
-# prefix: bds
+# prefix: EventShapes
 
-@prefix EventShapes: <http://purl.bdrc.io/ontology/shapes/core/EventShapes/>
+@prefix EventShapes: <http://purl.bdrc.io/ontology/shapes/core/EventShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -30,56 +29,83 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bds:EventShape
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Event Shape"@en ;
+  sh:property bds:EventShape-eventText ;
+  sh:property bds:EventShape-eventWhere ;
+  sh:property bds:EventShape-eventWho ;
+  sh:property bds:EventShape-notAfter ;
+  sh:property bds:EventShape-notBefore ;
+  sh:property bds:EventShape-onDate ;
+  sh:property bds:EventShape-onOrAbout ;
+  sh:property bds:EventShape-onYear ;
+  sh:targetClass bdo:Event ;
+.
+bds:EventShape-eventText
+  a sh:PropertyShape ;
+  sh:path bdo:eventText ;
+  dash:editor dash:TextAreaWithLangEditor ;
+  dash:singleLine false ;
+  sh:datatype rdf:langString ;
+  sh:name "event text"@en ;
+.
+bds:EventShape-eventWhere
+  a sh:PropertyShape ;
+  sh:path bdo:eventWhere ;
+  dash:editor dash:InstancesSelectEditor ;
+  sh:class bdo:Place ;
+  sh:maxCount 1 ;
+  sh:name "where event occurred"@en ;
+.
+bds:EventShape-eventWho
+  a sh:PropertyShape ;
+  sh:path bdo:eventWho ;
+  dash:editor dash:InstancesSelectEditor ;
+  sh:class bdo:AgentInRole ;
+  sh:name "who was involved in the event"@en ;
+.
+bds:EventShape-notAfter
+  a sh:PropertyShape ;
+  sh:path bdo:notAfter ;
+  sh:datatype xsd:gYear ;
+  sh:maxCount 1 ;
+  sh:name "event occurred not before"@en ;
+.
+bds:EventShape-notBefore
+  a sh:PropertyShape ;
+  sh:path bdo:notBefore ;
+  sh:datatype xsd:gYear ;
+  sh:maxCount 1 ;
+  sh:name "event occurred not before"@en ;
+.
+bds:EventShape-onDate
+  a sh:PropertyShape ;
+  sh:path bdo:onDate ;
+  dash:editor dash:DatePickerEditor ;
+  sh:datatype xsd:date ;
+  sh:maxCount 1 ;
+  sh:name "event occurred on"@en ;
+.
+bds:EventShape-onOrAbout
+  a sh:PropertyShape ;
+  sh:path bdo:onOrAbout ;
+  sh:datatype xsd:string ;
+  sh:description "this property should not be used. Use on of the other 4 forms instead."@en ;
+  sh:maxCount 1 ;
+  sh:name "event occurred on or about"@en ;
+.
+bds:EventShape-onYear
+  a sh:PropertyShape ;
+  sh:path bdo:onYear ;
+  sh:datatype xsd:gYear ;
+  sh:maxCount 1 ;
+  sh:name "event occurred during the year"@en ;
+.
 EventShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
   owl:imports bdo: ;
   owl:versionInfo "Initial SHACL constraints for Events and its subclasses" ;
-.
-bds:EventShape
-  a rdfs:Class ;
-  a sh:NodeShape ;
-  rdfs:label "Event Shape"@en ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:notAfter ;
-      sh:nodeKind xsd:gYear ;
-      sh:maxCount 1 ;
-      sh:minCount 0 ;
-      sh:name "event occurred not after"@en ;
-  ] ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:notBefore ;
-      sh:nodeKind xsd:gYear ;
-      sh:maxCount 1 ;
-      sh:minCount 0 ;
-      sh:name "event occurred not before"@en ;
-  ] ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:onDate ;
-      sh:nodeKind xsd:date ;
-      sh:maxCount 1 ;
-      sh:minCount 0 ;
-      sh:name "event occurred on"@en ;
-  ] ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:onOrAbout ;
-      sh:nodeKind xsd:string ;
-      sh:maxCount 1 ;
-      sh:minCount 0 ;
-      sh:name "event occurred on or about"@en ;
-      sh:description "this property should not be used. Use on of the other 4 forms instead."@en ;
-  ] ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:onYear ;
-      sh:nodeKind xsd:gYear ;
-      sh:maxCount 1 ;
-      sh:minCount 0 ;
-      sh:name "event occurred during the year"@en ;
-  ] ;
-  sh:targetClass bdo:Event ;
 .
