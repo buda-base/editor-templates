@@ -1,0 +1,145 @@
+<?xml version='1.0'?>
+<!--
+   Licensed to the Apache Software Foundation (ASF) under one or more
+   contributor license agreements.  See the NOTICE file distributed with
+   this work for additional information regarding copyright ownership.
+   The ASF licenses this file to You under the Apache License, Version 2.0
+   (the "License"); you may not use this file except in compliance with
+   the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY jena    'http://jena.hpl.hp.com/schemas/'>
+
+    <!ENTITY rdf     'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+    <!ENTITY rdfs    'http://www.w3.org/2000/01/rdf-schema#'>
+    <!ENTITY xsd     'http://www.w3.org/2001/XMLSchema#'>
+    <!ENTITY base    '&jena;2003/03/ont-manager'>
+    <!ENTITY ont     '&base;#'>
+    <!ENTITY adm     'http://purl.bdrc.io/ontology/admin/'>
+    <!ENTITY bdo     'http://purl.bdrc.io/ontology/core/'>
+    <!ENTITY bdr     'http://purl.bdrc.io/resource/'>
+    <!ENTITY bda     'http://purl.bdrc.io/admindata/'>
+    <!ENTITY bds     'http://purl.bdrc.io/ontology/shapes/core/'>
+    <!ENTITY bdsa    'http://purl.bdrc.io/ontology/shapes/adm/'>
+]>
+
+<rdf:RDF
+    xmlns:rdf ="&rdf;"
+    xmlns:rdfs="&rdfs;"
+    xmlns     ="&ont;"
+    xml:base  ="&base;"
+    xmlns:adm ="&adm;"
+    xmlns:bdo ="&bdo;"
+    xmlns:bdr ="&bdr;"
+    xmlns:bda ="&bda;"
+    xmlns:bds ="&bds;"
+    xmlns:bdsa ="&bdsa;"
+    >
+    
+    <!-- Mappings for locally cached buda ontologies -->
+    
+    <DocumentManagerPolicy>
+        <!-- policy for controlling the document manager's behaviour -->
+        <processImports rdf:datatype="&xsd;boolean">true</processImports>
+        <cacheModels    rdf:datatype="&xsd;boolean">true</cacheModels>
+        <ignoreImport   rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        <ignoreImport   rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+        <ignoreImport   rdf:resource="http://www.w3.org/2002/07/owl#"/>
+        <ignoreImport   rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <ignoreImport   rdf:resource="http://datashapes.org/dash#"/>
+        <ignoreImport   rdf:resource="http://www.w3.org/ns/shacl#"/>
+        <adm:defaultOntGraph   rdf:resource="http://purl.bdrc.io/graph/shapesSchema"/>
+    </DocumentManagerPolicy>
+    
+
+    <!-- ======== bdo admin shapes ontologies ======== -->
+    
+    <OntologySpec>
+        <!-- local version of the admin shapes vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/shapes/adm/"/>
+        <altURL    rdf:resource="editor-templates/templates/adm/adm.core.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/adm/adm.core.shapes.ttl"/>
+        <prefix    rdf:datatype="&xsd;string">bdsa</prefix>
+        <adm:ontVisible rdf:datatype="&xsd;boolean">true</adm:ontVisible>
+    </OntologySpec>    
+    
+    
+    <!-- ======== bdo shapes ontologies ======== -->
+    
+    <OntologySpec>
+        <!-- local version of the bds vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/shapes/core/"/>
+        <altURL    rdf:resource="editor-templates/templates/core/core.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/core.shapes.ttl"/>
+        <prefix    rdf:datatype="&xsd;string">bds</prefix>        
+        <adm:ontVisible rdf:datatype="&xsd;boolean">true</adm:ontVisible>
+    </OntologySpec>
+
+    <!-- ======== supporting shapes ======== -->
+
+    <OntologySpec>
+        <!-- local version of Corporation shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/shapes/core/CorporationShapes/"/>
+        <altURL    rdf:resource="editor-templates/templates/core/corporation.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/corporation.shapes.ttl"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- local version of Event shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/shapes/core/EventShapes/"/>
+        <altURL    rdf:resource="editor-templates/templates/core/event.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/event.shapes.ttl"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- local version of Identifier shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/shapes/core/IdentifierShapes/"/>
+        <altURL    rdf:resource="editor-templates/templates/core/identifier.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/identifier.shapes.ttl"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- local version of Instance shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/shapes/core/InstanceShapes/"/>
+        <altURL    rdf:resource="editor-templates/templates/core/instance.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/instance.shapes.ttl"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- local version of Item shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/shapes/core/ItemShapes/"/>
+        <altURL    rdf:resource="editor-templates/templates/core/item.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/item.shapes.ttl"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- local version of PersonEvent shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/shapes/core/PersonEventShapes/"/>
+        <altURL    rdf:resource="editor-templates/templates/core/person.event.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/person.event.shapes.ttl"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- local version of Person shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/shapes/core/PersonShapes/"/>
+        <altURL    rdf:resource="editor-templates/templates/core/person.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/person.shapes.ttl"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- local version of Work shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/ontology/shapes/core/WorkShapes/"/>
+        <altURL    rdf:resource="editor-templates/templates/core/work.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/work.shapes.ttl"/>
+    </OntologySpec>
+    
+</rdf:RDF>
