@@ -1,6 +1,7 @@
 # baseURI: http://purl.bdrc.io/ontology/shapes/core/PersonShapes/
 # imports: http://datashapes.org/dash
 # imports: http://purl.bdrc.io/ontology/core/
+# imports: http://purl.bdrc.io/ontology/shapes/core/
 # imports: http://purl.bdrc.io/ontology/shapes/core/PersonEventShapes/
 # prefix: PersonShapes
 
@@ -32,6 +33,9 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bdo:Person
+  bds:rootShape bds:PersonShape ;
+.
 bds:AssociatedPersonsPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Kinshp relations"@en ;
@@ -41,8 +45,6 @@ bds:FemaleShape
   a sh:NodeShape ;
   rdfs:label "Female Shape"@en ;
   sh:property bds:PersonShape-genderFemale ;
-  sh:property bds:PersonShape-hasHusband ;
-  sh:targetClass bdo:Person ;
 .
 bds:IdentityPropertyGroup
   a sh:PropertyGroup ;
@@ -59,8 +61,6 @@ bds:MaleShape
   a sh:NodeShape ;
   rdfs:label "Male Shape"@en ;
   sh:property bds:PersonShape-genderMale ;
-  sh:property bds:PersonShape-hasWife ;
-  sh:targetClass bdo:Person ;
 .
 bds:PersonNamePropertyGroup
   a sh:PropertyGroup ;
@@ -124,6 +124,8 @@ bds:PersonShape
   sh:property bds:PersonShape-hasYoungerSister ;
   sh:property bds:PersonShape-kinWith ;
   sh:property bds:PersonShape-personName ;
+  sh:property bds:PersonShape-personStudentOf ;
+  sh:property bds:PersonShape-personTeacherOf ;
   sh:targetClass bdo:Person ;
 .
 bds:PersonShape-gender
@@ -449,6 +451,7 @@ PersonShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
   owl:imports bdo: ;
+  owl:imports bds: ;
   owl:imports <http://purl.bdrc.io/ontology/shapes/core/PersonEventShapes/> ;
   owl:versionInfo "SHACL constraints for Person" ;
 .

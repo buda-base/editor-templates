@@ -71,3 +71,8 @@ bds:LabelShape
     ] ;
   sh:targetClass bdo:Label ;
 .
+bds:rootShape
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Entity ;
+  rdfs:range sh:NodeShape ;
+.
