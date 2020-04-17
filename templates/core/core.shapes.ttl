@@ -38,40 +38,47 @@ bds:EntityShape
   a sh:NodeShape ;
   rdfs:label "Entity shape"@en ;
   rdfs:subClassOf rdfs:Resource ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path skos:prefLabel ;
-      sh:datatype rdf:langString ;
-      sh:description "require unique language from among the listed choices"@en ;
-      sh:languageIn (
-          "en"
-          "zh"
-          "bo"
-          "bo-x-ewts"
-        ) ;
-      sh:minCount 1 ;
-      sh:name "pref label"@en ;
-      sh:order "1"^^xsd:decimal ;
-      sh:uniqueLang true ;
-    ] ;
+  sh:property bds:EntityShape-skos_prefLabel ;
   sh:targetClass bdo:Entity ;
+.
+bds:EntityShape-skos_prefLabel
+  a sh:PropertyShape ;
+  sh:path skos:prefLabel ;
+  sh:datatype rdf:langString ;
+  sh:description "require unique language from among the listed choices"@en ;
+  sh:languageIn (
+      "en"
+      "zh"
+      "bo"
+      "bo-x-ewts"
+    ) ;
+  sh:minCount 1 ;
+  sh:name "pref label"@en ;
+  sh:order "1"^^xsd:decimal ;
+  sh:uniqueLang true ;
 .
 bds:LabelShape
   a rdfs:Class ;
   a sh:NodeShape ;
   rdfs:label "Label Shape"@en ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:hasTranslation ;
-      sh:class bdo:Label ;
-      sh:description "this Label may have zero or more tanslations"@en ;
-      sh:inversePath bdo:translationOf ;
-      sh:minCount 0 ;
-      sh:name "label has translation"@en ;
-    ] ;
+  sh:property bds:LabelShape-hasTranslation ;
   sh:targetClass bdo:Label ;
 .
+bds:LabelShape-hasTranslation
+  a sh:PropertyShape ;
+  sh:path bdo:hasTranslation ;
+  sh:class bdo:Label ;
+  sh:description "this Label may have zero or more tanslations"@en ;
+  sh:inversePath bdo:translationOf ;
+  sh:minCount 0 ;
+  sh:name "label has translation"@en ;
+.
 bds:rootShape
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Entity ;
+  rdfs:range sh:NodeShape ;
+.
+bds:uiShape
   a owl:ObjectProperty ;
   rdfs:domain bdo:Entity ;
   rdfs:range sh:NodeShape ;
