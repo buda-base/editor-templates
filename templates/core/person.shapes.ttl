@@ -36,35 +36,15 @@
 bdo:Person
   bds:rootShape bds:PersonShape ;
 .
-bds:AssociatedPersonsPropertyGroup
-  a sh:PropertyGroup ;
-  rdfs:label "Kinshp relations"@en ;
-  sh:order "3"^^xsd:decimal ;
-.
 bds:FemaleShape
   a sh:NodeShape ;
   rdfs:label "Female Shape"@en ;
   sh:property bds:PersonShape-genderFemale ;
 .
-bds:IdentityPropertyGroup
-  a sh:PropertyGroup ;
-  rdfs:label "Identity relations"@en ;
-  sh:order "0"^^xsd:decimal ;
-.
-bds:KinshipPropertyGroup
-  a sh:PropertyGroup ;
-  rdfs:label "Kinshp relations"@en ;
-  sh:group bds:AssociatedPersonsPropertyGroup ;
-  sh:order "0"^^xsd:decimal ;
-.
 bds:MaleShape
   a sh:NodeShape ;
   rdfs:label "Male Shape"@en ;
   sh:property bds:PersonShape-genderMale ;
-.
-bds:PersonNamePropertyGroup
-  a sh:PropertyGroup ;
-  rdfs:label "Name relations"@en ;
 .
 bds:PersonNameShape
   a sh:NodeShape ;
@@ -76,27 +56,18 @@ bds:PersonNameShape
 bds:PersonNameShape-personNameLabel
   a sh:PropertyShape ;
   sh:path rdfs:label ;
-  dash:editor dash:TextAreaWithLangEditor ;
-  dash:singleLine true ;
   sh:datatype rdf:langString ;
   sh:description "this Person has a name given by the label."@en ;
-  sh:group bds:PersonNamePropertyGroup ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
-  sh:name "name label"@en ;
-  sh:order "1"^^xsd:decimal ;
 .
 bds:PersonNameShape-personNameType
   a sh:PropertyShape ;
   sh:path bdo:personNameType ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:class bdo:PersonNameType ;
   sh:description "this Person has a name of the given type."@en ;
-  sh:group bds:PersonNamePropertyGroup ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
-  sh:name "name type"@en ;
-  sh:order "0"^^xsd:decimal ;
 .
 bds:PersonShape
   a sh:NodeShape ;
@@ -131,13 +102,10 @@ bds:PersonShape
 bds:PersonShape-gender
   a sh:PropertyShape ;
   sh:path bdo:gender ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:class bdo:Gender ;
   sh:description "this Person may have at most one Gender or none if not known."@en ;
   sh:group bds:IdentityPropertyGroup ;
   sh:maxCount 1 ;
-  sh:name "has gender"@en ;
-  sh:order "1"^^xsd:decimal ;
 .
 bds:PersonShape-genderFemale
   a sh:PropertyShape ;
@@ -145,7 +113,6 @@ bds:PersonShape-genderFemale
   sh:hasValue bdr:GenderFemale ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
-  sh:name "female"@en ;
 .
 bds:PersonShape-genderMale
   a sh:PropertyShape ;
@@ -153,299 +120,197 @@ bds:PersonShape-genderMale
   sh:hasValue bdr:GenderMale ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
-  sh:name "male"@en ;
 .
 bds:PersonShape-hasBrother
   a sh:PropertyShape ;
   sh:path bdo:hasBrother ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have zero or more brothers."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasSibling ;
-  sh:name "has brother"@en ;
   sh:node bds:MaleShape ;
-  sh:order "2"^^xsd:decimal ;
 .
 bds:PersonShape-hasCousin
   a sh:PropertyShape ;
   sh:path bdo:hasCousin ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:class bdo:Person ;
   sh:description "this Person may have zero or more cousins."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasCousin ;
-  sh:name "has cousin"@en ;
-  sh:order "3"^^xsd:decimal ;
 .
 bds:PersonShape-hasDaughter
   a sh:PropertyShape ;
   sh:path bdo:hasDaughter ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have zero or more daughters."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasParent ;
-  sh:name "has daughter"@en ;
   sh:node bds:FemaleShape ;
-  sh:order "1"^^xsd:decimal ;
 .
 bds:PersonShape-hasFather
   a sh:PropertyShape ;
   sh:path bdo:hasFather ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have a father."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasChild ;
   sh:maxCount 1 ;
-  sh:name "has father"@en ;
   sh:node bds:MaleShape ;
-  sh:order "0"^^xsd:decimal ;
 .
 bds:PersonShape-hasGrandChild
   a sh:PropertyShape ;
   sh:path bdo:hasGrandChild ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:class bdo:Person ;
   sh:description "this Person may have zero or more grandchildren."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasGrandParent ;
-  sh:name "has grandchild"@en ;
   sh:order "3"^^xsd:decimal ;
 .
 bds:PersonShape-hasGrandParent
   a sh:PropertyShape ;
   sh:path bdo:hasGrandParent ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:class bdo:Person ;
   sh:description "this Person may have zero upto 4 grandparents."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasGrandChild ;
   sh:maxCount 4 ;
-  sh:name "has grandparent"@en ;
-  sh:order "3"^^xsd:decimal ;
 .
 bds:PersonShape-hasGranddaughter
   a sh:PropertyShape ;
   sh:path bdo:hasGranddaughter ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have zero or more granddaughters."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasGrandParent ;
-  sh:name "has granddaughter"@en ;
   sh:node bds:FemaleShape ;
-  sh:order "3"^^xsd:decimal ;
 .
 bds:PersonShape-hasGrandfather
   a sh:PropertyShape ;
   sh:path bdo:hasGrandfather ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have at most two Grandfathers."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasGrandChild ;
   sh:maxCount 2 ;
-  sh:name "has grandfather"@en ;
   sh:node bds:MaleShape ;
-  sh:order "3"^^xsd:decimal ;
 .
 bds:PersonShape-hasGrandmother
   a sh:PropertyShape ;
   sh:path bdo:hasGrandmother ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have at most two Grandmothers."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasGrandChild ;
   sh:maxCount 2 ;
-  sh:name "has grandmother"@en ;
   sh:node bds:FemaleShape ;
-  sh:order "3"^^xsd:decimal ;
 .
 bds:PersonShape-hasGrandson
   a sh:PropertyShape ;
   sh:path bdo:hasGrandson ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have zero or more grandsons."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasGrandParent ;
-  sh:name "has grandson"@en ;
   sh:node bds:MaleShape ;
-  sh:order "3"^^xsd:decimal ;
 .
 bds:PersonShape-hasHusband
   a sh:PropertyShape ;
   sh:path bdo:hasHusband ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have a husband."@en ;
-  sh:group bds:KinshipPropertyGroup ;
-  sh:inversePath bdo:hasWife ;
-  sh:name "has husband"@en ;
+  sh:inversePath bdo:hasWife ;  sh:name "has husband"@en ;
   sh:node bds:MaleShape ;
-  sh:order "0"^^xsd:decimal ;
 .
 bds:PersonShape-hasMother
   a sh:PropertyShape ;
   sh:path bdo:hasMother ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have at most one mother."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasChild ;
   sh:maxCount 1 ;
-  sh:name "has mother"@en ;
   sh:node bds:FemaleShape ;
-  sh:order "1"^^xsd:decimal ;
 .
 bds:PersonShape-hasOlderBrother
   a sh:PropertyShape ;
   sh:path bdo:hasOlderBrother ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have zero or more older brothers."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasSibling ;
-  sh:name "has older brother"@en ;
   sh:node bds:MaleShape ;
-  sh:order "2"^^xsd:decimal ;
 .
 bds:PersonShape-hasOlderSister
   a sh:PropertyShape ;
   sh:path bdo:hasOlderSister ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have zero or more older sisters."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasSibling ;
   sh:name "has older sister"@en ;
-  sh:node bds:FemaleShape ;
   sh:order "2"^^xsd:decimal ;
 .
 bds:PersonShape-hasParent
   a sh:PropertyShape ;
   sh:path bdo:hasParent ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:class bdo:Person ;
   sh:description "this Person may have at most two parents."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasChild ;
   sh:maxCount 2 ;
-  sh:name "has parent"@en ;
-  sh:order "1"^^xsd:decimal ;
 .
 bds:PersonShape-hasSibling
   a sh:PropertyShape ;
   sh:path bdo:hasSibling ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:class bdo:Person ;
   sh:description "this Person may have zero or more siblings."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasSibling ;
-  sh:name "has sibling"@en ;
-  sh:order "2"^^xsd:decimal ;
 .
 bds:PersonShape-hasSister
   a sh:PropertyShape ;
   sh:path bdo:hasSister ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have zero or more sisters."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasSibling ;
-  sh:name "has sister"@en ;
   sh:node bds:FemaleShape ;
-  sh:order "2"^^xsd:decimal ;
 .
 bds:PersonShape-hasSon
   a sh:PropertyShape ;
   sh:path bdo:hasSon ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have zero or more sons."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasParent ;
-  sh:name "has son"@en ;
   sh:node bds:MaleShape ;
-  sh:order "1"^^xsd:decimal ;
 .
 bds:PersonShape-hasSpouse
   a sh:PropertyShape ;
   sh:path bdo:hasSpouse ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:class bdo:Person ;
   sh:description "this Person may have at most one spouse."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasSpouse ;
   sh:maxCount 1 ;
-  sh:name "has spouse"@en ;
-  sh:order "0"^^xsd:decimal ;
 .
 bds:PersonShape-hasWife
   a sh:PropertyShape ;
   sh:path bdo:hasWife ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have at most one wife."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasHusband ;
   sh:maxCount 1 ;
-  sh:name "has wife"@en ;
   sh:node bds:FemaleShape ;
-  sh:order "0"^^xsd:decimal ;
 .
 bds:PersonShape-hasYoungerBrother
   a sh:PropertyShape ;
   sh:path bdo:hasYoungerBrother ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have zero or more younger brothers."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasSibling ;
-  sh:name "has younger brother"@en ;
   sh:node bds:MaleShape ;
-  sh:order "2"^^xsd:decimal ;
 .
 bds:PersonShape-hasYoungerSister
   a sh:PropertyShape ;
   sh:path bdo:hasYoungerSister ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have zero or more younger sisters."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:hasSibling ;
-  sh:name "has younger sister"@en ;
   sh:node bds:FemaleShape ;
-  sh:order "2"^^xsd:decimal ;
 .
 bds:PersonShape-kinWith
   a sh:PropertyShape ;
   sh:path bdo:kinWith ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:class bdo:Person ;
   sh:description "this Person may have zero or more kin."@en ;
-  sh:group bds:KinshipPropertyGroup ;
   sh:inversePath bdo:kinWith ;
-  sh:name "has kin"@en ;
 .
 bds:PersonShape-personName
   a sh:PropertyShape ;
   sh:path bdo:personName ;
-  dash:viewer dash:DetailsViewer ;
   sh:description "this Person may have one or more names."@en ;
-  sh:group bds:IdentityPropertyGroup ;
   sh:minCount 1 ;
-  sh:name "person name"@en ;
   sh:node bds:PersonNameShape ;
   sh:nodeKind sh:IRI ;
-  sh:order "0"^^xsd:decimal ;
 .
 bds:PersonShape-personStudentOf
   a sh:PropertyShape ;
   sh:path bdo:personStudentOf ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:class bdo:Person ;
   sh:description "this Person may have zero or more teachers."@en ;
-  sh:group bds:StudentTeacherPropertyGroup ;
-  sh:name "student of"@en ;
-  sh:order "0"^^xsd:decimal ;
 .
 bds:PersonShape-personTeacherOf
   a sh:PropertyShape ;
   sh:path bdo:personTeacherOf ;
-  dash:editor dash:InstancesSelectEditor ;
   sh:class bdo:Person ;
   sh:description "this Person may have zero or more students."@en ;
-  sh:group bds:StudentTeacherPropertyGroup ;
-  sh:name "teacher of"@en ;
-  sh:order "1"^^xsd:decimal ;
 .
 PersonShapes:
   a owl:Ontology ;
@@ -454,10 +319,4 @@ PersonShapes:
   owl:imports bds: ;
   owl:imports <http://purl.bdrc.io/ontology/shapes/core/PersonEventShapes/> ;
   owl:versionInfo "SHACL constraints for Person" ;
-.
-bds:StudentTeacherPropertyGroup
-  a sh:PropertyGroup ;
-  rdfs:label "Student/Teacher relations"@en ;
-  sh:group bds:AssociatedPersonsPropertyGroup ;
-  sh:order "1"^^xsd:decimal ;
 .
