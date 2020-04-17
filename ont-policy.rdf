@@ -55,7 +55,8 @@
         <ignoreImport   rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <ignoreImport   rdf:resource="http://www.w3.org/2002/07/owl#"/>
         <ignoreImport   rdf:resource="http://www.w3.org/2004/02/skos/core"/>
-        <ignoreImport   rdf:resource="http://datashapes.org/dash#"/>
+        <ignoreImport   rdf:resource="http://datashapes.org/dash"/>
+        <ignoreImport   rdf:resource="http://topbraid.org/tosh"/>
         <ignoreImport   rdf:resource="http://www.w3.org/ns/shacl#"/>
         <ignoreImport   rdf:resource="http://purl.bdrc.io/ontology/core/"/>
         <adm:defaultOntGraph   rdf:resource="http://purl.bdrc.io/graph/shapesSchema"/>
