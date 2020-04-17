@@ -71,6 +71,7 @@ bds:PersonNameShape-personNameType
 .
 bds:PersonShape
   a sh:NodeShape ;
+  adm:graphId bdg:PersonShapes ;
   rdfs:label "Person Shape"@en ;
   sh:property bds:PersonShape-gender ;
   sh:property bds:PersonShape-hasBrother ;
@@ -124,7 +125,7 @@ bds:PersonShape-genderMale
 bds:PersonShape-hasBrother
   a sh:PropertyShape ;
   sh:path bdo:hasBrother ;
-  sh:description "this Person may have zero or more brothers."@en ;
+  sh:description "This Person may have zero or more brothers."@en ;
   sh:inversePath bdo:hasSibling ;
   sh:node bds:MaleShape ;
 .
@@ -200,7 +201,8 @@ bds:PersonShape-hasHusband
   a sh:PropertyShape ;
   sh:path bdo:hasHusband ;
   sh:description "this Person may have a husband."@en ;
-  sh:inversePath bdo:hasWife ;  sh:name "has husband"@en ;
+  sh:inversePath bdo:hasWife ;
+  sh:name "has husband"@en ;
   sh:node bds:MaleShape ;
 .
 bds:PersonShape-hasMother

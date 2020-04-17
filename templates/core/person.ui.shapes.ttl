@@ -33,6 +33,9 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bdo:Person
+  bds:uiShape bds:PersonUIShape ;
+.
 bds:AssociatedPersonsPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Kinshp relations"@en ;
@@ -232,6 +235,37 @@ bds:PersonShape-personTeacherOf
   sh:group bds:StudentTeacherPropertyGroup ;
   sh:name "teacher of"@en ;
   sh:order "1"^^xsd:decimal ;
+.
+bds:PersonUIShape
+  a sh:NodeShape ;
+  adm:graphId bdg:PersonUIShapes ;
+  rdfs:label "Person Shape"@en ;
+  sh:property bds:PersonShape-gender ;
+  sh:property bds:PersonShape-hasBrother ;
+  sh:property bds:PersonShape-hasCousin ;
+  sh:property bds:PersonShape-hasDaughter ;
+  sh:property bds:PersonShape-hasFather ;
+  sh:property bds:PersonShape-hasGrandChild ;
+  sh:property bds:PersonShape-hasGrandParent ;
+  sh:property bds:PersonShape-hasGranddaughter ;
+  sh:property bds:PersonShape-hasGrandfather ;
+  sh:property bds:PersonShape-hasGrandmother ;
+  sh:property bds:PersonShape-hasGrandson ;
+  sh:property bds:PersonShape-hasMother ;
+  sh:property bds:PersonShape-hasOlderBrother ;
+  sh:property bds:PersonShape-hasOlderSister ;
+  sh:property bds:PersonShape-hasParent ;
+  sh:property bds:PersonShape-hasSibling ;
+  sh:property bds:PersonShape-hasSister ;
+  sh:property bds:PersonShape-hasSon ;
+  sh:property bds:PersonShape-hasSpouse ;
+  sh:property bds:PersonShape-hasYoungerBrother ;
+  sh:property bds:PersonShape-hasYoungerSister ;
+  sh:property bds:PersonShape-kinWith ;
+  sh:property bds:PersonShape-personName ;
+  sh:property bds:PersonShape-personStudentOf ;
+  sh:property bds:PersonShape-personTeacherOf ;
+  sh:targetClass bdo:Person ;
 .
 PersonUIShapes:
   a owl:Ontology ;
