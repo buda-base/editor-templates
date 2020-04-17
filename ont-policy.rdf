@@ -142,7 +142,7 @@
         <publicURI rdf:resource="http://purl.bdrc.io/ontology/shapes/core/PersonUIShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/person.ui.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/person.ui.shapes.ttl"/>
-        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/PersonShapes"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/PersonUIShapes"/>
     </OntologySpec>
 
     <OntologySpec>
