@@ -135,7 +135,7 @@ bds:PersonShape-hasGrandmother
 bds:PersonShape-hasGrandson
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:KinshipPropertyGroup ;
-  sh:name "has grandson"@en ;  sh:node bds:MaleShape ;
+  sh:name "has grandson"@en ;
   sh:order "3"^^xsd:decimal ;
 .
 bds:PersonShape-hasHusband
@@ -147,7 +147,7 @@ bds:PersonShape-hasHusband
 bds:PersonShape-hasMother
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:KinshipPropertyGroup ;
-  sh:name "has mother"@en ;  sh:node bds:FemaleShape ;
+  sh:name "has mother"@en ;
   sh:order "1"^^xsd:decimal ;
 .
 bds:PersonShape-hasOlderBrother
