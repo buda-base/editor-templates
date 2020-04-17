@@ -239,7 +239,7 @@ bds:PersonShape-personTeacherOf
 bds:PersonUIShape
   a sh:NodeShape ;
   adm:graphId bdg:PersonUIShapes ;
-  rdfs:label "Person Shape"@en ;
+  rdfs:label "Person UI Shapes"@en ;
   sh:property bds:PersonShape-gender ;
   sh:property bds:PersonShape-hasBrother ;
   sh:property bds:PersonShape-hasCousin ;
