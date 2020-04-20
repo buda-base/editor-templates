@@ -62,8 +62,8 @@ bds:PersonNameShape-personNameLabel
 .
 bds:PersonNameShape-personNameType
   a sh:PropertyShape ;
-  sh:path bdo:personNameType ;
-  sh:class bdo:PersonNameType ;
+  sh:path rdf:type ;
+  sh:class bdo:PersonName ;
   sh:description "this Person has a name of the given type."@en ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
