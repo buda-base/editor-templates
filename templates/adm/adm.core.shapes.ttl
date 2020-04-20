@@ -1,9 +1,10 @@
-# baseURI: http://purl.bdrc.io/ontology/shapes/adm/
+# baseURI: http://purl.bdrc.io/shapes/adm/AdminShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/adm/types/Access
+# imports: http://purl.bdrc.io/ontology/adm/types/Access/
 # imports: http://purl.bdrc.io/ontology/core/
-# prefix: bdsa
+# prefix: AdminShapes
 
+@prefix AdminShapes: <http://purl.bdrc.io/shapes/adm/AdminShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -29,18 +30,16 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bdsa:
+AdminShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
   owl:imports <http://purl.bdrc.io/ontology/adm/types/Access> ;
-  owl:imports bdo: ;
+  owl:imports <http://purl.bdrc.io/ontology/core/> ;
   owl:versionInfo "Initial SHACL constraints core admin shapes" ;
 .
 bdsa:AdmEntityShape
-  a rdfs:Class ;
   a sh:NodeShape ;
   rdfs:label "Admin Entity shape"@en ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:property [
       a sh:PropertyShape ;
       sh:path adm:status ;

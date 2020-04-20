@@ -1,9 +1,9 @@
-# baseURI: http://purl.bdrc.io/ontology/shapes/core/WorkShapes/
+# baseURI: http://purl.bdrc.io/shapes/core/WorkShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/shapes/core/
-# prefix: bds
+# imports: http://purl.bdrc.io/shapes/core/CoreShapes/
+# prefix: WorkShapes
 
-@prefix WorkShapes: <http://purl.bdrc.io/ontology/shapes/core/WorkShapes/>
+@prefix WorkShapes: <http://purl.bdrc.io/shapes/core/WorkShapes/>
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -32,11 +32,10 @@
 WorkShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports bds: ;
+  owl:imports <http://purl.bdrc.io/shapes/core/CoreShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Works" ;
 .
 bds:SerialMemberShape
-  a rdfs:Class ;
   a sh:NodeShape ;
   rdfs:label "SerialMember Shape"@en ;
   sh:property [
@@ -62,7 +61,6 @@ bds:SerialMemberShape
   sh:targetClass bdo:SerialMember ;
 .
 bds:SerialWorkShape
-  a rdfs:Class ;
   a sh:NodeShape ;
   rdfs:label "SerialWork Shape"@en ;
   sh:property [
@@ -77,7 +75,6 @@ bds:SerialWorkShape
   sh:targetClass bdo:SerialWork ;
 .
 bds:WorkShape
-  a rdfs:Class ;
   a sh:NodeShape ;
   rdfs:label "Work shape"@en ;
   rdfs:subClassOf rdfs:Resource ;

@@ -1,9 +1,10 @@
-# baseURI: http://purl.bdrc.io/ontology/shapes/core/CorporationShapes/
+# baseURI: http://purl.bdrc.io/shapes/core/CorporationShapes/
 # imports: http://datashapes.org/dash
 # imports: http://purl.bdrc.io/ontology/core/
-# prefix: bds
+# imports: http://purl.bdrc.io/shapes/core/CoreShapes/
+# prefix: CorporationShapes
 
-@prefix CorporationShapes: <http://purl.bdrc.io/ontology/shapes/core/CorporationShapes/>
+@prefix CorporationShapes: <http://purl.bdrc.io/shapes/core/CorporationShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -32,14 +33,13 @@
 CorporationShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports bdo: ;
+  owl:imports <http://purl.bdrc.io/ontology/core/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/CoreShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Corporations and their members" ;
 .
 bds:CorporationMemberShape
-  a rdfs:Class ;
   a sh:NodeShape ;
   rdfs:label "CorporationMember shape"@en ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:property [
       a sh:PropertyShape ;
       sh:path bdo:memberOf ;
@@ -53,10 +53,8 @@ bds:CorporationMemberShape
   sh:targetClass bdo:Person ;
 .
 bds:CorporationShape
-  a rdfs:Class ;
   a sh:NodeShape ;
   rdfs:label "Corporation shape"@en ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:property [
       a sh:PropertyShape ;
       sh:path bdo:hasMember ;

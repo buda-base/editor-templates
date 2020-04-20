@@ -1,9 +1,10 @@
-# baseURI: http://purl.bdrc.io/ontology/shapes/core/EventShapes/
+# baseURI: http://purl.bdrc.io/shapes/core/EventShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/shapes/core/
+# imports: http://purl.bdrc.io/ontology/core/
+# imports: http://purl.bdrc.io/shapes/core/CoreShapes/
 # prefix: EventShapes
 
-@prefix EventShapes: <http://purl.bdrc.io/ontology/shapes/core/EventShapes/> .
+@prefix EventShapes: <http://purl.bdrc.io/shapes/core/EventShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -30,7 +31,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bds:EventShape
-  a rdfs:Class ;
   a sh:NodeShape ;
   rdfs:label "Event Shape"@en ;
   sh:property bds:EventShape-eventText ;
@@ -106,6 +106,7 @@ bds:EventShape-onYear
 EventShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports <http://purl.bdrc.io/ontology/shapes/core/> ;
+  owl:imports <http://purl.bdrc.io/ontology/core/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/CoreShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Events and its subclasses" ;
 .

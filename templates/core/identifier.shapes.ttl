@@ -1,9 +1,10 @@
-# baseURI: http://purl.bdrc.io/ontology/shapes/core/IdentifierShapes/
+# baseURI: http://purl.bdrc.io/shapes/core/IdentifierShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/shapes/core/
-# prefix: bds
+# imports: http://purl.bdrc.io/ontology/core/
+# imports: http://purl.bdrc.io/shapes/core/CoreShapes/
+# prefix: IdentifierShapes
 
-@prefix IdentifierShapes: <http://purl.bdrc.io/ontology/shapes/core/IdentifierShapes/>
+@prefix IdentifierShapes: <http://purl.bdrc.io/shapes/core/IdentifierShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -32,7 +33,8 @@
 IdentifierShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports <http://purl.bdrc.io/ontology/shapes/core/> ;
+  owl:imports <http://purl.bdrc.io/ontology/core/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/CoreShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Identifiers such as ISBN and such" ;
 .
 bds:IsbnShape

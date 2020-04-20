@@ -1,9 +1,9 @@
-# baseURI: http://purl.bdrc.io/ontology/shapes/core/PersonEventShapes/
+# baseURI: http://purl.bdrc.io/shapes/core/PersonEventShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/shapes/core/EventShapes/
+# imports: http://purl.bdrc.io/shapes/core/EventShapes/
 # prefix: PersonEventShapes
 
-@prefix PersonEventShapes: <http://purl.bdrc.io/ontology/shapes/core/PersonEventShapes/> .
+@prefix PersonEventShapes: <http://purl.bdrc.io/shapes/core/PersonEventShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -30,7 +30,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bds:PersonEventShapes
-  a rdfs:Class ;
   a sh:NodeShape ;
   rdfs:label "Person Event Shape"@en ;
   sh:property bds:PersonEventShape-personEventCorporation ;
@@ -65,6 +64,6 @@ bds:EventShape-personEventType
 PersonEventShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports <http://purl.bdrc.io/ontology/shapes/core/EventShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/EventShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Person Events" ;
 .

@@ -1,9 +1,9 @@
-# baseURI: http://purl.bdrc.io/ontology/shapes/core/PersonUIShapes/
+# baseURI: http://purl.bdrc.io/shapes/core/PersonUIShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/shapes/core/PersonShapes/
+# imports: http://purl.bdrc.io/shapes/core/PersonShapes/
 # prefix: PersonUIShapes
 
-@prefix PersonUIShapes: <http://purl.bdrc.io/ontology/shapes/core/PersonUIShapes/> .
+@prefix PersonUIShapes: <http://purl.bdrc.io/shapes/core/PersonUIShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda: <http://purl.bdrc.io/admin.data/> .
 @prefix bdg: <http://purl.bdrc.io/graph/> .
@@ -268,7 +268,7 @@ bds:PersonUIShape
 PersonUIShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports <http://purl.bdrc.io/ontology/shapes/core/PersonShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/PersonShapes/> ;
   owl:versionInfo "SHACL UI templates for Person" ;
 .
 bds:StudentTeacherPropertyGroup

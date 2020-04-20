@@ -1,9 +1,10 @@
-# baseURI: http://purl.bdrc.io/ontology/shapes/core/InstanceShapes/
+# baseURI: http://purl.bdrc.io/shapes/core/InstanceShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/shapes/core/
-# prefix: bds
+# imports: http://purl.bdrc.io/ontology/core/
+# imports: http://purl.bdrc.io/shapes/core/CoreShapes/
+# prefix: InstanceShapes
 
-@prefix InstanceShapes: <http://purl.bdrc.io/ontology/shapes/core/InstanceShapes/>
+@prefix InstanceShapes: <http://purl.bdrc.io/shapes/core/InstanceShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -32,11 +33,11 @@
 InstanceShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports <http://purl.bdrc.io/ontology/shapes/core/> ;
+  owl:imports <http://purl.bdrc.io/ontology/core/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/CoreShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Instance and its subclasses" ;
 .
 bds:InstanceShape
-  a rdfs:Class ;
   a sh:NodeShape ;
   rdfs:label "Instance Shape"@en ;
   sh:property [
@@ -67,7 +68,6 @@ bds:InstanceShape
   sh:targetClass bdo:Instance ;
 .
 bds:PhysicalInstanceShape
-  a rdfs:Class ;
   a sh:NodeShape ;
   rdfs:label "PhysicalInstance Shape"@en ;
   sh:property [
@@ -91,7 +91,6 @@ bds:PhysicalInstanceShape
   sh:targetClass bdo:PhysicalInstance ;
 .
 bds:SerialInstanceShape
-  a rdfs:Class ;
   a sh:NodeShape ;
   rdfs:label "SerialInstance Shape"@en ;
   sh:property [
