@@ -2,7 +2,7 @@
 # imports: http://datashapes.org/dash
 # imports: http://purl.bdrc.io/ontology/adm/types/Access
 # imports: http://purl.bdrc.io/ontology/core/
-# prefix: bds
+# prefix: bdsa
 
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .

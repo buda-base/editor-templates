@@ -1,7 +1,6 @@
 # baseURI: http://purl.bdrc.io/ontology/shapes/core/WorkShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/adm/types/Access
-# imports: http://purl.bdrc.io/ontology/core/
+# imports: http://purl.bdrc.io/ontology/shapes/core/
 # prefix: bds
 
 @prefix WorkShapes: <http://purl.bdrc.io/ontology/shapes/core/WorkShapes/>
@@ -33,7 +32,7 @@
 WorkShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports bdo: ;
+  owl:imports bds: ;
   owl:versionInfo "Initial SHACL constraints for Works" ;
 .
 bds:SerialMemberShape

@@ -1,6 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/shapes/core/PersonEventShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/core/
 # imports: http://purl.bdrc.io/ontology/shapes/core/EventShapes/
 # prefix: PersonEventShapes
 
@@ -66,8 +65,6 @@ bds:EventShape-personEventType
 PersonEventShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports bdo: ;
-  owl:imports <http://purl.bdrc.io/ontology/shapes/core/EventShapes/> ;
   owl:imports <http://purl.bdrc.io/ontology/shapes/core/EventShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Person Events" ;
 .

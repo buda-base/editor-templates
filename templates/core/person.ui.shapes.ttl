@@ -1,7 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/shapes/core/PersonUIShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/core/
-# imports: http://purl.bdrc.io/ontology/shapes/core/
 # imports: http://purl.bdrc.io/ontology/shapes/core/PersonShapes/
 # prefix: PersonUIShapes
 
@@ -270,8 +268,6 @@ bds:PersonUIShape
 PersonUIShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports bdo: ;
-  owl:imports bds: ;
   owl:imports <http://purl.bdrc.io/ontology/shapes/core/PersonShapes/> ;
   owl:versionInfo "SHACL UI templates for Person" ;
 .

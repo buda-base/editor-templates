@@ -1,6 +1,6 @@
 # baseURI: http://purl.bdrc.io/ontology/shapes/core/EventShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/core/
+# imports: http://purl.bdrc.io/ontology/shapes/core/
 # prefix: EventShapes
 
 @prefix EventShapes: <http://purl.bdrc.io/ontology/shapes/core/EventShapes/> .
@@ -106,6 +106,6 @@ bds:EventShape-onYear
 EventShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports bdo: ;
+  owl:imports <http://purl.bdrc.io/ontology/shapes/core/> ;
   owl:versionInfo "Initial SHACL constraints for Events and its subclasses" ;
 .

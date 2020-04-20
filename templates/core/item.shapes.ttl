@@ -1,7 +1,7 @@
 # baseURI: http://purl.bdrc.io/ontology/shapes/core/ItemShapes/
 # imports: http://datashapes.org/dash
 # imports: http://purl.bdrc.io/ontology/adm/types/Access
-# imports: http://purl.bdrc.io/ontology/core/
+# imports: http://purl.bdrc.io/ontology/shapes/core/
 # prefix: bds
 
 @prefix ItemShapes: <http://purl.bdrc.io/ontology/shapes/core/ItemShapes/>
@@ -33,7 +33,7 @@
 ItemShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports bdo: ;
+  owl:imports <http://purl.bdrc.io/ontology/shapes/core/> ;
   owl:versionInfo "Initial SHACL constraints for Item and its subclasses" ;
 .
 bds:ItemPhysicalAssetShape

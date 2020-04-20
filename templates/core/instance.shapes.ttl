@@ -1,7 +1,6 @@
 # baseURI: http://purl.bdrc.io/ontology/shapes/core/InstanceShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/adm/types/Access
-# imports: http://purl.bdrc.io/ontology/core/
+# imports: http://purl.bdrc.io/ontology/shapes/core/
 # prefix: bds
 
 @prefix InstanceShapes: <http://purl.bdrc.io/ontology/shapes/core/InstanceShapes/>
@@ -33,7 +32,7 @@
 InstanceShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports bdo: ;
+  owl:imports <http://purl.bdrc.io/ontology/shapes/core/> ;
   owl:versionInfo "Initial SHACL constraints for Instance and its subclasses" ;
 .
 bds:InstanceShape

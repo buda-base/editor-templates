@@ -1,6 +1,5 @@
 # baseURI: http://purl.bdrc.io/ontology/shapes/core/CorporationShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/adm/types/Access
 # imports: http://purl.bdrc.io/ontology/core/
 # prefix: bds
 
