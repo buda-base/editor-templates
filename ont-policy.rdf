@@ -61,7 +61,7 @@
         <ignoreImport   rdf:resource="http://purl.bdrc.io/ontology/core/"/>
         <ignoreImport   rdf:resource="http://purl.bdrc.io/ontology/admin/"/>
         <ignoreImport   rdf:resource="http://purl.bdrc.io/ontology/adm/types/Access"/>
-        <!-- adm:defaultOntGraph   rdf:resource="http://purl.bdrc.io/graph/shapesSchema"/ -->
+        <adm:defaultOntGraph   rdf:resource="http://purl.bdrc.io/graph/shapesSchema"/>
     </DocumentManagerPolicy>
     
 
