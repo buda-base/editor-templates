@@ -37,14 +37,14 @@ bds:PersonEventShapes
   sh:property bds:PersonEventShape-personEventType ;
   sh:targetClass bdo:PersonEvent ;
 .
-bds:EventShape-personEventCorporation
+bds:PersonEventShape-personEventCorporation
   a sh:PropertyShape ;
   sh:path bdo:personEventCorporation ;
   dash:editor dash:InstancesSelectEditor ;
   sh:class bdo:Corporation ;
   sh:name "corporation associated with the event"@en ;
 .
-bds:EventShape-personEventRole
+bds:PersonEventShape-personEventRole
   a sh:PropertyShape ;
   sh:path bdo:personEventRole ;
   dash:editor dash:InstancesSelectEditor ;
@@ -52,7 +52,7 @@ bds:EventShape-personEventRole
   sh:maxCount 1 ;
   sh:name "role associated with the event"@en ;
 .
-bds:EventShape-personEventType
+bds:PersonEventShape-personEventType
   a sh:PropertyShape ;
   sh:path bdo:eventType ;
   dash:editor dash:InstancesSelectEditor ;
