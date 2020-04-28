@@ -92,7 +92,7 @@ bds:PersonShape
 .
 bds:PersonShape-gender
   a sh:PropertyShape ;
-  sh:path bdo:gender ;
+  sh:path bdo:personGender ;
   sh:class bdo:Gender ;
   sh:description "this Person may have at most one Gender or none if not known."@en ;
   sh:group bds:IdentityPropertyGroup ;
@@ -100,14 +100,14 @@ bds:PersonShape-gender
 .
 bds:PersonShape-genderFemale
   a sh:PropertyShape ;
-  sh:path bdo:gender ;
+  sh:path bdo:personGender ;
   sh:hasValue bdr:GenderFemale ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
 .
 bds:PersonShape-genderMale
   a sh:PropertyShape ;
-  sh:path bdo:gender ;
+  sh:path bdo:personGender ;
   sh:hasValue bdr:GenderMale ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
