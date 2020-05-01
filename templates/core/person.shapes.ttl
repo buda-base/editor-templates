@@ -37,16 +37,19 @@ bdo:Person
 .
 bds:FemaleShape
   a sh:NodeShape ;
+  bds:nodeShapeType bds:IgnoreShape ;
   rdfs:label "Female Shape"@en ;
   sh:property bds:PersonShape-genderFemale ;
 .
 bds:MaleShape
   a sh:NodeShape ;
+  bds:nodeShapeType bds:IgnoreShape ;
   rdfs:label "Male Shape"@en ;
   sh:property bds:PersonShape-genderMale ;
 .
 bds:PersonNameShape
   a sh:NodeShape ;
+  bds:nodeShapeType bds:FacetShape ;
   rdfs:label "Person Name Shape"@en ;
   sh:property bds:PersonNameShape-personNameLabel ;
   sh:targetClass bdo:PersonName ;
@@ -61,6 +64,7 @@ bds:PersonNameShape-personNameLabel
 .
 bds:PersonShape
   a sh:NodeShape ;
+  bds:identifierPrefix "P" ;
   adm:graphId bdg:PersonShapes ;
   rdfs:label "Person Shape"@en ;
   sh:property bds:PersonShape-gender ;

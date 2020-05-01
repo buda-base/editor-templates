@@ -37,6 +37,9 @@ CorporationShapes:
   owl:imports <http://purl.bdrc.io/shapes/core/CoreShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Corporations and their members" ;
 .
+bdo:Corporation 
+  bsd:rootShape bds:CorporationShape ;
+.
 bds:CorporationMemberShape
   a sh:NodeShape ;
   rdfs:label "CorporationMember shape"@en ;
@@ -54,6 +57,7 @@ bds:CorporationMemberShape
 .
 bds:CorporationShape
   a sh:NodeShape ;
+  bds:identifierShape "C" ;
   rdfs:label "Corporation shape"@en ;
   sh:property [
       a sh:PropertyShape ;

@@ -31,6 +31,7 @@
 
 bds:PersonEventShapes
   a sh:NodeShape ;
+  bds:nodeShapeType bds:FacetShape ;
   rdfs:label "Person Event Shape"@en ;
   sh:property bds:PersonEventShape-personEventCorporation ;
   sh:property bds:PersonEventShape-personEventRole ;

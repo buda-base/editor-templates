@@ -30,8 +30,13 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bdo:Event 
+  bsd:rootShape bds:EventShape ;
+.
 bds:EventShape
   a sh:NodeShape ;
+  bds:identifierPrefix "EV" ;
+  bds:nodeShapeType bds:FacetShape ;
   rdfs:label "Event Shape"@en ;
   sh:property bds:EventShape-eventText ;
   sh:property bds:EventShape-eventWhere ;

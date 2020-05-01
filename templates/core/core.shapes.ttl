@@ -34,6 +34,38 @@ CoreShapes:
   owl:imports <http://purl.bdrc.io/ontology/core/> ;
   owl:versionInfo "Initial SHACL constraints" ;
 .
+bds:identifierPrefix
+  a owl:DatatypeProperty ;
+  rdfs:label "prefix for resource id"@en ;
+  rdfs:domain rdfs:Resource ;
+  rdfs:range xsd:string ;
+  skos:definition "prefix to use when generating identifier for a resource"@en ;
+.
+bds:nodeShapeType
+  a owl:ObjectProperty ;
+  rdfs:label "node shape type"@en ;
+  rdfs:domain sh:NodeShape ;
+  rdfs:range bds:NodeShapeType ;
+  skos:definition "type of a node shape to discriminate among fact shapes, internal shapes, and so on"@en ;
+.
+bds:NodeShapeType
+  a owl:Class ;
+.
+bds:FacetShape
+  a bds:NodeShapeType ;
+  rdfs:label "node shape is a facet"@en ;
+  skos:definition "this shape applies to a resource contained in the graph of root Resource that is a facet of the containing resource"@en ;
+.
+bds:IgnoreShape
+  a bds:NodeShapeType ;
+  rdfs:label "node shape is ignored for editing"@en ;
+  skos:definition "this shape indicates internal resource that is not editable"@en ;
+.
+bds:InternalShape
+  a bds:NodeShapeType ;
+  rdfs:label "node shape is internal"@en ;
+  skos:definition "this shape applies to internal resources such as Volumes in an Imagegroup"@en ;
+.
 bds:EntityShape
   a sh:NodeShape ;
   rdfs:label "Entity shape"@en ;
