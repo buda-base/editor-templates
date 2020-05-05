@@ -1,16 +1,14 @@
-# baseURI: http://purl.bdrc.io/shapes/core/CorporationShapes/
+# baseURI: http://purl.bdrc.io/shapes/core/RootShapes/
 # imports: http://datashapes.org/dash
 # imports: http://purl.bdrc.io/ontology/core/
-# imports: http://purl.bdrc.io/shapes/core/RootShapes/
-# prefix: CorporationShapes
+# prefix: RootShapes
 
-@prefix CorporationShapes: <http://purl.bdrc.io/shapes/core/CorporationShapes/> .
+@prefix RootShapes: <http://purl.bdrc.io/shapes/core/RootShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
-@prefix bdsa: <http://purl.bdrc.io/ontology/shapes/adm/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dash: <http://datashapes.org/dash#> .
@@ -30,44 +28,58 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-CorporationShapes:
+RootShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/BaseShapes/> ;
   owl:imports <http://purl.bdrc.io/ontology/core/> ;
-  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
-  owl:versionInfo "Initial SHACL constraints for Corporations and their members" ;
+  owl:versionInfo "Initial SHACL constraints" ;
 .
-bdo:Corporation 
-  bds:rootShape bds:CorporationShape ;
-.
-bds:CorporationMemberShape
+bds:EntityShape
   a sh:NodeShape ;
-  rdfs:label "CorporationMember shape"@en ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:memberOf ;
-      sh:class bdo:Corporation ;
-      sh:description "this respource may be a member of a Corporation"@en ;
-      sh:inversePath bdo:hasMember ;
-      sh:minCount 0 ;
-      sh:name "member of"@en ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-  sh:targetClass bdo:Person ;
+  bds:nodeShapeType bds:FacetShape ;
+  rdfs:label "Entity shape"@en ;
+  sh:property bds:EntityShape-skos_prefLabel ;
+  sh:targetClass bdo:Entity ;
 .
-bds:CorporationShape
+bds:EntityShape-skos_prefLabel
+  a sh:PropertyShape ;
+  sh:path skos:prefLabel ;
+  sh:datatype rdf:langString ;
+  sh:description "require unique language from among the listed choices"@en ;
+  sh:languageIn (
+      "en"
+      "zh"
+      "bo"
+      "bo-x-ewts"
+    ) ;
+  sh:minCount 1 ;
+  sh:name "pref label"@en ;
+  sh:order "1"^^xsd:decimal ;
+  sh:uniqueLang true ;
+.
+bds:LabelShape
   a sh:NodeShape ;
-  bds:identifierShape "C" ;
-  rdfs:label "Corporation shape"@en ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:hasMember ;
-      sh:class bdo:CorporationMember ;
-      sh:description "this Corporation may have zero or more members"@en ;
-      sh:inversePath bdo:memberOf ;
-      sh:minCount 0 ;
-      sh:name "has member"@en ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-  sh:targetClass bdo:Corporation ;
+  rdfs:label "Label Shape"@en ;
+  sh:property bds:LabelShape-hasTranslation ;
+  sh:targetClass bdo:Label ;
+.
+bds:LabelShape-hasTranslation
+  a sh:PropertyShape ;
+  sh:path bdo:hasTranslation ;
+  sh:class bdo:Label ;
+  sh:description "this Label may have zero or more tanslations"@en ;
+  sh:inversePath bdo:translationOf ;
+  sh:minCount 0 ;
+  sh:name "label has translation"@en ;
+.
+bds:rootShape
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Entity ;
+  rdfs:range sh:NodeShape ;
+.
+bds:uiShape
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Entity ;
+  rdfs:range sh:NodeShape ;
 .

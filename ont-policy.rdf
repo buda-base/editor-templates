@@ -64,7 +64,17 @@
         <adm:defaultOntGraph   rdf:resource="http://purl.bdrc.io/graph/shapesSchema"/>
     </DocumentManagerPolicy>
     
+    
+    <!-- ======== bds extensions to shacl vocabulary ======== -->
 
+    <OntologySpec>
+        <!-- local version of the bds extensions to shacl vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/BaseShapes/"/>
+        <altURL    rdf:resource="editor-templates/templates/core/base.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/base.shapes.ttl"/>
+    </OntologySpec>
+
+    
     <!-- ======== bdo admin shapes ontologies ======== -->
     
     <OntologySpec>
@@ -78,10 +88,10 @@
     <!-- ======== bdo shapes ontologies ======== -->
     
     <OntologySpec>
-        <!-- local version of the bds vocabulary -->
-        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/CoreShapes/"/>
-        <altURL    rdf:resource="editor-templates/templates/core/core.shapes.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/core.shapes.ttl"/>
+        <!-- local version of the root shapes for entities -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/RootShapes/"/>
+        <altURL    rdf:resource="editor-templates/templates/core/root.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/root.shapes.ttl"/>
     </OntologySpec>
 
     <!-- ======== supporting shapes ======== -->

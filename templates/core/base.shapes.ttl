@@ -1,9 +1,9 @@
-# baseURI: http://purl.bdrc.io/shapes/core/CoreShapes/
+# baseURI: http://purl.bdrc.io/shapes/core/BaseShapes/
 # imports: http://datashapes.org/dash
 # imports: http://purl.bdrc.io/ontology/core/
-# prefix: CoreShapes
+# prefix: BaseShapes
 
-@prefix CoreShapes: <http://purl.bdrc.io/shapes/core/CoreShapes/> .
+@prefix BaseShapes: <http://purl.bdrc.io/shapes/core/BaseShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -28,11 +28,10 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-CoreShapes:
+BaseShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports <http://purl.bdrc.io/ontology/core/> ;
-  owl:versionInfo "Initial SHACL constraints" ;
+  owl:versionInfo "Buda extension to shacl vocabulary" ;
 .
 bds:identifierPrefix
   a owl:DatatypeProperty ;
@@ -65,51 +64,4 @@ bds:InternalShape
   a bds:NodeShapeType ;
   rdfs:label "node shape is internal"@en ;
   skos:definition "this shape applies to internal resources such as Volumes in an Imagegroup"@en ;
-.
-bds:EntityShape
-  a sh:NodeShape ;
-  rdfs:label "Entity shape"@en ;
-  sh:property bds:EntityShape-skos_prefLabel ;
-  sh:targetClass bdo:Entity ;
-.
-bds:EntityShape-skos_prefLabel
-  a sh:PropertyShape ;
-  sh:path skos:prefLabel ;
-  sh:datatype rdf:langString ;
-  sh:description "require unique language from among the listed choices"@en ;
-  sh:languageIn (
-      "en"
-      "zh"
-      "bo"
-      "bo-x-ewts"
-    ) ;
-  sh:minCount 1 ;
-  sh:name "pref label"@en ;
-  sh:order "1"^^xsd:decimal ;
-  sh:uniqueLang true ;
-.
-bds:LabelShape
-  a sh:NodeShape ;
-  rdfs:label "Label Shape"@en ;
-  sh:property bds:LabelShape-hasTranslation ;
-  sh:targetClass bdo:Label ;
-.
-bds:LabelShape-hasTranslation
-  a sh:PropertyShape ;
-  sh:path bdo:hasTranslation ;
-  sh:class bdo:Label ;
-  sh:description "this Label may have zero or more tanslations"@en ;
-  sh:inversePath bdo:translationOf ;
-  sh:minCount 0 ;
-  sh:name "label has translation"@en ;
-.
-bds:rootShape
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:Entity ;
-  rdfs:range sh:NodeShape ;
-.
-bds:uiShape
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:Entity ;
-  rdfs:range sh:NodeShape ;
 .

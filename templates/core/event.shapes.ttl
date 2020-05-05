@@ -1,7 +1,7 @@
 # baseURI: http://purl.bdrc.io/shapes/core/EventShapes/
 # imports: http://datashapes.org/dash
 # imports: http://purl.bdrc.io/ontology/core/
-# imports: http://purl.bdrc.io/shapes/core/CoreShapes/
+# imports: http://purl.bdrc.io/shapes/core/RootShapes/
 # prefix: EventShapes
 
 @prefix EventShapes: <http://purl.bdrc.io/shapes/core/EventShapes/> .
@@ -31,7 +31,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bdo:Event 
-  bsd:rootShape bds:EventShape ;
+  bds:rootShape bds:EventShape ;
 .
 bds:EventShape
   a sh:NodeShape ;
@@ -112,6 +112,6 @@ EventShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
   owl:imports <http://purl.bdrc.io/ontology/core/> ;
-  owl:imports <http://purl.bdrc.io/shapes/core/CoreShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Events and its subclasses" ;
 .
