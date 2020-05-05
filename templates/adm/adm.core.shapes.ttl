@@ -40,8 +40,23 @@ AdminShapes:
 bdsa:AdmEntityShape
   a sh:NodeShape ;
   rdfs:label "Admin Entity shape"@en ;
-  sh:property [
+  sh:property bdsa:AdmEntityShape-status ;
+  sh:property bdsa:AdmEntityShape-logEntry ;
+  sh:targetClass bdo:Entity ;
+.
+bdsa:AdmEntityShape-logEntry
       a sh:PropertyShape ;
+      bds:propertyShapeType bds:IgnoreShape ;
+      sh:path adm:logEntry ;
+      sh:class adm:LogEntry ;
+      sh:description "must have one or more adm:logEntry of value adm:LogEntry"@en ;
+      sh:minCount 1 ;
+      sh:name "log entry"@en ;
+      sh:nodeKind sh:IRI ;
+.
+bdsa:AdmEntityShape-status
+      a sh:PropertyShape ;
+      bds:propertyShapeType bds:FacetShape ;
       sh:path adm:status ;
       sh:class adm:Status ;
       sh:description "must be exactly one adm:status of value adm:StatusType"@en ;
@@ -49,6 +64,4 @@ bdsa:AdmEntityShape
       sh:minCount 1 ;
       sh:name "status"@en ;
       sh:nodeKind sh:IRI ;
-    ] ;
-  sh:targetClass bdo:Entity ;
 .

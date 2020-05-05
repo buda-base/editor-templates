@@ -44,24 +44,31 @@ bds:nodeShapeType
   a owl:ObjectProperty ;
   rdfs:label "node shape type"@en ;
   rdfs:domain sh:NodeShape ;
-  rdfs:range bds:NodeShapeType ;
+  rdfs:range bds:ShapeType ;
   skos:definition "type of a node shape to discriminate among fact shapes, internal shapes, and so on"@en ;
 .
-bds:NodeShapeType
+bds:propertyShapeType
+  a owl:ObjectProperty ;
+  rdfs:label "node shape type"@en ;
+  rdfs:domain sh:PropertyShape ;
+  rdfs:range bds:ShapeType ;
+  skos:definition "type of a node shape to discriminate among fact shapes, internal shapes, and so on"@en ;
+.
+bds:ShapeType
   a owl:Class ;
 .
 bds:FacetShape
-  a bds:NodeShapeType ;
+  a bds:ShapeType ;
   rdfs:label "node shape is a facet"@en ;
   skos:definition "this shape applies to a resource contained in the graph of root Resource that is a facet of the containing resource"@en ;
 .
 bds:IgnoreShape
-  a bds:NodeShapeType ;
+  a bds:ShapeType ;
   rdfs:label "node shape is ignored for editing"@en ;
   skos:definition "this shape indicates internal resource that is not editable"@en ;
 .
 bds:InternalShape
-  a bds:NodeShapeType ;
+  a bds:ShapeType ;
   rdfs:label "node shape is internal"@en ;
   skos:definition "this shape applies to internal resources such as Volumes in an Imagegroup"@en ;
 .

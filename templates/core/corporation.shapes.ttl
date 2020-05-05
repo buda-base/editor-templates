@@ -43,31 +43,33 @@ bdo:Corporation
 bds:CorporationMemberShape
   a sh:NodeShape ;
   rdfs:label "CorporationMember shape"@en ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:memberOf ;
-      sh:class bdo:Corporation ;
-      sh:description "this respource may be a member of a Corporation"@en ;
-      sh:inversePath bdo:hasMember ;
-      sh:minCount 0 ;
-      sh:name "member of"@en ;
-      sh:nodeKind sh:IRI ;
-    ] ;
+  sh:property bds:CorporationMemberShape-memberOf ;
   sh:targetClass bdo:Person ;
+.
+bds:CorporationMemberShape-memberOf
+  a sh:PropertyShape ;
+  sh:path bdo:memberOf ;
+  sh:class bdo:Corporation ;
+  sh:description "this respource may be a member of a Corporation"@en ;
+  sh:inversePath bdo:hasMember ;
+  sh:minCount 0 ;
+  sh:name "member of"@en ;
+  sh:nodeKind sh:IRI ;
 .
 bds:CorporationShape
   a sh:NodeShape ;
   bds:identifierShape "C" ;
   rdfs:label "Corporation shape"@en ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:hasMember ;
-      sh:class bdo:CorporationMember ;
-      sh:description "this Corporation may have zero or more members"@en ;
-      sh:inversePath bdo:memberOf ;
-      sh:minCount 0 ;
-      sh:name "has member"@en ;
-      sh:nodeKind sh:IRI ;
-    ] ;
+  sh:property bds:CorporationShape-hasMember ;
   sh:targetClass bdo:Corporation ;
+.
+bds:CorporationShape-hasMember
+  a sh:PropertyShape ;
+  sh:path bdo:hasMember ;
+  sh:class bdo:CorporationMember ;
+  sh:description "this Corporation may have zero or more members"@en ;
+  sh:inversePath bdo:memberOf ;
+  sh:minCount 0 ;
+  sh:name "has member"@en ;
+  sh:nodeKind sh:IRI ;
 .
