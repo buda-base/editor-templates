@@ -67,6 +67,7 @@ bds:PersonShape
   bds:identifierPrefix "P" ;
   adm:graphId bdg:PersonShapes ;
   rdfs:label "Person Shape"@en ;
+  sh:property bds:PersonShape-personEvent ;
   sh:property bds:PersonShape-gender ;
   sh:property bds:PersonShape-hasBrother ;
   sh:property bds:PersonShape-hasCousin ;
@@ -94,12 +95,18 @@ bds:PersonShape
   sh:property bds:PersonShape-personTeacherOf ;
   sh:targetClass bdo:Person ;
 .
+bds:PersonShape-personEvent
+  a sh:PropertyShape ;
+  sh:path bdo:personEvent ;
+  sh:class bdo:PersonEvent ;
+  sh:description "this Person may have zero or more events like birth, death, ordination."@en ;
+  sh:minCount 0 ;
+.
 bds:PersonShape-gender
   a sh:PropertyShape ;
   sh:path bdo:personGender ;
   sh:class bdo:Gender ;
   sh:description "this Person may have at most one Gender or none if not known."@en ;
-  sh:group bds:IdentityPropertyGroup ;
   sh:maxCount 1 ;
 .
 bds:PersonShape-genderFemale

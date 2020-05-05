@@ -44,6 +44,11 @@ bds:IdentityPropertyGroup
   rdfs:label "Identity relations"@en ;
   sh:order "0"^^xsd:decimal ;
 .
+bds:EventPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Event relations"@en ;
+  sh:order "1"^^xsd:decimal ;
+.
 bds:KinshipPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Kinshp relations"@en ;
@@ -53,6 +58,18 @@ bds:KinshipPropertyGroup
 bds:PersonNamePropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Name relations"@en ;
+.
+bds:PersonShape-gender
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:IdentityPropertyGroup ;
+  sh:name "has gender"@en ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:PersonShape-personEvent
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:EventPropertyGroup ;
+  sh:name "has event"@en ;
+  sh:order "0"^^xsd:decimal ;
 .
 bds:PersonNameShape-personNameLabel
   dash:editor dash:TextAreaWithLangEditor ;
@@ -66,12 +83,6 @@ bds:PersonNameShape-personNameType
   sh:group bds:PersonNamePropertyGroup ;
   sh:name "name type"@en ;
   sh:order "0"^^xsd:decimal ;
-.
-bds:PersonShape-gender
-  dash:editor dash:InstancesSelectEditor ;
-  sh:group bds:IdentityPropertyGroup ;
-  sh:name "has gender"@en ;
-  sh:order "1"^^xsd:decimal ;
 .
 bds:PersonShape-genderFemale
   sh:name "female"@en ;
