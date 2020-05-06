@@ -40,59 +40,66 @@ ItemShapes:
 bds:ItemPhysicalAssetShape
   a sh:NodeShape ;
   rdfs:label "Item Shape"@en ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bf:heldBy ;
-      sh:class bdo:Agent ;
-      sh:minCount 0 ;
-      sh:name "held by"@en ;
-  ] ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bf:identifiedBy ;
-      sh:inversePath bf:identifies ;
-      sh:class bdo:ItemIdentifier ;
-      sh:minCount 0 ;
-      sh:name "identified by"@en ;
-  ] ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:heldAt ;
-      sh:class bdo:ItemIdentifier ;
-      sh:minCount 0 ;
-      sh:name "is held at"@en ;
-  ] ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:notAfter ;
-      sh:nodeKind xsd:gYear ;
-      sh:maxCount 1 ;
-      sh:minCount 0 ;
-      sh:name "acquired not after"@en ;
-  ] ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:notBefore ;
-      sh:nodeKind xsd:gYear ;
-      sh:maxCount 1 ;
-      sh:minCount 0 ;
-      sh:name "acquired not before"@en ;
-  ] ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:onDate ;
-      sh:nodeKind xsd:date ;
-      sh:maxCount 1 ;
-      sh:minCount 0 ;
-      sh:name "acquired on"@en ;
-  ] ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:onOrAbout ;
-      sh:nodeKind xsd:string ;
-      sh:maxCount 1 ;
-      sh:minCount 0 ;
-      sh:name "acquired on or about"@en ;
-  ] ;
+  sh:property bds:ItemPhysicalAssetShape-bf_heldBy ;
+  sh:property bds:ItemPhysicalAssetShape-bf_identifiedBy ;
+  sh:property bds:ItemPhysicalAssetShape-heldAt ;
+  sh:property bds:ItemPhysicalAssetShape-notAfter ;
+  sh:property bds:ItemPhysicalAssetShape-notBefore ;
+  sh:property bds:ItemPhysicalAssetShape-onDate ;
+  sh:property bds:ItemPhysicalAssetShape-onOrAbout ;
   sh:targetClass bdo:ItemPhysicalAsset ;
+.
+bds:ItemPhysicalAssetShape-bf_heldBy
+  a sh:PropertyShape ;
+  sh:path bf:heldBy ;
+  sh:class bdo:Agent ;
+  sh:minCount 0 ;
+  sh:name "held by"@en ;
+.
+bds:ItemPhysicalAssetShape-bf_identifiedBy
+  a sh:PropertyShape ;
+  sh:path bf:identifiedBy ;
+  sh:inversePath bf:identifies ;
+  sh:class bdo:ItemIdentifier ;
+  sh:minCount 0 ;
+  sh:name "identified by"@en ;
+.
+bds:ItemPhysicalAssetShape-heldAt
+  a sh:PropertyShape ;
+  sh:path bdo:heldAt ;
+  sh:class bdo:ItemIdentifier ;
+  sh:minCount 0 ;
+  sh:name "is held at"@en ;
+.
+bds:ItemPhysicalAssetShape-notAfter
+  a sh:PropertyShape ;
+  sh:path bdo:notAfter ;
+  sh:nodeKind xsd:gYear ;
+  sh:maxCount 1 ;
+  sh:minCount 0 ;
+  sh:name "acquired not after"@en ;
+.
+bds:ItemPhysicalAssetShape-notBefore
+  a sh:PropertyShape ;
+  sh:path bdo:notBefore ;
+  sh:nodeKind xsd:gYear ;
+  sh:maxCount 1 ;
+  sh:minCount 0 ;
+  sh:name "acquired not before"@en ;
+.
+bds:ItemPhysicalAssetShape-onDate
+  a sh:PropertyShape ;
+  sh:path bdo:onDate ;
+  sh:nodeKind xsd:date ;
+  sh:maxCount 1 ;
+  sh:minCount 0 ;
+  sh:name "acquired on"@en ;
+.
+bds:ItemPhysicalAssetShape-onOrAbout
+  a sh:PropertyShape ;
+  sh:path bdo:onOrAbout ;
+  sh:nodeKind xsd:string ;
+  sh:maxCount 1 ;
+  sh:minCount 0 ;
+  sh:name "acquired on or about"@en ;
 .

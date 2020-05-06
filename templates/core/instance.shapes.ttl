@@ -40,67 +40,73 @@ InstanceShapes:
 bds:InstanceShape
   a sh:NodeShape ;
   rdfs:label "Instance Shape"@en ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:creator ;
-      sh:class bdo:AgentAsCreator ;
-      sh:description "this Instance may have zero or more creators."@en ;
-      sh:minCount 0 ;
-      sh:name "instance has translation"@en ;
-    ] ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:instanceOf ;
-      sh:class bdo:Work ;
-      sh:description "this Instance is an instance of at least one Work"@en ;
-      sh:inversePath bdo:hasInstance ;
-      sh:minCount 1 ;
-      sh:name "instance of"@en ;
-    ] ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bf:identifiedBy ;
-      sh:inversePath bf:identifies ;
-      sh:class bdo:InstanceIdentifier ;
-      sh:minCount 0 ;
-      sh:name "identifies instance shape"@en ;
-  ] ;
+  sh:property bds:InstanceShape-creator ;
+  sh:property bds:InstanceShape-instanceOf ;
+  sh:property bds:InstanceShape-bf_identifiedBy ;
   sh:targetClass bdo:Instance ;
+.
+bds:InstanceShape-creator
+  a sh:PropertyShape ;
+  sh:path bdo:creator ;
+  sh:class bdo:AgentAsCreator ;
+  sh:description "this Instance may have zero or more creators."@en ;
+  sh:minCount 0 ;
+  sh:name "instance has translation"@en ;
+.
+bds:InstanceShape-instanceOf
+  a sh:PropertyShape ;
+  sh:path bdo:instanceOf ;
+  sh:class bdo:Work ;
+  sh:description "this Instance is an instance of at least one Work"@en ;
+  sh:inversePath bdo:hasInstance ;
+  sh:minCount 1 ;
+  sh:name "instance of"@en ;
+.
+bds:InstanceShape-bf_identifiedBy
+  a sh:PropertyShape ;
+  sh:path bf:identifiedBy ;
+  sh:inversePath bf:identifies ;
+  sh:class bdo:InstanceIdentifier ;
+  sh:minCount 0 ;
+  sh:name "identifies instance shape"@en ;
 .
 bds:PhysicalInstanceShape
   a sh:NodeShape ;
   rdfs:label "PhysicalInstance Shape"@en ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:printMethod ;
-      sh:class bdo:PrintMethod ;
-      sh:description "this PhysicalInstance may have a single PrintMethod"@en ;
-      sh:maxCount 1 ;
-      sh:minCount 0 ;
-      sh:name "instance print method"@en ;
-    ] ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:binding ;
-      sh:class bdo:Binding ;
-      sh:description "this PhysicalInstance may have a single Binding"@en ;
-      sh:maxCount 1 ;
-      sh:minCount 0 ;
-      sh:name "instance binding"@en ;
-    ] ;
+  sh:property bds:PhysicalInstanceShape-binding ;
+  sh:property bds:PhysicalInstanceShape-printMethod ;
   sh:targetClass bdo:PhysicalInstance ;
+.
+bds:PhysicalInstanceShape-binding
+  a sh:PropertyShape ;
+  sh:path bdo:binding ;
+  sh:class bdo:Binding ;
+  sh:description "this PhysicalInstance may have a single Binding"@en ;
+  sh:maxCount 1 ;
+  sh:minCount 0 ;
+  sh:name "instance binding"@en ;
+.
+bds:PhysicalInstanceShape-printMethod
+  a sh:PropertyShape ;
+  sh:path bdo:printMethod ;
+  sh:class bdo:PrintMethod ;
+  sh:description "this PhysicalInstance may have a single PrintMethod"@en ;
+  sh:maxCount 1 ;
+  sh:minCount 0 ;
+  sh:name "instance print method"@en ;
 .
 bds:SerialInstanceShape
   a sh:NodeShape ;
   rdfs:label "SerialInstance Shape"@en ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path bdo:instanceOf ;
-      sh:class bdo:SerialMember ;
-      sh:description "this is an instance of a SerialMember"@en ;
-      sh:inversePath bdo:hasInstance ;
-      sh:minCount 1 ;
-      sh:name "instance of serial"@en ;
-    ] ;
+  sh:property bds:SerialInstanceShape-instanceOf ;
   sh:targetClass bdo:SerialInstance ;
+.
+bds:SerialInstanceShape-instanceOf
+  a sh:PropertyShape ;
+  sh:path bdo:instanceOf ;
+  sh:class bdo:SerialMember ;
+  sh:description "this is an instance of a SerialMember"@en ;
+  sh:inversePath bdo:hasInstance ;
+  sh:minCount 1 ;
+  sh:name "instance of serial"@en ;
 .

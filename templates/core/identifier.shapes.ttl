@@ -43,18 +43,19 @@ bds:IsbnShape
   rdfs:label "ISBN shape"@en ;
   rdfs:subClassOf rdfs:Resource ;
   rdfs:isDefinedBy "https://www.isbn-international.org/sites/default/files/ISBN%20Manual%202012%20-corr.pdf"^^xsd:anyURI ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path rdf:value ;
-      sh:class xsd:string ;
-      sh:description "this ISBN should conform to the pattern"@en ;
-      sh:maxCount 1 ;
-      sh:minCount 0 ;
-      sh:name "ISBN shape"@en ;
-      sh:pattern "^(97(8|9))?\\d{9}(\\d|X)$" ;
-    ] ;
+  sh:property bds:IsbnShape-rdf_value ;
   sh:targetClass bf:Isbn ;
   skos:editorialNote "The regex is does not take into account opitional blank, ' ', or dash, '-', chars separating the various groups. Also there is no spec for calculating the check digit"@en ;
+.
+bds:IsbnShape-rdf_value
+  a sh:PropertyShape ;
+  sh:path rdf:value ;
+  sh:class xsd:string ;
+  sh:description "this ISBN should conform to the pattern"@en ;
+  sh:maxCount 1 ;
+  sh:minCount 0 ;
+  sh:name "ISBN shape"@en ;
+  sh:pattern "^(97(8|9))?\\d{9}(\\d|X)$" ;
 .
 bds:LccnShape
   a rdfs:Class ;
@@ -62,15 +63,16 @@ bds:LccnShape
   rdfs:label "LCCN shape"@en ;
   rdfs:subClassOf rdfs:Resource ;
   rdfs:isDefinedBy <http://www.loc.gov/marc/lccn-namespace.html> ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path rdf:value ;
-      sh:class xsd:string ;
-      sh:description "this LCCN should conform to the pattern"@en ;
-      sh:maxCount 1 ;
-      sh:minCount 0 ;
-      sh:name "LCCN shape"@en ;
-      sh:pattern "[[a-z]|[[a-z][a-z]|dd]|[a-z][[a-z][a-z]|dd]|[a-z][a-z]dd]dddddddd" ;
-    ] ;
+  sh:property bds:LccnShape-rdf_value ;
   sh:targetClass bf:Lccn ;
+.
+bds:LccnShape-rdf_value
+  a sh:PropertyShape ;
+  sh:path rdf:value ;
+  sh:class xsd:string ;
+  sh:description "this LCCN should conform to the pattern"@en ;
+  sh:maxCount 1 ;
+  sh:minCount 0 ;
+  sh:name "LCCN shape"@en ;
+  sh:pattern "[[a-z]|[[a-z][a-z]|dd]|[a-z][[a-z][a-z]|dd]|[a-z][a-z]dd]dddddddd" ;
 .
