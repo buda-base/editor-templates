@@ -38,9 +38,53 @@ RootShapes:
 bds:EntityShape
   a sh:NodeShape ;
   bds:nodeShapeType bds:FacetShape ;
-  rdfs:label "Entity shape"@en ;
+  sh:name "Entity shape"@en ;
   sh:property bds:EntityShape-skos_prefLabel ;
+  sh:property bds:EntityShape-note ;
   sh:targetClass bdo:Entity ;
+.
+bds:EntityShape-note
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:FacetShape ;
+  sh:description "Zero or more notes may be associated with an entity"@en ;
+  sh:minCount 0 ;
+  sh:path bdo:note ;
+  sh:node bds:NoteShape ;
+  sh:nodeKind sh:IRI ;
+.
+bds:NoteShape
+  a sh:NodeShape ;
+  bds:identifierPrefix "NT" ;
+  bds:nodeShapeType bds:FacetShape ;
+  sh:property bds:NoteShape-contentLocation ;
+  sh:property bds:NoteShape-noteSource ;
+  sh:property bds:NoteShape-noteText ;
+  sh:property bds:NoteShape-noteType ;
+  sh:targetClass bdo:Note ;
+.
+bds:NoteShape-contentLocation
+  a sh:PropertyShape ;
+  sh:path bdo:contentLocation ;
+  sh:class bdo:ContentLocation ;
+  sh:minCount 0 ;  
+.
+bds:NoteShape-noteSource
+  a sh:PropertyShape ;
+  sh:path bdo:noteSource ;
+  sh:class bdo:BiblioEntity ;
+  sh:minCount 0 ;  
+.
+bds:NoteShape-noteText
+  a sh:PropertyShape ;
+  sh:path bdo:noteText ;
+  sh:datatype rdf:langString ;
+  sh:minCount 0 ;  
+.
+bds:NoteShape-noteType
+  a sh:PropertyShape ;
+  sh:path bdo:noteType ;
+  sh:datatype xsd:string ;
+  sh:minCount 0 ;  
 .
 bds:EntityShape-skos_prefLabel
   a sh:PropertyShape ;
