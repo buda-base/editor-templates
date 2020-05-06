@@ -72,3 +72,37 @@ bds:InternalShape
   rdfs:label "node shape is internal"@en ;
   skos:definition "this shape applies to internal resources such as Volumes in an Imagegroup"@en ;
 .
+bds:increment
+  a owl:DatatypeProperty ;
+  rdfs:label "increment by"@en ;
+  rdfs:domain sh:PropertyShape ;
+  rdfs:range xsd:integer ;
+  skos:definition "an amount to increment the value of the sh:path property by"@en ;
+.
+bds:sortRank
+  a owl:DatatypeProperty ;
+  rdfs:label "sort rank"@en ;
+  rdfs:domain sh:PropertyShape ;
+  rdfs:range xsd:integer ;
+  skos:definition "values of the sh:path property are used to sort results before higher ranked properties."@en ;
+.
+bds:sortDirection
+  a owl:ObjecttypeProperty ;
+  rdfs:label "sort direction"@en ;
+  rdfs:domain sh:PropertyShape ;
+  rdfs:range bds:SortDirection ;
+  skos:definition "values of the sh:path property are sorted in the specified direction."@en ;
+.
+bds:SortDirection
+  a owl:Class ;
+.
+bds:SortAscending
+  a bds:SortDirection ;
+  rdfs:label "sort ascending"@en ;
+  skos:definition "items should be sorted in ascending order"@en ;
+.
+bds:SortDescending
+  a bds:SortDirection ;
+  rdfs:label "sort descending"@en ;
+  skos:definition "items should be sorted in descending order"@en ;
+.
