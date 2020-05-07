@@ -57,6 +57,11 @@ bds:propertyShapeType
 bds:ShapeType
   a owl:Class ;
 .
+bds:ExternalShape
+  a bds:ShapeType ;
+  rdfs:label "node shape refers to resource external to focus node graph"@en ;
+  skos:definition "this shape indicates external resource that is not contained in the focus node graph"@en ;
+.
 bds:FacetShape
   a bds:ShapeType ;
   rdfs:label "node shape is a facet"@en ;

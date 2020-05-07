@@ -40,7 +40,7 @@ bds:PersonEventShapes
 .
 bds:PersonEventShape-personEventCorporation
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:IgnoreShape ;
+  bds:propertyShapeType bds:ExternalShapeShape ;
   sh:path bdo:personEventCorporation ;
   dash:editor dash:InstancesSelectEditor ;
   sh:class bdo:Corporation ;

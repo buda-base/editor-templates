@@ -58,7 +58,7 @@ bds:EventShape-eventText
 .
 bds:EventShape-eventWhere
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:IgnoreShape ;
+  bds:propertyShapeType bds:ExternalShapeShape ;
   sh:path bdo:eventWhere ;
   dash:editor dash:InstancesSelectEditor ;
   sh:class bdo:Place ;
@@ -67,7 +67,7 @@ bds:EventShape-eventWhere
 .
 bds:EventShape-eventWho
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:IgnoreShape ;
+  bds:propertyShapeType bds:ExternalShapeShape ;
   sh:path bdo:eventWho ;
   dash:editor dash:InstancesSelectEditor ;
   sh:class bdo:AgentInRole ;
