@@ -101,6 +101,7 @@
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/CorporationShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/corporation.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/corporation.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/CorporationShapes"/>
     </OntologySpec>
 
     <OntologySpec>
@@ -122,6 +123,7 @@
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/InstanceShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/instance.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/instance.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/InstanceShapes"/>
     </OntologySpec>
 
     <OntologySpec>
@@ -129,6 +131,7 @@
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/ItemShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/item.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/item.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/ItemShapes"/>
     </OntologySpec>
 
     <OntologySpec>
@@ -159,6 +162,7 @@
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/WorkShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/work.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/work.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/WorkShapes"/>
     </OntologySpec>
     
 </rdf:RDF>
