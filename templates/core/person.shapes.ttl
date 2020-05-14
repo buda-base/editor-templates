@@ -346,7 +346,7 @@ bds:PersonShape-personName
   a sh:PropertyShape ;
   sh:path bdo:personName ;
   sh:description "this Person may have one or more names."@en ;
-  sh:message ":personName object must be a subClassOf* :PersonName"
+  sh:message ":personName object must be a subClassOf* :PersonName" ;
   sh:minCount 1 ;
   sh:node bds:PersonNameShape ;
   sh:nodeKind sh:IRI ;
