@@ -32,6 +32,30 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bds:CheckPersonClassShape  a      sh:NodeShape ;
+    rdfs:label      "Check Person Class Shape"@en ;
+    sh:targetSubjectsOf bdo:isRoot ;
+    sh:message "focusNode must be a bdo:Person" ;
+    sh:sparql [
+      a sh:SPARQLConstraint ;
+      sh:prefixes [
+        sh:declare [
+          sh:prefix "rdf" ;
+          sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#" ;
+        ] , [
+          sh:prefix "bdo" ;
+          sh:namespace "http://purl.bdrc.io/ontology/core/" ;
+        ]
+      ] ;
+      sh:select """
+        select distinct $this
+        where {
+             filter not exists { $this rdf:type bdo:Person }
+        }	  
+      """ ;
+    ] ;
+.
+
 bdo:Person
   bds:rootShape bds:PersonShape ;
 .
