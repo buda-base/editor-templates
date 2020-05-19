@@ -31,7 +31,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bdo:Person bdo:localShapeGraph bdg:PersonLocalShapes .
+bdo:Person bds:localShapeGraph bdg:PersonLocalShapes .
 
 bds:PersonShape-hasBrother sh:deactivated true .
 bds:PersonShape-hasCousin sh:deactivated true .
