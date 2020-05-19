@@ -68,7 +68,7 @@
     <!-- ======== bds extensions to shacl vocabulary ======== -->
 
     <OntologySpec>
-        <!-- local version of the bds extensions to shacl vocabulary -->
+        <!-- the bds extensions to shacl vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/BaseShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/base.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/base.shapes.ttl"/>
@@ -78,7 +78,7 @@
     <!-- ======== bdo admin shapes ontologies ======== -->
     
     <OntologySpec>
-        <!-- local version of the admin shapes vocabulary -->
+        <!-- the admin shapes vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/adm/AdminShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/adm/adm.core.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/adm/adm.core.shapes.ttl"/>
@@ -88,7 +88,7 @@
     <!-- ======== bdo shapes ontologies ======== -->
     
     <OntologySpec>
-        <!-- local version of the root shapes for entities -->
+        <!-- the root shapes for entities -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/RootShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/root.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/root.shapes.ttl"/>
@@ -97,7 +97,7 @@
     <!-- ======== supporting shapes ======== -->
 
     <OntologySpec>
-        <!-- local version of Corporation shapes -->
+        <!-- Corporation shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/CorporationShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/corporation.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/corporation.shapes.ttl"/>
@@ -105,21 +105,21 @@
     </OntologySpec>
 
     <OntologySpec>
-        <!-- local version of Event shapes -->
+        <!-- Event shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/EventShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/event.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/event.shapes.ttl"/>
     </OntologySpec>
 
     <OntologySpec>
-        <!-- local version of Identifier shapes -->
+        <!-- Identifier shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/IdentifierShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/identifier.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/identifier.shapes.ttl"/>
     </OntologySpec>
 
     <OntologySpec>
-        <!-- local version of Instance shapes -->
+        <!-- Instance shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/InstanceShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/instance.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/instance.shapes.ttl"/>
@@ -127,7 +127,7 @@
     </OntologySpec>
 
     <OntologySpec>
-        <!-- local version of Item shapes -->
+        <!-- Item shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/ItemShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/item.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/item.shapes.ttl"/>
@@ -135,14 +135,14 @@
     </OntologySpec>
 
     <OntologySpec>
-        <!-- local version of PersonEvent shapes -->
+        <!-- PersonEvent shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/PersonEventShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/person.event.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/person.event.shapes.ttl"/>
     </OntologySpec>
 
     <OntologySpec>
-        <!-- local version of Person shapes -->
+        <!-- Person shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/PersonShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/person.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/person.shapes.ttl"/>
@@ -150,7 +150,15 @@
     </OntologySpec>
 
     <OntologySpec>
-        <!-- local version of Person UI template shapes -->
+        <!-- Person shapes localized to a single Person graph-->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/PersonLocalShapes/"/>
+        <altURL    rdf:resource="editor-templates/templates/core/person.local.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/person.local.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/PersonLocalShapes"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- Person UI template shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/PersonUIShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/person.ui.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/person.ui.shapes.ttl"/>
@@ -158,7 +166,7 @@
     </OntologySpec>
 
     <OntologySpec>
-        <!-- local version of Work shapes -->
+        <!-- Work shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/WorkShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/work.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/work.shapes.ttl"/>

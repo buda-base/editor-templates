@@ -152,7 +152,6 @@ bds:PersonShape-hasBrother
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasBrother ;
   sh:description "This Person may have zero or more brothers."@en ;
-  sh:inversePath bdo:hasSibling ;
   sh:node bds:MaleShape ;
 .
 bds:PersonShape-hasCousin
@@ -161,14 +160,12 @@ bds:PersonShape-hasCousin
   sh:path bdo:hasCousin ;
   sh:class bdo:Person ;
   sh:description "this Person may have zero or more cousins."@en ;
-  sh:inversePath bdo:hasCousin ;
 .
 bds:PersonShape-hasDaughter
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasDaughter ;
   sh:description "this Person may have zero or more daughters."@en ;
-  sh:inversePath bdo:hasParent ;
   sh:node bds:FemaleShape ;
 .
 bds:PersonShape-hasFather
@@ -176,7 +173,6 @@ bds:PersonShape-hasFather
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasFather ;
   sh:description "this Person may have a father."@en ;
-  sh:inversePath bdo:hasChild ;
   sh:maxCount 1 ;
   sh:node bds:MaleShape ;
 .
@@ -186,7 +182,6 @@ bds:PersonShape-hasGrandChild
   sh:path bdo:hasGrandChild ;
   sh:class bdo:Person ;
   sh:description "this Person may have zero or more grandchildren."@en ;
-  sh:inversePath bdo:hasGrandParent ;
   sh:order "3"^^xsd:decimal ;
 .
 bds:PersonShape-hasGrandParent
@@ -195,7 +190,6 @@ bds:PersonShape-hasGrandParent
   sh:path bdo:hasGrandParent ;
   sh:class bdo:Person ;
   sh:description "this Person may have zero upto 4 grandparents."@en ;
-  sh:inversePath bdo:hasGrandChild ;
   sh:maxCount 4 ;
 .
 bds:PersonShape-hasGranddaughter
@@ -203,7 +197,6 @@ bds:PersonShape-hasGranddaughter
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasGranddaughter ;
   sh:description "this Person may have zero or more granddaughters."@en ;
-  sh:inversePath bdo:hasGrandParent ;
   sh:node bds:FemaleShape ;
 .
 bds:PersonShape-hasGrandfather
@@ -211,7 +204,6 @@ bds:PersonShape-hasGrandfather
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasGrandfather ;
   sh:description "this Person may have at most two Grandfathers."@en ;
-  sh:inversePath bdo:hasGrandChild ;
   sh:maxCount 2 ;
   sh:node bds:MaleShape ;
 .
@@ -220,7 +212,6 @@ bds:PersonShape-hasGrandmother
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasGrandmother ;
   sh:description "this Person may have at most two Grandmothers."@en ;
-  sh:inversePath bdo:hasGrandChild ;
   sh:maxCount 2 ;
   sh:node bds:FemaleShape ;
 .
@@ -229,7 +220,6 @@ bds:PersonShape-hasGrandson
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasGrandson ;
   sh:description "this Person may have zero or more grandsons."@en ;
-  sh:inversePath bdo:hasGrandParent ;
   sh:node bds:MaleShape ;
 .
 bds:PersonShape-hasHusband
@@ -237,7 +227,6 @@ bds:PersonShape-hasHusband
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasHusband ;
   sh:description "this Person may have a husband."@en ;
-  sh:inversePath bdo:hasWife ;
   sh:name "has husband"@en ;
   sh:node bds:MaleShape ;
 .
@@ -246,7 +235,6 @@ bds:PersonShape-hasMother
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasMother ;
   sh:description "this Person may have at most one mother."@en ;
-  sh:inversePath bdo:hasChild ;
   sh:maxCount 1 ;
   sh:node bds:FemaleShape ;
 .
@@ -255,7 +243,6 @@ bds:PersonShape-hasOlderBrother
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasOlderBrother ;
   sh:description "this Person may have zero or more older brothers."@en ;
-  sh:inversePath bdo:hasSibling ;
   sh:node bds:MaleShape ;
 .
 bds:PersonShape-hasOlderSister
@@ -263,7 +250,6 @@ bds:PersonShape-hasOlderSister
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasOlderSister ;
   sh:description "this Person may have zero or more older sisters."@en ;
-  sh:inversePath bdo:hasSibling ;
   sh:name "has older sister"@en ;
   sh:order "2"^^xsd:decimal ;
 .
@@ -273,7 +259,6 @@ bds:PersonShape-hasParent
   sh:path bdo:hasParent ;
   sh:class bdo:Person ;
   sh:description "this Person may have at most two parents."@en ;
-  sh:inversePath bdo:hasChild ;
   sh:maxCount 2 ;
 .
 bds:PersonShape-hasSibling
@@ -282,14 +267,12 @@ bds:PersonShape-hasSibling
   sh:path bdo:hasSibling ;
   sh:class bdo:Person ;
   sh:description "this Person may have zero or more siblings."@en ;
-  sh:inversePath bdo:hasSibling ;
 .
 bds:PersonShape-hasSister
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasSister ;
   sh:description "this Person may have zero or more sisters."@en ;
-  sh:inversePath bdo:hasSibling ;
   sh:node bds:FemaleShape ;
 .
 bds:PersonShape-hasSon
@@ -297,7 +280,6 @@ bds:PersonShape-hasSon
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasSon ;
   sh:description "this Person may have zero or more sons."@en ;
-  sh:inversePath bdo:hasParent ;
   sh:node bds:MaleShape ;
 .
 bds:PersonShape-hasSpouse
@@ -306,7 +288,6 @@ bds:PersonShape-hasSpouse
   sh:path bdo:hasSpouse ;
   sh:class bdo:Person ;
   sh:description "this Person may have at most one spouse."@en ;
-  sh:inversePath bdo:hasSpouse ;
   sh:maxCount 1 ;
 .
 bds:PersonShape-hasWife
@@ -314,7 +295,6 @@ bds:PersonShape-hasWife
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasWife ;
   sh:description "this Person may have at most one wife."@en ;
-  sh:inversePath bdo:hasHusband ;
   sh:maxCount 1 ;
   sh:node bds:FemaleShape ;
 .
@@ -323,7 +303,6 @@ bds:PersonShape-hasYoungerBrother
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasYoungerBrother ;
   sh:description "this Person may have zero or more younger brothers."@en ;
-  sh:inversePath bdo:hasSibling ;
   sh:node bds:MaleShape ;
 .
 bds:PersonShape-hasYoungerSister
@@ -331,7 +310,6 @@ bds:PersonShape-hasYoungerSister
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasYoungerSister ;
   sh:description "this Person may have zero or more younger sisters."@en ;
-  sh:inversePath bdo:hasSibling ;
   sh:node bds:FemaleShape ;
 .
 bds:PersonShape-kinWith
@@ -340,7 +318,6 @@ bds:PersonShape-kinWith
   sh:path bdo:kinWith ;
   sh:class bdo:Person ;
   sh:description "this Person may have zero or more kin."@en ;
-  sh:inversePath bdo:kinWith ;
 .
 bds:PersonShape-personName
   a sh:PropertyShape ;

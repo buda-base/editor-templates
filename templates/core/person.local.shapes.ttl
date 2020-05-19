@@ -1,0 +1,65 @@
+# baseURI: http://purl.bdrc.io/shapes/core/PersonLocalShapes/
+# imports: http://datashapes.org/dash
+# imports: http://purl.bdrc.io/shapes/core/PersonShapes/
+# prefix: PersonLocalShapes
+
+@prefix PersonLocalShapes: <http://purl.bdrc.io/shapes/core/PersonLocalShapes/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admin.data/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
+@prefix bdsa: <http://purl.bdrc.io/ontology/shapes/adm/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bdo:Person bdo:localShapeGraph bdg:PersonLocalShapes .
+
+bds:PersonShape-hasBrother sh:deactivated true .
+bds:PersonShape-hasCousin sh:deactivated true .
+bds:PersonShape-hasDaughter sh:deactivated true .
+bds:PersonShape-hasFather sh:deactivated true .
+bds:PersonShape-hasGrandChild sh:deactivated true .
+bds:PersonShape-hasGrandParent sh:deactivated true .
+bds:PersonShape-hasGranddaughter sh:deactivated true .
+bds:PersonShape-hasGrandfather sh:deactivated true .
+bds:PersonShape-hasGrandmother sh:deactivated true .
+bds:PersonShape-hasGrandson sh:deactivated true .
+bds:PersonShape-hasMother sh:deactivated true .
+bds:PersonShape-hasOlderBrother sh:deactivated true .
+bds:PersonShape-hasOlderSister sh:deactivated true .
+bds:PersonShape-hasParent sh:deactivated true .
+bds:PersonShape-hasSibling sh:deactivated true .
+bds:PersonShape-hasSister sh:deactivated true .
+bds:PersonShape-hasSon sh:deactivated true .
+bds:PersonShape-hasSpouse sh:deactivated true .
+bds:PersonShape-hasYoungerBrother sh:deactivated true .
+bds:PersonShape-hasYoungerSister sh:deactivated true .
+bds:PersonShape-kinWith sh:deactivated true .
+bds:PersonShape-personStudentOf sh:deactivated true .
+bds:PersonShape-personTeacherOf sh:deactivated true .
+
+PersonLocalShapes:
+  a owl:Ontology ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/PersonShapes/> ;
+  owl:versionInfo "SHACL constraints for a single Person graph" ;
+.

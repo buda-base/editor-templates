@@ -113,9 +113,13 @@ bds:LabelShape-hasTranslation
   sh:path bdo:hasTranslation ;
   sh:class bdo:Label ;
   sh:description "this Label may have zero or more tanslations"@en ;
-  sh:inversePath bdo:translationOf ;
   sh:minCount 0 ;
   sh:name "label has translation"@en ;
+.
+bds:localShapeGraph
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Entity ;
+  rdfs:range xsd:anyURI ;
 .
 bds:rootShape
   a owl:ObjectProperty ;

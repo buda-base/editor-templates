@@ -58,14 +58,12 @@ bds:InstanceShape-instanceOf
   sh:path bdo:instanceOf ;
   sh:class bdo:Work ;
   sh:description "this Instance is an instance of at least one Work"@en ;
-  sh:inversePath bdo:hasInstance ;
   sh:minCount 1 ;
   sh:name "instance of"@en ;
 .
 bds:InstanceShape-bf_identifiedBy
   a sh:PropertyShape ;
   sh:path bf:identifiedBy ;
-  sh:inversePath bf:identifies ;
   sh:class bdo:InstanceIdentifier ;
   sh:minCount 0 ;
   sh:name "identifies instance shape"@en ;
@@ -106,7 +104,6 @@ bds:SerialInstanceShape-instanceOf
   sh:path bdo:instanceOf ;
   sh:class bdo:SerialMember ;
   sh:description "this is an instance of a SerialMember"@en ;
-  sh:inversePath bdo:hasInstance ;
   sh:minCount 1 ;
   sh:name "instance of serial"@en ;
 .

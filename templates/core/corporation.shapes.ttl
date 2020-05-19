@@ -51,7 +51,6 @@ bds:CorporationMemberShape-memberOf
   sh:path bdo:memberOf ;
   sh:class bdo:Corporation ;
   sh:description "this respource may be a member of a Corporation"@en ;
-  sh:inversePath bdo:hasMember ;
   sh:minCount 0 ;
   sh:name "member of"@en ;
   sh:nodeKind sh:IRI ;
@@ -68,7 +67,6 @@ bds:CorporationShape-hasMember
   sh:path bdo:hasMember ;
   sh:class bdo:CorporationMember ;
   sh:description "this Corporation may have zero or more members"@en ;
-  sh:inversePath bdo:memberOf ;
   sh:minCount 0 ;
   sh:name "has member"@en ;
   sh:nodeKind sh:IRI ;

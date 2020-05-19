@@ -47,7 +47,6 @@ bds:SerialMemberShape-hasInstance
   sh:path bdo:hasInstance ;
   sh:class bdo:Instance ;
   sh:description "this SerialMember may have a SerialInstance"@en ;
-  sh:inversePath bdo:instanceOf ;
   sh:maxCount 1 ;
   sh:minCount 0 ;
   sh:name "has serial instance"@en ;
@@ -57,7 +56,6 @@ bds:SerialMemberShape-memberOf
   sh:path bdo:memberOf ;
   sh:class bdo:SerialWork ;
   sh:description "this SerialMember is a series member of a SerialWork"@en ;
-  sh:inversePath bdo:hasMember ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
   sh:name "series member"@en ;
@@ -73,7 +71,6 @@ bds:SerialWorkShape-hasMember
   sh:path bdo:hasMember ;
   sh:class bdo:SerialMember ;
   sh:description "this SerialWork has zero or more SerialMembers"@en ;
-  sh:inversePath bdo:memberOf ;
   sh:minCount 0 ;
   sh:name "has series member"@en ;
 .
@@ -104,7 +101,6 @@ bds:WorkShape-hasInstance
   sh:path bdo:hasInstance ;
   sh:class bdo:Instance ;
   sh:description "this Work may have zero or more Instances"@en ;
-  sh:inversePath bdo:instanceOf ;
   sh:minCount 0 ;
   sh:name "has instance"@en ;
 .
@@ -113,7 +109,6 @@ bds:WorkShape-hasTranslation
   sh:path bdo:hasTranslation ;
   sh:class bdo:Work ;
   sh:description "this Work may have zero or more tanslations" ;
-  sh:inversePath bdo:translationOf ;
   sh:minCount 0 ;
   sh:name "work has translation"@en ;
 .
@@ -143,7 +138,6 @@ bds:WorkShape-workTitle2
 bds:WorkShape-bf_identifiedBy
   a sh:PropertyShape ;
   sh:path bf:identifiedBy ;
-  sh:inversePath bf:identifies ;
   sh:class bdo:WorkIdentifier ;
   sh:minCount 0 ;
   sh:name "identifies Work shape"@en ;
