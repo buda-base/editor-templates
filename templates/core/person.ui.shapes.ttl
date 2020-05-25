@@ -32,7 +32,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bdo:Person
-  bds:uiShape bds:PersonUIShape ;
+  bds:uiShapeGraph bdg:PersonUIShapes ;
 .
 bds:AssociatedPersonsPropertyGroup
   a sh:PropertyGroup ;
@@ -248,6 +248,7 @@ bds:PersonShape-personTeacherOf
 bds:PersonUIShape
   a sh:NodeShape ;
   adm:graphId bdg:PersonUIShapes ;
+  bds:isTopShape true ;
   rdfs:label "Person UI Shapes"@en ;
   sh:property bds:PersonShape-gender ;
   sh:property bds:PersonShape-hasBrother ;

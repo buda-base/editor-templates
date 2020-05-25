@@ -116,18 +116,23 @@ bds:LabelShape-hasTranslation
   sh:minCount 0 ;
   sh:name "label has translation"@en ;
 .
-bds:localShape
+bds:isTopShape
   a owl:ObjectProperty ;
-  rdfs:domain bdo:Entity ;
-  rdfs:range sh:NodeShape ;
+  rdfs:domain bds:NodeShape ;
+  rdfs:range xsd:boolean ;
 .
-bds:topShape
+bds:localShapeGraph
   a owl:ObjectProperty ;
   rdfs:domain bdo:Entity ;
-  rdfs:range sh:NodeShape ;
+  rdfs:range xsd:anyURI ;
 .
-bds:uiShape
+bds:topShapeGraph
   a owl:ObjectProperty ;
   rdfs:domain bdo:Entity ;
-  rdfs:range sh:NodeShape ;
+  rdfs:range xsd:anyURI ;
+.
+bds:uiShapeGraph
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Entity ;
+  rdfs:range xsd:anyURI ;
 .

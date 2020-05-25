@@ -33,7 +33,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bdo:Person
-  bds:topShape bds:PersonShape ;
+  bds:topShapeGraph bdg:PersonShapes ;
 .
 PersonShapes:
   a owl:Ontology ;
@@ -45,6 +45,7 @@ PersonShapes:
 bds:PersonShape
   a sh:NodeShape ;
   adm:graphId bdg:PersonShapes ;
+  bds:isTopShape true ;
   rdfs:label "Person Shape"@en ;
   sh:property bds:PersonShape-hasBrother ;
   sh:property bds:PersonShape-hasCousin ;

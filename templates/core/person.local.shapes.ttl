@@ -32,7 +32,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bdo:Person 
-  bds:localShape bds:PersonLocalShape ;
+  bds:localShapeGraph bdg:PersonLocalShapes ;
 .
 PersonLocalShapes:
   a owl:Ontology ;
@@ -42,8 +42,9 @@ PersonLocalShapes:
 .
 bds:PersonLocalShape
   a sh:NodeShape ;
-  bds:identifierPrefix "P" ;
   adm:graphId bdg:PersonLocalShapes ;
+  bds:identifierPrefix "P" ;
+  bds:isTopShape true ;
   rdfs:label "Person Shape"@en ;
   sh:property bds:PersonShape-personEvent ;
   sh:property bds:PersonShape-gender ;
