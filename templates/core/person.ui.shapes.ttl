@@ -33,6 +33,7 @@
 
 bdo:Person
   bds:uiShapeGraph bdg:PersonUIShapes ;
+  bds:uiShape bds:PersonUIShape ;
 .
 bds:AssociatedPersonsPropertyGroup
   a sh:PropertyGroup ;

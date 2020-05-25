@@ -33,6 +33,7 @@
 
 bdo:Person 
   bds:localShapeGraph bdg:PersonLocalShapes ;
+  bds:localShape bds:PersonLocalShape ;
 .
 PersonLocalShapes:
   a owl:Ontology ;
