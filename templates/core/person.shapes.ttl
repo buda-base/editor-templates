@@ -35,6 +35,7 @@
 bdo:Person
   bds:topShapeGraph bdg:PersonShapes ;
 .
+
 PersonShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
