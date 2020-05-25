@@ -44,7 +44,7 @@ bds:PersonLocalShape
   a sh:NodeShape ;
   adm:graphId bdg:PersonLocalShapes ;
   bds:identifierPrefix "P" ;
-  bds:isTopShape true ;
+  bds:isLocalShape true ;
   rdfs:label "Person Shape"@en ;
   sh:property bds:PersonShape-personEvent ;
   sh:property bds:PersonShape-gender ;

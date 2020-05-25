@@ -116,7 +116,17 @@ bds:LabelShape-hasTranslation
   sh:minCount 0 ;
   sh:name "label has translation"@en ;
 .
+bds:isLocalShape
+  a owl:ObjectProperty ;
+  rdfs:domain bds:NodeShape ;
+  rdfs:range xsd:boolean ;
+.
 bds:isTopShape
+  a owl:ObjectProperty ;
+  rdfs:domain bds:NodeShape ;
+  rdfs:range xsd:boolean ;
+.
+bds:isUIShape
   a owl:ObjectProperty ;
   rdfs:domain bds:NodeShape ;
   rdfs:range xsd:boolean ;

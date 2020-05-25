@@ -248,7 +248,7 @@ bds:PersonShape-personTeacherOf
 bds:PersonUIShape
   a sh:NodeShape ;
   adm:graphId bdg:PersonUIShapes ;
-  bds:isTopShape true ;
+  bds:isUIhape true ;
   rdfs:label "Person UI Shapes"@en ;
   sh:property bds:PersonShape-gender ;
   sh:property bds:PersonShape-hasBrother ;
