@@ -1,6 +1,6 @@
 # baseURI: http://purl.bdrc.io/shapes/core/PersonLocalShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/shapes/core/PersonShapes/
+# imports: http://purl.bdrc.io/shapes/core/PersonEventShapes/
 # prefix: PersonLocalShapes
 
 @prefix PersonLocalShapes: <http://purl.bdrc.io/shapes/core/PersonLocalShapes/> .
@@ -31,35 +31,110 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bdo:Person bds:localShapeGraph bdg:PersonLocalShapes .
-
-bds:PersonShape-hasBrother sh:deactivated true .
-bds:PersonShape-hasCousin sh:deactivated true .
-bds:PersonShape-hasDaughter sh:deactivated true .
-bds:PersonShape-hasFather sh:deactivated true .
-bds:PersonShape-hasGrandChild sh:deactivated true .
-bds:PersonShape-hasGrandParent sh:deactivated true .
-bds:PersonShape-hasGranddaughter sh:deactivated true .
-bds:PersonShape-hasGrandfather sh:deactivated true .
-bds:PersonShape-hasGrandmother sh:deactivated true .
-bds:PersonShape-hasGrandson sh:deactivated true .
-bds:PersonShape-hasMother sh:deactivated true .
-bds:PersonShape-hasOlderBrother sh:deactivated true .
-bds:PersonShape-hasOlderSister sh:deactivated true .
-bds:PersonShape-hasParent sh:deactivated true .
-bds:PersonShape-hasSibling sh:deactivated true .
-bds:PersonShape-hasSister sh:deactivated true .
-bds:PersonShape-hasSon sh:deactivated true .
-bds:PersonShape-hasSpouse sh:deactivated true .
-bds:PersonShape-hasYoungerBrother sh:deactivated true .
-bds:PersonShape-hasYoungerSister sh:deactivated true .
-bds:PersonShape-kinWith sh:deactivated true .
-bds:PersonShape-personStudentOf sh:deactivated true .
-bds:PersonShape-personTeacherOf sh:deactivated true .
-
+bdo:Person 
+  bds:localShape bds:PersonLocalShape ;
+.
 PersonLocalShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports <http://purl.bdrc.io/shapes/core/PersonShapes/> ;
-  owl:versionInfo "SHACL constraints for a single Person graph" ;
+  owl:imports <http://purl.bdrc.io/shapes/core/PersonEventShapes/> ;
+  owl:versionInfo "SHACL constraints for a internal elements of a Person graph" ;
+.
+bds:PersonLocalShape
+  a sh:NodeShape ;
+  bds:identifierPrefix "P" ;
+  adm:graphId bdg:PersonLocalShapes ;
+  rdfs:label "Person Shape"@en ;
+  sh:property bds:PersonShape-personEvent ;
+  sh:property bds:PersonShape-gender ;
+  sh:property bds:PersonShape-personName ;
+  sh:targetClass bdo:Person ;
+.
+bds:CheckPersonClassShape  a      sh:NodeShape ;
+    rdfs:label      "Check Person Class Shape"@en ;
+    sh:targetSubjectsOf bdo:isRoot ;
+    sh:message "focusNode must be a bdo:Person" ;
+    sh:sparql [
+      a sh:SPARQLConstraint ;
+      sh:prefixes [
+        sh:declare [
+          sh:prefix "rdf" ;
+          sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#" ;
+        ] , [
+          sh:prefix "bdo" ;
+          sh:namespace "http://purl.bdrc.io/ontology/core/" ;
+        ]
+      ] ;
+      sh:select """
+        select distinct $this
+        where {
+             filter not exists { $this rdf:type bdo:Person }
+        }	  
+      """ ;
+    ] ;
+.
+bds:FemaleShape
+  a sh:NodeShape ;
+  bds:nodeShapeType bds:IgnoreShape ;
+  rdfs:label "Female Shape"@en ;
+  sh:property bds:PersonShape-genderFemale ;
+.
+bds:MaleShape
+  a sh:NodeShape ;
+  bds:nodeShapeType bds:IgnoreShape ;
+  rdfs:label "Male Shape"@en ;
+  sh:property bds:PersonShape-genderMale ;
+.
+bds:PersonNameShape
+  a sh:NodeShape ;
+  bds:nodeShapeType bds:FacetShape ;
+  rdfs:label "Person Name Shape"@en ;
+  sh:property bds:PersonNameShape-personNameLabel ;
+  sh:targetClass bdo:PersonName ;
+.
+bds:PersonNameShape-personNameLabel
+  a sh:PropertyShape ;
+  sh:path rdfs:label ;
+  sh:datatype rdf:langString ;
+  sh:description "this Person has a name given by the label."@en ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+.
+bds:PersonShape-personEvent
+  a sh:PropertyShape ;
+  sh:path bdo:personEvent ;
+  sh:class bdo:PersonEvent ;
+  sh:description "this Person may have zero or more events like birth, death, ordination."@en ;
+  sh:minCount 0 ;
+.
+bds:PersonShape-gender
+  a sh:PropertyShape ;
+  sh:path bdo:personGender ;
+  sh:class bdo:Gender ;
+  sh:description "this Person may have at most one Gender or none if not known."@en ;
+  sh:maxCount 1 ;
+.
+bds:PersonShape-genderFemale
+  a sh:PropertyShape ;
+  sh:path bdo:personGender ;
+  sh:hasValue bdr:GenderFemale ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+.
+bds:PersonShape-genderMale
+  a sh:PropertyShape ;
+  sh:path bdo:personGender ;
+  sh:hasValue bdr:GenderMale ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+.
+bds:PersonShape-personName
+  a sh:PropertyShape ;
+  sh:path bdo:personName ;
+  sh:description "this Person may have one or more names."@en ;
+  sh:message ":personName object must be a subClassOf* :PersonName" ;
+  sh:minCount 1 ;
+  sh:node bds:PersonNameShape ;
+  sh:nodeKind sh:IRI ;
+  sh:targetClass bdo:PersonName ;
 .
