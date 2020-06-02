@@ -1,5 +1,6 @@
 # Templates for the BUDA editor
 
+
 ## Prior work
 
 - https://www.w3.org/TR/shacl/
