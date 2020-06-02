@@ -33,6 +33,34 @@ BaseShapes:
   owl:imports <http://datashapes.org/dash> ;
   owl:versionInfo "Buda extension to shacl vocabulary" ;
 .
+bds:RDF 
+    a sh:PrefixDeclaration ;
+    sh:declare [ 
+        sh:prefix "rdf" ;
+        sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#" ;
+    ] ;
+.
+bds:RDFS
+    a sh:PrefixDeclaration ;
+    sh:declare [ 
+        sh:prefix "rdfs" ;
+        sh:namespace "http://www.w3.org/2000/01/rdf-schema#" ;
+    ] ;
+.
+bds:BDO
+    a sh:PrefixDeclaration ;
+    sh:declare [ 
+        sh:prefix "bdo" ;
+        sh:namespace "http://purl.bdrc.io/ontology/core/" ;
+    ] ;
+.
+bds:BDR
+    a sh:PrefixDeclaration ;
+    sh:declare [ 
+        sh:prefix "bdr" ;
+        sh:namespace "http://purl.bdrc.io/resource/" ;
+    ] ;
+.
 bds:identifierPrefix
   a owl:DatatypeProperty ;
   rdfs:label "prefix for resource id"@en ;

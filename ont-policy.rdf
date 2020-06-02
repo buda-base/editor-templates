@@ -135,13 +135,6 @@
     </OntologySpec>
 
     <OntologySpec>
-        <!-- PersonEvent shapes -->
-        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/PersonEventShapes/"/>
-        <altURL    rdf:resource="editor-templates/templates/core/person.event.shapes.ttl"/>
-        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/person.event.shapes.ttl"/>
-    </OntologySpec>
-
-    <OntologySpec>
         <!-- Person shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/PersonShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/person.shapes.ttl"/>
