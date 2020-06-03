@@ -38,7 +38,7 @@ bds:PersonShape
   bds:isLocalShape true ;
   rdfs:label "Person Shape"@en ;
   sh:property bds:PersonShape-personEvent ;
-  sh:property bds:PersonShape-gender ;
+  sh:property bds:PersonShape-personGender ;
   sh:property bds:PersonShape-personName ;
   sh:targetClass bdo:Person ;
 .
@@ -64,7 +64,7 @@ bds:CheckPersonClass
 bds:CheckGenderClass  
     a      sh:NodeShape ;
     rdfs:label      "Check Gender Class Shape"@en ;
-    sh:targetObjectsOf bdo:gender ;
+    sh:targetObjectsOf bdo:personGender ;
     sh:message "focusNode must be instance of bdo:Gender" ;
     sh:sparql [
       a sh:SPARQLConstraint ;
@@ -154,7 +154,6 @@ bds:PersonEventShape
   bds:nodeShapeType bds:FacetShape ;
   rdfs:label "Person Event Shape"@en ;
   sh:property bds:PersonEventShape-personEventRole ;
-  sh:property bds:PersonEventShape-personEventType ;
   sh:targetClass bdo:PersonEvent ;
 .
 bds:PersonEventShape-personEventRole
@@ -166,20 +165,10 @@ bds:PersonEventShape-personEventRole
   sh:message "At most one PersonEventRole allowed"@en ;
   sh:name "role associated with the event"@en ;
 .
-bds:PersonEventShape-personEventType
-  a sh:PropertyShape ;
-  sh:path bdo:eventType ;
-  dash:editor dash:InstancesSelectEditor ;
-  sh:class bdo:PersonEventType ;
-  sh:minCount 1 ;
-  sh:maxCount 1 ;
-  sh:message "exactly one PersonEventType required"@en ;
-  sh:name "role associated with the event"@en ;
-.
 ##
 ## Gender
 ##
-bds:PersonShape-gender
+bds:PersonShape-personGender
   a sh:PropertyShape ;
   sh:path bdo:personGender ;
   sh:class bdo:Gender ;
