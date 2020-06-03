@@ -48,7 +48,7 @@ bds:PersonShape
 bds:CheckPersonClass  
     a      sh:NodeShape ;
     rdfs:label      "Check Person Class Shape"@en ;
-    sh:targetSubjectsOf bdo:isRoot ;
+    sh:targetSubjectsOf bdo:personName ;
     sh:message "focusNode must be a bdo:Person" ;
     sh:sparql [
       a sh:SPARQLConstraint ;
