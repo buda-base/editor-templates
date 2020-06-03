@@ -47,6 +47,13 @@ bds:RDFS
         sh:namespace "http://www.w3.org/2000/01/rdf-schema#" ;
     ] ;
 .
+bds:ADM
+    a sh:PrefixDeclaration ;
+    sh:declare [ 
+        sh:prefix "adm" ;
+        sh:namespace "http://purl.bdrc.io/ontology/admin/" ;
+    ] ;
+.
 bds:BDO
     a sh:PrefixDeclaration ;
     sh:declare [ 
