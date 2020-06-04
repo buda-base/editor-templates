@@ -149,7 +149,6 @@ bds:PersonShape-personEvent
   sh:description "this Person may have zero or more events like birth, death, ordination."@en ;
   sh:message "Each PersonEvent must be an IRI - no blank nodes"@en ;
   sh:nodeKind sh:IRI ;
-  sh:class bdo:PersonEvent ;
 .
 bds:PersonEventShape
   a sh:NodeShape ;
