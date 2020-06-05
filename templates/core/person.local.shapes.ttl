@@ -42,9 +42,6 @@ bds:PersonShape
   sh:property bds:PersonShape-personName ;
   sh:targetClass bdo:Person ;
 .
-##
-## Class checking
-##
 bds:CheckPersonClass  
     a      sh:NodeShape ;
     rdfs:label      "Check Person Class Shape"@en ;
@@ -63,43 +60,14 @@ bds:CheckPersonClass
       """ ;
     ] ;
 .
-bds:CheckGenderClass  
-    a      sh:NodeShape ;
-    rdfs:label      "Check Gender Class Shape"@en ;
-    sh:targetObjectsOf bdo:personGender ;
-    sh:message "focusNode must be instance of bdo:Gender" ;
-    sh:sparql [
-      a sh:SPARQLConstraint ;
-      sh:prefixes bds:RDF , bds:RDFS , bds:BDO ;
-      sh:select """
-        select distinct $this
-        where {
-            filter not exists { $this rdf:type bdo:Gender . } .
-        }	  
-      """ ;
-    ] ;
-.
-bds:CheckPersonEventClass  
-    a      sh:NodeShape ;
-    rdfs:label      "Check PersonEvent Class Shape"@en ;
-    sh:targetObjectsOf bdo:personEvent ;
-    sh:message "focusNode must be subClassOf* bdo:PersonEvent" ;
-    sh:sparql [
-      a sh:SPARQLConstraint ;
-      sh:prefixes bds:RDF , bds:RDFS , bds:BDO ;
-      sh:select """
-        select distinct $this
-        where {
-            filter not exists { $this rdf:type/rdfs:subClassOf* bdo:PersonEvent . } .
-        }	  
-      """ ;
-    ] ;
-.
+##
+## PersonName
+##
 bds:CheckPersonNameClass  
     a      sh:NodeShape ;
     rdfs:label      "Check PersonName Class Shape"@en ;
     sh:targetObjectsOf bdo:personName ;
-    sh:message "focusNode must be subClassOf* bdo:PersonName" ;
+    sh:message ":personName object must be subClassOf* bdo:PersonName" ;
     sh:sparql [
       a sh:SPARQLConstraint ;
       sh:prefixes bds:RDF , bds:RDFS , bds:BDO ;
@@ -111,17 +79,12 @@ bds:CheckPersonNameClass
       """ ;
     ] ;
 .
-##
-## PersonName
-##
 bds:PersonShape-personName
   a sh:PropertyShape ;
   sh:path bdo:personName ;
-  sh:description "this Person may have one or more names."@en ;
   sh:message "There must be at least one :personName object and each must be an IRI - no blank nodes"@en ;
   sh:minCount 1 ;
   sh:nodeKind sh:IRI ;
-  sh:class bdo:PersonName ;
 .
 bds:PersonNameShape
   a sh:NodeShape ;
@@ -134,7 +97,6 @@ bds:PersonNameShape-personNameLabel
   a sh:PropertyShape ;
   sh:path rdfs:label ;
   sh:datatype rdf:langString ;
-  sh:description "this Person has a name given by the label."@en ;
   sh:message "A PersonName must have exactly one rdfs:label"@en ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
@@ -142,12 +104,26 @@ bds:PersonNameShape-personNameLabel
 ##
 ## PersonEvent
 ##
+bds:CheckPersonEventClass  
+    a      sh:NodeShape ;
+    rdfs:label      "Check PersonEvent Class Shape"@en ;
+    sh:targetObjectsOf bdo:personEvent ;
+    sh:message ":personEvent object must be subClassOf* bdo:PersonEvent" ;
+    sh:sparql [
+      a sh:SPARQLConstraint ;
+      sh:prefixes bds:RDF , bds:RDFS , bds:BDO ;
+      sh:select """
+        select distinct $this
+        where {
+            filter not exists { $this rdf:type/rdfs:subClassOf* bdo:PersonEvent . } .
+        }	  
+      """ ;
+    ] ;
+.
 bds:PersonShape-personEvent
   a sh:PropertyShape ;
   sh:path bdo:personEvent ;
-  sh:class bdo:PersonEvent ;
-  sh:description "this Person may have zero or more events like birth, death, ordination."@en ;
-  sh:message "Each PersonEvent must be an IRI - no blank nodes"@en ;
+  sh:message ":personEvent object must be an IRI - no blank nodes"@en ;
   sh:nodeKind sh:IRI ;
 .
 bds:PersonEventShape
@@ -160,20 +136,47 @@ bds:PersonEventShape
 bds:PersonEventShape-personEventRole
   a sh:PropertyShape ;
   sh:path bdo:personEventRole ;
-  dash:editor dash:InstancesSelectEditor ;
-  sh:class bdo:Role ;
   sh:maxCount 1 ;
-  sh:message "At most one PersonEventRole allowed"@en ;
-  sh:name "role associated with the event"@en ;
+  sh:message "At most one :personEventRole allowed"@en ;
+.
+bds:CheckRoleClass  
+    a      sh:NodeShape ;
+    rdfs:label      "Check Role Class Shape"@en ;
+    sh:targetObjectsOf bdo:personEventRole ;
+    sh:message ":personEventRole object must be subClassOf* bdo:Role" ;
+    sh:sparql [
+      a sh:SPARQLConstraint ;
+      sh:prefixes bds:RDF , bds:RDFS , bds:BDO ;
+      sh:select """
+        select distinct $this
+        where {
+            filter not exists { $this rdf:type/rdfs:subClassOf* bdo:Role . } .
+        }	  
+      """ ;
+    ] ;
 .
 ##
 ## Gender
 ##
+bds:CheckGenderClass  
+    a      sh:NodeShape ;
+    rdfs:label      "Check Gender Class Shape"@en ;
+    sh:targetObjectsOf bdo:personGender ;
+    sh:message ":personGender object must be instance of bdo:Gender" ;
+    sh:sparql [
+      a sh:SPARQLConstraint ;
+      sh:prefixes bds:RDF , bds:RDFS , bds:BDO ;
+      sh:select """
+        select distinct $this
+        where {
+            filter not exists { $this rdf:type bdo:Gender . } .
+        }	  
+      """ ;
+    ] ;
+.
 bds:PersonShape-personGender
   a sh:PropertyShape ;
   sh:path bdo:personGender ;
-  sh:class bdo:Gender ;
-  sh:description "this Person may have at most one Gender or none if not known."@en ;
   sh:maxCount 1 ;
-  sh:message "At most one bdo:gender allowed"@en ;
+  sh:message "At most one bdo:personGender allowed"@en ;
 .
