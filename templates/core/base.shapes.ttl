@@ -145,36 +145,6 @@ bds:SortDescending
   rdfs:label "sort descending"@en ;
   skos:definition "items should be sorted in descending order"@en ;
 .
-bds:localShape
-  a owl:ObjectProperty ;
-  rdfs:domain bds:NodeShape ;
-  rdfs:range sh:NodeShape ;
-.
-bds:topShape
-  a owl:ObjectProperty ;
-  rdfs:domain bds:NodeShape ;
-  rdfs:range sh:NodeShape ;
-.
-bds:uiShape
-  a owl:ObjectProperty ;
-  rdfs:domain bds:NodeShape ;
-  rdfs:range sh:NodeShape ;
-.
-bds:isLocalShape
-  a owl:ObjectProperty ;
-  rdfs:domain bds:NodeShape ;
-  rdfs:range xsd:boolean ;
-.
-bds:isTopShape
-  a owl:ObjectProperty ;
-  rdfs:domain bds:NodeShape ;
-  rdfs:range xsd:boolean ;
-.
-bds:isUIShape
-  a owl:ObjectProperty ;
-  rdfs:domain bds:NodeShape ;
-  rdfs:range xsd:boolean ;
-.
 bds:localShapeGraph
   a owl:ObjectProperty ;
   rdfs:domain bdo:Entity ;

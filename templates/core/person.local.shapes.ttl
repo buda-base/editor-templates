@@ -24,7 +24,6 @@
 
 bdo:Person 
   bds:localShapeGraph bdg:PersonLocalShapes ;
-  bds:localShape bds:PersonLocalShape ;
 .
 PersonLocalShapes:
   a owl:Ontology ;
@@ -35,7 +34,6 @@ PersonLocalShapes:
 bds:PersonShape
   a sh:NodeShape ;
   bds:identifierPrefix "P" ;
-  bds:isLocalShape true ;
   rdfs:label "Person Shape"@en ;
   sh:property bds:PersonShape-personEvent ;
   sh:property bds:PersonShape-personGender ;

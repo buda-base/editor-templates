@@ -235,15 +235,3 @@ bds:ContentLocationShape-contentPagination
   sh:class bdo:PaginationType ;
   sh:maxCount 1 ;
 .
-
-
-
-
-
-
-
-
-
-
-
-
