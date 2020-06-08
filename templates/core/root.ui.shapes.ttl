@@ -1,9 +1,9 @@
-# baseURI: http://purl.bdrc.io/shapes/core/RootShapes/
+# baseURI: http://purl.bdrc.io/shapes/core/RootUIShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/shapes/core/RootLocalShapes/
-# prefix: RootShapes
+# imports: http://purl.bdrc.io/shapes/core/RootShapes/
+# prefix: RootUIShapes
 
-@prefix RootShapes: <http://purl.bdrc.io/shapes/core/RootShapes/> .
+@prefix RootUIShapes: <http://purl.bdrc.io/shapes/core/RootUIShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -28,17 +28,24 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-RootShapes:
+RootUIShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports <http://purl.bdrc.io/shapes/core/RootLocalShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
   owl:versionInfo "Initial SHACL constraints" ;
 .
-bds:NoteShape
-  sh:property bds:NoteShape-noteSource ;
+bds:EntityShape
+  sh:name "Entity shape"@en ;
 .
-bds:NoteShape-noteSource
-  a sh:PropertyShape ;
-  sh:path bdo:noteSource ;
-  sh:class bdo:BiblioEntity ;
+bds:EntityShape-note
+  sh:description "Zero or more notes may be associated with an entity"@en ;
+.
+bds:EntityShape-skos_prefLabel
+  sh:description "require unique language from among the listed choices"@en ;
+  sh:name "pref label"@en ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:LabelShape-hasTranslation
+  sh:description "this Label may have zero or more tanslations"@en ;
+  sh:name "label has translation"@en ;
 .

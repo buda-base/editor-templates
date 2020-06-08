@@ -1,0 +1,249 @@
+# baseURI: http://purl.bdrc.io/shapes/core/RootLocalShapes/
+# imports: http://datashapes.org/dash
+# imports: http://purl.bdrc.io/shapes/core/BaseShapes/
+# prefix: RootLocalShapes
+
+@prefix RootLocalShapes: <http://purl.bdrc.io/shapes/core/RootLocalShapes/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+RootLocalShapes:
+  a owl:Ontology ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/BaseShapes/> ;
+  owl:versionInfo "Initial SHACL constraints" ;
+.
+bds:EntityShape
+  a sh:NodeShape ;
+  bds:nodeShapeType bds:FacetShape ;
+  sh:property bds:EntityShape-skos_prefLabel ;
+  sh:property bds:EntityShape-note ;
+  sh:targetClass bdo:Entity ;
+.
+bds:EntityShape-note
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:FacetShape ;
+  sh:description "Zero or more notes may be associated with an entity"@en ;
+  sh:path bdo:note ;
+  sh:nodeKind sh:IRI ;
+.
+bds:NoteShape
+  a sh:NodeShape ;
+  bds:identifierPrefix "NT" ;
+  bds:nodeShapeType bds:FacetShape ;
+  sh:property bds:NoteShape-contentLocation ;
+  sh:property bds:NoteShape-noteText ;
+  sh:property bds:NoteShape-noteType ;
+  sh:targetClass bdo:Note ;
+.
+bds:NoteShape-contentLocation
+  a sh:PropertyShape ;
+  sh:path bdo:contentLocation ;
+  sh:class bdo:ContentLocation ;
+.
+bds:NoteShape-noteText
+  a sh:PropertyShape ;
+  sh:path bdo:noteText ;
+  sh:datatype rdf:langString ;
+.
+bds:NoteShape-noteType
+  a sh:PropertyShape ;
+  sh:path bdo:noteType ;
+  sh:datatype xsd:string ;
+.
+bds:EntityShape-skos_prefLabel
+  a sh:PropertyShape ;
+  sh:path skos:prefLabel ;
+  sh:datatype rdf:langString ;
+  sh:languageIn (
+      "en" "zh" "bo" "bo-x-ewts" "km-x-femc" "km" "fr" "km-x-bdrc" 
+    ) ;
+  sh:minCount 1 ;
+  sh:uniqueLang true ;
+.
+bds:LabelShape
+  a sh:NodeShape ;
+  rdfs:label "Label Shape"@en ;
+  sh:property bds:LabelShape-hasTranslation ;
+  sh:targetClass bdo:Label ;
+.
+bds:LabelShape-hasTranslation
+  a sh:PropertyShape ;
+  sh:path bdo:hasTranslation ;
+  sh:class bdo:Label ;
+.
+bds:ContentLocationShape
+  a sh:NodeShape ;
+  rdfs:label "ContentLocation Shape"@en ;
+  sh:property bds:ContentLocationShape-contentLocationByFolio ;
+  sh:property bds:ContentLocationShape-contentLocationEndLine ;
+  sh:property bds:ContentLocationShape-contentLocationEndPage ;
+  sh:property bds:ContentLocationShape-contentLocationEndPhrase ;
+  sh:property bds:ContentLocationShape-contentLocationEndSide ;
+  sh:property bds:ContentLocationShape-contentLocationEndVolume ;
+  sh:property bds:ContentLocationShape-contentLocationEndVolumeName ;
+  sh:property bds:ContentLocationShape-contentLocationInstance ;
+  sh:property bds:ContentLocationShape-contentLocationLine ;
+  sh:property bds:ContentLocationShape-contentLocationPage ;
+  sh:property bds:ContentLocationShape-contentLocationPhrase ;
+  sh:property bds:ContentLocationShape-contentLocationSeqNum ;
+  sh:property bds:ContentLocationShape-contentLocationSide ;
+  sh:property bds:ContentLocationShape-contentLocationStatement ;
+  sh:property bds:ContentLocationShape-contentLocationStatementCBETA ;
+  sh:property bds:ContentLocationShape-contentLocationVolume ;
+  sh:property bds:ContentLocationShape-contentLocationVolumeName ;
+  sh:property bds:ContentLocationShape-contentPagination ;
+  sh:targetClass bdo:ContentLocation ;
+.
+bds:ContentLocationShape-contentLocationByFolio
+  a sh:PropertyShape ;
+  rdfs:label "contentLocationByFolio Shape"@en ;
+  sh:path bdo:contentLocationByFolio ;
+  sh:datatype xsd:boolean ;
+  sh:maxCount 1 ;
+.
+bds:ContentLocationShape-contentLocationEndLine
+  a sh:PropertyShape ;
+  rdfs:label "contentLocationEndLine Shape"@en ;
+  sh:path bdo:contentLocationEndLine ;
+  sh:datatype xsd:integer ;
+  sh:maxCount 1 ;
+.
+bds:ContentLocationShape-contentLocationEndPage
+  a sh:PropertyShape ;
+  rdfs:label "contentLocationEndPage Shape"@en ;
+  sh:path bdo:contentLocationEndPage ;
+  sh:datatype xsd:integer ;
+  sh:maxCount 1 ;
+.
+bds:ContentLocationShape-contentLocationEndPhrase
+  a sh:PropertyShape ;
+  rdfs:label "contentLocationEndPhrase Shape"@en ;
+  sh:path bdo:contentLocationEndPhrase ;
+  sh:datatype xsd:integer ;
+  sh:maxCount 1 ;
+.
+bds:ContentLocationShape-contentLocationEndSide
+  a sh:PropertyShape ;
+  rdfs:label "contentLocationEndSide Shape"@en ;
+  sh:path bdo:contentLocationEndSide ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+.
+bds:ContentLocationShape-contentLocationEndVolume
+  a sh:PropertyShape ;
+  rdfs:label "contentLocationEndVolume Shape"@en ;
+  sh:path bdo:contentLocationEndVolume ;
+  sh:datatype xsd:integer ;
+  sh:maxCount 1 ;
+.
+bds:ContentLocationShape-contentLocationEndVolumeName
+  a sh:PropertyShape ;
+  rdfs:label "contentLocationEndVolumeName Shape"@en ;
+  sh:path bdo:contentLocationEndVolumeName ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+.
+bds:ContentLocationShape-contentLocationLine
+  a sh:PropertyShape ;
+  rdfs:label "contentLocationLine Shape"@en ;
+  sh:path bdo:contentLocationLine ;
+  sh:datatype xsd:integer ;
+  sh:maxCount 1 ;
+.
+bds:ContentLocationShape-contentLocationPage
+  a sh:PropertyShape ;
+  rdfs:label "contentLocationPage Shape"@en ;
+  sh:path bdo:contentLocationPage ;
+  sh:datatype xsd:integer ;
+  sh:maxCount 1 ;
+.
+bds:ContentLocationShape-contentLocationPhrase
+  a sh:PropertyShape ;
+  rdfs:label "contentLocationPhrase Shape"@en ;
+  sh:path bdo:contentLocationPhrase ;
+  sh:datatype xsd:integer ;
+  sh:maxCount 1 ;
+.
+bds:ContentLocationShape-contentLocationSeqNum
+  a sh:PropertyShape ;
+  rdfs:label "contentLocationSeqNum Shape"@en ;
+  sh:path bdo:contentLocationSeqNum ;
+  sh:datatype xsd:integer ;
+  sh:maxCount 1 ;
+.
+bds:ContentLocationShape-contentLocationSide
+  a sh:PropertyShape ;
+  rdfs:label "contentLocationSide Shape"@en ;
+  sh:path bdo:contentLocationSide ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+.
+bds:ContentLocationShape-contentLocationStatement
+  a sh:PropertyShape ;
+  rdfs:label "contentLocationStatement Shape"@en ;
+  sh:path bdo:contentLocationStatement ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+.
+bds:ContentLocationShape-contentLocationStatementCBETA
+  a sh:PropertyShape ;
+  rdfs:label "contentLocationStatementCBETA Shape"@en ;
+  sh:path bdo:contentLocationStatementCBETA ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+.
+bds:ContentLocationShape-contentLocationVolume
+  a sh:PropertyShape ;
+  rdfs:label "contentLocationVolume Shape"@en ;
+  sh:path bdo:contentLocationVolume ;
+  sh:datatype xsd:integer ;
+  sh:maxCount 1 ;
+.
+bds:ContentLocationShape-contentLocationVolumeName
+  a sh:PropertyShape ;
+  rdfs:label "contentLocationVolumeName Shape"@en ;
+  sh:path bdo:contentLocationVolumeName ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+.
+bds:ContentLocationShape-contentPagination
+  a sh:PropertyShape ;
+  rdfs:label "contentPagination Shape"@en ;
+  sh:path bdo:contentPagination ;
+  sh:class bdo:PaginationType ;
+  sh:maxCount 1 ;
+.
+
+
+
+
+
+
+
+
+
+
+
+

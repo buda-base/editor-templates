@@ -1,10 +1,10 @@
-# baseURI: http://purl.bdrc.io/shapes/core/EventShapes/
+# baseURI: http://purl.bdrc.io/shapes/core/EventUIShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/shapes/core/EventLocalShapes/
-# imports: http://purl.bdrc.io/shapes/core/RootShapes/
-# prefix: EventShapes
+# imports: http://purl.bdrc.io/shapes/core/EventShapes/
+# imports: http://purl.bdrc.io/shapes/core/RootUIShapes/
+# prefix: EventUIShapes
 
-@prefix EventShapes: <http://purl.bdrc.io/shapes/core/EventShapes/> .
+@prefix EventUIShapes: <http://purl.bdrc.io/shapes/core/EventUIShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -30,27 +30,40 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-EventShapes:
+EventUIShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
-  owl:imports <http://purl.bdrc.io/shapes/core/EventLocalShapes/> ;
-  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/EventShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Events and its subclasses" ;
 .
-bds:EventShape
-  sh:property bds:EventShape-eventWhere ;
-  sh:property bds:EventShape-eventWho ;
+bds:EventShape-eventText
+  dash:editor dash:TextAreaWithLangEditor ;
+  dash:singleLine false ;
+  sh:name "event text"@en ;
 .
 bds:EventShape-eventWhere
-  a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShapeShape ;
-  sh:path bdo:eventWhere ;
-  sh:class bdo:Place ;
-  sh:maxCount 1 ;
+  dash:editor dash:InstancesSelectEditor ;
+  sh:name "where event occurred"@en ;
 .
 bds:EventShape-eventWho
-  a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShapeShape ;
-  sh:path bdo:eventWho ;
-  sh:class bdo:AgentInRole ;
+  dash:editor dash:InstancesSelectEditor ;
+  sh:name "who was involved in the event"@en ;
+.
+bds:EventShape-notAfter
+  sh:name "event occurred not before"@en ;
+.
+bds:EventShape-notBefore
+  sh:name "event occurred not before"@en ;
+.
+bds:EventShape-onDate
+  dash:editor dash:DatePickerEditor ;
+  sh:name "event occurred on"@en ;
+.
+bds:EventShape-onOrAbout
+  sh:description "this property should not be used. Use on of the other 4 forms instead."@en ;
+  sh:name "event occurred on or about"@en ;
+.
+bds:EventShape-onYear
+  sh:name "event occurred during the year"@en ;
 .

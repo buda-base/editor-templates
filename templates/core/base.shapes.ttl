@@ -1,6 +1,5 @@
 # baseURI: http://purl.bdrc.io/shapes/core/BaseShapes/
 # imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/core/
 # prefix: BaseShapes
 
 @prefix BaseShapes: <http://purl.bdrc.io/shapes/core/BaseShapes/> .

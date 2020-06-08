@@ -1,14 +1,15 @@
-# baseURI: http://purl.bdrc.io/shapes/core/RootShapes/
+# baseURI: http://purl.bdrc.io/shapes/core/EventLocalShapes/
 # imports: http://datashapes.org/dash
 # imports: http://purl.bdrc.io/shapes/core/RootLocalShapes/
-# prefix: RootShapes
+# prefix: EventLocalShapes
 
-@prefix RootShapes: <http://purl.bdrc.io/shapes/core/RootShapes/> .
+@prefix EventLocalShapes: <http://purl.bdrc.io/shapes/core/EventLocalShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
+@prefix bdsa: <http://purl.bdrc.io/ontology/shapes/adm/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dash: <http://datashapes.org/dash#> .
@@ -28,17 +29,57 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-RootShapes:
+EventLocalShapes:
   a owl:Ontology ;
   owl:imports <http://datashapes.org/dash> ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootLocalShapes/> ;
-  owl:versionInfo "Initial SHACL constraints" ;
+  owl:versionInfo "Initial SHACL constraints for Events and its subclasses" ;
 .
-bds:NoteShape
-  sh:property bds:NoteShape-noteSource ;
+bds:EventShape
+  a sh:NodeShape ;
+  bds:identifierPrefix "EV" ;
+  bds:nodeShapeType bds:FacetShape ;
+  rdfs:label "Event Shape"@en ;
+  sh:property bds:EventShape-eventText ;
+  sh:property bds:EventShape-notAfter ;
+  sh:property bds:EventShape-notBefore ;
+  sh:property bds:EventShape-onDate ;
+  sh:property bds:EventShape-onOrAbout ;
+  sh:property bds:EventShape-onYear ;
+  sh:targetClass bdo:Event ;
 .
-bds:NoteShape-noteSource
+bds:EventShape-eventText
   a sh:PropertyShape ;
-  sh:path bdo:noteSource ;
-  sh:class bdo:BiblioEntity ;
+  sh:path bdo:eventText ;
+  sh:datatype rdf:langString ;
+.
+bds:EventShape-notAfter
+  a sh:PropertyShape ;
+  sh:path bdo:notAfter ;
+  sh:datatype xsd:gYear ;
+  sh:maxCount 1 ;
+.
+bds:EventShape-notBefore
+  a sh:PropertyShape ;
+  sh:path bdo:notBefore ;
+  sh:datatype xsd:gYear ;
+  sh:maxCount 1 ;
+.
+bds:EventShape-onDate
+  a sh:PropertyShape ;
+  sh:path bdo:onDate ;
+  sh:datatype xsd:date ;
+  sh:maxCount 1 ;
+.
+bds:EventShape-onOrAbout
+  a sh:PropertyShape ;
+  sh:path bdo:onOrAbout ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+.
+bds:EventShape-onYear
+  a sh:PropertyShape ;
+  sh:path bdo:onYear ;
+  sh:datatype xsd:gYear ;
+  sh:maxCount 1 ;
 .

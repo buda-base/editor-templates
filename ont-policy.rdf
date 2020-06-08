@@ -93,6 +93,20 @@
         <altURL    rdf:resource="editor-templates/templates/core/root.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/root.shapes.ttl"/>
     </OntologySpec>
+    
+    <OntologySpec>
+        <!-- the root shapes for entities -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/RootLocalShapes/"/>
+        <altURL    rdf:resource="editor-templates/templates/core/root.local.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/root.local.shapes.ttl"/>
+    </OntologySpec>
+    
+    <OntologySpec>
+        <!-- the root shapes for entities -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/RootUIShapes/"/>
+        <altURL    rdf:resource="editor-templates/templates/core/root.ui.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/root.ui.shapes.ttl"/>
+    </OntologySpec>
 
     <!-- ======== supporting shapes ======== -->
 
@@ -109,6 +123,20 @@
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/EventShapes/"/>
         <altURL    rdf:resource="editor-templates/templates/core/event.shapes.ttl"/>
         <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/event.shapes.ttl"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- Event shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/EventLocalShapes/"/>
+        <altURL    rdf:resource="editor-templates/templates/core/event.local.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/event.local.shapes.ttl"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- Event shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/EventUIShapes/"/>
+        <altURL    rdf:resource="editor-templates/templates/core/event.ui.shapes.ttl"/>
+        <altURL    rdf:resource="https://raw.githubusercontent.com/buda-base/editor-templates/master/templates/core/event.ui.shapes.ttl"/>
     </OntologySpec>
 
     <OntologySpec>
