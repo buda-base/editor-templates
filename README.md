@@ -12,11 +12,11 @@ The shacl shapes express validation and UI information for the various Entities 
 
 These are the resources that are subjects of editing. The shapes information for these Entities are organized into shapes graphs for each class of Entity, and for each class there are three graphs: 
 
-- the _local_ graph that expresses validation of the properties associated with the Entity that do not involve references to other Entities, e.g., when an `bdo:Instance` was created or the gender of a `bdo:Person`.
-- the _top_ graph that validates references from the focus Entity graph to other Entities, e.g., where a `bdo:Work` was published or the father of a `bdo:Person`
-- the _ui_ graph that contains information that supports the UI for the editing client, e.g., the order in which names, gender, birth/death events, student/teacher relationships should be presented on the UI and names and descriptions and so on.
+- the _local_ graph expresses validation of the properties associated with the Entity that do not involve references to other Entities, e.g., when an `bdo:Instance` was created or the gender of a `bdo:Person`.
+- the _top_ graph validates references from the focus Entity graph to other Entities, e.g., where a `bdo:Work` was published or the father of a `bdo:Person`. The _top_ graph includes the _local_ graph.
+- the _ui_ graph contains information that supports the UI for the editing client, e.g., the order in which names, gender, birth/death events, student/teacher relationships should be presented on the UI and names and descriptions and so on. The _ui_ graph includes the _top_ and _local_ graphs
 
-The naming convention for the three sorts of shape graphs is classnameLocalShapes, classnameShapes, and classnameUIShapes. _Top_ is not used in the naming and is understood in the classnameShapes form, that contains the full set of constraints for validating instances of classname.
+The naming convention for the three sorts of shape graphs is _classname_**LocalShapes**, _classname_**Shapes**, and _classname_**UIShapes**. _Top_ is not used in the naming and is understood in the _classname_**Shapes** form, that contains the full set of constraints for validating instances of classname.
 
 There are a variety of supporting resources that may be associated with all, many, or some Entity classes:
 
@@ -27,9 +27,15 @@ There are a variety of supporting resources that may be associated with all, man
 
 The shapes associated with these are organized as above and imported as needed by the three types of shapes graphs for each Entity. The shapes for resources common to most or all Entities are contained in RootLocalShapes, RootShapes, and RootUIShapes. Event shapes are contained in a separate set of EventLocalShapes, EventShapes, EventUIShapes.
 
-There is a BaseShapes graph that contains definitions of shapes and ancillary properties and classes that support the definitions used in shapes for Entites and other resources.
+There is a `BaseShapes` graph that contains definitions of shapes and ancillary properties and classes that support the definitions used in shapes for Entites and other resources. Among the properties defined in `BaseShapes` are `bds:localShapeGraph`, `bds:topShapeGraph`, and `bds:uiShapeGraph`. These connect an Entity class to the corresponding shapes graphs for the class:
+```
+bdo:Person 
+    bds:localShapeGraph bdg:LocalPersonShapes ;
+    bds:topShapeGraph   bdg:PersonShapes ;
+    bds:uiShapeGraph    bdg:PersonUIShapes .
+```
 
-The various shapes modules (shacl ontologies) are indicated in the `ont-policy.rdf` and the pattern of importing is illustrated below for the `bdo:Persaon` Entity:
+The various shapes modules (shacl ontologies) are indicated in the `ont-policy.rdf` and the pattern of importing is illustrated below for the `bdo:Person` Entity:
 ```
 PersonUIShapes
     PersonShapes
