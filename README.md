@@ -1,5 +1,69 @@
-# Templates for the BUDA editor
+# SHACL Shapes Templates for the BUDA editor
 
+The shacl shapes express validation and UI information for the various Entities that are the focus of the BUDA platform:
+
+- Bibliographic items - bdo:Works, bdo:Instances, bdo:Items
+- bdo:Persons
+- bdo:Places
+- bdo:Topics
+- bdo:Roles
+- bdo:Lineages
+- bdo:Corporations
+
+These are the resources that are subjects of editing. The shapes information for these Entities are organized into shapes graphs for each class of Entity, and for each class there are three graphs: 
+
+- the _local_ graph that expresses validation of the properties associated with the Entity that do not involve references to other Entities, e.g., when an `bdo:Instance` was created or the gender of a `bdo:Person`.
+- the _top_ graph that validates references from the focus Entity graph to other Entities, e.g., where a `bdo:Work` was published or the father of a `bdo:Person`
+- the _ui_ graph that contains information that supports the UI for the editing client, e.g., the order in which names, gender, birth/death events, student/teacher relationships should be presented on the UI and names and descriptions and so on.
+
+The naming convention for the three sorts of shape graphs is classnameLocalShapes, classnameShapes, and classnameUIShapes. _Top_ is not used in the naming and is understood in the classnameShapes form, that contains the full set of constraints for validating instances of classname.
+
+There are a variety of supporting resources that may be associated with all, many, or some Entity classes:
+
+- bdo:Note
+- bdo:Label
+- bdo:ContentLocation
+- bdo:Event
+
+The shapes associated with these are organized as above and imported as needed by the three types of shapes graphs for each Entity. The shapes for resources common to most or all Entities are contained in RootLocalShapes, RootShapes, and RootUIShapes. Event shapes are contained in a separate set of EventLocalShapes, EventShapes, EventUIShapes.
+
+There is a BaseShapes graph that contains definitions of shapes and ancillary properties and classes that support the definitions used in shapes for Entites and other resources.
+
+The various shapes modules (shacl ontologies) are indicated in the `ont-policy.rdf` and the pattern of importing is illustrated below for the `bdo:Persaon` Entity:
+```
+PersonUIShapes
+    PersonShapes
+    EventUIShapes
+    
+PersonShapes
+    PersonLocalShapes       
+    EventShapes
+
+PersonLocalShapes
+    EventLocalShapes
+
+EventUIShapes
+    EventShapes
+    RootUIShapes
+
+EventShapes
+    EventLocalShapes
+    RootShapes
+    
+EventLocalShapes
+    RootLocalShapes
+
+RootUIShapes
+    RootShapes
+
+RootShapes
+    RootLocalShapes
+
+RootLocalShapes
+    BaseShapes
+
+BaseShapes
+```
 
 ## Prior work
 
