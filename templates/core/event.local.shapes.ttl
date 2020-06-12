@@ -50,12 +50,13 @@ bds:EventShape
 .
 bds:EventShape-eventText
   a sh:PropertyShape ;
-  sh:message ":eventText must an rdf:langString"@en ;
+  sh:message ":eventText must be an rdf:langString"@en ;
   sh:path bdo:eventText ;
   sh:datatype rdf:langString ;
 .
 bds:EventShape-notAfter
   a sh:PropertyShape ;
+  sh:message "there must be at most one :notAfter, and it must be an xsd:gYear"@en ;
   sh:path bdo:notAfter ;
   sh:datatype xsd:gYear ;
   sh:maxCount 1 ;
