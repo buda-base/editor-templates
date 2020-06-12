@@ -50,6 +50,7 @@ bds:EventShape
 .
 bds:EventShape-eventText
   a sh:PropertyShape ;
+  sh:message ":eventText must an rdf:langString"@en ;
   sh:path bdo:eventText ;
   sh:datatype rdf:langString ;
 .
