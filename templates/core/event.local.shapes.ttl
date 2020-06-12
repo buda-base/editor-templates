@@ -63,6 +63,7 @@ bds:EventShape-notAfter
 .
 bds:EventShape-notBefore
   a sh:PropertyShape ;
+  sh:message "there must be at most one :notBefore, and it must be an xsd:gYear"@en ;
   sh:path bdo:notBefore ;
   sh:datatype xsd:gYear ;
   sh:maxCount 1 ;
