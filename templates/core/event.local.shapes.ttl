@@ -1,5 +1,4 @@
 # baseURI: http://purl.bdrc.io/shapes/core/EventLocalShapes/
-# imports: http://datashapes.org/dash
 # imports: http://purl.bdrc.io/shapes/core/RootLocalShapes/
 # prefix: EventLocalShapes
 
@@ -31,7 +30,6 @@
 
 EventLocalShapes:
   a owl:Ontology ;
-  owl:imports <http://datashapes.org/dash> ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootLocalShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Events and its subclasses" ;
 .
@@ -70,18 +68,21 @@ bds:EventShape-notBefore
 .
 bds:EventShape-onDate
   a sh:PropertyShape ;
+  sh:message "there must be at most one :onDate, and it must be an xsd:date"@en ;
   sh:path bdo:onDate ;
   sh:datatype xsd:date ;
   sh:maxCount 1 ;
 .
 bds:EventShape-onOrAbout
   a sh:PropertyShape ;
+  sh:message "there must be at most one :onOrAbout, and it must be an xsd:string"@en ;
   sh:path bdo:onOrAbout ;
   sh:datatype xsd:string ;
   sh:maxCount 1 ;
 .
 bds:EventShape-onYear
   a sh:PropertyShape ;
+  sh:message "there must be at most one :onYear, and it must be an xsd:gYear"@en ;
   sh:path bdo:onYear ;
   sh:datatype xsd:gYear ;
   sh:maxCount 1 ;

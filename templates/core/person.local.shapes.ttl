@@ -1,5 +1,4 @@
 # baseURI: http://purl.bdrc.io/shapes/core/PersonLocalShapes/
-# imports: http://datashapes.org/dash
 # imports: http://purl.bdrc.io/shapes/core/EventLocalShapes/
 # prefix: PersonLocalShapes
 
@@ -27,7 +26,6 @@ bdo:Person
 .
 PersonLocalShapes:
   a owl:Ontology ;
-  owl:imports <http://datashapes.org/dash> ;
   owl:imports <http://purl.bdrc.io/shapes/core/EventLocalShapes/> ;
   owl:versionInfo "SHACL constraints for a internal elements of a Person graph" ;
 .

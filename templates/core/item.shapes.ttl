@@ -1,6 +1,4 @@
 # baseURI: http://purl.bdrc.io/shapes/core/ItemShapes/
-# imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/core/
 # imports: http://purl.bdrc.io/shapes/core/RootShapes/
 # prefix: bds
 
@@ -32,8 +30,6 @@
 
 ItemShapes:
   a owl:Ontology ;
-  owl:imports <http://datashapes.org/dash> ;
-  owl:imports <http://purl.bdrc.io/ontology/core/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Item and its subclasses" ;
 .

@@ -1,5 +1,4 @@
 # baseURI: http://purl.bdrc.io/shapes/core/BaseShapes/
-# imports: http://datashapes.org/dash
 # prefix: BaseShapes
 
 @prefix BaseShapes: <http://purl.bdrc.io/shapes/core/BaseShapes/> .
@@ -29,7 +28,6 @@
 
 BaseShapes:
   a owl:Ontology ;
-  owl:imports <http://datashapes.org/dash> ;
   owl:versionInfo "Buda extension to shacl vocabulary" ;
 .
 bds:RDF 

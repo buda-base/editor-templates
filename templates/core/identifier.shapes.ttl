@@ -1,6 +1,4 @@
 # baseURI: http://purl.bdrc.io/shapes/core/IdentifierShapes/
-# imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/core/
 # imports: http://purl.bdrc.io/shapes/core/RootShapes/
 # prefix: IdentifierShapes
 
@@ -32,8 +30,6 @@
 
 IdentifierShapes:
   a owl:Ontology ;
-  owl:imports <http://datashapes.org/dash> ;
-  owl:imports <http://purl.bdrc.io/ontology/core/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Identifiers such as ISBN and such" ;
 .

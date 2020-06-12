@@ -1,5 +1,4 @@
 # baseURI: http://purl.bdrc.io/shapes/core/RootShapes/
-# imports: http://datashapes.org/dash
 # imports: http://purl.bdrc.io/shapes/core/RootLocalShapes/
 # prefix: RootShapes
 
@@ -30,7 +29,6 @@
 
 RootShapes:
   a owl:Ontology ;
-  owl:imports <http://datashapes.org/dash> ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootLocalShapes/> ;
   owl:versionInfo "Initial SHACL constraints" ;
 .

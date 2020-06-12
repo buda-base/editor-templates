@@ -1,7 +1,4 @@
 # baseURI: http://purl.bdrc.io/shapes/adm/AdminShapes/
-# imports: http://datashapes.org/dash
-# imports: http://purl.bdrc.io/ontology/adm/types/Access/
-# imports: http://purl.bdrc.io/ontology/core/
 # prefix: AdminShapes
 
 @prefix AdminShapes: <http://purl.bdrc.io/shapes/adm/AdminShapes/> .
@@ -32,9 +29,6 @@
 
 AdminShapes:
   a owl:Ontology ;
-  owl:imports <http://datashapes.org/dash> ;
-  owl:imports <http://purl.bdrc.io/ontology/adm/types/Access> ;
-  owl:imports <http://purl.bdrc.io/ontology/core/> ;
   owl:versionInfo "Initial SHACL constraints core admin shapes" ;
 .
 bdsa:AdmEntityShape
