@@ -172,7 +172,6 @@ bds:ContentLocationShape
   sh:property bds:ContentLocationShape-contentLocationEndSide ;
   sh:property bds:ContentLocationShape-contentLocationEndVolume ;
   sh:property bds:ContentLocationShape-contentLocationEndVolumeName ;
-  sh:property bds:ContentLocationShape-contentLocationInstance ;
   sh:property bds:ContentLocationShape-contentLocationLine ;
   sh:property bds:ContentLocationShape-contentLocationPage ;
   sh:property bds:ContentLocationShape-contentLocationPhrase ;
