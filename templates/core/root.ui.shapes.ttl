@@ -39,6 +39,7 @@ bds:EntityShape
 .
 bds:EntityShape-note
   sh:description "Zero or more notes may be associated with an entity"@en ;
+  sh:name "note"@en ;
 .
 bds:EntityShape-skos_prefLabel
   sh:description "require unique language from among the listed choices"@en ;
