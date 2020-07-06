@@ -49,7 +49,7 @@ bds:CheckNoteClass
     sh:message "focusNode must be a bdo:Note" ;
     sh:sparql [
       a sh:SPARQLConstraint ;
-      sh:prefixes bds:RDF, bds:BDO ;
+      sh:prefixes bds:RDF, bds:RDFS, bds:BDO ;
       sh:select """
         select distinct $this
         where {
@@ -152,7 +152,7 @@ bds:CheckContentLocationClass
     sh:message "object if :contentLocation must be a bdo:ContentLocation" ;
     sh:sparql [
       a sh:SPARQLConstraint ;
-      sh:prefixes bds:RDF, bds:BDO ;
+      sh:prefixes bds:RDF, bds:RDFS, bds:BDO ;
       sh:select """
         select distinct $this
         where {
