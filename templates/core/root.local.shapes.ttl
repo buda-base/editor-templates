@@ -177,8 +177,6 @@ bds:ContentLocationShape
   sh:property bds:ContentLocationShape-contentLocationPhrase ;
   sh:property bds:ContentLocationShape-contentLocationSeqNum ;
   sh:property bds:ContentLocationShape-contentLocationSide ;
-  sh:property bds:ContentLocationShape-contentLocationStatement ;
-  sh:property bds:ContentLocationShape-contentLocationStatementCBETA ;
   sh:property bds:ContentLocationShape-contentLocationVolume ;
   sh:property bds:ContentLocationShape-contentLocationVolumeName ;
   sh:property bds:ContentLocationShape-contentPagination ;
