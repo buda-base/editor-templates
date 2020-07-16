@@ -40,7 +40,7 @@ bds:NoteShape
 .
 bds:NoteShape-noteSource
   a sh:PropertyShape ;
-  sh:message "a :noteSource must be an :Instance or other :BiblioEntity"@en ;
+  sh:message "a :noteSource must be an :Instance or other :BiblioEntity, for now"@en ;
   sh:path bdo:noteSource ;
   sh:class bdo:BiblioEntity ;
 .
