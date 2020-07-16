@@ -27,6 +27,9 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+##
+## Entity and other general property shapes
+##
 RootLocalShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/core/BaseShapes/> ;
