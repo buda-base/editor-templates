@@ -49,9 +49,19 @@ bds:ContentLocationShape
 .
 bds:ContentLocationShape-contentLocationInstance
   a sh:PropertyShape ;
-  rdfs:label "contentLocationInstance Shape"@en ;
   sh:message "a :ContentLocation may refer to, at most one, bdo:Instance as the source of the content."@en ;
   sh:path bdo:contentLocationInstance ;
   sh:class bdo:Instance ;
   sh:maxCount 1 ;
+.
+bds:CommonShape-prefLabel
+  a sh:PropertyShape ;
+  sh:path skos:prefLabel ;
+  sh:datatype rdf:langString ;
+  sh:uniqueLang true ;
+.
+bds:CommonShape-altLabel
+  a sh:PropertyShape ;
+  sh:path skos:altLabel ;
+  sh:datatype rdf:langString ;
 .

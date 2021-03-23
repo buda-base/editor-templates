@@ -280,3 +280,7 @@ bds:PersonShape-personTeacherOf
   sh:path bdo:personTeacherOf ;
   sh:class bdo:Person ;
 .
+bds:CommonShape-prefLabel
+  sh:message "There must be at least one skos:prefLabel"@en ;
+  sh:minCount 1 ;
+.

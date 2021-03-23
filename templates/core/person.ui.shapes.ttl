@@ -46,6 +46,11 @@ bds:PersonShape
 ##
 ## Property groups
 ##
+
+## TODO: add events and name groups
+
+# bds:PersonNamePropertyGroup
+
 bds:AssociatedPersonsPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Kinshp relations"@en ;
@@ -309,4 +314,8 @@ bds:PersonShape-personTeacherOf
   sh:group bds:StudentTeacherPropertyGroup ;
   sh:name "teacher of"@en ;
   sh:order "1"^^xsd:decimal ;
+.
+bds:CommonShape-prefLabel
+  sh:group bds:PersonNamePropertyGroup ;
+  sh:order "0"^^xsd:decimal ;
 .

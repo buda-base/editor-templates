@@ -35,13 +35,6 @@ RootLocalShapes:
   owl:imports <http://purl.bdrc.io/shapes/core/BaseShapes/> ;
   owl:versionInfo "Initial SHACL constraints" ;
 .
-bds:EntityShape
-  a sh:NodeShape ;
-  bds:nodeShapeType bds:FacetShape ;
-  sh:property bds:EntityShape-skos_prefLabel ;
-  sh:property bds:EntityShape-note ;
-  sh:targetClass bdo:Entity ;
-.
 ##
 ## Notes
 ##
@@ -60,13 +53,6 @@ bds:CheckNoteClass
         }	  
       """ ;
     ] ;
-.
-bds:EntityShape-note
-  a sh:PropertyShape ;
-  bds:propertyShapeType bds:FacetShape ;
-  sh:message "a note must be an IRI, no blank nodes"@en ;
-  sh:path bdo:note ;
-  sh:nodeKind sh:IRI ;
 .
 bds:NoteShape
   a sh:NodeShape ;
@@ -115,20 +101,6 @@ bds:NoteShape-noteType
   sh:path bdo:noteType ;
   sh:datatype xsd:string ;
   sh:maxCount 1 ;
-.
-##
-## usage of skos:prefLabels on Entities
-##
-bds:EntityShape-skos_prefLabel
-  a sh:PropertyShape ;
-  sh:message "each Entity resource must have at least one skos:prefLabel and each must be a unique language"@en ;
-  sh:path skos:prefLabel ;
-  sh:datatype rdf:langString ;
-  sh:languageIn (
-      "en" "zh" "bo" "bo-x-ewts" "km-x-femc" "km" "fr" "km-x-bdrc" 
-    ) ;
-  sh:minCount 1 ;
-  sh:uniqueLang true ;
 .
 ##
 ## Labels
