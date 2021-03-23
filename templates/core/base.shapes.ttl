@@ -72,6 +72,12 @@ bds:identifierPrefix
   rdfs:range xsd:string ;
   skos:definition "prefix to use when generating identifier for a resource"@en ;
 .
+bds:classIn
+  a owl:DatatypeProperty ;
+  rdfs:label "expected object type"@en ;
+  rdfs:domain rdfs:Resource ;
+  skos:definition "this is similar to sh:class except that the constraint is that the type must be any of the listed types instead of the conjuction of all listed types. The object should be a rdf:list."@en ;
+.
 bds:nodeShapeType
   a owl:ObjectProperty ;
   rdfs:label "node shape type"@en ;
