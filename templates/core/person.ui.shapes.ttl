@@ -94,12 +94,6 @@ bds:PersonShape-personGender
   sh:name "has gender"@en ;
   sh:order "1"^^xsd:decimal ;
 .
-bds:PersonShape-genderFemale
-  sh:name "female"@en ;
-.
-bds:PersonShape-genderMale
-  sh:name "male"@en ;
-.
 ##
 ## PersonEvents
 ##
