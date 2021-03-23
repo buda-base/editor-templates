@@ -49,16 +49,9 @@ bds:PersonShape
 
 ## TODO: add events and name groups
 
-# bds:PersonNamePropertyGroup
-
-bds:AssociatedPersonsPropertyGroup
+bds:PersonNamePropertyGroup
   a sh:PropertyGroup ;
-  rdfs:label "Kinshp relations"@en ;
-  sh:order "3"^^xsd:decimal ;
-.
-bds:IdentityPropertyGroup
-  a sh:PropertyGroup ;
-  rdfs:label "Identity relations"@en ;
+  rdfs:label "Name relations"@en ;
   sh:order "0"^^xsd:decimal ;
 .
 bds:EventPropertyGroup
@@ -66,29 +59,24 @@ bds:EventPropertyGroup
   rdfs:label "Event relations"@en ;
   sh:order "1"^^xsd:decimal ;
 .
-bds:KinshipPropertyGroup
-  a sh:PropertyGroup ;
-  rdfs:label "Kinshp relations"@en ;
-  sh:group bds:AssociatedPersonsPropertyGroup ;
-  sh:order "1"^^xsd:decimal ;
-.
-bds:PersonNamePropertyGroup
-  a sh:PropertyGroup ;
-  rdfs:label "Name relations"@en ;
-.
 bds:StudentTeacherPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Student/Teacher relations"@en ;
-  sh:group bds:AssociatedPersonsPropertyGroup ;
-  sh:order "0"^^xsd:decimal ;
+  sh:order "2"^^xsd:decimal ;
 .
+bds:KinshipPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Kinshp relations"@en ;
+  sh:order "3"^^xsd:decimal ;
+.
+
 ##
 ## UI additions for Property shapes
 ##
 ## Gender
 ##
 bds:PersonShape-personGender
-  dash:editor dash:InstancesSelectEditor ;
+  dash:editor dash:EnumSelectEditor ;
   sh:description "may have at most one :personGender or none if not known."@en ;
   sh:group bds:IdentityPropertyGroup ;
   sh:name "has gender"@en ;
@@ -98,37 +86,51 @@ bds:PersonShape-personGender
 ## PersonEvents
 ##
 bds:PersonShape-personEvent
-  dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have zero or more events like birth, death, ordination."@en ;
   sh:group bds:EventPropertyGroup ;
+  bds:propertyShapeType bds:FacetShape ;
   sh:name "has event"@en ;
   sh:order "0"^^xsd:decimal ;
 .
 bds:PersonEventShape-personEventCorporation
   dash:editor dash:InstancesSelectEditor ;
+  bds:propertyShapeType bds:ExternalShape ;
   sh:name "corporation associated with the event"@en ;
+  sh:order "2"^^xsd:decimal ;
 .
-
 bds:PersonEventShape-personEventRole
   dash:editor dash:InstancesSelectEditor ;
+  bds:propertyShapeType bds:ExternalShape ;
   sh:name "role associated with the event"@en ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:PersonEventShape-type
+  dash:editor dash:EnumSelectEditor ;
+  sh:description "event type"@en ;
+  sh:name "type"@en ;
+  sh:order "0"^^xsd:decimal ;
 .
 ##
 ## PersonNames
 ##
 bds:PersonShape-personName
-  dash:viewer dash:DetailsViewer ;
   sh:description "this Person may have one or more names."@en ;
   sh:name "person name"@en ;
-  sh:order "0"^^xsd:decimal ;
+  sh:group bds:PersonNamePropertyGroup ;
+  sh:order "1"^^xsd:decimal ;
 .
 bds:PersonNameShape-personNameLabel
   dash:editor dash:TextAreaWithLangEditor ;
   dash:singleLine true ;
   sh:description "this Person has a name given by the label."@en ;
-  sh:group bds:PersonNamePropertyGroup ;
   sh:name "name label"@en ;
   sh:order "1"^^xsd:decimal ;
+.
+bds:PersonNameShape-type
+  dash:editor dash:EnumSelectEditor ;
+  sh:description "name type"@en ;
+  sh:name "type"@en ;
+  sh:order "0"^^xsd:decimal ;
 .
 ##
 ## Kinship
