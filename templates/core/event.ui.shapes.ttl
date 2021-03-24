@@ -35,11 +35,6 @@ EventUIShapes:
   owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Events and its subclasses" ;
 .
-bds:EventShape-eventText
-  dash:editor dash:TextAreaWithLangEditor ;
-  dash:singleLine false ;
-  sh:name "event text"@en ;
-.
 bds:EventShape-eventWhere
   dash:editor dash:InstancesSelectEditor ;
   sh:name "where event occurred"@en ;
@@ -50,9 +45,11 @@ bds:EventShape-eventWho
 .
 bds:EventShape-notAfter
   sh:name "event occurred not before"@en ;
+  dash:editor bds:gYearEditor ;
 .
 bds:EventShape-notBefore
   sh:name "event occurred not before"@en ;
+  dash:editor bds:gYearEditor ;
 .
 bds:EventShape-onDate
   dash:editor dash:DatePickerEditor ;
@@ -64,4 +61,5 @@ bds:EventShape-onOrAbout
 .
 bds:EventShape-onYear
   sh:name "event occurred during the year"@en ;
+  dash:editor bds:gYearEditor ;
 .

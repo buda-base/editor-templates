@@ -92,24 +92,30 @@ bds:PersonShape-personEvent
   sh:name "has event"@en ;
   sh:order "0"^^xsd:decimal ;
 .
-bds:PersonEventShape-personEventCorporation
-  dash:editor dash:InstancesSelectEditor ;
-  bds:propertyShapeType bds:ExternalShape ;
-  sh:name "corporation associated with the event"@en ;
-  sh:order "2"^^xsd:decimal ;
-.
-bds:PersonEventShape-personEventRole
-  dash:editor dash:InstancesSelectEditor ;
-  bds:propertyShapeType bds:ExternalShape ;
-  sh:name "role associated with the event"@en ;
-  sh:order "1"^^xsd:decimal ;
-.
 bds:PersonEventShape-type
   dash:editor dash:EnumSelectEditor ;
   sh:description "event type"@en ;
   sh:name "type"@en ;
   sh:order "0"^^xsd:decimal ;
 .
+bds:EventShape-notAfter sh:oder "1"^^xsd:decimal .
+bds:EventShape-notBefore sh:oder "2"^^xsd:decimal .
+bds:EventShape-onYear sh:oder "3"^^xsd:decimal .
+bds:EventShape-onOrAbout sh:oder "4"^^xsd:decimal .
+bds:EventShape-eventWhere sh:oder "5"^^xsd:decimal .
+bds:PersonEventShape-personEventRole
+  dash:editor dash:InstancesSelectEditor ;
+  bds:propertyShapeType bds:ExternalShape ;
+  sh:name "role associated with the event"@en ;
+  sh:order "6"^^xsd:decimal ;
+.
+bds:PersonEventShape-personEventCorporation
+  dash:editor dash:InstancesSelectEditor ;
+  bds:propertyShapeType bds:ExternalShape ;
+  sh:name "corporation associated with the event"@en ;
+  sh:order "7"^^xsd:decimal ;
+.
+bds:EventShape-eventWho sh:oder "8"^^xsd:decimal .
 ##
 ## PersonNames
 ##

@@ -122,12 +122,6 @@
 
     <OntologySpec>
         <!-- Event shapes -->
-        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/EventLocalShapes/"/>
-        <altURL    rdf:resource="templates/core/event.local.shapes.ttl"/>
-    </OntologySpec>
-
-    <OntologySpec>
-        <!-- Event shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/EventUIShapes/"/>
         <altURL    rdf:resource="templates/core/event.ui.shapes.ttl"/>
     </OntologySpec>
@@ -157,13 +151,6 @@
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/PersonShapes/"/>
         <altURL    rdf:resource="templates/core/person.shapes.ttl"/>
         <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/PersonShapes"/>
-    </OntologySpec>
-
-    <OntologySpec>
-        <!-- Person shapes localized to a single Person graph-->
-        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/PersonLocalShapes/"/>
-        <altURL    rdf:resource="templates/core/person.local.shapes.ttl"/>
-        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/PersonLocalShapes"/>
     </OntologySpec>
 
     <OntologySpec>

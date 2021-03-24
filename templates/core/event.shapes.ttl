@@ -1,5 +1,4 @@
 # baseURI: http://purl.bdrc.io/shapes/core/EventShapes/
-# imports: http://purl.bdrc.io/shapes/core/EventLocalShapes/
 # imports: http://purl.bdrc.io/shapes/core/RootShapes/
 # prefix: EventShapes
 
@@ -31,13 +30,63 @@
 
 EventShapes:
   a owl:Ontology ;
-  owl:imports <http://purl.bdrc.io/shapes/core/EventLocalShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
-  owl:versionInfo "Initial SHACL constraints for Events and its subclasses" ;
+  owl:versionInfo "Initial SHACL constraints for Event" ;
 .
 bds:EventShape
+  a sh:NodeShape ;
+  bds:identifierPrefix "EV" ;
+  bds:nodeShapeType bds:FacetShape ;
+  rdfs:label "Event Shape"@en ;
+  sh:property bds:EventShape-notAfter ;
+  sh:property bds:EventShape-notBefore ;
+  sh:property bds:EventShape-onDate ;
+  sh:property bds:EventShape-onOrAbout ;
+  sh:property bds:EventShape-onYear ;
   sh:property bds:EventShape-eventWhere ;
   sh:property bds:EventShape-eventWho ;
+  sh:targetClass bdo:Event ;
+.
+bds:EventShape-notAfter
+  a sh:PropertyShape ;
+  sh:message "there must be at most one :notAfter, and it must be an xsd:gYear"@en ;
+  sh:path bdo:notAfter ;
+  sh:datatype xsd:gYear ;
+  sh:maxCount 1 ;
+  sh:minExclusive "-4000"^^xsd:gYear ;
+  sh:maxExclusive "2100"^^xsd:gYear ;
+.
+bds:EventShape-notBefore
+  a sh:PropertyShape ;
+  sh:message "there must be at most one :notBefore, and it must be an xsd:gYear"@en ;
+  sh:path bdo:notBefore ;
+  sh:datatype xsd:gYear ;
+  sh:maxCount 1 ;
+  sh:minExclusive "-4000"^^xsd:gYear ;
+  sh:maxExclusive "2100"^^xsd:gYear ;
+.
+bds:EventShape-onDate
+  a sh:PropertyShape ;
+  sh:message "there must be at most one :onDate, and it must be an xsd:date"@en ;
+  sh:path bdo:onDate ;
+  sh:datatype xsd:date ;
+  sh:maxCount 1 ;
+.
+bds:EventShape-onOrAbout
+  a sh:PropertyShape ;
+  sh:message "there must be at most one :onOrAbout, and it must be an xsd:string"@en ;
+  sh:path bdo:onOrAbout ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+.
+bds:EventShape-onYear
+  a sh:PropertyShape ;
+  sh:message "there must be at most one :onYear, and it must be an xsd:gYear"@en ;
+  sh:path bdo:onYear ;
+  sh:datatype xsd:gYear ;
+  sh:maxCount 1 ;
+  sh:minExclusive "-4000"^^xsd:gYear ;
+  sh:maxExclusive "2100"^^xsd:gYear ;
 .
 bds:EventShape-eventWhere
   a sh:PropertyShape ;
@@ -50,5 +99,5 @@ bds:EventShape-eventWho
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShapeShape ;
   sh:path bdo:eventWho ;
-  sh:class bdo:AgentInRole ;
+  sh:class bdo:Person ;
 .
