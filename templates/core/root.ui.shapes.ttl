@@ -48,9 +48,13 @@ bds:CommonShape-altLabel
   dash:editor dash:TextAreaWithLangEditor ;
   dash:singleLine true ;
 .
-bds:bds:NoteShape-noteText
+bds:RootShape-note
+  sh:name "notes"@en ;
+  dash:editor dash:DetailsEditor ;
+.
+bds:NoteShape-noteText
   dash:editor dash:TextAreaWithLangEditor ;
-  sh:name "source location"@en ;
+  sh:name "text"@en ;
   sh:order "0"^^xsd:decimal ;
 .
 bds:NoteShape-contentLocationStatement
@@ -86,7 +90,6 @@ bds:ContentLocationShape-contentLocationPage
   sh:name "page"@en ;
   sh:order "2"^^xsd:decimal ;
   dash:singleLine true ;
-  sh:defaultValue 1 ;
 .
 bds:ContentLocationShape-contentLocationEndPage 
   dash:editor dash:TextFieldEditor ;

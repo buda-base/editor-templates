@@ -69,6 +69,11 @@ bds:KinshipPropertyGroup
   rdfs:label "Kinshp relations"@en ;
   sh:order "3"^^xsd:decimal ;
 .
+bds:NotesPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Notes"@en ;
+  sh:order "4"^^xsd:decimal ;
+.
 
 ##
 ## UI additions for Property shapes
@@ -336,5 +341,12 @@ bds:PersonShape-personTeacherOf
 .
 bds:CommonShape-prefLabel
   sh:group bds:PersonNamePropertyGroup ;
+  sh:order "0"^^xsd:decimal ;
+.
+##
+## Notes
+##
+bds:RootShape-note
+  sh:group bds:NotesPropertyGroup ;
   sh:order "0"^^xsd:decimal ;
 .
