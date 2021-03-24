@@ -68,9 +68,16 @@ bds:BDR
 bds:identifierPrefix
   a owl:DatatypeProperty ;
   rdfs:label "prefix for resource id"@en ;
-  rdfs:domain rdfs:Resource ;
   rdfs:range xsd:string ;
   skos:definition "prefix to use when generating identifier for a resource"@en ;
+.
+# TODO: some properties should be displayed conditionally, for instance eventWho on a personEvent only makes sense if the type of personEvent is a marriage or divorce
+bds:displayPriority
+  a owl:DatatypeProperty ;
+  rdfs:label "display priority"@en ;
+  rdfs:range xsd:integer ;
+  rdfs:domain sh:PropertyShape ;
+  skos:definition "indicates if a property should be displayed or hidden, using a number between 0 and 2 where 0 means the property should always be displayed, 1 means the property can be hidden behind a see more button if necessary, 2 means the property should be hidden."@en ;
 .
 bds:classIn
   a owl:DatatypeProperty ;
@@ -148,11 +155,6 @@ bds:SortDescending
   a bds:SortDirection ;
   rdfs:label "sort descending"@en ;
   skos:definition "items should be sorted in descending order"@en ;
-.
-bds:localShapeGraph
-  a owl:ObjectProperty ;
-  rdfs:domain bdo:Entity ;
-  rdfs:range xsd:anyURI ;
 .
 bds:topShapeGraph
   a owl:ObjectProperty ;
