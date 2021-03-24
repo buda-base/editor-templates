@@ -42,9 +42,6 @@ PersonUIShapes
 PersonShapes    
     EventShapes
 
-PersonLocalShapes
-    EventLocalShapes
-
 EventUIShapes
     EventShapes
     RootUIShapes

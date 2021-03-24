@@ -49,13 +49,18 @@ bds:CommonShape-altLabel
 ##
 ## Notes
 ##
+bds:RootShape-note
+  a sh:PropertyShape ;
+  sh:path bdo:note ;
+  sh:nodeKind sh:IRI ;
+  bds:propertyShapeType bds:FacetShape ;
+.
 bds:NoteShape
   a sh:NodeShape ;
   bds:identifierPrefix "NT" ;
   bds:nodeShapeType bds:FacetShape ;
   sh:property bds:NoteShape-contentLocation ;
   sh:property bds:NoteShape-contentLocationStatement ;
-  sh:property bds:NoteShape-contentLocationStatementCBETA ;
   sh:property bds:NoteShape-noteText ;
   sh:property bds:NoteShape-noteSource ;
 # there are no note types currently well defined
@@ -101,21 +106,6 @@ bds:NoteShape-noteType
   sh:maxCount 1 ;
 .
 ##
-## Labels
-##
-bds:LabelShape
-  a sh:NodeShape ;
-  rdfs:label "Label Shape"@en ;
-  sh:property bds:LabelShape-hasTranslation ;
-  sh:targetClass bdo:Label ;
-.
-bds:LabelShape-hasTranslation
-  a sh:PropertyShape ;
-  sh:message "a label may refer to other :Labels that are translations of this label"@en ;
-  sh:path bdo:hasTranslation ;
-  sh:class bdo:Label ;
-.
-##
 ## ContentLocations
 ##
 bds:ContentLocationShape
@@ -146,6 +136,7 @@ bds:ContentLocationShape-contentLocationInstance
   sh:path bdo:contentLocationInstance ;
   bds:propertyShapeType bds:ExternalShapeShape ;
   sh:maxCount 1 ;
+  sh:minCount 1 ;
   sh:class bdo:ImageInstance ;
   sh:message "At most one instance allowed"@en ;
 .
@@ -169,6 +160,8 @@ bds:ContentLocationShape-contentLocationEndPage
   sh:path bdo:contentLocationEndPage ;
   sh:datatype xsd:integer ;
   sh:maxCount 1 ;
+  sh:minInclusive 1 ;
+  sh:maxInclusive 4000 ;
 .
 bds:ContentLocationShape-contentLocationEndPhrase
   a sh:PropertyShape ;
@@ -184,6 +177,8 @@ bds:ContentLocationShape-contentLocationEndSide
   sh:path bdo:contentLocationEndSide ;
   sh:datatype xsd:string ;
   sh:maxCount 1 ;
+  sh:minInclusive 1 ;
+  sh:maxInclusive 100 ;
 .
 bds:ContentLocationShape-contentLocationEndVolume
   a sh:PropertyShape ;
@@ -191,6 +186,8 @@ bds:ContentLocationShape-contentLocationEndVolume
   sh:path bdo:contentLocationEndVolume ;
   sh:datatype xsd:integer ;
   sh:maxCount 1 ;
+  sh:minInclusive 1 ;
+  sh:maxInclusive 500 ;
 .
 bds:ContentLocationShape-contentLocationEndVolumeName
   a sh:PropertyShape ;
@@ -205,6 +202,8 @@ bds:ContentLocationShape-contentLocationLine
   sh:path bdo:contentLocationLine ;
   sh:datatype xsd:integer ;
   sh:maxCount 1 ;
+  sh:minInclusive 1 ;
+  sh:maxInclusive 100 ;
 .
 bds:ContentLocationShape-contentLocationPage
   a sh:PropertyShape ;
@@ -213,6 +212,8 @@ bds:ContentLocationShape-contentLocationPage
   sh:path bdo:contentLocationPage ;
   sh:datatype xsd:integer ;
   sh:maxCount 1 ;
+  sh:minInclusive 1 ;
+  sh:maxInclusive 4000 ;
 .
 bds:ContentLocationShape-contentLocationPhrase
   a sh:PropertyShape ;
@@ -242,6 +243,9 @@ bds:ContentLocationShape-contentLocationVolume
   sh:path bdo:contentLocationVolume ;
   sh:datatype xsd:integer ;
   sh:maxCount 1 ;
+  sh:minInclusive 1 ;
+  sh:maxInclusive 500 ;
+  sh:minCount 1 ;
 .
 bds:ContentLocationShape-contentLocationVolumeName
   a sh:PropertyShape ;
@@ -255,5 +259,6 @@ bds:ContentLocationShape-contentPagination
   sh:message "a :ContentLocation may indicate, at most one, pagination type."@en ;
   sh:path bdo:contentPagination ;
   sh:class bdo:PaginationType ;
+  sh:in (bdr:PaginationAbsolute bdr:PaginationRelative) ;
   sh:maxCount 1 ;
 .

@@ -45,11 +45,11 @@ bds:EventShape-eventWho
 .
 bds:EventShape-notAfter
   sh:name "event occurred not before"@en ;
-  dash:editor bds:gYearEditor ;
+  dash:editor bds:TextFieldEditor ;
 .
 bds:EventShape-notBefore
   sh:name "event occurred not before"@en ;
-  dash:editor bds:gYearEditor ;
+  dash:editor bds:TextFieldEditor ;
 .
 bds:EventShape-onDate
   dash:editor dash:DatePickerEditor ;

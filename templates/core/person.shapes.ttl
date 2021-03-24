@@ -60,6 +60,10 @@ bds:PersonShape
   sh:property bds:PersonShape-kinWith ;
   sh:property bds:PersonShape-personStudentOf ;
   sh:property bds:PersonShape-personTeacherOf ;
+  sh:property bds:PersonShape-personTeacherOf ;
+  sh:property bds:RootShape-note ;
+  # TODO: incarnation
+  # TODO: missing kin properties
 .
 ##
 ## Gender defns for kinship

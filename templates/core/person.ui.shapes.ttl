@@ -88,7 +88,7 @@ bds:PersonShape-personGender
 bds:PersonShape-personEvent
   sh:description "this Person may have zero or more events like birth, death, ordination."@en ;
   sh:group bds:EventPropertyGroup ;
-  bds:propertyShapeType bds:FacetShape ;
+  dash:editor dash:DetailsEditor ;
   sh:name "has event"@en ;
   sh:order "0"^^xsd:decimal ;
 .
@@ -102,18 +102,18 @@ bds:EventShape-notAfter sh:oder "1"^^xsd:decimal .
 bds:EventShape-notBefore sh:oder "2"^^xsd:decimal .
 bds:EventShape-onYear sh:oder "3"^^xsd:decimal .
 bds:EventShape-onOrAbout sh:oder "4"^^xsd:decimal .
-bds:EventShape-eventWhere sh:oder "5"^^xsd:decimal .
+bds:EventShape-eventWhere sh:oder "5"^^xsd:decimal ; bds:displayPriority 1 .
 bds:PersonEventShape-personEventRole
   dash:editor dash:InstancesSelectEditor ;
-  bds:propertyShapeType bds:ExternalShape ;
   sh:name "role associated with the event"@en ;
   sh:order "6"^^xsd:decimal ;
+  bds:displayPriority 1 ;
 .
 bds:PersonEventShape-personEventCorporation
   dash:editor dash:InstancesSelectEditor ;
-  bds:propertyShapeType bds:ExternalShape ;
   sh:name "corporation associated with the event"@en ;
   sh:order "7"^^xsd:decimal ;
+  bds:displayPriority 1 ;
 .
 bds:EventShape-eventWho sh:oder "8"^^xsd:decimal .
 ##
@@ -123,6 +123,7 @@ bds:PersonShape-personName
   sh:description "this Person may have one or more names."@en ;
   sh:name "person name"@en ;
   sh:group bds:PersonNamePropertyGroup ;
+  dash:editor dash:DetailsEditor ;
   sh:order "1"^^xsd:decimal ;
 .
 bds:PersonNameShape-personNameLabel
@@ -146,68 +147,27 @@ bds:PersonShape-hasBrother
   sh:description "This Person may have zero or more brothers."@en ;
   sh:group bds:KinshipPropertyGroup ;
   sh:name "has brother"@en ;
-  sh:order "2"^^xsd:decimal ;
+  sh:order "0"^^xsd:decimal ;
 .
-bds:PersonShape-hasCousin
+bds:PersonShape-hasSister
   dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have zero or more cousins."@en ;
-  sh:name "has cousin"@en ;
-  sh:order "3"^^xsd:decimal ;
+  sh:description "this Person may have zero or more sisters."@en ;
+  sh:group bds:KinshipPropertyGroup ;
+  sh:name "has sister"@en ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:PersonShape-hasSon
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have zero or more sons."@en ;
+  sh:group bds:KinshipPropertyGroup ;
+  sh:name "has son"@en ;
+  sh:order "2"^^xsd:decimal ;
 .
 bds:PersonShape-hasDaughter
   dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have zero or more daughters."@en ;
   sh:group bds:KinshipPropertyGroup ;
   sh:name "has daughter"@en ;
-  sh:order "1"^^xsd:decimal ;
-.
-bds:PersonShape-hasFather
-  dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have a father."@en ;
-  sh:group bds:KinshipPropertyGroup ;
-  sh:name "has father"@en ;
-  sh:order "0"^^xsd:decimal ;
-.
-bds:PersonShape-hasGrandChild
-  dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have zero or more grandchildren."@en ;
-  sh:group bds:KinshipPropertyGroup ;
-  sh:name "has grandchild"@en ;
-  sh:order "3"^^xsd:decimal ;
-.
-bds:PersonShape-hasGrandParent
-  dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have zero upto 4 grandparents."@en ;
-  sh:group bds:KinshipPropertyGroup ;
-  sh:name "has grandparent"@en ;
-  sh:order "3"^^xsd:decimal ;
-.
-bds:PersonShape-hasGranddaughter
-  dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have zero or more granddaughters."@en ;
-  sh:group bds:KinshipPropertyGroup ;
-  sh:name "has granddaughter"@en ;
-  sh:order "3"^^xsd:decimal ;
-.
-bds:PersonShape-hasGrandfather
-  dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have at most two Grandfathers."@en ;
-  sh:group bds:KinshipPropertyGroup ;
-  sh:name "has grandfather"@en ;
-  sh:order "3"^^xsd:decimal ;
-.
-bds:PersonShape-hasGrandmother
-  dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have at most two Grandmothers."@en ;
-  sh:group bds:KinshipPropertyGroup ;
-  sh:name "has grandmother"@en ;
-  sh:order "3"^^xsd:decimal ;
-.
-bds:PersonShape-hasGrandson
-  dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have zero or more grandsons."@en ;
-  sh:group bds:KinshipPropertyGroup ;
-  sh:name "has grandson"@en ;
   sh:order "3"^^xsd:decimal ;
 .
 bds:PersonShape-hasHusband
@@ -215,90 +175,147 @@ bds:PersonShape-hasHusband
   sh:description "this Person may have a husband."@en ;
   sh:group bds:KinshipPropertyGroup ;
   sh:name "has husband"@en ;
-  sh:order "0"^^xsd:decimal ;
-.
-bds:PersonShape-hasMother
-  dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have at most one mother."@en ;
-  sh:group bds:KinshipPropertyGroup ;
-  sh:name "has mother"@en ;
-  sh:order "1"^^xsd:decimal ;
-.
-bds:PersonShape-hasOlderBrother
-  dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have zero or more older brothers."@en ;
-  sh:group bds:KinshipPropertyGroup ;
-  sh:name "has older brother"@en ;
-  sh:order "2"^^xsd:decimal ;
-.
-bds:PersonShape-hasOlderSister
-  dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have zero or more older sisters."@en ;
-  sh:group bds:KinshipPropertyGroup ;
-  sh:name "has older sister"@en ;
-  sh:order "2"^^xsd:decimal ;
-.
-bds:PersonShape-hasParent
-  dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have at most two parents."@en ;
-  sh:group bds:KinshipPropertyGroup ;
-  sh:name "has parent"@en ;
-  sh:order "1"^^xsd:decimal ;
-.
-bds:PersonShape-hasSibling
-  dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have zero or more siblings."@en ;
-  sh:group bds:KinshipPropertyGroup ;
-  sh:name "has sibling"@en ;
-  sh:order "2"^^xsd:decimal ;
-.
-bds:PersonShape-hasSister
-  dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have zero or more sisters."@en ;
-  sh:group bds:KinshipPropertyGroup ;
-  sh:name "has sister"@en ;
-  sh:order "2"^^xsd:decimal ;
-.
-bds:PersonShape-hasSon
-  dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have zero or more sons."@en ;
-  sh:group bds:KinshipPropertyGroup ;
-  sh:name "has son"@en ;
-  sh:order "1"^^xsd:decimal ;
-.
-bds:PersonShape-hasSpouse
-  dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have at most one spouse."@en ;
-  sh:group bds:KinshipPropertyGroup ;
-  sh:name "has spouse"@en ;
-  sh:order "0"^^xsd:decimal ;
+  sh:order "4"^^xsd:decimal ;
 .
 bds:PersonShape-hasWife
   dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have at most one wife."@en ;
   sh:group bds:KinshipPropertyGroup ;
   sh:name "has wife"@en ;
-  sh:order "0"^^xsd:decimal ;
+  sh:order "5"^^xsd:decimal ;
+.
+bds:PersonShape-hasFather
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have a father."@en ;
+  sh:group bds:KinshipPropertyGroup ;
+  sh:name "has father"@en ;
+  sh:order "6"^^xsd:decimal ;
+.
+bds:PersonShape-hasMother
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have at most one mother."@en ;
+  sh:group bds:KinshipPropertyGroup ;
+  sh:name "has mother"@en ;
+  sh:order "7"^^xsd:decimal ;
+.
+bds:PersonShape-hasGranddaughter
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have zero or more granddaughters."@en ;
+  sh:group bds:KinshipPropertyGroup ;
+  sh:name "has granddaughter"@en ;
+  sh:order "8"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-hasSpouse
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have at most one spouse."@en ;
+  sh:group bds:KinshipPropertyGroup ;
+  sh:name "has spouse"@en ;
+  sh:order "9"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-hasCousin
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have zero or more cousins."@en ;
+  sh:name "has cousin"@en ;
+  sh:order "10"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-hasGrandfather
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have at most two Grandfathers."@en ;
+  sh:group bds:KinshipPropertyGroup ;
+  sh:name "has grandfather"@en ;
+  sh:order "11"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-hasGrandmother
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have at most two Grandmothers."@en ;
+  sh:group bds:KinshipPropertyGroup ;
+  sh:name "has grandmother"@en ;
+  sh:order "12"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-hasGrandson
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have zero or more grandsons."@en ;
+  sh:group bds:KinshipPropertyGroup ;
+  sh:name "has grandson"@en ;
+  sh:order "13"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-hasGrandChild
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have zero or more grandchildren."@en ;
+  sh:group bds:KinshipPropertyGroup ;
+  sh:name "has grandchild"@en ;
+  sh:order "14"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-hasGrandParent
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have zero upto 4 grandparents."@en ;
+  sh:group bds:KinshipPropertyGroup ;
+  sh:name "has grandparent"@en ;
+  sh:order "15"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-hasOlderBrother
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have zero or more older brothers."@en ;
+  sh:group bds:KinshipPropertyGroup ;
+  sh:name "has older brother"@en ;
+  sh:order "16"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-hasOlderSister
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have zero or more older sisters."@en ;
+  sh:group bds:KinshipPropertyGroup ;
+  sh:name "has older sister"@en ;
+  sh:order "17"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-hasParent
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have at most two parents."@en ;
+  sh:group bds:KinshipPropertyGroup ;
+  sh:name "has parent"@en ;
+  sh:order "18"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-hasSibling
+  dash:editor dash:InstancesSelectEditor ;
+  sh:description "this Person may have zero or more siblings."@en ;
+  sh:group bds:KinshipPropertyGroup ;
+  sh:name "has sibling"@en ;
+  sh:order "19"^^xsd:decimal ;
+  bds:displayPriority 1 ;
 .
 bds:PersonShape-hasYoungerBrother
   dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have zero or more younger brothers."@en ;
 sh:group bds:KinshipPropertyGroup ;
   sh:name "has younger brother"@en ;
-  sh:order "2"^^xsd:decimal ;
+  sh:order "20"^^xsd:decimal ;
+  bds:displayPriority 1 ;
 .
 bds:PersonShape-hasYoungerSister
   dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have zero or more younger sisters."@en ;
   sh:group bds:KinshipPropertyGroup ;
   sh:name "has younger sister"@en ;
-  sh:order "2"^^xsd:decimal ;
+  sh:order "21"^^xsd:decimal ;
+  bds:displayPriority 1 ;
 .
 bds:PersonShape-kinWith
   dash:editor dash:InstancesSelectEditor ;
   sh:description "this Person may have zero or more kin."@en ;
   sh:group bds:KinshipPropertyGroup ;
   sh:name "has kin"@en ;
+  sh:order "22"^^xsd:decimal ;
+  bds:displayPriority 1 ;
 .
 ##
 ## Student/Teacher

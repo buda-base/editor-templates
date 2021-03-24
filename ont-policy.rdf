@@ -93,13 +93,6 @@
     </OntologySpec>
     
     <OntologySpec>
-        <!-- the root local shapes for entities -->
-        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/RootLocalShapes/"/>
-        <altURL    rdf:resource="templates/core/root.local.shapes.ttl"/>
-        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/RootLocalShapes"/>
-    </OntologySpec>
-    
-    <OntologySpec>
         <!-- the root ui shapes for entities -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/RootUIShapes/"/>
         <altURL    rdf:resource="templates/core/root.ui.shapes.ttl"/>
