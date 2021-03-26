@@ -51,22 +51,22 @@ bds:PersonShape
 
 bds:PersonNamePropertyGroup
   a sh:PropertyGroup ;
-  rdfs:label "Name relations"@en ;
+  rdfs:label "Names"@en ;
   sh:order "0"^^xsd:decimal ;
 .
 bds:EventPropertyGroup
   a sh:PropertyGroup ;
-  rdfs:label "Event relations"@en ;
+  rdfs:label "Events"@en ;
   sh:order "1"^^xsd:decimal ;
 .
 bds:StudentTeacherPropertyGroup
   a sh:PropertyGroup ;
-  rdfs:label "Student/Teacher relations"@en ;
+  rdfs:label "Students/Teachers"@en ;
   sh:order "2"^^xsd:decimal ;
 .
 bds:KinshipPropertyGroup
   a sh:PropertyGroup ;
-  rdfs:label "Kinshp relations"@en ;
+  rdfs:label "Kinship"@en ;
   sh:order "3"^^xsd:decimal ;
 .
 bds:NotesPropertyGroup

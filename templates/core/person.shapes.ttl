@@ -268,7 +268,7 @@ bds:PersonNameShape
   rdfs:label "Person Name Shape"@en ;
   sh:targetObjectsOf bdo:personName ;
   sh:property bds:PersonNameShape-personNameLabel ;
-  sh:property bds:PersonNameShape-personNameType ;
+  sh:property bds:PersonNameShape-type ;
   sh:targetClass bdo:PersonName ;
 .
 bds:PersonNameShape-personNameLabel
