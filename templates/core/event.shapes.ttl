@@ -90,14 +90,14 @@ bds:EventShape-onYear
 .
 bds:EventShape-eventWhere
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShapeShape ;
+  bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:eventWhere ;
   sh:class bdo:Place ;
   sh:maxCount 1 ;
 .
 bds:EventShape-eventWho
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShapeShape ;
+  bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:eventWho ;
   sh:class bdo:Person ;
 .

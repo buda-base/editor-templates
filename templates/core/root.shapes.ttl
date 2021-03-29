@@ -73,7 +73,7 @@ bds:NoteShape-noteSource
   sh:message "a note may have at most one :noteSource"@en ;
   sh:path bdo:noteSource ;
   sh:maxCount 1 ;
-  bds:propertyShapeType bds:ExternalShapeShape ;
+  bds:propertyShapeType bds:ExternalShape ;
   sh:class bdo:ImageInstance ;
 .
 bds:NoteShape-contentLocationStatementCBETA
@@ -134,7 +134,7 @@ bds:ContentLocationShape
 bds:ContentLocationShape-contentLocationInstance 
   a sh:PropertyShape ;
   sh:path bdo:contentLocationInstance ;
-  bds:propertyShapeType bds:ExternalShapeShape ;
+  bds:propertyShapeType bds:ExternalShape ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
   sh:class bdo:ImageInstance ;
