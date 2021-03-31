@@ -32,6 +32,7 @@ PersonShapes:
 bds:PersonShape
   a sh:NodeShape ;
   bds:identifierPrefix "P" ;
+  sh:namespace "http://purl.bdrc.io/resource/" ;
   rdfs:label "Person Shape"@en ;
   sh:property bds:PersonShape-personEvent ;
   sh:property bds:PersonShape-personName ;
@@ -62,8 +63,18 @@ bds:PersonShape
   sh:property bds:PersonShape-personTeacherOf ;
   sh:property bds:PersonShape-personTeacherOf ;
   sh:property bds:RootShape-note ;
+  sh:property bds:PersonShape-adminData ;
   # TODO: incarnation
   # TODO: missing kin properties
+.
+##
+## Admin data
+##
+bds:PersonShape-adminData 
+  a sh:PropertyShape ;
+  sh:path [ sh:inversePath adm:adminAbout ] ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
 .
 ##
 ## Gender defns for kinship
@@ -71,7 +82,6 @@ bds:PersonShape
 bds:PersonShape-gender
   a sh:PropertyShape ;
   sh:path bdo:personGender ;
-  sh:hasValue bdr:GenderFemale ;
   sh:in ( bdr:GenderFemale bdr:GenderMale ) ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
@@ -264,6 +274,8 @@ bds:PersonShape-personName
 .
 bds:PersonNameShape
   a sh:NodeShape ;
+  bds:identifierPrefix "NM" ;
+  sh:namespace "http://purl.bdrc.io/resource/" ;
   bds:nodeShapeType bds:FacetShape ;
   rdfs:label "Person Name Shape"@en ;
   sh:targetObjectsOf bdo:personName ;

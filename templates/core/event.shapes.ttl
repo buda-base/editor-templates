@@ -36,6 +36,7 @@ EventShapes:
 bds:EventShape
   a sh:NodeShape ;
   bds:identifierPrefix "EV" ;
+  sh:namespace "http://purl.bdrc.io/resource/" ;
   bds:nodeShapeType bds:FacetShape ;
   rdfs:label "Event Shape"@en ;
   sh:property bds:EventShape-notAfter ;

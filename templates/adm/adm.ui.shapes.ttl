@@ -1,9 +1,10 @@
 # baseURI: http://purl.bdrc.io/shapes/adm/AdminShapes/
 # prefix: AdminShapes
 
-@prefix AdminShapes: <http://purl.bdrc.io/shapes/adm/AdminShapes/> .
+@prefix AdminUiShapes: <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
@@ -27,35 +28,43 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-AdminShapes:
+AdminUIShapes:
   a owl:Ontology ;
-  owl:versionInfo "Initial SHACL constraints core admin shapes" ;
+  owl:versionInfo "SHACL UI constraints for admin data" ;
+  owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
 .
-bdsa:AdmEntityShape
-  a sh:NodeShape ;
-  rdfs:label "Admin Entity shape"@en ;
-  sh:property bdsa:AdmEntityShape-status ;
-  sh:property bdsa:AdmEntityShape-logEntry ;
-  sh:targetClass bdo:Entity ;
+bdsa:AdmEntityShape-logDate
+      bds:propertyShapeType bds:IgnoreShape ;
+      sh:name "time"@en ;
+      sh:order "0" ;
+.
+bdsa:AdmEntityShape-logMessage
+      sh:name "message"@en ;
+      sh:order "1" ;
+.
+bdsa:AdmEntityShape-logWho
+      sh:name "user"@en ;
+      sh:order "2" ;
 .
 bdsa:AdmEntityShape-logEntry
-      a sh:PropertyShape ;
-      bds:propertyShapeType bds:IgnoreShape ;
-      sh:path adm:logEntry ;
-      sh:class adm:LogEntry ;
-      sh:description "must have one or more adm:logEntry of value adm:LogEntry"@en ;
-      sh:minCount 1 ;
       sh:name "log entry"@en ;
-      sh:nodeKind sh:IRI ;
+      sh:order "4" ;
 .
 bdsa:AdmEntityShape-status
-      a sh:PropertyShape ;
-      bds:propertyShapeType bds:FacetShape ;
-      sh:path adm:status ;
-      sh:class adm:Status ;
-      sh:description "must be exactly one adm:status of value adm:StatusType"@en ;
-      sh:maxCount 1 ;
-      sh:minCount 1 ;
+      dash:editor dash:EnumSelectEditor ;
       sh:name "status"@en ;
-      sh:nodeKind sh:IRI ;
+      sh:order "0" ;
+.
+bdsa:AdmEntityShape-access
+      dash:editor dash:EnumSelectEditor ;
+      sh:name "access"@en ;
+      sh:order "1" ;
+.
+bdsa:AdmEntityShape-replaceWith
+      sh:name "replace with (for withdrawn records only)"@en ;
+      sh:order "3" ;
+.
+bdsa:AdmEntityShape-restrictedInChina
+      sh:name "restricted in China"@en ;
+      sh:order "2" ;
 .

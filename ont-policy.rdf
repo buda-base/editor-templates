@@ -79,10 +79,15 @@
     <OntologySpec>
         <!-- the admin shapes vocabulary -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/adm/AdminShapes/"/>
-        <altURL    rdf:resource="templates/adm/adm.core.shapes.ttl"/>
+        <altURL    rdf:resource="templates/adm/adm.shapes.ttl"/>
     </OntologySpec>    
     
-    
+    <OntologySpec>
+        <!-- the admin shapes vocabulary -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/adm/AdminUiShapes/"/>
+        <altURL    rdf:resource="templates/adm/adm.ui.shapes.ttl"/>
+    </OntologySpec>   
+
     <!-- ======== bdo shapes ontologies ======== -->
     
     <OntologySpec>

@@ -58,6 +58,7 @@ bds:RootShape-note
 bds:NoteShape
   a sh:NodeShape ;
   bds:identifierPrefix "NT" ;
+  sh:namespace "http://purl.bdrc.io/resource/" ;
   bds:nodeShapeType bds:FacetShape ;
   sh:property bds:NoteShape-contentLocation ;
   sh:property bds:NoteShape-contentLocationStatement ;
@@ -111,6 +112,7 @@ bds:NoteShape-noteType
 bds:ContentLocationShape
   a sh:NodeShape ;
   bds:identifierPrefix "CL" ;
+  sh:namespace "http://purl.bdrc.io/resource/" ;
   rdfs:label "ContentLocation Shape"@en ;
   sh:property bds:ContentLocationShape-contentLocationByFolio ;
   sh:property bds:ContentLocationShape-contentLocationEndLine ;

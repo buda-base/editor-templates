@@ -1,0 +1,110 @@
+# baseURI: http://purl.bdrc.io/shapes/adm/AdminShapes/
+# prefix: AdminShapes
+
+@prefix AdminShapes: <http://purl.bdrc.io/shapes/adm/AdminShapes/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
+@prefix bdsa: <http://purl.bdrc.io/ontology/shapes/adm/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+AdminShapes:
+  a owl:Ontology ;
+  owl:versionInfo "SHACL constraints for admin data" ;
+.
+bdsa:AdmEntityShape
+  a sh:NodeShape ;
+  sh:namespace "http://purl.bdrc.io/admindata/" ;
+  rdfs:label "Admin Entity shape"@en ;
+  sh:property bdsa:AdmEntityShape-status ;
+  sh:property bdsa:AdmEntityShape-access ;
+  sh:property bdsa:AdmEntityShape-restrictedInChina ;
+  sh:property bdsa:AdmEntityShape-replaceWith ;
+  sh:property bdsa:AdmEntityShape-logEntry ;
+  sh:targetClass bdo:Entity ;
+  sh:targetSubjectsOf adm:adminAbout ;
+.
+bdsa:LogEntryShape
+  a sh:NodeShape ;
+  bds:identifierPrefix "LG" ;
+  sh:namespace "http://purl.bdrc.io/admindata/" ;
+  bds:nodeShapeType bds:FacetShape ;
+  rdfs:label "Log Entry"@en ;
+  sh:targetObjectsOf adm:logEntry ;
+  sh:property bdsa:AdmEntityShape-logDate ;
+  sh:property bdsa:AdmEntityShape-logMessage ;
+  sh:property bdsa:AdmEntityShape-logWho ;
+  sh:targetClass adm:LogEntry ;
+.
+bdsa:AdmEntityShape-logDate
+      a sh:PropertyShape ;
+      sh:path adm:logDate ;
+      sh:datatype xsd:dateTime ; # TODO: add other datatypes such as gYear / xsd:date ?
+.
+bdsa:AdmEntityShape-logMessage
+      a sh:PropertyShape ;
+      sh:path adm:logMessage ;
+      sh:datatype rdf:langString ;
+.
+bdsa:AdmEntityShape-logWho
+      a sh:PropertyShape ;
+      bds:propertyShapeType bds:IgnoreShape ;
+      sh:path adm:logWho ;
+      sh:nodeKind sh:IRI ;
+.
+bdsa:AdmEntityShape-logEntry
+      a sh:PropertyShape ;
+      bds:propertyShapeType bds:FacetShape ;
+      sh:path adm:logEntry ;
+      sh:class adm:LogEntry ;
+      sh:nodeKind sh:IRI ;
+.
+bdsa:AdmEntityShape-status
+      a sh:PropertyShape ;
+      sh:path adm:status ;
+      sh:class adm:Status ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:in ( bda:StatusReleased bda:StatusWithdrawn bda:StatusEditing bda:StatusOnHold bda:StatusProvisional bda:StatusScanned bda:StatusSeekingOut bda:StatusAccessioned bda:StatusAcquiring ) ;
+      sh:nodeKind sh:IRI ;
+.
+bdsa:AdmEntityShape-access
+      a sh:PropertyShape ;
+      sh:path adm:status ;
+      sh:class adm:Access ;
+      sh:in (bda:AccessOpen bda:AccessFairUse bda:AccessRestrictedTemporarily bda:AccessRestrictedByTbrc bda:AccessRestrictedSealed bda:AccessRestrictedByQuality bda:AccessMixed ) ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:IRI ;
+.
+bdsa:AdmEntityShape-replaceWith
+      a sh:PropertyShape ;
+      bds:propertyShapeType bds:ExternalShape ;
+      sh:path adm:replaceWith ;
+      sh:classIn (bdo:Person bdo:Place bdo:Topic bdo:Instance bdo:Work bdo:Corporation bdo:Role) ;
+      sh:nodeKind sh:IRI ;
+.
+bdsa:AdmEntityShape-restrictedInChina
+      a sh:PropertyShape ;
+      sh:path adm:restrictedInChina ;
+      sh:datatype xsd:boolean ;
+.
