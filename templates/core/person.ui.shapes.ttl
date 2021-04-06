@@ -88,7 +88,7 @@ bds:PersonShape-adminData
 ##
 ## Gender
 ##
-bds:PersonShape-personGender
+bds:PersonShape-gender
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:PersonNamePropertyGroup ;
   sh:name "has gender"@en ;
