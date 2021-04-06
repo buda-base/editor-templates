@@ -73,6 +73,7 @@ bds:PersonShape
 bds:PersonShape-adminData 
   a sh:PropertyShape ;
   sh:path [ sh:inversePath adm:adminAbout ] ;
+  bds:propertyShapeType  bds:FacetShape ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
 .
@@ -93,7 +94,7 @@ bds:PersonShape-hasBrother
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasBrother ;
-  sh:node bds:MaleShape ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasCousin
   a sh:PropertyShape ;
