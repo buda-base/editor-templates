@@ -68,6 +68,17 @@ bds:PersonShape
   # TODO: missing kin properties
 .
 ##
+## type
+##
+bds:PersonShape-type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:in (bdo:Person) ;
+  sh:message "A Person must have type person"@en ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+.
+##
 ## Admin data
 ##
 bds:PersonShape-adminData 
@@ -120,7 +131,6 @@ bds:PersonShape-hasGrandChild
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasGrandChild ;
   sh:class bdo:Person ;
-  sh:order "3"^^xsd:decimal ;
 .
 bds:PersonShape-hasGrandParent
   a sh:PropertyShape ;

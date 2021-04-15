@@ -44,37 +44,53 @@ PersonUIShapes:
 ##
 ## Property groups
 ##
-
-## TODO: add events and name groups
+bds:BasePropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "General Properties"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
 bds:PersonNamePropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Names"@en ;
-  sh:order "0"^^xsd:decimal ;
+  sh:order "1"^^xsd:decimal ;
 .
 bds:EventPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Events"@en ;
-  sh:order "1"^^xsd:decimal ;
+  sh:order "2"^^xsd:decimal ;
 .
 bds:StudentTeacherPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Students/Teachers"@en ;
-  sh:order "2"^^xsd:decimal ;
+  sh:order "3"^^xsd:decimal ;
 .
 bds:KinshipPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Kinship"@en ;
-  sh:order "3"^^xsd:decimal ;
+  sh:order "4"^^xsd:decimal ;
 .
 bds:NotesPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Notes"@en ;
-  sh:order "4"^^xsd:decimal ;
+  sh:order "5"^^xsd:decimal ;
 .
 bds:AdminPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Admin data"@en ;
-  sh:order "5"^^xsd:decimal ;
+  sh:order "6"^^xsd:decimal ;
+.
+##
+## type
+##
+bds:PersonShape-type
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:BasePropertyGroup ;
+  sh:name "type"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:CommonShape-prefLabel
+  sh:group bds:BasePropertyGroup ;
+  sh:order "1"^^xsd:decimal ;
 .
 ##
 ## Admin data
@@ -345,10 +361,6 @@ bds:PersonShape-personTeacherOf
   sh:group bds:StudentTeacherPropertyGroup ;
   sh:name "teacher of"@en ;
   sh:order "1"^^xsd:decimal ;
-.
-bds:CommonShape-prefLabel
-  sh:group bds:PersonNamePropertyGroup ;
-  sh:order "0"^^xsd:decimal ;
 .
 ##
 ## Notes
