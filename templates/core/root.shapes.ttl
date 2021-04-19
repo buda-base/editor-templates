@@ -77,11 +77,10 @@ bds:NoteShape-noteSource
   bds:propertyShapeType bds:ExternalShape ;
   sh:class bdo:ImageInstance ;
 .
-bds:NoteShape-contentLocationStatementCBETA
+bds:NoteShape-contentLocationStatement
   a sh:PropertyShape ;
-  rdfs:label "contentLocationStatementCBETA Shape"@en ;
-  sh:message "a note may have at most one :contentLocationStatementCBETA"@en ;
-  sh:path bdo:contentLocationStatementCBETA ;
+  sh:message "a note may have at most one :contentLocationStatement"@en ;
+  sh:path bdo:contentLocationStatement ;
   sh:datatype xsd:string ;
   sh:maxCount 1 ;
 .
