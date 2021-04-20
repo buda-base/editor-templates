@@ -58,6 +58,14 @@ RootShapes
 BaseShapes
 ```
 
+## LDSPDI cache
+
+These shapes are served by LDSPDI, to renew the cache:
+
+```
+
+```
+
 ## Prior work
 
 - https://www.w3.org/TR/shacl/

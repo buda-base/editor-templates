@@ -126,11 +126,11 @@ bds:PersonEventShape-type
   sh:name "type"@en ;
   sh:order "0"^^xsd:decimal ;
 .
-bds:EventShape-notAfter sh:oder "1"^^xsd:decimal .
-bds:EventShape-notBefore sh:oder "2"^^xsd:decimal .
-bds:EventShape-onYear sh:oder "3"^^xsd:decimal .
-bds:EventShape-onOrAbout sh:oder "4"^^xsd:decimal .
-bds:EventShape-eventWhere sh:oder "5"^^xsd:decimal ; bds:displayPriority 1 .
+bds:EventShape-notAfter sh:order "1"^^xsd:decimal .
+bds:EventShape-notBefore sh:order "2"^^xsd:decimal .
+bds:EventShape-onYear sh:order "3"^^xsd:decimal .
+bds:EventShape-onOrAbout sh:order "4"^^xsd:decimal .
+bds:EventShape-eventWhere sh:order "5"^^xsd:decimal ; bds:displayPriority 1 .
 bds:PersonEventShape-personEventRole
   dash:editor dash:InstancesSelectEditor ;
   sh:name "role associated with the event"@en ;
@@ -143,7 +143,7 @@ bds:PersonEventShape-personEventCorporation
   sh:order "7"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .
-bds:EventShape-eventWho sh:oder "8"^^xsd:decimal .
+bds:EventShape-eventWho sh:order "8"^^xsd:decimal .
 ##
 ## PersonNames
 ##
