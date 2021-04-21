@@ -166,3 +166,37 @@ bds:uiShapeGraph
   rdfs:domain bdo:Entity ;
   rdfs:range xsd:anyURI ;
 .
+bds:uiShapeGraph
+  a owl:ObjectProperty ;
+  rdfs:domain bdo:Entity ;
+  rdfs:range xsd:anyURI ;
+.
+bds:readOnly
+  a owl:DatatypeProperty ;
+  rdfs:label "read only"@en ;
+  rdfs:domain sh:PropertyShape ;
+  rdfs:range xsd:boolean ;
+  skos:definition "true indicates that the editor should not allow the user to change the property"@en ;
+.
+bds:defaultValue
+  a owl:DatatypeProperty ;
+  rdfs:label "editor default value"@en ;
+  rdfs:domain sh:PropertyShape ;
+  skos:definition "indicates the default value that the editor should display when there is no value"@en ;
+.
+bds:DateTimeOrDateOrgYear
+  a rdf:List ;
+  rdf:first [
+      sh:datatype xsd:dateTime ;
+    ] ;
+  rdf:rest (
+      [
+        sh:datatype xsd:date ;
+      ]
+      [
+        sh:datatype xsd:gYear ;
+      ]
+    ) ;
+  rdfs:comment "An rdf:List that can be used in property constraints as value for sh:or to indicate that all values of a property must be either xsd:gYear, xsd:date or xsd:dateTime." ;
+  rdfs:label "Date or date time or year" ;
+.

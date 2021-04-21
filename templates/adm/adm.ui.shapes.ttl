@@ -37,18 +37,23 @@ bdsa:AdmEntityShape-logDate
       bds:propertyShapeType bds:IgnoreShape ;
       sh:name "time"@en ;
       sh:order "0" ;
+      bds:readOnly true ;
 .
 bdsa:AdmEntityShape-logMessage
       sh:name "message"@en ;
       sh:order "1" ;
+      dash:editor dash:TextAreaWithLangEditor ;
+      dash:singleLine true ;
 .
 bdsa:AdmEntityShape-logWho
       sh:name "user"@en ;
       sh:order "2" ;
+      bds:readOnly true ;
 .
 bdsa:AdmEntityShape-logEntry
       sh:name "log entry"@en ;
       sh:order "4" ;
+      bds:readOnly true ;
 .
 bdsa:AdmEntityShape-status
       dash:editor dash:EnumSelectEditor ;
@@ -62,9 +67,12 @@ bdsa:AdmEntityShape-access
 .
 bdsa:AdmEntityShape-replaceWith
       sh:name "replace with (for withdrawn records only)"@en ;
+      dash:editor dash:EnumSelectEditor ;
       sh:order "3" ;
 .
 bdsa:AdmEntityShape-restrictedInChina
+      dash:editor dash:BooleanSelectEditor ;
       sh:name "restricted in China"@en ;
       sh:order "2" ;
+      bds:defaultValue false
 .

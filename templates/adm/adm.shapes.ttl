@@ -59,7 +59,7 @@ bdsa:LogEntryShape
 bdsa:AdmEntityShape-logDate
       a sh:PropertyShape ;
       sh:path adm:logDate ;
-      sh:datatype xsd:dateTime ; # TODO: add other datatypes such as gYear / xsd:date ?
+      sh:or bds:DateTimeOrDateOrgYear ;
 .
 bdsa:AdmEntityShape-logMessage
       a sh:PropertyShape ;
