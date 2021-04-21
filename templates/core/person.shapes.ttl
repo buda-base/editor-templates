@@ -87,6 +87,7 @@ bds:PersonShape-adminData
   bds:propertyShapeType  bds:FacetShape ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
+  bds:readOnly true ;
 .
 ##
 ## Gender defns for kinship
