@@ -54,6 +54,7 @@ bdsa:AdmEntityShape-logEntry
       sh:name "log entry"@en ;
       sh:order "4" ;
       bds:readOnly true ;
+      bds:sortBy adm:logDate ;
 .
 bdsa:AdmEntityShape-status
       dash:editor dash:EnumSelectEditor ;
@@ -74,5 +75,5 @@ bdsa:AdmEntityShape-restrictedInChina
       dash:editor dash:BooleanSelectEditor ;
       sh:name "restricted in China"@en ;
       sh:order "2" ;
-      bds:defaultValue false
+      bds:defaultValue false ;
 .

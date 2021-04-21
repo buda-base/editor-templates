@@ -129,6 +129,12 @@ bds:increment
   rdfs:range xsd:integer ;
   skos:definition "an amount to increment the value of the sh:path property by"@en ;
 .
+bds:sortBy
+  a owl:DatatypeProperty ;
+  rdfs:label "sort rank"@en ;
+  rdfs:domain sh:PropertyShape ;
+  skos:definition "the property (value of sh:path, not shacl property) used to sort the objects of this property"@en ;
+.
 bds:sortRank
   a owl:DatatypeProperty ;
   rdfs:label "sort rank"@en ;
