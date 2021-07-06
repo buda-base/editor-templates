@@ -161,14 +161,14 @@
     <OntologySpec>
         <!-- User profile shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/profile/UserProfileShapes/"/>
-        <altURL    rdf:resource="templates/profile/userprofile.shapes.ttl"/>s
+        <altURL    rdf:resource="templates/profile/userprofile.shapes.ttl"/>
         <adm:ontGraph     rdf:resource="http://purl.bdrc.io/shapes/profile/UserProfileShapes"/>
     </OntologySpec>
 
     <OntologySpec>
         <!-- User profile shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/profile/UserProfileUIShapes/"/>
-        <altURL    rdf:resource="templates/profile/userprofile.ui.shapes.ttl"/>s
+        <altURL    rdf:resource="templates/profile/userprofile.ui.shapes.ttl"/>
         <adm:ontGraph     rdf:resource="http://purl.bdrc.io/shapes/profile/UserProfileUIShapes"/>
     </OntologySpec>
 
