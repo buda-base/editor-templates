@@ -1,5 +1,4 @@
 # baseURI: http://purl.bdrc.io/shapes/core/RootShapes/
-# imports: http://purl.bdrc.io/shapes/core/RootLocalShapes/
 # prefix: RootShapes
 
 @prefix RootShapes: <http://purl.bdrc.io/shapes/core/RootShapes/> .

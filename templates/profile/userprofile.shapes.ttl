@@ -1,0 +1,95 @@
+@prefix UserProfileShapes: <http://purl.bdrc.io/shapes/profile/UserProfileShapes/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admin.data/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdou: <http://purl.bdrc.io/ontology/ext/user/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
+@prefix bdsa: <http://purl.bdrc.io/ontology/shapes/adm/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix tmp:   <http://purl.bdrc.io/ontology/tmp/> .
+
+bdou:User 
+  bds:topShapeGraph bdg:UserProfileShape ;
+.
+
+UserProfileShapes:
+  a owl:Ontology ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
+  owl:versionInfo "SHACL templates for User Profiles" ;
+.
+bds:UserProfileShape
+  a sh:NodeShape ;
+  bds:identifierPrefix "U" ;
+  sh:namespace "http://purl.bdrc.io/resource-nc/user/" ;
+  rdfs:label "User Profile Shape"@en ;
+  sh:property bds:CommonShape-prefLabel ;
+  sh:property bds:FoafMbox ;
+  sh:property bds:TmpAgreeEmail ;
+  sh:property bds:BdouInterest ;
+  sh:property bds:BdouMainResidenceArea ;
+  sh:property bds:BdouPicture ;
+  sh:property bds:BdouLocalNameDefaultPrefix ;
+  sh:property bds:PersonShape-gender ;
+.
+bds:FoafMbox
+  a sh:PropertyShape ;
+  sh:path foaf:mbox ;
+  sh:datatype xsd:string ;
+.
+bds:TmpAgreeEmail
+  a sh:PropertyShape ;
+  sh:path tmp:agreeEmail ;
+  sh:datatype xsd:boolean ;
+  sh:maxCount 1 ;
+.
+bds:BdouInterest
+  a sh:PropertyShape ;
+  sh:path bdou:interest ;
+  sh:in ( tmp:TibetanBuddhistTexts tmp:otherInterest tmp:BonpoTexts tmp:SanskritTexts tmp:ChineseTexts tmp:multiLingualTexts tmp:Maps tmp:BuddhistArt tmp:Bibliographies tmp:SoutheastAsianTexts ) ;
+.
+bds:BdouMainResidenceArea
+  a sh:PropertyShape ;
+  sh:path bdou:mainResidenceArea ;
+  sh:in ( tmp:outside  tmp:kham tmp:amdo tmp:uTsang tmp:other ) ;
+.
+bds:BdouPicture
+  a sh:PropertyShape ;
+  sh:path bdou:mainResidenceArea ;
+  sh:datatype xsd:anyURI ;
+.
+bds:BdouLocalNameDefaultPrefix
+  a sh:PropertyShape ;
+  sh:path bdou:localNameDefaultPrefix ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:pattern "(^$|^[0-9][A-Z][A-Z]$)" ;
+  sh:message "the prefix must be either empty, or be one number followed by two upper case letters"@en ;
+.
+bds:PersonShape-gender
+  a sh:PropertyShape ;
+  sh:path bdo:personGender ;
+  sh:in ( bdr:GenderFemale bdr:GenderMale ) ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+.

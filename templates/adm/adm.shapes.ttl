@@ -60,11 +60,13 @@ bdsa:AdmEntityShape-logDate
       a sh:PropertyShape ;
       sh:path adm:logDate ;
       sh:or bds:DateTimeOrDateOrgYear ;
+      sh:maxCount 1 ;
 .
 bdsa:AdmEntityShape-logMessage
       a sh:PropertyShape ;
       sh:path adm:logMessage ;
       sh:datatype rdf:langString ;
+      sh:maxCount 1 ;
 .
 bdsa:AdmEntityShape-logWho
       a sh:PropertyShape ;
@@ -102,9 +104,11 @@ bdsa:AdmEntityShape-replaceWith
       sh:path adm:replaceWith ;
       sh:classIn (bdo:Person bdo:Place bdo:Topic bdo:Instance bdo:Work bdo:Corporation bdo:Role) ;
       sh:nodeKind sh:IRI ;
+      sh:maxCount 1 ;
 .
 bdsa:AdmEntityShape-restrictedInChina
       a sh:PropertyShape ;
       sh:path adm:restrictedInChina ;
       sh:datatype xsd:boolean ;
+      sh:maxCount 1 ;
 .

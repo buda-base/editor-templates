@@ -1,0 +1,96 @@
+@prefix UserProfileUIShapes: <http://purl.bdrc.io/shapes/profile/UserProfileUIShapes/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admin.data/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdou: <http://purl.bdrc.io/ontology/ext/user/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
+@prefix bdsa: <http://purl.bdrc.io/ontology/shapes/adm/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix tmp:   <http://purl.bdrc.io/ontology/tmp/> .
+
+bdou:User 
+  bds:uiShapeGraph bdg:UserProfileUIShapes ;
+.
+
+UserProfileUIShapes:
+  a owl:Ontology ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/profile/UserProfileShapes/> ;
+  owl:versionInfo "SHACL UI templates for User Profiles" ;
+.
+
+bds:BasePropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "General Properties"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:CommonShape-prefLabel
+  sh:group bds:BasePropertyGroup ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:PersonShape-gender
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:BasePropertyGroup ;
+  sh:name "has gender"@en ;
+  sh:order "2"^^xsd:decimal ;
+.
+bds:FoafMbox
+  sh:group bds:BasePropertyGroup ;
+  sh:order "3"^^xsd:decimal ;
+  sh:name "Email address"@en ;
+  dash:editor dash:TextAreaWithLangEditor ;
+  dash:singleLine true ;
+.
+bds:TmpAgreeEmail
+  sh:group bds:BasePropertyGroup ;
+  sh:order "4"^^xsd:decimal ;
+  sh:name "Agree to receiving emails from BDRC"@en ;
+  dash:editor dash:BooleanSelectEditor ;
+.
+bds:BdouInterest
+  sh:group bds:BasePropertyGroup ;
+  sh:order "5"^^xsd:decimal ;
+  dash:editor dash:EnumSelectEditor ;
+  sh:name "interest"@en ;
+.
+bds:BdouMainResidenceArea
+  sh:group bds:BasePropertyGroup ;
+  sh:order "6"^^xsd:decimal ;
+  dash:editor dash:EnumSelectEditor ;
+  sh:name "main residence area"@en ;
+.
+bds:BdouPicture
+  sh:group bds:BasePropertyGroup ;
+  sh:order "7"^^xsd:decimal ;
+  sh:name "URL of picture"@en ;
+  dash:editor dash:TextAreaWithLangEditor ;
+  dash:singleLine true ;
+.
+bds:BdouLocalNameDefaultPrefix
+  sh:group bds:BasePropertyGroup ;
+  sh:order "8"^^xsd:decimal ;
+  sh:name "RID prefix"@en ;
+  dash:editor dash:TextAreaWithLangEditor ;
+  dash:singleLine true ;
+.
