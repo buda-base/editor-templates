@@ -287,7 +287,6 @@ bds:PersonShape-personName
 bds:PersonNameShape
   a sh:NodeShape ;
   bds:identifierPrefix "NM" ;
-  sh:namespace "http://purl.bdrc.io/resource/" ;
   bds:nodeShapeType bds:FacetShape ;
   rdfs:label "Person Name Shape"@en ;
   sh:targetObjectsOf bdo:personName ;
@@ -323,6 +322,7 @@ bds:PersonShape-personEvent
 .
 bds:PersonEventShape
   a sh:NodeShape ;
+  bds:identifierPrefix "EV" ;
   bds:nodeShapeType bds:FacetShape ;
   rdfs:label "Person Event Shape"@en ;
   sh:property bds:PersonEventShape-personEventRole , bds:PersonEventShape-type , bds:PersonEventShape-personEventCorporation , bds:EventShape-notAfter , bds:EventShape-notBefore , bds:EventShape-onYear , bds:EventShape-onOrAbout , bds:EventShape-eventWhere , bds:EventShape-eventWho ;

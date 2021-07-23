@@ -41,7 +41,7 @@ UserProfileShapes:
 bds:UserProfileShape
   a sh:NodeShape ;
   bds:identifierPrefix "U" ;
-  sh:namespace "http://purl.bdrc.io/resource-nc/user/" ;
+  sh:namespace "http://purl.bdrc.io/resource-nc/user/"^^xsd:anyURI ;
   rdfs:label "User Profile Shape"@en ;
   sh:property bds:CommonShape-prefLabel ;
   sh:property bds:FoafMbox ;
