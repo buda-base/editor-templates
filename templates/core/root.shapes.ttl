@@ -74,7 +74,7 @@ bds:NoteShape-noteSource
   sh:path bdo:noteSource ;
   sh:maxCount 1 ;
   bds:propertyShapeType bds:ExternalShape ;
-  sh:class bdo:ImageInstance ;
+  sh:class bds:classIn ( bdo:Instance bdo:Work ) ;
 .
 bds:NoteShape-contentLocationStatement
   a sh:PropertyShape ;
