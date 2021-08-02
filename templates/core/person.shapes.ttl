@@ -95,7 +95,7 @@ bds:PersonShape-adminData
 bds:PersonShape-gender
   a sh:PropertyShape ;
   sh:path bdo:personGender ;
-  sh:in ( bdr:GenderFemale bdr:GenderMale ) ;
+  sh:in ( bdr:GenderMale bdr:GenderFemale ) ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
 .
