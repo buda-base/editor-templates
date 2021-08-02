@@ -325,7 +325,7 @@ bds:PersonEventShape
   bds:identifierPrefix "EV" ;
   bds:nodeShapeType bds:FacetShape ;
   rdfs:label "Person Event Shape"@en ;
-  sh:property bds:PersonEventShape-personEventRole , bds:PersonEventShape-type , bds:PersonEventShape-personEventCorporation , bds:EventShape-notAfter , bds:EventShape-notBefore , bds:EventShape-onYear , bds:EventShape-onOrAbout , bds:EventShape-eventWhere , bds:EventShape-eventWho ;
+  sh:property bds:PersonEventShape-personEventRole , bds:PersonEventShape-type , bds:PersonEventShape-personEventCorporation , bds:EventShape-notAfter , bds:EventShape-notBefore , bds:EventShape-onYear , bds:EventShape-onOrAbout , bds:EventShape-eventWhere ;
   sh:targetClass bdo:PersonEvent ;
   sh:targetObjectsOf bdo:personEvent ;
 .
