@@ -36,44 +36,44 @@ AdminUiShapes:
 bdsa:AdmEntityShape-logDate
       bds:propertyShapeType bds:IgnoreShape ;
       sh:name "time"@en ;
-      sh:order "0" ;
+      sh:order "0"^^xsd:decimal ;
       bds:readOnly true ;
 .
 bdsa:AdmEntityShape-logMessage
       sh:name "message"@en ;
-      sh:order "1" ;
+      sh:order "1"^^xsd:decimal ;
       dash:editor dash:TextAreaWithLangEditor ;
       dash:singleLine true ;
 .
 bdsa:AdmEntityShape-logWho
       sh:name "user"@en ;
-      sh:order "2" ;
+      sh:order "2"^^xsd:decimal ;
       bds:readOnly true ;
 .
 bdsa:AdmEntityShape-logEntry
       sh:name "log entry"@en ;
-      sh:order "4" ;
+      sh:order "4"^^xsd:decimal ;
       bds:readOnly true ;
       bds:sortBy adm:logDate ;
 .
 bdsa:AdmEntityShape-status
       dash:editor dash:EnumSelectEditor ;
       sh:name "status"@en ;
-      sh:order "0" ;
+      sh:order "0"^^xsd:decimal ;
 .
 bdsa:AdmEntityShape-access
       dash:editor dash:EnumSelectEditor ;
       sh:name "access"@en ;
-      sh:order "1" ;
+      sh:order "1"^^xsd:decimal ;
 .
 bdsa:AdmEntityShape-replaceWith
       sh:name "replace with (for withdrawn records only)"@en ;
       dash:editor dash:EnumSelectEditor ;
-      sh:order "3" ;
+      sh:order "3"^^xsd:decimal ;
 .
 bdsa:AdmEntityShape-restrictedInChina
       dash:editor dash:BooleanSelectEditor ;
       sh:name "restricted in China"@en ;
-      sh:order "2" ;
+      sh:order "2"^^xsd:decimal ;
       bds:defaultValue false ;
 .
