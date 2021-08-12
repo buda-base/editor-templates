@@ -102,7 +102,6 @@ bdsa:AdmEntityShape-replaceWith
       a sh:PropertyShape ;
       bds:propertyShapeType bds:ExternalShape ;
       sh:path adm:replaceWith ;
-      sh:classIn (bdo:Person bdo:Place bdo:Topic bdo:Instance bdo:Work bdo:Corporation bdo:Role) ;
       sh:nodeKind sh:IRI ;
       sh:maxCount 1 ;
 .
