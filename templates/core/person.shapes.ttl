@@ -89,6 +89,9 @@ bds:PersonShape-adminData
   sh:minCount 1 ;
   bds:readOnly true ;
 .
+bdsa:AdmEntityShape-replaceWith 
+  bds:classIn ( bdo:Person bdo:Topic ) ;
+.
 ##
 ## Gender defns for kinship
 ##
