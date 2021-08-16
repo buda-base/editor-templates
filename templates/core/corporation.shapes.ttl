@@ -50,6 +50,6 @@ bds:CorporationShape
 bds:CorporationShape-hasMember
   a sh:PropertyShape ;
   sh:path bdo:hasMember ;
-  bds:classIn ( bdo:Person , bdo:CorporationMember ) ;
+  bds:classIn ( bdo:Person bdo:CorporationMember ) ;
   sh:nodeKind sh:IRI ;
 .
