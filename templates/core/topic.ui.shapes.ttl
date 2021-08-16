@@ -1,0 +1,91 @@
+# baseURI: http://purl.bdrc.io/shapes/core/TopicUIShapes/
+
+@prefix CorporationUIShapes: <http://purl.bdrc.io/shapes/core/TopicUIShapes/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admin.data/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
+@prefix bdsa: <http://purl.bdrc.io/ontology/shapes/adm/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+TopicUIShapes:
+  a owl:Ontology ;
+  owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
+  owl:versionInfo "SHACL UI templates for Person" ;
+.
+bds:TopicShape
+  a sh:NodeShape ;
+  bds:identifierPrefix "T" ;
+  sh:namespace "http://purl.bdrc.io/resource/" ;
+  rdfs:label "Topic Shape"@en ;
+  sh:property bds:CommonShape-prefLabel ;
+  sh:property bds:RootShape-note ;
+  sh:property bds:PersonShape-adminData ;
+  bds:TopicShape-type
+.
+bds:TopicShape-type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:in (bdo:Topic) ;
+  sh:message "A topic must have type topic"@en ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+.
+bds:BasePropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "General Properties"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:NotesPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Notes"@en ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:AdminPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Admin data"@en ;
+  sh:order "2"^^xsd:decimal ;
+.
+bds:TopicShape-type
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:BasePropertyGroup ;
+  sh:name "type"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:CommonShape-prefLabel
+  sh:group bds:BasePropertyGroup ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:PersonShape-adminData 
+  dash:editor dash:DetailsEditor ;
+  sh:group bds:AdminPropertyGroup ;
+  sh:name "admin data"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:RootShape-note
+  sh:group bds:NotesPropertyGroup ;
+  sh:order "0"^^xsd:decimal ;
+  dash:editor dash:DetailsEditor ;
+.

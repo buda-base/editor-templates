@@ -37,34 +37,19 @@ CorporationShapes:
 bdo:Corporation 
   bds:rootShape bds:CorporationShape ;
 .
-bds:CorporationMemberShape
-  a sh:NodeShape ;
-  rdfs:label "CorporationMember shape"@en ;
-  sh:property bds:CorporationMemberShape-memberOf ;
-  sh:targetClass bdo:Person ;
-.
-bds:CorporationMemberShape-memberOf
-  a sh:PropertyShape ;
-  sh:path bdo:memberOf ;
-  sh:class bdo:Corporation ;
-  sh:description "this respource may be a member of a Corporation"@en ;
-  sh:minCount 0 ;
-  sh:name "member of"@en ;
-  sh:nodeKind sh:IRI ;
-.
 bds:CorporationShape
   a sh:NodeShape ;
   bds:identifierShape "C" ;
   rdfs:label "Corporation shape"@en ;
   sh:property bds:CorporationShape-hasMember ;
+  sh:property bds:CommonShape-prefLabel ;
+  sh:property bds:RootShape-note ;
+  sh:property bds:PersonShape-adminData ;
   sh:targetClass bdo:Corporation ;
 .
 bds:CorporationShape-hasMember
   a sh:PropertyShape ;
   sh:path bdo:hasMember ;
-  sh:class bdo:CorporationMember ;
-  sh:description "this Corporation may have zero or more members"@en ;
-  sh:minCount 0 ;
-  sh:name "has member"@en ;
+  bds:classIn ( bdo:Person , bdo:CorporationMember ) ;
   sh:nodeKind sh:IRI ;
 .

@@ -107,9 +107,23 @@
 
     <OntologySpec>
         <!-- Corporation shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/CorporationUIShapes/"/>
+        <altURL    rdf:resource="templates/core/corporation.ui.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/CorporationUIShapes"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- Corporation shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/CorporationShapes/"/>
         <altURL    rdf:resource="templates/core/corporation.shapes.ttl"/>
         <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/CorporationShapes"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- Topic shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/TopicUIShapes/"/>
+        <altURL    rdf:resource="templates/core/topic.ui.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/TopicUIShapes"/>
     </OntologySpec>
 
     <OntologySpec>
