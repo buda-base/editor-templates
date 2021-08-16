@@ -32,8 +32,8 @@
 TopicUIShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
-  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
-  owl:versionInfo "SHACL UI templates for Person" ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
+  owl:versionInfo "SHACL UI templates for Topic" ;
 .
 bds:TopicShape
   a sh:NodeShape ;
@@ -48,10 +48,14 @@ bds:TopicShape
 bds:TopicShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
-  sh:in (bdo:Topic) ;
+  sh:in ( bdo:Topic) ;
   sh:message "A topic must have type topic"@en ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:BasePropertyGroup ;
+  sh:name "type"@en ;
+  sh:order "0"^^xsd:decimal ;
 .
 bds:BasePropertyGroup
   a sh:PropertyGroup ;

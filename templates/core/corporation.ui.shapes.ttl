@@ -33,7 +33,8 @@ CorporationUIShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/CorporationShapes/> ;
-  owl:versionInfo "SHACL UI templates for Person" ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
+  owl:versionInfo "SHACL UI templates for Corporation" ;
 .
 
 bds:BasePropertyGroup
@@ -65,7 +66,7 @@ bds:CorporationShape-hasMember
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:name "members"@en ;
-  sh:order "1"^^xsd:decimal ;
+  sh:order "2"^^xsd:decimal ;
 .
 bdsa:AdmShape-adminAbout 
   dash:editor dash:DetailsEditor ;

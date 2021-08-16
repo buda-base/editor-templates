@@ -39,6 +39,7 @@ PersonUIShapes:
   owl:imports <http://purl.bdrc.io/shapes/core/EventUIShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/PersonShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
   owl:versionInfo "SHACL UI templates for Person" ;
 .
 ##
