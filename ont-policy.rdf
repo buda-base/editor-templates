@@ -166,6 +166,20 @@
     </OntologySpec>
 
     <OntologySpec>
+        <!-- Collection UI template shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/CollectionUIShapes/"/>
+        <altURL    rdf:resource="templates/core/collection.ui.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/CollectionUIShapes"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- Role UI template shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/RoleUIShapes/"/>
+        <altURL    rdf:resource="templates/core/role.ui.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/RoleUIShapes"/>
+    </OntologySpec>
+
+    <OntologySpec>
         <!-- User profile shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/profile/UserProfileShapes/"/>
         <altURL    rdf:resource="templates/profile/userprofile.shapes.ttl"/>
