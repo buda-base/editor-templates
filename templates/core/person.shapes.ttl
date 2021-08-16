@@ -63,7 +63,7 @@ bds:PersonShape
   sh:property bds:PersonShape-personTeacherOf ;
   sh:property bds:PersonShape-personTeacherOf ;
   sh:property bds:RootShape-note ;
-  sh:property bds:PersonShape-adminData ;
+  sh:property bdsa:AdmShape-adminAbout ;
   # TODO: incarnation
   # TODO: missing kin properties
 .
@@ -81,14 +81,6 @@ bds:PersonShape-type
 ##
 ## Admin data
 ##
-bds:PersonShape-adminData 
-  a sh:PropertyShape ;
-  sh:path [ sh:inversePath adm:adminAbout ] ;
-  bds:propertyShapeType  bds:FacetShape ;
-  sh:maxCount 1 ;
-  sh:minCount 1 ;
-  bds:readOnly true ;
-.
 bdsa:AdmEntityShape-replaceWith 
   bds:classIn ( bdo:Person bdo:Topic ) ;
 .

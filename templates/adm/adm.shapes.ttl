@@ -32,6 +32,14 @@ AdminShapes:
   a owl:Ontology ;
   owl:versionInfo "SHACL constraints for admin data" ;
 .
+bdsa:AdmShape-adminAbout
+      a sh:PropertyShape ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:path [ sh:inversePath adm:adminAbout ] ;
+      bds:propertyShapeType  bds:FacetShape ;
+      bds:readOnly true ;
+.
 bdsa:AdmEntityShape
   a sh:NodeShape ;
   sh:namespace "http://purl.bdrc.io/admindata/" ;

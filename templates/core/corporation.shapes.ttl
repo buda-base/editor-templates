@@ -43,9 +43,18 @@ bds:CorporationShape
   rdfs:label "Corporation shape"@en ;
   sh:property bds:CorporationShape-hasMember ;
   sh:property bds:CommonShape-prefLabel ;
+  sh:property bds:PersonShape-type ;
   sh:property bds:RootShape-note ;
-  sh:property bds:PersonShape-adminData ;
+  sh:property bdsa:AdmShape-adminAbout ;
   sh:targetClass bdo:Corporation ;
+.
+bds:CorporationShape-type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:in (bdo:Corporation) ;
+  sh:message "Must have type corporation"@en ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
 .
 bds:CorporationShape-hasMember
   a sh:PropertyShape ;

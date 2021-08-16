@@ -51,7 +51,7 @@ bds:AdminPropertyGroup
   rdfs:label "Admin data"@en ;
   sh:order "2"^^xsd:decimal ;
 .
-bds:PersonShape-type
+bds:CorporationShape-type
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:name "type"@en ;
@@ -67,7 +67,7 @@ bds:CorporationShape-hasMember
   sh:name "members"@en ;
   sh:order "1"^^xsd:decimal ;
 .
-bds:PersonShape-adminData 
+bdsa:AdmShape-adminAbout 
   dash:editor dash:DetailsEditor ;
   sh:group bds:AdminPropertyGroup ;
   sh:name "admin data"@en ;

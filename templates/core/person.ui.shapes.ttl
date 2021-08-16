@@ -95,7 +95,7 @@ bds:CommonShape-prefLabel
 ##
 ## Admin data
 ##
-bds:PersonShape-adminData 
+bdsa:AdmShape-adminAbout 
   dash:editor dash:DetailsEditor ;
   sh:group bds:AdminPropertyGroup ;
   sh:name "admin data"@en ;
