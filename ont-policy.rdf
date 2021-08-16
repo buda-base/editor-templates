@@ -152,13 +152,6 @@
     </OntologySpec>
 
     <OntologySpec>
-        <!-- Item shapes -->
-        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/ItemShapes/"/>
-        <altURL    rdf:resource="templates/core/item.shapes.ttl"/>
-        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/ItemShapes"/>
-    </OntologySpec>
-
-    <OntologySpec>
         <!-- Person shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/PersonShapes/"/>
         <altURL    rdf:resource="templates/core/person.shapes.ttl"/>
