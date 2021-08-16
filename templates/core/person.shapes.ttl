@@ -64,6 +64,7 @@ bds:PersonShape
   sh:property bds:PersonShape-personTeacherOf ;
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
+  sh:property bds:PersonShape-type ;
   # TODO: incarnation
   # TODO: missing kin properties
 .
@@ -73,7 +74,7 @@ bds:PersonShape
 bds:PersonShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
-  sh:in (bdo:Person) ;
+  sh:in ( bdo:Person ) ;
   sh:message "A Person must have type person"@en ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
