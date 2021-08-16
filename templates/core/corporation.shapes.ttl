@@ -43,7 +43,7 @@ bds:CorporationShape
   rdfs:label "Corporation shape"@en ;
   sh:property bds:CorporationShape-hasMember ;
   sh:property bds:CommonShape-prefLabel ;
-  sh:property bds:PersonShape-type ;
+  sh:property bds:CorporationShape-type ;
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
   sh:targetClass bdo:Corporation ;
