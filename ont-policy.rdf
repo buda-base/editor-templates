@@ -166,6 +166,20 @@
     </OntologySpec>
 
     <OntologySpec>
+        <!-- Place shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/PlaceShapes/"/>
+        <altURL    rdf:resource="templates/core/place.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/PlaceShapes"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- Place UI template shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/PlaceUIShapes/"/>
+        <altURL    rdf:resource="templates/core/place.ui.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/PlaceUIShapes"/>
+    </OntologySpec>
+
+    <OntologySpec>
         <!-- Collection UI template shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/CollectionUIShapes/"/>
         <altURL    rdf:resource="templates/core/collection.ui.shapes.ttl"/>
