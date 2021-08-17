@@ -35,6 +35,12 @@ TopicUIShapes:
   owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
   owl:versionInfo "SHACL UI templates for Topic" ;
 .
+
+bdo:Topic
+  bds:topShapeGraph bdg:TopicShape ;
+  bds:uiShapeGraph bdg:TopicUIShapes ;
+.
+
 bds:TopicShape
   a sh:NodeShape ;
   bds:identifierPrefix "T" ;

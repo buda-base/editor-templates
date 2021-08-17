@@ -78,13 +78,11 @@ bds:PlaceShape-placeLat
   a sh:PropertyShape ;
   sh:path bdo:placeLat ;
   sh:datatype xsd:string ;
-  bds:propertyShapeType bds:FacetShape ;
 .
 bds:PlaceShape-placeLong
   a sh:PropertyShape ;
   sh:path bdo:placeLong ;
   sh:datatype xsd:string ;
-  bds:propertyShapeType bds:FacetShape ;
 .
 bds:PlaceShape-placeType
   a sh:PropertyShape ;
