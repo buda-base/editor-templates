@@ -41,6 +41,7 @@ bds:CollectionShape
   sh:namespace "http://purl.bdrc.io/resource/" ;
   rdfs:label "Collection Shape"@en ;
   sh:property bds:CommonShape-prefLabel ;
+  sh:property bds:CommonShape-altLabel ;
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
   sh:property bds:CollectionShape-type ;
@@ -81,6 +82,10 @@ bds:CollectionShape-type
 bds:CommonShape-prefLabel
   sh:group bds:BasePropertyGroup ;
   sh:order "1"^^xsd:decimal ;
+.
+bds:CommonShape-altLabel
+  sh:group bds:BasePropertyGroup ;
+  sh:order "2"^^xsd:decimal ;
 .
 bdsa:AdmShape-adminAbout 
   dash:editor dash:DetailsEditor ;

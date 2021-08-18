@@ -36,6 +36,7 @@ bds:PlaceShape
   rdfs:label "Place Shape"@en ;
   sh:property bds:PlaceShape-type ;
   sh:property bds:CommonShape-prefLabel ;
+  sh:property bds:CommonShape-altLabel ;
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
   sh:property bds:PlaceShape-placeType ;
