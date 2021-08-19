@@ -62,6 +62,14 @@ bds:CommonShape-prefLabel
   sh:group bds:BasePropertyGroup ;
   sh:order "1"^^xsd:decimal ;
 .
+bds:CommonShape-altLabel
+  sh:group bds:BasePropertyGroup ;
+  sh:order "2"^^xsd:decimal ;
+.
+bds:CommonShape-rdfsComment
+  sh:group bds:BasePropertyGroup ;
+  sh:order "3"^^xsd:decimal ;
+.
 bds:CorporationShape-hasMember
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:BasePropertyGroup ;

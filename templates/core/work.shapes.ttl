@@ -1,7 +1,3 @@
-# baseURI: http://purl.bdrc.io/shapes/core/WorkShapes/
-# imports: http://purl.bdrc.io/shapes/core/RootShapes/
-# prefix: WorkShapes
-
 @prefix WorkShapes: <http://purl.bdrc.io/shapes/core/WorkShapes/>
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
@@ -31,7 +27,6 @@
 WorkShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
-  owl:versionInfo "Initial SHACL constraints for Works" ;
 .
 
 bds:WorkShape
@@ -40,8 +35,10 @@ bds:WorkShape
   rdfs:subClassOf rdfs:Resource ;
   sh:property bds:CommonShape-prefLabel ;
   sh:property bds:CommonShape-altLabel ;
+  sh:property bds:WorkShape-catalogInfo ;
   sh:property bds:WorkShape-hasInstance ;
   sh:property bds:WorkShape-hasTranslation ;
+  sh:property bds:WorkShape-workEvent ;
   sh:property bds:CommonShape-identifiedBy ;
   sh:property bds:BiblioShape-creator ;
   sh:property bds:RootShape-note ;
@@ -49,11 +46,11 @@ bds:WorkShape
   sh:property bds:WorkShape-type ;
   sh:targetClass bdo:Work ;
 .
-bds:WorkShape-creator
+bds:WorkShape-catalogInfo
   a sh:PropertyShape ;
-  sh:path bdo:creator ;
-  sh:class bdo:AgentAsCreator ;
-  sh:nodeKind sh:IRI ;
+  sh:path bdo:catalogInfo ;
+  sh:datatype rdf:langString ;
+  sh:uniqueLang true ;
 .
 # a few more properties on the same pattern: workExtractOf, workDerivativeOf, workHasDerivative, workHasParallelPartsIn, workHasParallelsIn
 bds:WorkShape-hasInstance
@@ -96,4 +93,31 @@ bds:WorkShape-type
 .
 bds:AgentAsCreatorShape-role
   sh:in ( bdr:R0ER0019 bdr:R0ER0014 bdr:R0ER0009 bdr:R0ER0011 bdr:R0ER0012 bdr:R0ER0014 bdr:R0ER0015 bdr:R0ER0016 bdr:R0ER0017 bdr:R0ER0018  bdr:R0ER0020 bdr:R0ER0021 bdr:R0ER0022 bdr:R0ER0023 bdr:R0ER0025 bdr:R0ER0026 bdr:R0ER0027 bdr:R0ER0028 bdr:R0ER0030 bdr:R0ER0031 bdr:R0ER0032 )
+.
+##
+## Events
+##
+bds:bds:WorkShape-workEvent
+  a sh:PropertyShape ;
+  sh:path bdo:workEvent ;
+  sh:nodeKind sh:IRI ;
+  bds:propertyShapeType bds:FacetShape ;
+.
+bds:WorkEventShape
+  a sh:NodeShape ;
+  bds:identifierPrefix "EV" ;
+  bds:nodeShapeType bds:FacetShape ;
+  rdfs:label "Place Event Shape"@en ;
+  sh:property bds:PlaceEventShape-type , bds:EventShape-notAfter , bds:EventShape-notBefore , bds:EventShape-onYear , bds:EventShape-onOrAbout , bds:EventShape-eventWhere ;
+  sh:targetClass bdo:WorkEvent ;
+  sh:targetObjectsOf bdo:workEvent ;
+.
+bds:WorkEventShape-type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:in ( bdo:AuthoredEvent bdo:CompletedEvent bdo:OriginatedEvent bdo:RequestedEvent bdo:RevealedEvent bdo:RevisedEvent bdo:SecondRevisedEvent bdo:SecondTranslatedEvent bdo:ThirdRevisedEvent bdo:ThirdTranslatedEvent bdo:TranslatedEvent bdo:TranslationRevisedEvent ) ;
+  sh:message "A WorkEvent must have one type"@en ;
+  sh:class bdo:WorkEvent ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
 .

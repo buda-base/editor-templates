@@ -1,9 +1,8 @@
-# baseURI: http://purl.bdrc.io/shapes/core/CorporationShapes/
-# imports: http://purl.bdrc.io/ontology/core/
+# baseURI: http://purl.bdrc.io/shapes/core/SerialWorkShapes/
 # imports: http://purl.bdrc.io/shapes/core/RootShapes/
-# prefix: CorporationShapes
+# prefix: SerialWorkShapes
 
-@prefix CorporationShapes: <http://purl.bdrc.io/shapes/core/CorporationShapes/> .
+@prefix SerialWorkShapes: <http://purl.bdrc.io/shapes/core/SerialWorkShapes/>
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -29,38 +28,31 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-CorporationShapes:
+SerialWorkShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
-  owl:versionInfo "Initial SHACL constraints for Corporations and their members" ;
 .
-bdo:Corporation 
-  bds:rootShape bds:CorporationShape ;
-.
-bds:CorporationShape
+
+bds:SerialWorkShape
   a sh:NodeShape ;
-  bds:identifierPrefix "C" ;
-  rdfs:label "Corporation shape"@en ;
-  sh:property bds:CorporationShape-hasMember ;
+  rdfs:label "Work shape"@en ;
+  rdfs:subClassOf rdfs:Resource ;
   sh:property bds:CommonShape-prefLabel ;
   sh:property bds:CommonShape-altLabel ;
   sh:property bds:CommonShape-rdfsComment ;
-  sh:property bds:CorporationShape-type ;
+  sh:property bds:WorkShape-serialHasInstance ;
+  sh:property bds:BiblioShape-creator ;
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
-  sh:targetClass bdo:Corporation ;
+  sh:property bds:SerialWorkShape-type ;
+  sh:targetClass bdo:SerialWork ;
 .
-bds:CorporationShape-type
+bds:SerialWorkShape-catalogInfo
   a sh:PropertyShape ;
-  sh:path rdf:type ;
-  sh:in ( bdo:Corporation ) ;
-  sh:message "Must have type corporation"@en ;
-  sh:maxCount 1 ;
-  sh:minCount 1 ;
+  sh:path bdo:catalogInfo ;
+  sh:datatype rdf:langString ;
+  sh:uniqueLang true ;
 .
-bds:CorporationShape-hasMember
-  a sh:PropertyShape ;
-  sh:path bdo:hasMember ;
-  bds:classIn ( bdo:Person bdo:CorporationMember ) ;
-  sh:nodeKind sh:IRI ;
+bds:AgentAsCreatorShape-role
+  sh:in ( bdr:R0ER0015 )
 .

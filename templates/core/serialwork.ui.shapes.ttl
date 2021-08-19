@@ -1,6 +1,4 @@
-# baseURI: http://purl.bdrc.io/shapes/core/CollectionUIShapes/
-
-@prefix CollectionUIShapes: <http://purl.bdrc.io/shapes/core/CollectionUIShapes/> .
+@prefix SerialWorkUIShapes: <http://purl.bdrc.io/shapes/core/SerialWorkUIShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda: <http://purl.bdrc.io/admin.data/> .
 @prefix bdg: <http://purl.bdrc.io/graph/> .
@@ -29,52 +27,39 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
-CollectionUIShapes:
+SerialWorkUIShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/SerialWorkShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
-  owl:versionInfo "SHACL UI templates for Collection" ;
 .
-bds:CollectionShape
-  a sh:NodeShape ;
-  bds:identifierPrefix "PR" ;
-  sh:namespace "http://purl.bdrc.io/resource/" ;
-  rdfs:label "Collection Shape"@en ;
-  sh:property bds:CommonShape-prefLabel ;
-  sh:property bds:CommonShape-altLabel ;
-  sh:property bds:CommonShape-rdfsComment ;
-  sh:property bds:RootShape-note ;
-  sh:property bdsa:AdmShape-adminAbout ;
-  sh:property bds:CollectionShape-type ;
-.
-bds:CollectionShape-type
-  a sh:PropertyShape ;
-  sh:path rdf:type ;
-  sh:in ( bdo:Collection ) ;
-  sh:message "must have type collection"@en ;
-  sh:maxCount 1 ;
-  sh:minCount 1 ;
-  dash:editor dash:EnumSelectEditor ;
-  sh:group bds:BasePropertyGroup ;
-  sh:name "type"@en ;
-  sh:order "0"^^xsd:decimal ;
-.
+
 bds:BasePropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "General Properties"@en ;
   sh:order "0"^^xsd:decimal ;
 .
+bds:CreatorsPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Creators"@en ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:SerialInstancesPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Serial Instances"@en ;
+  sh:order "2"^^xsd:decimal ;
+.
 bds:NotesPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Notes"@en ;
-  sh:order "1"^^xsd:decimal ;
+  sh:order "3"^^xsd:decimal ;
 .
 bds:AdminPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Admin data"@en ;
-  sh:order "2"^^xsd:decimal ;
+  sh:order "4"^^xsd:decimal ;
 .
-bds:CollectionShape-type
+bds:SerialWorkShape-type
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:name "type"@en ;
@@ -92,11 +77,26 @@ bds:CommonShape-rdfsComment
   sh:group bds:BasePropertyGroup ;
   sh:order "3"^^xsd:decimal ;
 .
+bds:BiblioShape-creator
+  dash:editor dash:DetailsEditor ;
+  sh:group bds:CreatorsPropertyGroup ;
+  sh:name "creators"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:WorkShape-serialHasInstance
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:SerialInstancesPropertyGroup ;
+  sh:name "creators"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
 bdsa:AdmShape-adminAbout 
   dash:editor dash:DetailsEditor ;
   sh:group bds:AdminPropertyGroup ;
   sh:name "admin data"@en ;
   sh:order "0"^^xsd:decimal ;
+.
+bdsa:AdmEntityShape-replaceWith 
+  bds:classIn ( bdo:SerialWork bdo:Work ) ;
 .
 bds:RootShape-note
   sh:group bds:NotesPropertyGroup ;

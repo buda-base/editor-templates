@@ -48,6 +48,10 @@ bds:CommonShape-altLabel
   dash:editor dash:TextAreaWithLangEditor ;
   dash:singleLine true ;
 .
+bds:CommonShape-rdfsComment
+  sh:name "description"@en ;
+  dash:editor dash:TextAreaWithLangEditor ;
+.
 bds:CommonShape-associatedTradition
   dash:editor dash:EnumSelectEditor ;
   sh:name "associated tradition" ;

@@ -45,6 +45,12 @@ bds:CommonShape-altLabel
   sh:path skos:altLabel ;
   sh:datatype rdf:langString ;
 .
+bds:CommonShape-rdfsComment
+  a sh:PropertyShape ;
+  sh:path rdfs:comment ;
+  sh:datatype rdf:langString ;
+  sh:uniqueLang true ;
+.
 ##
 ## identifiers
 ##
