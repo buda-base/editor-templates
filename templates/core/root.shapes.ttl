@@ -99,6 +99,8 @@ bds:AgentAsCreatorShape
   bds:nodeShapeType bds:FacetShape ;
   sh:property bds:AgentAsCreatorShape-role ;
   sh:property bds:AgentAsCreatorShape-agent ;
+  sh:targetClass bdo:AgentAsCreator ;
+  sh:targetObjectsOf bdo:creator ;
 .
 bds:AgentAsCreatorShape-role
   a sh:PropertyShape ;

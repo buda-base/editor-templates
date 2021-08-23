@@ -27,11 +27,13 @@
 WorkShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/EventShapes/> ;
 .
 
 bds:WorkShape
   a sh:NodeShape ;
   rdfs:label "Work shape"@en ;
+  bds:identifierPrefix "WA" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:property bds:CommonShape-prefLabel ;
   sh:property bds:CommonShape-altLabel ;

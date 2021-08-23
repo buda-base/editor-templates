@@ -35,7 +35,8 @@ SerialWorkShapes:
 
 bds:SerialWorkShape
   a sh:NodeShape ;
-  rdfs:label "Work shape"@en ;
+  rdfs:label "Serial Work shape"@en ;
+  bds:identifierPrefix "WAS" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:property bds:CommonShape-prefLabel ;
   sh:property bds:CommonShape-altLabel ;

@@ -32,6 +32,7 @@ WorkUIShapes:
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/WorkShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/EventUIShapes/> ;
 .
 
 bds:BasePropertyGroup
@@ -90,15 +91,17 @@ bds:WorkShape-catalogInfo
 bds:WorkShape-language
   sh:group bds:BasePropertyGroup ;
   sh:order "4"^^xsd:decimal ;
+  dash:editor dash:EnumSelectEditor ;
 .
 bds:CommonShape-identifiedBy
+  sh:name "identifier" ;
   sh:group bds:BasePropertyGroup ;
   sh:order "5"^^xsd:decimal ;
 .
 bds:BiblioShape-creator
   dash:editor dash:DetailsEditor ;
   sh:group bds:CreatorsPropertyGroup ;
-  sh:name "creators"@en ;
+  sh:name "creator"@en ;
   sh:order "0"^^xsd:decimal ;
 .
 bds:WorkShape-hasInstance
@@ -124,7 +127,7 @@ bds:WorkShape-hasTranslation
 bds:WorkShape-workEvent
   sh:group bds:EventsPropertyGroup ;
   dash:editor dash:DetailsEditor ;
-  sh:name "has event"@en ;
+  sh:name "event"@en ;
   sh:order "0"^^xsd:decimal ;
 .
 bds:WorkEventShape-type
