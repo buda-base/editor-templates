@@ -1,0 +1,160 @@
+@prefix WorkUIShapes: <http://purl.bdrc.io/shapes/core/WorkUIShapes/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admin.data/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
+@prefix bdsa: <http://purl.bdrc.io/ontology/shapes/adm/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+WorkUIShapes:
+  a owl:Ontology ;
+  owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/WorkShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
+.
+
+bds:BasePropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "General Properties"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:CreatorsPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Creators"@en ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:EventsPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Events"@en ;
+  sh:order "2"^^xsd:decimal ;
+.
+bds:InstancesPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Instances"@en ;
+  sh:order "3"^^xsd:decimal ;
+.
+bds:RelationsPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Relations"@en ;
+  sh:order "4"^^xsd:decimal ;
+.
+bds:NotesPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Notes"@en ;
+  sh:order "5"^^xsd:decimal ;
+.
+bds:AdminPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Admin data"@en ;
+  sh:order "6"^^xsd:decimal ;
+.
+bds:SerialWorkShape-type
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:BasePropertyGroup ;
+  sh:name "type"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:CommonShape-prefLabel
+  sh:group bds:BasePropertyGroup ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:CommonShape-altLabel
+  sh:group bds:BasePropertyGroup ;
+  sh:order "2"^^xsd:decimal ;
+.
+bds:WorkShape-catalogInfo
+  sh:group bds:BasePropertyGroup ;
+  sh:order "3"^^xsd:decimal ;
+.
+bds:WorkShape-language
+  sh:group bds:BasePropertyGroup ;
+  sh:order "4"^^xsd:decimal ;
+.
+bds:CommonShape-identifiedBy
+  sh:group bds:BasePropertyGroup ;
+  sh:order "5"^^xsd:decimal ;
+.
+bds:BiblioShape-creator
+  dash:editor dash:DetailsEditor ;
+  sh:group bds:CreatorsPropertyGroup ;
+  sh:name "creators"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:WorkShape-hasInstance
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:InstancesPropertyGroup ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:WorkShape-isAbout
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:RelationsPropertyGroup ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:WorkShape-genre
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:RelationsPropertyGroup ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:WorkShape-hasTranslation
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:RelationsPropertyGroup ;
+  sh:order "2"^^xsd:decimal ;
+.
+bds:WorkShape-workEvent
+  sh:group bds:EventsPropertyGroup ;
+  dash:editor dash:DetailsEditor ;
+  sh:name "has event"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:WorkEventShape-type
+  dash:editor dash:EnumSelectEditor ;
+  sh:description "event type"@en ;
+  sh:name "type"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:EventShape-onYear sh:order "1"^^xsd:decimal .
+bds:EventShape-notAfter sh:order "2"^^xsd:decimal ;
+   bds:displayPriority 1 ;
+.
+bds:EventShape-notBefore sh:order "3"^^xsd:decimal ;
+   bds:displayPriority 1 ;
+.
+bds:EventShape-onOrAbout sh:order "4"^^xsd:decimal ;
+   bds:displayPriority 1 ;
+.
+bds:EventShape-eventWhere sh:order "5"^^xsd:decimal ; bds:displayPriority 1 .
+bdsa:AdmShape-adminAbout 
+  dash:editor dash:DetailsEditor ;
+  sh:group bds:AdminPropertyGroup ;
+  sh:name "admin data"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
+bdsa:AdmEntityShape-replaceWith 
+  bds:classIn ( bdo:SerialWork bdo:Work ) ;
+.
+bds:RootShape-note
+  sh:group bds:NotesPropertyGroup ;
+  sh:order "0"^^xsd:decimal ;
+  dash:editor dash:DetailsEditor ;
+.

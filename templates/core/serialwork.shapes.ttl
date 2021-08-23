@@ -2,7 +2,7 @@
 # imports: http://purl.bdrc.io/shapes/core/RootShapes/
 # prefix: SerialWorkShapes
 
-@prefix SerialWorkShapes: <http://purl.bdrc.io/shapes/core/SerialWorkShapes/>
+@prefix SerialWorkShapes: <http://purl.bdrc.io/shapes/core/SerialWorkShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -46,6 +46,12 @@ bds:SerialWorkShape
   sh:property bdsa:AdmShape-adminAbout ;
   sh:property bds:SerialWorkShape-type ;
   sh:targetClass bdo:SerialWork ;
+.
+bds:WorkShape-serialHasInstance
+  a sh:PropertyShape ;
+  sh:path bdo:serialHasInstance ;
+  bds:propertyShapeType bds:ExternalShape ;
+  bds:classIn ( bdo:Instance bdo:EtextInstance )
 .
 bds:SerialWorkShape-catalogInfo
   a sh:PropertyShape ;

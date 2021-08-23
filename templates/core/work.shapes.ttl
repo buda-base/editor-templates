@@ -1,4 +1,4 @@
-@prefix WorkShapes: <http://purl.bdrc.io/shapes/core/WorkShapes/>
+@prefix WorkShapes: <http://purl.bdrc.io/shapes/core/WorkShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -56,7 +56,7 @@ bds:WorkShape-catalogInfo
 bds:WorkShape-hasInstance
   a sh:PropertyShape ;
   sh:path bdo:workHasInstance ;
-  sh:class bdo:Instance ;
+  bds:classIn ( bdo:Instance bdo:EtextInstance )
   bds:propertyShapeType bds:ExternalShape ;
 .
 bds:WorkShape-hasTranslation
@@ -82,6 +82,7 @@ bds:WorkShape-language
   sh:path bdo:language ;
   sh:in ( bdr:LangBo bdr:LangZh bdr:LangKm bdr:LangMn bdr:LangMy bdr:LangNew bdr:LangPi bdr:LangSa bdr:LangDz ) ;
   bds:propertyShapeType bds:ExternalShape ;
+  sh:minCount 1 ;
 .
 bds:WorkShape-type
   a sh:PropertyShape ;

@@ -214,4 +214,25 @@
         <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/WorkShapes"/>
     </OntologySpec>
     
+    <OntologySpec>
+        <!-- Work shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/WorkUIShapes/"/>
+        <altURL    rdf:resource="templates/core/work.ui.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/WorkUIShapes"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- Serial Work shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/SerialWorkShapes/"/>
+        <altURL    rdf:resource="templates/core/serialwork.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/SerialWorkShapes"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <!-- Serial Work shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/SerialWorkUIShapes/"/>
+        <altURL    rdf:resource="templates/core/serialwork.ui.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/SerialWorkUIShapes"/>
+    </OntologySpec>
+
 </rdf:RDF>
