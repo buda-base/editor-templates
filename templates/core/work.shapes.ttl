@@ -84,7 +84,6 @@ bds:WorkShape-language
   a sh:PropertyShape ;
   sh:path bdo:language ;
   sh:in ( bdr:LangBo bdr:LangZh bdr:LangKm bdr:LangMn bdr:LangMy bdr:LangNew bdr:LangPi bdr:LangSa bdr:LangDz ) ;
-  bds:propertyShapeType bds:ExternalShape ;
   sh:minCount 1 ;
 .
 bds:WorkShape-type
