@@ -59,7 +59,7 @@ bds:WorkShape-catalogInfo
 bds:WorkShape-hasInstance
   a sh:PropertyShape ;
   sh:path bdo:workHasInstance ;
-  bds:classIn ( bdo:Instance bdo:EtextInstance )
+  bds:classIn ( bdo:Instance bdo:EtextInstance ) ;
   bds:propertyShapeType bds:ExternalShape ;
 .
 bds:WorkShape-hasTranslation
