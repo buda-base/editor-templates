@@ -62,3 +62,11 @@ bds:SerialWorkShape-catalogInfo
 bds:AgentAsCreatorShape-role
   sh:in ( bdr:R0ER0015 )
 .
+bds:SerialWorkShape-type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:in ( bdo:SerialWork ) ;
+  sh:message "must have type serial work"@en ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+.

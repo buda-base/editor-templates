@@ -69,7 +69,7 @@ bds:AdminPropertyGroup
   rdfs:label "Admin data"@en ;
   sh:order "6"^^xsd:decimal ;
 .
-bds:SerialWorkShape-type
+bds:WorkShape-type
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:name "type"@en ;

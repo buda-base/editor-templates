@@ -43,6 +43,9 @@ bds:WorkShape
   sh:property bds:BiblioShape-creator ;
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
+  sh:property bds:WorkShape-language ;
+  sh:property bds:WorkShape-isAbout ;
+  sh:property bds:WorkShape-genre ;
   sh:property bds:WorkShape-type ;
   sh:targetClass bdo:Work ;
 .
@@ -98,7 +101,7 @@ bds:AgentAsCreatorShape-role
 ##
 ## Events
 ##
-bds:bds:WorkShape-workEvent
+bds:WorkShape-workEvent
   a sh:PropertyShape ;
   sh:path bdo:workEvent ;
   sh:nodeKind sh:IRI ;
