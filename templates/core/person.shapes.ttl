@@ -27,6 +27,7 @@ bdo:Person
 PersonShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/core/EventShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
   owl:versionInfo "SHACL constraints for Person" ;
 .
 bds:PersonShape

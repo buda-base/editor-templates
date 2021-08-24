@@ -28,6 +28,7 @@ WorkShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/EventShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
 .
 
 bds:WorkShape
@@ -49,7 +50,11 @@ bds:WorkShape
   sh:property bds:WorkShape-isAbout ;
   sh:property bds:WorkShape-genre ;
   sh:property bds:WorkShape-type ;
+  sh:property bdsa:AdmShape-adminAbout ;
   sh:targetClass bdo:Work ;
+.
+bdsa:AdmEntityShape-replaceWith 
+  bds:classIn ( bdo:Work bdo:SerialWork ) ;
 .
 bds:WorkShape-catalogInfo
   a sh:PropertyShape ;
