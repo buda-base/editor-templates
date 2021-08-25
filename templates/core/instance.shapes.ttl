@@ -249,15 +249,3 @@ bds:InstanceEventShape-partType
   sh:class bdo:PartType ;
   sh:maxCount 1 ;
 .
-bds:InstanceShape-instanceHasReproduction
-  a sh:PropertyShape ;
-  sh:path bdo:instanceHasReproduction ;
-  bds:classIn ( bdo:ImageInstance bdo:EtextInstance bdo:Instance ) ;
-  sh:maxCount 1 ;
-.
-bds:InstanceShape-instanceReproductionOf
-  a sh:PropertyShape ;
-  sh:path bdo:instanceHasReproduction ;
-  bds:classIn ( bdo:Instance bdo:ImageInstance ) ;
-  sh:maxCount 1 ;
-.

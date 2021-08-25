@@ -52,3 +52,4 @@ bds:InstanceShape-scanInfo
   sh:datatype rdf:langString ;
   sh:uniqueLang true ;
 .
+# instanceHasVolume

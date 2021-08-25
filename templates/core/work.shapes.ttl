@@ -117,7 +117,7 @@ bds:WorkEventShape
   a sh:NodeShape ;
   bds:identifierPrefix "EV" ;
   bds:nodeShapeType bds:FacetShape ;
-  rdfs:label "Wirj Event Shape"@en ;
+  rdfs:label "Work Event Shape"@en ;
   sh:property bds:WorkEventShape-type , bds:EventShape-notAfter , bds:EventShape-notBefore , bds:EventShape-onYear , bds:EventShape-onOrAbout , bds:EventShape-eventWhere ;
   sh:targetClass bdo:WorkEvent ;
   sh:targetObjectsOf bdo:workEvent ;
