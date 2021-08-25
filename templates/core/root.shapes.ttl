@@ -344,3 +344,38 @@ bds:ContentLocationShape-contentPagination
   sh:in (bdr:PaginationAbsolute bdr:PaginationRelative) ;
   sh:maxCount 1 ;
 .
+#
+# Instance properties
+#
+bds:InstanceShape-instanceOf
+  a sh:PropertyShape ;
+  sh:path bdo:instanceOf ;
+  sh:class bdo:Work ;
+  sh:description "All instances should have one work, except bundles containing unrelated texts"@en ;
+  sh:name "instance of"@en ;
+  sh:maxCount 1 ;
+.
+bds:InstanceShape-instanceHasReproduction
+  a sh:PropertyShape ;
+  sh:path bdo:instanceHasReproduction ;
+  bds:classIn ( bdo:ImageInstance bdo:EtextInstance bdo:Instance ) ;
+  sh:maxCount 1 ;
+.
+bds:InstanceShape-instanceReproductionOf
+  a sh:PropertyShape ;
+  sh:path bdo:instanceHasReproduction ;
+  bds:classIn ( bdo:Instance bdo:ImageInstance ) ;
+  sh:maxCount 1 ;
+.
+bds:InstanceShape-isComplete
+  a sh:PropertyShape ;
+  sh:path bdo:isComplete ;
+  sh:datatype xsd:boolean ;
+  sh:maxCount 1 ;
+.
+bds:InstanceShape-sourceNote
+  a sh:PropertyShape ;
+  sh:path bdo:sourceNote ;
+  sh:datatype rdf:langString ;
+  sh:uniqueLang true ;
+.

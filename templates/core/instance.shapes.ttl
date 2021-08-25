@@ -34,7 +34,7 @@ InstanceShapes:
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Instance and its subclasses" ;
 .
-bds:InstanceShape
+bds:GeneralInstanceShape
   a sh:NodeShape ;
   rdfs:label "Instance Shape"@en ;
   bds:identifierPrefix "MW" ;
@@ -53,6 +53,21 @@ bds:InstanceShape
   sh:property bds:InstanceShape-publisherName ;
   sh:property bds:InstanceShape-publisherLocation ;
   sh:property bds:InstanceShape-seriesNumber ;
+  sh:property bds:InstanceShape-dimWidth ;
+  sh:property bds:InstanceShape-dimLength ;
+  sh:property bds:InstanceShape-dimHeight ;
+  sh:property bds:InstanceShape-authorshipStatement ;
+  sh:property bds:InstanceShape-biblioNote ;
+  sh:property bds:InstanceShape-colophon ;
+  sh:property bds:InstanceShape-incipit ;
+  sh:property bds:InstanceShape-instanceEvent ;
+  sh:property bds:InstanceShape-instanceHasReproduction ;
+  sh:property bds:InstanceShape-instanceReproductionOf ;
+  sh:property bds:InstanceShape-isComplete ;
+  sh:property bds:InstanceShape-isDamaged ;
+  sh:property bds:InstanceShape-numberOfVolumes ;
+  sh:property bds:InstanceShape-sourceNote ;
+  sh:property bds:NoteShape-contentLocation ;
   sh:targetClass bdo:Instance ;
 .
 
@@ -60,14 +75,7 @@ bds:AgentAsCreatorShape-role
   sh:in ( bdr:R0ER0010 bdr:R0ER0013 bdr:R0ER0015 bdr:R0ER0024 bdr:R0ER0030 bdr:R0ER0033 bdr:R0ER0034 )
 .
 
-bds:InstanceShape-instanceOf
-  a sh:PropertyShape ;
-  sh:path bdo:instanceOf ;
-  sh:class bdo:Work ;
-  sh:description "All instances should have one work, except bundles containing unrelated texts"@en ;
-  sh:name "instance of"@en ;
-  sh:maxCount 1 ;
-.
+
 bds:InstanceShape-serialInstanceOf
   a sh:PropertyShape ;
   sh:path bdo:serialInstanceOf ;
@@ -80,7 +88,7 @@ bds:InstanceShape-script
   a sh:PropertyShape ;
   sh:path bdo:script ;
   sh:class bdo:Script ;
-  sh:in (bdr:ScriptDbuCan bdr:ScriptDbuMed bdr:ScriptKhyugYig bdr:ScriptHans bdr:ScriptHant bdr:ScriptDeva bdr:ScriptKhmr bdr:ScriptLatn bdr:ScriptMong bdr:ScriptMymr bdr:ScriptBeng bdr:ScriptCyrl bdr:ScriptKhar bdr:ScriptNepaleseHooked bdr:ScriptNewa bdr:ScriptRanj bdr:ScriptSinh) ;
+  sh:in ( bdr:ScriptDbuCan bdr:ScriptDbuMed bdr:ScriptKhyugYig bdr:ScriptHans bdr:ScriptHant bdr:ScriptDeva bdr:ScriptKhmr bdr:ScriptLatn bdr:ScriptMong bdr:ScriptMymr bdr:ScriptBeng bdr:ScriptCyrl bdr:ScriptKhar bdr:ScriptNepaleseHooked bdr:ScriptNewa bdr:ScriptRanj bdr:ScriptSinh ) ;
   sh:description "an instance may have one or more scripts"@en ;
   sh:minCount 1 ;
 .
@@ -90,7 +98,7 @@ bds:InstanceShape-binding
   sh:class bdo:Binding ;
   sh:description "this PhysicalInstance may have a single Binding"@en ;
   sh:maxCount 1 ;
-  sh:in (bdr:Binding_LooseLeaf_Pecha bdr:Binding_Codex_Perfect bdr:Binding_LooseLeaf_Pothi bdr:Binding_Codex_Sewn bdr:Binding_Continuous_Folded bdr:Binding_Continuous_Leporello bdr:Binding_Continuous_Scroll ) ;
+  sh:in ( bdr:Binding_LooseLeaf_Pecha bdr:Binding_Codex_Perfect bdr:Binding_LooseLeaf_Pothi bdr:Binding_Codex_Sewn bdr:Binding_Continuous_Folded bdr:Binding_Continuous_Leporello bdr:Binding_Continuous_Scroll ) ;
   sh:name "instance binding"@en ;
 .
 bds:InstanceShape-printMethod
@@ -98,14 +106,14 @@ bds:InstanceShape-printMethod
   sh:path bdo:printMethod ;
   sh:class bdo:PrintMethod ;
   sh:description "this PhysicalInstance may have a single PrintMethod"@en ;
-  sh:in (bdr:PrintMethod_Manuscript bdr:PrintMethod_ManuscriptStylus bdr:PrintMethod_Modern bdr:PrintMethod_Relief_WoodBlock bdr:PrintMethod_Xerography bdr:PrintMethod_Relief_Letterpress) ;
+  sh:in ( bdr:PrintMethod_Manuscript bdr:PrintMethod_ManuscriptStylus bdr:PrintMethod_Modern bdr:PrintMethod_Relief_WoodBlock bdr:PrintMethod_Xerography bdr:PrintMethod_Relief_Letterpress ) ;
   sh:name "instance print method"@en ;
 .
 bds:InstanceShape-material
   a sh:PropertyShape ;
   sh:path bdo:material ;
   sh:class bdo:BaseMaterial ;
-  sh:in (bdr:MaterialPaper bdr:MaterialBirchBark bdr:MaterialCardboard bdr:MaterialCloth bdr:MaterialDeshog bdr:MaterialKhoiPaper bdr:MaterialLoktaPaper bdr:MaterialMultiLayerPaper bdr:MaterialPalmLeaf bdr:MaterialRicePaper bdr:MaterialSaPaper bdr:MaterialParchment bdr:MaterialDigital bdr:MaterialPalmyraPalmLeaf bdr:MaterialCoryphaPalmLeaf)
+  sh:in ( bdr:MaterialPaper bdr:MaterialBirchBark bdr:MaterialCardboard bdr:MaterialCloth bdr:MaterialDeshog bdr:MaterialKhoiPaper bdr:MaterialLoktaPaper bdr:MaterialMultiLayerPaper bdr:MaterialPalmLeaf bdr:MaterialRicePaper bdr:MaterialSaPaper bdr:MaterialParchment bdr:MaterialDigital bdr:MaterialPalmyraPalmLeaf bdr:MaterialCoryphaPalmLeaf )
 .
 bds:InstanceShape-appliedMaterial
   a sh:PropertyShape ;
@@ -117,21 +125,139 @@ bds:InstanceShape-appliedMaterial
 bds:InstanceShape-publisherName
   a sh:PropertyShape ;
   sh:path bdo:publisherName ;
-  sh:maxCount 1 ;
+  sh:uniqueLang true ;
   sh:description "use only for modern publications, use [s.n.] in English for unknown publisher, when using Wylie, prefix with a star instead of putting in square brackets for reconstructed value"@en ;
   sh:datatype rdf:langString ;
 .
 bds:InstanceShape-publisherLocation
   a sh:PropertyShape ;
   sh:path bdo:publisherLocation ;
-  sh:maxCount 1 ;
+  sh:uniqueLang true ;
   sh:datatype rdf:langString ;
   sh:description "use only for modern publications, use [s.l.] in English for unknown location, when using Wylie, prefix with a star instead of putting in square brackets for reconstructed value"@en ;
+.
+bds:InstanceShape-editionStatement
+  a sh:PropertyShape ;
+  sh:path bdo:editionStatement ;
+  sh:uniqueLang true ;
   sh:datatype rdf:langString ;
+.
+bds:InstanceShape-hasSourcePrintery
+  a sh:PropertyShape ;
+  sh:path bdo:hasSourcePrintery ;
+  sh:class bdo:Place ;
+  sh:maxCount 1 ;
 .
 bds:InstanceShape-seriesNumber
   a sh:PropertyShape ;
   sh:path bdo:seriesNumber ;
   sh:maxCount 1 ;
   sh:datatype xsd:string ;
+.
+bds:InstanceShape-instanceExtentStatement
+  a sh:PropertyShape ;
+  sh:path bdo:instanceExtentStatement ;
+  sh:maxCount 1 ;
+  sh:datatype xsd:string ;
+.
+bds:InstanceShape-dimWidth
+  a sh:PropertyShape ;
+  sh:path bdo:dimWidth ;
+  sh:maxCount 1 ;
+  sh:datatype xsd:float ;
+  sh:minExclusive "0.0"^^xsd:float ;
+  sh:maxExclusive "100.0"^^xsd:float ;
+.
+bds:InstanceShape-dimLength
+  a sh:PropertyShape ;
+  sh:path bdo:dimLength ;
+  sh:maxCount 1 ;
+  sh:datatype xsd:float ;
+  sh:minExclusive "0.0"^^xsd:float ;
+  sh:maxExclusive "100.0"^^xsd:float ;
+.
+bds:InstanceShape-dimHeight
+  a sh:PropertyShape ;
+  sh:path bdo:dimHeight ;
+  sh:maxCount 1 ;
+  sh:datatype xsd:float ;
+  sh:minExclusive "0.0"^^xsd:float ;
+  sh:maxExclusive "100.0"^^xsd:float ;
+.
+bds:InstanceShape-colophon
+  a sh:PropertyShape ;
+  sh:path bdo:colophon ;
+  sh:datatype rdf:langString ;
+.
+bds:InstanceShape-incipit
+  a sh:PropertyShape ;
+  sh:path bdo:incipit ;
+  sh:datatype rdf:langString ;
+.
+bds:InstanceShape-authorshipStatement
+  a sh:PropertyShape ;
+  sh:path bdo:authorshipStatement ;
+  sh:datatype rdf:langString ;
+.
+bds:InstanceShape-biblioNote
+  a sh:PropertyShape ;
+  sh:path bdo:biblioNote ;
+  sh:datatype rdf:langString ;
+  sh:uniqueLang true ;
+.
+bds:InstanceShape-numberOfVolumes
+  a sh:PropertyShape ;
+  sh:path bdo:numberOfVolumes ;
+  sh:datatype xsd:integer ;
+  sh:uniqueLang true ;
+.
+bds:InstanceShape-isDamaged
+  a sh:PropertyShape ;
+  sh:path bdo:isDamaged ;
+  sh:datatype xsd:boolean ;
+  sh:maxCount 1 ;
+.
+bds:InstanceShape-instanceEvent
+  a sh:PropertyShape ;
+  sh:path bdo:instanceEvent ;
+  sh:nodeKind sh:IRI ;
+  bds:propertyShapeType bds:FacetShape ;
+.
+bds:InstanceEventShape
+  a sh:NodeShape ;
+  bds:identifierPrefix "EV" ;
+  bds:nodeShapeType bds:FacetShape ;
+  rdfs:label "Instance Event Shape"@en ;
+  sh:property bds:InstanceEventShape-type , bds:EventShape-notAfter , bds:EventShape-notBefore , bds:EventShape-onYear , bds:EventShape-onOrAbout , bds:EventShape-eventWhere , bds:EventShape-eventWho ;
+  sh:targetClass bdo:InstanceEvent ;
+  sh:targetObjectsOf bdo:instanceEvent ;
+.
+bds:InstanceEventShape-type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:in ( bdo:PublishedEvent bdo:PrintedEvent bdo:CarvedEvent bdo:CompiledEvent bdo:EnscribedEvent bdo:OriginalCopyEvent ) ;
+  sh:message "An instance event must have one type"@en ;
+  sh:class bdo:InstanceEvent ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+.
+bds:InstanceEventShape-partType
+  a sh:PropertyShape ;
+  sh:path bdo:partType ;
+  sh:class bdo:AppliedMaterial ;
+  sh:in ( bdr:PartTypeChapter bdr:PartTypeFragment bdr:PartTypeSection bdr:PartTypeTableOfContent bdr:PartTypeText bdr:PartTypeVolume ) ;
+  sh:class bdo:PartType ;
+  sh:maxCount 1 ;
+.
+bds:InstanceShape-instanceHasReproduction
+  a sh:PropertyShape ;
+  sh:path bdo:instanceHasReproduction ;
+  bds:classIn ( bdo:ImageInstance bdo:EtextInstance bdo:Instance ) ;
+  sh:maxCount 1 ;
+.
+bds:InstanceShape-instanceReproductionOf
+  a sh:PropertyShape ;
+  sh:path bdo:instanceHasReproduction ;
+  bds:classIn ( bdo:Instance bdo:ImageInstance ) ;
+  sh:maxCount 1 ;
 .

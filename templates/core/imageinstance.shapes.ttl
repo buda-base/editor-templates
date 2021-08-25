@@ -1,0 +1,54 @@
+@prefix ImageInstanceShapes: <http://purl.bdrc.io/shapes/core/ImageInstanceShapes/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
+@prefix bdsa: <http://purl.bdrc.io/ontology/shapes/adm/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ImageInstanceShapes:
+  a owl:Ontology ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
+  owl:versionInfo "Initial SHACL constraints for Instance and its subclasses" ;
+.
+bds:ImageInstanceShape
+  a sh:NodeShape ;
+  rdfs:label "Image Instance Shape"@en ;
+  bds:identifierPrefix "W" ;
+  sh:property bds:CommonShape-prefLabel ;
+  sh:property bds:CommonShape-altLabel ;
+  sh:property bds:InstanceShape-instanceOf ;
+  sh:property bds:CommonShape-identifiedBy ;
+  sh:property bds:RootShape-note ;
+  sh:property bdsa:AdmShape-adminAbout ;
+  sh:property bds:InstanceShape-instanceHasReproduction ;
+  sh:property bds:InstanceShape-instanceReproductionOf ;
+  sh:property bds:InstanceShape-isComplete ;
+  sh:property bds:InstanceShape-scanInfo ;
+  sh:targetClass bdo:Instance ;
+.
+bds:InstanceShape-scanInfo
+  a sh:PropertyShape ;
+  sh:path bdo:scanInfo ;
+  sh:datatype rdf:langString ;
+  sh:uniqueLang true ;
+.

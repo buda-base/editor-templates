@@ -117,8 +117,8 @@ bds:WorkEventShape
   a sh:NodeShape ;
   bds:identifierPrefix "EV" ;
   bds:nodeShapeType bds:FacetShape ;
-  rdfs:label "Place Event Shape"@en ;
-  sh:property bds:PlaceEventShape-type , bds:EventShape-notAfter , bds:EventShape-notBefore , bds:EventShape-onYear , bds:EventShape-onOrAbout , bds:EventShape-eventWhere ;
+  rdfs:label "Wirj Event Shape"@en ;
+  sh:property bds:WorkEventShape-type , bds:EventShape-notAfter , bds:EventShape-notBefore , bds:EventShape-onYear , bds:EventShape-onOrAbout , bds:EventShape-eventWhere ;
   sh:targetClass bdo:WorkEvent ;
   sh:targetObjectsOf bdo:workEvent ;
 .
