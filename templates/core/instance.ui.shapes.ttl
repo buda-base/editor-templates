@@ -1,0 +1,212 @@
+@prefix InstanceUIShapes: <http://purl.bdrc.io/shapes/core/InstanceUIShapes/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
+@prefix bdsa: <http://purl.bdrc.io/ontology/shapes/adm/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+InstanceUIShapes:
+  a owl:Ontology ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/EventUIShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/InstanceShapes/> ;
+  owl:versionInfo "Initial SHACL constraints for Instance" ;
+.
+##
+## General properties
+##
+bds:BasePropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "General Properties"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:InstanceShape-type
+  sh:group bds:BasePropertyGroup ;
+  dash:editor dash:EnumSelectEditor ;
+.
+bds:InstanceShape-script
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:BasePropertyGroup ;
+.
+bds:InstanceShape-biblioNote
+  dash:editor dash:TextAreaWithLangEditor ;
+  sh:group bds:BasePropertyGroup ;
+.
+bds:CommonShape-prefLabel
+  sh:group bds:BasePropertyGroup ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:CommonShape-altLabel
+  sh:group bds:BasePropertyGroup ;
+  sh:order "2"^^xsd:decimal ;
+.
+bds:CommonShape-identifiedBy
+  sh:name "identifier" ;
+  sh:group bds:BasePropertyGroup ;
+  sh:order "5"^^xsd:decimal ;
+.
+##
+## Publishers and printery
+##
+bds:PubPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Publication/Printery"@en ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:InstanceShape-printMethod
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:PubPropertyGroup ;
+.
+bds:InstanceShape-appliedMaterial
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:PubPropertyGroup ;
+.
+bds:InstanceShape-publisherName
+  dash:editor dash:TextAreaWithLangEditor ;
+  dash:singleLine true ;
+  sh:group bds:PubPropertyGroup ;
+.
+bds:InstanceShape-publisherLocation
+  dash:editor dash:TextAreaWithLangEditor ;
+  dash:singleLine true ;
+  sh:group bds:PubPropertyGroup ;
+.
+bds:InstanceShape-editionStatement
+  dash:editor dash:TextAreaWithLangEditor ;
+  dash:singleLine true ;
+  sh:group bds:PubPropertyGroup ;
+.
+bds:InstanceShape-hasSourcePrintery
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:PubPropertyGroup ;
+.
+bds:InstanceShape-instanceEvent
+  dash:editor dash:DetailsEditor ;
+  sh:group bds:PubPropertyGroup ;
+.
+##
+## textual features
+##
+bds:TextPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Textual features"@en ;
+  sh:order "2"^^xsd:decimal ;
+.
+bds:InstanceShape-colophon
+  dash:editor dash:TextAreaWithLangEditor ;
+  sh:group bds:TextPropertyGroup ;
+.
+bds:InstanceShape-incipit
+  dash:editor dash:TextAreaWithLangEditor ;
+  sh:group bds:TextPropertyGroup ;
+.
+bds:InstanceShape-authorshipStatement
+  dash:editor dash:TextAreaWithLangEditor ;
+  dash:singleLine true ;
+  sh:group bds:TextPropertyGroup ;
+.
+##
+## physical properties
+##
+bds:PhysicalPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Physical features"@en ;
+  sh:order "3"^^xsd:decimal ;
+.
+bds:InstanceShape-numberOfVolumes
+  dash:editor dash:TextFieldEditor ;
+  sh:group bds:PhysicalPropertyGroup ;
+.
+bds:InstanceShape-instanceExtentStatement
+  dash:editor dash:TextAreaWithLangEditor ;
+  dash:singleLine true ;
+  sh:group bds:PhysicalPropertyGroup ;
+.
+bds:InstanceShape-binding
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:PhysicalPropertyGroup ;
+.
+bds:InstanceShape-material
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:PhysicalPropertyGroup ;
+.
+bds:InstanceShape-dimWidth
+  dash:editor dash:TextFieldEditor ;
+  sh:group bds:PhysicalPropertyGroup ;
+.
+bds:InstanceShape-dimLength
+  dash:editor dash:TextFieldEditor ;
+  sh:group bds:PhysicalPropertyGroup ;
+.
+bds:InstanceShape-dimHeight
+  dash:editor dash:TextFieldEditor ;
+  sh:group bds:PhysicalPropertyGroup ;
+.
+bds:InstanceShape-isDamaged
+  dash:editor dash:BooleanSelectEditor ;
+  sh:group bds:PhysicalPropertyGroup ;
+.
+##
+## Properties of members of serial works
+##
+bds:SerialPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Properties of serials"@en ;
+  sh:order "4"^^xsd:decimal ;
+.
+bds:InstanceShape-serialInstanceOf
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:SerialPropertyGroup ;
+.
+bds:InstanceShape-seriesNumber
+  dash:editor dash:TextFieldEditor ;
+  dash:singleLine true ;
+  sh:group bds:SerialPropertyGroup ;
+.
+##
+## Properties of parts
+##
+bds:PartsPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Properties of parts (ex-outline nodes)"@en ;
+  sh:order "4"^^xsd:decimal ;
+.
+bds:InstanceEventShape-partType
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:PartsPropertyGroup ;
+.
+bds:InstanceShape-contentLocation 
+  dash:editor dash:DetailsEditor ;
+  sh:group bds:PartsPropertyGroup ;
+.
+bds:InstanceShape-contentLocationStatement ;
+  dash:editor dash:TextFieldEditor ;
+  dash:singleLine true ;
+  sh:group bds:PartsPropertyGroup ;
+.
+##
+## creators
+##
+bds:BiblioShape-creator
+  dash:editor dash:DetailsEditor ;
+.

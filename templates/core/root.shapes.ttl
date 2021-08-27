@@ -349,6 +349,7 @@ bds:ContentLocationShape-contentPagination
 #
 bds:InstanceShape-instanceOf
   a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:instanceOf ;
   sh:class bdo:Work ;
   sh:description "All instances should have one work, except bundles containing unrelated texts"@en ;
@@ -357,12 +358,14 @@ bds:InstanceShape-instanceOf
 .
 bds:InstanceShape-instanceHasReproduction
   a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:instanceHasReproduction ;
   bds:classIn ( bdo:ImageInstance bdo:EtextInstance bdo:Instance ) ;
   sh:maxCount 1 ;
 .
 bds:InstanceShape-instanceReproductionOf
   a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:instanceHasReproduction ;
   bds:classIn ( bdo:Instance bdo:ImageInstance ) ;
   sh:maxCount 1 ;

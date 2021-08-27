@@ -1,7 +1,3 @@
-# baseURI: http://purl.bdrc.io/shapes/core/InstanceShapes/
-# imports: http://purl.bdrc.io/shapes/core/RootShapes/
-# prefix: InstanceShapes
-
 @prefix InstanceShapes: <http://purl.bdrc.io/shapes/core/InstanceShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
@@ -30,9 +26,10 @@
 
 InstanceShapes:
   a owl:Ontology ;
-  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
-  owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
-  owl:versionInfo "Initial SHACL constraints for Instance and its subclasses" ;
+  owl:imports <http://purl.bdrc.io/shapes/core/EventUIShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
+  owl:versionInfo "UI SHACL constraints for Instance" ;
 .
 bds:GeneralInstanceShape
   a sh:NodeShape ;
@@ -60,6 +57,7 @@ bds:GeneralInstanceShape
   sh:property bds:InstanceShape-biblioNote ;
   sh:property bds:InstanceShape-colophon ;
   sh:property bds:InstanceShape-incipit ;
+  sh:property bds:InstanceShape-type ;
   sh:property bds:InstanceShape-instanceEvent ;
   sh:property bds:InstanceShape-instanceHasReproduction ;
   sh:property bds:InstanceShape-instanceReproductionOf ;
@@ -67,7 +65,8 @@ bds:GeneralInstanceShape
   sh:property bds:InstanceShape-isDamaged ;
   sh:property bds:InstanceShape-numberOfVolumes ;
   sh:property bds:InstanceShape-sourceNote ;
-  sh:property bds:NoteShape-contentLocation ;
+  sh:property bds:InstanceShape-contentLocation ;
+  sh:property bds:InstanceShape-contentLocationStatement ;
   sh:targetClass bdo:Instance ;
 .
 
@@ -75,6 +74,14 @@ bds:AgentAsCreatorShape-role
   sh:in ( bdr:R0ER0010 bdr:R0ER0013 bdr:R0ER0015 bdr:R0ER0024 bdr:R0ER0030 bdr:R0ER0033 bdr:R0ER0034 )
 .
 
+bds:InstanceShape-type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:in ( bdo:Instance bdo:BundleInstance ) ;
+  sh:message "A Person must have type person"@en ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+.
 
 bds:InstanceShape-serialInstanceOf
   a sh:PropertyShape ;
@@ -82,6 +89,7 @@ bds:InstanceShape-serialInstanceOf
   sh:class bdo:SerialWork ;
   sh:description "An instance can be a member of a serial"@en ;
   sh:name "serial instance of"@en ;
+  bds:propertyShapeType bds:ExternalShape ;
   sh:maxCount 1 ;
 .
 bds:InstanceShape-script
@@ -147,6 +155,7 @@ bds:InstanceShape-hasSourcePrintery
   sh:path bdo:hasSourcePrintery ;
   sh:class bdo:Place ;
   sh:maxCount 1 ;
+  bds:propertyShapeType bds:ExternalShape ;
 .
 bds:InstanceShape-seriesNumber
   a sh:PropertyShape ;
@@ -247,5 +256,20 @@ bds:InstanceEventShape-partType
   sh:class bdo:AppliedMaterial ;
   sh:in ( bdr:PartTypeChapter bdr:PartTypeFragment bdr:PartTypeSection bdr:PartTypeTableOfContent bdr:PartTypeText bdr:PartTypeVolume ) ;
   sh:class bdo:PartType ;
+  sh:maxCount 1 ;
+.
+bds:InstanceShape-contentLocation
+  a sh:PropertyShape ;
+  sh:message "a note may have at most one :contentLocation"@en ;
+  sh:path bdo:contentLocation ;
+  sh:class bdo:ContentLocation ;
+  sh:maxCount 1 ;
+.
+
+bds:InstanceShape-contentLocationStatement
+  a sh:PropertyShape ;
+  sh:message "a note may have at most one :contentLocationStatement"@en ;
+  sh:path bdo:contentLocationStatement ;
+  sh:datatype xsd:string ;
   sh:maxCount 1 ;
 .
