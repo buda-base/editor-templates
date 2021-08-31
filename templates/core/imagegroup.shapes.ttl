@@ -1,0 +1,91 @@
+@prefix ImagegroupShapes: <http://purl.bdrc.io/shapes/core/ImagegroupShapes/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
+@prefix bdsa: <http://purl.bdrc.io/ontology/shapes/adm/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ImagegroupShapes:
+  a owl:Ontology ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
+  owl:versionInfo "Initial SHACL constraints for image group and its subclasses" ;
+.
+bds:ImagegroupShape
+  a sh:NodeShape ;
+  rdfs:label "Image Group Shape"@en ;
+  bds:identifierPrefix "I" ;
+  sh:property bds:ImagegroupShape-type ;
+  sh:property bds:CommonShape-prefLabel ;
+  sh:property bds:CommonShape-altLabel ;
+  sh:property bds:ImagegroupShape-volumeOf ;
+  sh:property bds:RootShape-note ;
+  sh:property bdsa:AdmShape-adminAbout ;
+  sh:property bds:ImagegroupShape-volumeNote ;
+  sh:property bds:ImagegroupShape-volumeNumber ;
+  sh:property bds:ImagegroupShape-volumePagesTbrcIntro ;
+  sh:property bds:ImagegroupShape-imagesMissing ;
+  sh:targetClass bdo:Instance ;
+.
+bds:ImagegroupShape-type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:in ( bdo:ImageGroup ) ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+.
+bds:ImagegroupShape-imagesMissing
+  a sh:PropertyShape ;
+  sh:path bdo:imagesMissing ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+.
+bds:ImagegroupShape-volumePagesTbrcIntro
+  a sh:PropertyShape ;
+  sh:path bdo:volumePagesTbrcIntro ;
+  sh:datatype xsd:integer ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:minInclusive 0  ;
+  sh:maxInclusive 2 ;
+.
+bds:ImagegroupShape-volumeNumber
+  a sh:PropertyShape ;
+  sh:path bdo:volumeNumber ;
+  sh:datatype xsd:integer ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:minInclusive 0  ;
+  sh:maxInclusive 500 ;
+.
+bds:ImagegroupShape-volumeNote
+  a sh:PropertyShape ;
+  sh:path bdo:volumeNote ;
+  sh:datatype rdf:langString ;
+.
+bds:ImagegroupShape-volumeOf
+  a sh:PropertyShape ;
+  sh:path bdo:volumeOf ;
+  sh:datatype rdf:langString ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+.
