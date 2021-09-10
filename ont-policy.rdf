@@ -235,4 +235,28 @@
         <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/SerialWorkUIShapes"/>
     </OntologySpec>
 
+    <OntologySpec>
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/InstanceShapes/"/>
+        <altURL    rdf:resource="templates/core/instance.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/InstanceShapes"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/InstanceUIShapes/"/>
+        <altURL    rdf:resource="templates/core/instance.ui.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/InstanceUIShapes"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/ImagegroupShapes/"/>
+        <altURL    rdf:resource="templates/core/imagegroup.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/ImagegroupShapes"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/ImagegroupUIShapes/"/>
+        <altURL    rdf:resource="templates/core/imagegroup.ui.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/ImagegroupUIShapes"/>
+    </OntologySpec>
+
 </rdf:RDF>

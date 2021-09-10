@@ -1,4 +1,4 @@
-@prefix ImagegroupShapes: <http://purl.bdrc.io/shapes/core/ImagegroupShapes/> .
+@prefix ImageInstanceShapes: <http://purl.bdrc.io/shapes/core/ImageInstanceShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -24,54 +24,75 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ImagegroupShapes:
+ImageInstanceShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
-  owl:imports <http://purl.bdrc.io/shapes/core/ImagegroupShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/ImageInstanceShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
-  owl:versionInfo "Initial SHACL constraints for image group and its subclasses" ;
+  owl:versionInfo "Initial SHACL constraints for Instance and its subclasses" ;
 .
+
 bds:BasePropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "General Properties"@en ;
   sh:order "0"^^xsd:decimal ;
 .
-bds:ImagegroupShape-type
+bds:ImageInstanceShape-type 
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:order "0"^^xsd:decimal ;
 .
-bds:ImagegroupShape-volumeOf
-  dash:editor dash:InstancesSelectEditor ;
+bds:ImageInstanceShape-scanInfo
+  dash:editor dash:TextAreaWithLangEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:order "1"^^xsd:decimal ;
 .
-bds:ImagegroupShape-volumeNumber
-  dash:editor dash:TextFieldEditor ;
+bds:InstanceShape-isComplete
+  dash:editor dash:BooleanSelectEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:order "2"^^xsd:decimal ;
 .
-bds:CommonShape-prefLabel
-  sh:group bds:BasePropertyGroup ;
+
+bds:ConnectionsPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Connections"@en ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:InstanceShape-instanceOf
+  sh:group bds:ConnectionsPropertyGroup ;
+  sh:order "1"^^xsd:decimal ;
+  dash:editor dash:InstancesSelectEditor ;
+.
+bds:InstanceShape-instanceHasReproduction
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:ConnectionsPropertyGroup ;
+  sh:order "2"^^xsd:decimal ;
+.
+bds:InstanceShape-instanceReproductionOf
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:ConnectionsPropertyGroup ;
   sh:order "3"^^xsd:decimal ;
 .
-bds:CommonShape-altLabel
-  sh:group bds:BasePropertyGroup ;
-  sh:order "4"^^xsd:decimal ;
+
+bds:NotesPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Notes"@en ;
+  sh:order "2"^^xsd:decimal ;
 .
-bds:ImagegroupShape-imagesMissing
-  dash:editor dash:TextFieldEditor ;
-  dash:singleLine true ;
-  sh:group bds:BasePropertyGroup ;
-  sh:order "5"^^xsd:decimal ;
+bds:RootShape-note
+  sh:group bds:NotesPropertyGroup ;
+  sh:order "0"^^xsd:decimal ;
+  dash:editor dash:DetailsEditor ;
 .
-bds:ImagegroupShape-volumePagesTbrcIntro
-  dash:editor dash:TextFieldEditor ;
-  sh:group bds:BasePropertyGroup ;
-  sh:order "6"^^xsd:decimal ;
+
+bds:AdminPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Admin data"@en ;
+  sh:order "3"^^xsd:decimal ;
 .
-bds:ImagegroupShape-volumeNote
-  dash:editor dash:TextFieldEditor ;
-  sh:group bds:BasePropertyGroup ;
-  sh:order "7"^^xsd:decimal ;
+bdsa:AdmShape-adminAbout
+  dash:editor dash:DetailsEditor ;
+  sh:group bds:AdminPropertyGroup ;
+  sh:name "admin data"@en ;
+  sh:order "0"^^xsd:decimal ;
 .

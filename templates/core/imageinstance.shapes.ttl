@@ -34,22 +34,31 @@ bds:ImageInstanceShape
   a sh:NodeShape ;
   rdfs:label "Image Instance Shape"@en ;
   bds:identifierPrefix "W" ;
-  sh:property bds:CommonShape-prefLabel ;
-  sh:property bds:CommonShape-altLabel ;
   sh:property bds:InstanceShape-instanceOf ;
-  sh:property bds:CommonShape-identifiedBy ;
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
   sh:property bds:InstanceShape-instanceHasReproduction ;
   sh:property bds:InstanceShape-instanceReproductionOf ;
   sh:property bds:InstanceShape-isComplete ;
-  sh:property bds:InstanceShape-scanInfo ;
+  sh:property bds:ImageInstanceShape-scanInfo ;
+  sh:property bds:ImageInstanceShape-type ;
   sh:targetClass bdo:Instance ;
 .
-bds:InstanceShape-scanInfo
+bds:ImageInstanceShape-type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:in ( bdo:ImageInstance ) ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+.
+
+bds:InstanceShape-instanceReproductionOf
+  sh:minCount 1 ;
+.
+
+bds:ImageInstanceShape-scanInfo
   a sh:PropertyShape ;
   sh:path bdo:scanInfo ;
   sh:datatype rdf:langString ;
   sh:uniqueLang true ;
 .
-# instanceHasVolume

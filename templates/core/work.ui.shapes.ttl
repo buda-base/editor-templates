@@ -86,6 +86,7 @@ bds:CommonShape-altLabel
 .
 bds:WorkShape-catalogInfo
   sh:group bds:BasePropertyGroup ;
+  dash:editor dash:TextAreaWithLangEditor ;
   sh:order "3"^^xsd:decimal ;
 .
 bds:WorkShape-language
@@ -95,6 +96,7 @@ bds:WorkShape-language
 .
 bds:CommonShape-identifiedBy
   sh:name "identifier" ;
+  dash:editor dash:DetailsEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:order "5"^^xsd:decimal ;
 .
