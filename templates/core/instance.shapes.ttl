@@ -31,7 +31,7 @@ InstanceShapes:
   owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
   owl:versionInfo "UI SHACL constraints for Instance" ;
 .
-bds:GeneralInstanceShape
+bds:InstanceShape
   a sh:NodeShape ;
   rdfs:label "Instance Shape"@en ;
   bds:identifierPrefix "MW" ;
