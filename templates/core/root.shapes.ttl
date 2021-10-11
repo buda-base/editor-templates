@@ -49,6 +49,7 @@ bds:CommonShape-rdfsComment
   a sh:PropertyShape ;
   sh:path rdfs:comment ;
   sh:datatype rdf:langString ;
+  bds:allowMarkDown true ;
   sh:uniqueLang true ;
 .
 ##
@@ -177,6 +178,7 @@ bds:NoteShape-noteText
   sh:message "a note may have at most one :noteText"@en ;
   sh:path bdo:noteText ;
   sh:datatype rdf:langString ;
+  bds:allowMarkDown true ;
   sh:maxCount 1 ;
 .
 bds:NoteShape-noteType

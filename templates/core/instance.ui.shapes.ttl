@@ -44,6 +44,7 @@ bds:InstanceShape-type
   sh:group bds:BasePropertyGroup ;
   dash:editor dash:EnumSelectEditor ;
   sh:order "0"^^xsd:decimal ;
+  sh:name "type"@en ;
 .
 bds:CommonShape-prefLabel
   sh:group bds:BasePropertyGroup ;

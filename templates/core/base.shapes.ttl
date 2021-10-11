@@ -99,6 +99,13 @@ bds:propertyShapeType
   rdfs:range bds:ShapeType ;
   skos:definition "type of a node shape to discriminate among fact shapes, internal shapes, and so on"@en ;
 .
+bds:allowMarkDown
+  a owl:DatatypeProperty ;
+  rdfs:label "node shape type"@en ;
+  rdfs:domain sh:PropertyShape ;
+  rdfs:range xsd:boolean ;
+  skos:definition "the object of the property can be in markdown"@en ;
+.
 bds:ShapeType
   a owl:Class ;
 .
