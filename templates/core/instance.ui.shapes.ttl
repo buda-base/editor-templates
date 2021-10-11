@@ -228,7 +228,7 @@ bds:InstanceShape-seriesNumber
 bds:PartsPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Properties of parts (ex-outline nodes)"@en ;
-  sh:order "4"^^xsd:decimal ;
+  sh:order "5"^^xsd:decimal ;
 .
 bds:InstanceEventShape-partType
   dash:editor dash:EnumSelectEditor ;
@@ -240,7 +240,7 @@ bds:InstanceShape-contentLocation
   sh:group bds:PartsPropertyGroup ;
   sh:order "1"^^xsd:decimal ;
 .
-bds:InstanceShape-contentLocationStatement ;
+bds:InstanceShape-contentLocationStatement  
   dash:editor dash:TextFieldEditor ;
   dash:singleLine true ;
   sh:group bds:PartsPropertyGroup ;
@@ -252,7 +252,7 @@ bds:InstanceShape-contentLocationStatement ;
 bds:NotesPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Notes"@en ;
-  sh:order "5"^^xsd:decimal ;
+  sh:order "6"^^xsd:decimal ;
 .
 bds:RootShape-note
   sh:group bds:NotesPropertyGroup ;
@@ -265,7 +265,7 @@ bds:RootShape-note
 bds:AdminPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Admin data"@en ;
-  sh:order "6"^^xsd:decimal ;
+  sh:order "7"^^xsd:decimal ;
 .
 bdsa:AdmShape-adminAbout 
   dash:editor dash:DetailsEditor ;
