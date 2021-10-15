@@ -114,3 +114,6 @@ bds:RootShape-note
   sh:order "0"^^xsd:decimal ;
   dash:editor dash:DetailsEditor ;
 .
+bdsa:AdmShape-adminAbout
+      sh:minCount 1 ;
+.

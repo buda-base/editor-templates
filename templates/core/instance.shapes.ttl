@@ -26,9 +26,9 @@
 
 InstanceShapes:
   a owl:Ontology ;
-  owl:imports <http://purl.bdrc.io/shapes/core/EventUIShapes/> ;
-  owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
-  owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/EventShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
   owl:versionInfo "UI SHACL constraints for Instance" ;
 .
 bds:InstanceShape
@@ -45,6 +45,7 @@ bds:InstanceShape
   sh:property bds:InstanceShape-binding ;
   sh:property bds:InstanceShape-script ;
   sh:property bds:InstanceShape-printMethod ;
+  sh:property bds:InstanceShape-reproductionPrintMethod ;
   sh:property bds:InstanceShape-appliedMaterial ;
   sh:property bds:InstanceShape-material ;
   sh:property bds:InstanceShape-publisherName ;
@@ -111,10 +112,11 @@ bds:InstanceShape-binding
 .
 bds:InstanceShape-printMethod
   a sh:PropertyShape ;
+  sh:minCount 1 ;
   sh:path bdo:printMethod ;
   sh:class bdo:PrintMethod ;
   sh:description "this PhysicalInstance may have a single PrintMethod"@en ;
-  sh:in ( bdr:PrintMethod_Manuscript bdr:PrintMethod_ManuscriptStylus bdr:PrintMethod_Modern bdr:PrintMethod_Relief_WoodBlock bdr:PrintMethod_Xerography bdr:PrintMethod_Relief_Letterpress ) ;
+  sh:in ( bdr:PrintMethod_Modern bdr:PrintMethod_Manuscript bdr:PrintMethod_Relief_WoodBlock bdr:PrintMethod_Xerography bdr:PrintMethod_Relief_Letterpress bdr:PrintMethod_ManuscriptStylus ) ;
   sh:name "instance print method"@en ;
 .
 bds:InstanceShape-material
@@ -254,7 +256,7 @@ bds:InstanceEventShape-partType
   a sh:PropertyShape ;
   sh:path bdo:partType ;
   sh:class bdo:AppliedMaterial ;
-  sh:in ( bdr:PartTypeChapter bdr:PartTypeFragment bdr:PartTypeSection bdr:PartTypeTableOfContent bdr:PartTypeText bdr:PartTypeVolume ) ;
+  sh:in ( bdr:PartTypeText bdr:PartTypeSection bdr:PartTypeVolume bdr:PartTypeCollection bdr:PartTypeCodex bdr:PartTypeDigitalCodex bdr:PartTypeReproductionCodex bdr:PartTypeChapter  bdr:PartTypeTableOfContent ) ;
   sh:class bdo:PartType ;
   sh:maxCount 1 ;
 .

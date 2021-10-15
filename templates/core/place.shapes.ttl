@@ -27,6 +27,7 @@ bdo:Place
 PlaceShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/core/EventShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
   owl:versionInfo "SHACL constraints for Place" ;
 .
 bds:PlaceShape
@@ -119,4 +120,7 @@ bds:PlaceEventShape-type
   sh:class bdo:PersonEvent ;
   sh:minCount 1 ;
   sh:maxCount 1 ;
+.
+bdsa:AdmShape-adminAbout
+      sh:minCount 1 ;
 .

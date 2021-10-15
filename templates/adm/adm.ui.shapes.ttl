@@ -32,6 +32,7 @@ AdminUiShapes:
   a owl:Ontology ;
   owl:versionInfo "SHACL UI constraints for admin data" ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/adm/RootUIShapes/> ;
 .
 bdsa:AdmEntityShape-logDate
       bds:propertyShapeType bds:IgnoreShape ;
@@ -76,4 +77,7 @@ bdsa:AdmEntityShape-restrictedInChina
       sh:name "restricted in China"@en ;
       sh:order "2"^^xsd:decimal ;
       bds:defaultValue false ;
+.
+bds:CommonShape-rdfsComment
+      sh:order "4"^^xsd:decimal ;
 .

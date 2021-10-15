@@ -31,6 +31,7 @@
 SerialWorkShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
 .
 
 bds:SerialWorkShape
@@ -70,4 +71,7 @@ bds:SerialWorkShape-type
   sh:message "must have type serial work"@en ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
+.
+bdsa:AdmShape-adminAbout
+      sh:minCount 1 ;
 .

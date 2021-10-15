@@ -52,7 +52,12 @@ bds:InstanceShape-isComplete
   sh:group bds:BasePropertyGroup ;
   sh:order "2"^^xsd:decimal ;
 .
-
+bds:InstanceShape-reproductionPrintMethod
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:PubPropertyGroup ;
+  sh:order "3"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
 bds:ConnectionsPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Connections"@en ;

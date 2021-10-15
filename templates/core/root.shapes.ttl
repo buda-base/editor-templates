@@ -384,3 +384,11 @@ bds:InstanceShape-sourceNote
   sh:datatype rdf:langString ;
   sh:uniqueLang true ;
 .
+bds:InstanceShape-reproductionPrintMethod
+  a sh:PropertyShape ;
+  sh:path bdo:reproductionPrintMethod ;
+  sh:class bdo:PrintMethod ;
+  sh:description "print method of the reproduction"@en ;
+  sh:in ( bdr:PrintMethod_Modern bdr:PrintMethod_Xerography bdr:PrintMethod_Offset bdr:PrintMethod_Microfilm ) ;
+  sh:name "instance print method"@en ;
+.
