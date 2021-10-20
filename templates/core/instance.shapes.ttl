@@ -71,6 +71,10 @@ bds:InstanceShape
   sh:targetClass bdo:Instance ;
 .
 
+# adding access in AdminData
+
+bdsa:AdmEntityShape sh:property bdsa:AdmEntityShape-access .
+
 bds:AgentAsCreatorShape-role
   sh:in ( bdr:R0ER0010 bdr:R0ER0013 bdr:R0ER0015 bdr:R0ER0024 bdr:R0ER0030 bdr:R0ER0033 bdr:R0ER0034 )
 .

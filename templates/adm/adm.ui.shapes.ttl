@@ -53,7 +53,7 @@ bdsa:AdmEntityShape-logWho
 .
 bdsa:AdmEntityShape-logEntry
       sh:name "log entry"@en ;
-      sh:order "4"^^xsd:decimal ;
+      sh:order "5"^^xsd:decimal ;
       bds:readOnly true ;
       bds:sortBy adm:logDate ;
 .
@@ -78,6 +78,9 @@ bdsa:AdmEntityShape-restrictedInChina
       sh:order "2"^^xsd:decimal ;
       bds:defaultValue false ;
 .
-bds:CommonShape-rdfsComment
+bdsa:AdmEntityShape-rdfsComment
       sh:order "4"^^xsd:decimal ;
+      dash:editor   dash:TextAreaWithLangEditor ;
+      sh:name       "admin note"@en ;
+      sh:description "note not displayed to users"@en ;
 .

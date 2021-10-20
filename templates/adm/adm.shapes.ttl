@@ -32,7 +32,12 @@ AdminShapes:
   a owl:Ontology ;
   owl:versionInfo "SHACL constraints for admin data" ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
-
+.
+bdsa:AdmEntityShape-rdfsComment
+  a sh:PropertyShape ;
+  sh:path rdfs:comment ;
+  sh:datatype rdf:langString ;
+  sh:uniqueLang true ;
 .
 bdsa:AdmShape-adminAbout
       a sh:PropertyShape ;
@@ -46,11 +51,10 @@ bdsa:AdmEntityShape
   sh:namespace "http://purl.bdrc.io/admindata/" ;
   rdfs:label "Admin Entity shape"@en ;
   sh:property bdsa:AdmEntityShape-status ;
-  sh:property bdsa:AdmEntityShape-access ;
   sh:property bdsa:AdmEntityShape-restrictedInChina ;
   sh:property bdsa:AdmEntityShape-replaceWith ;
   sh:property bdsa:AdmEntityShape-logEntry ;
-  sh:property bds:CommonShape-rdfsComment ;
+  sh:property bdsa:AdmEntityShape-rdfsComment ;
   sh:targetClass bdo:Entity ;
   sh:targetSubjectsOf adm:adminAbout ;
 .
