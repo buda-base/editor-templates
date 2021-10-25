@@ -115,7 +115,7 @@ bds:PlaceEventShape
 bds:PlaceEventShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
-  sh:in ( bdo:PlaceAbandoned bdo:PlaceConverted bdo:PlaceDestroyed bdo:PlaceFounded bdo:PlaceRebuilt ) ;
+  sh:in ( bdo:PlaceFounded bdo:PlaceConverted bdo:PlaceDestroyed bdo:PlaceRebuilt bdo:PlaceAbandoned ) ;
   sh:message "A PersonEvent must have one type"@en ;
   sh:class bdo:PersonEvent ;
   sh:minCount 1 ;

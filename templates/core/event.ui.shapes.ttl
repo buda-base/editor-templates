@@ -44,7 +44,7 @@ bds:EventShape-eventWho
   sh:name "who was involved in the event"@en ;
 .
 bds:EventShape-notAfter
-  sh:name "event occurred not before"@en ;
+  sh:name "event occurred not after"@en ;
   dash:editor bds:TextFieldEditor ;
 .
 bds:EventShape-notBefore

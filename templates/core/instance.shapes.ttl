@@ -66,6 +66,7 @@ bds:InstanceShape
   sh:property bds:InstanceShape-isDamaged ;
   sh:property bds:InstanceShape-numberOfVolumes ;
   sh:property bds:InstanceShape-sourceNote ;
+  sh:property bds:InstanceShape-partType ;
   sh:property bds:InstanceShape-contentLocation ;
   sh:property bds:InstanceShape-contentLocationStatement ;
   sh:targetClass bdo:Instance ;
@@ -256,13 +257,12 @@ bds:InstanceEventShape-type
   sh:minCount 1 ;
   sh:maxCount 1 ;
 .
-bds:InstanceEventShape-partType
+bds:InstanceShape-partType
   a sh:PropertyShape ;
   sh:path bdo:partType ;
   sh:class bdo:AppliedMaterial ;
   sh:in ( bdr:PartTypeText bdr:PartTypeSection bdr:PartTypeVolume bdr:PartTypeCollection bdr:PartTypeCodex bdr:PartTypeDigitalCodex bdr:PartTypeReproductionCodex bdr:PartTypeChapter  bdr:PartTypeTableOfContent ) ;
   sh:class bdo:PartType ;
-  sh:maxCount 1 ;
 .
 bds:InstanceShape-contentLocation
   a sh:PropertyShape ;
