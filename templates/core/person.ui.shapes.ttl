@@ -118,7 +118,7 @@ bds:PersonShape-personEvent
   sh:description "this Person may have zero or more events like birth, death, ordination."@en ;
   sh:group bds:EventPropertyGroup ;
   dash:editor dash:DetailsEditor ;
-  sh:name "has event"@en ;
+  sh:name "event"@en ;
   sh:order "0"^^xsd:decimal ;
 .
 bds:PersonEventShape-type
