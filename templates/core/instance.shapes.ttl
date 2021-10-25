@@ -109,7 +109,7 @@ bds:InstanceShape-binding
   a sh:PropertyShape ;
   sh:path bdo:binding ;
   sh:class bdo:Binding ;
-  sh:description "this PhysicalInstance may have a single Binding"@en ;
+  sh:description "type of binding"@en ;
   sh:maxCount 1 ;
   sh:in ( bdr:Binding_LooseLeaf_Pecha bdr:Binding_Codex_Perfect bdr:Binding_LooseLeaf_Pothi bdr:Binding_Codex_Sewn bdr:Binding_Continuous_Folded bdr:Binding_Continuous_Leporello bdr:Binding_Continuous_Scroll ) ;
   sh:name "instance binding"@en ;
@@ -119,7 +119,7 @@ bds:InstanceShape-printMethod
   sh:minCount 1 ;
   sh:path bdo:printMethod ;
   sh:class bdo:PrintMethod ;
-  sh:description "this PhysicalInstance may have a single PrintMethod"@en ;
+  sh:description "print method (in case of a reproduction, use this to indicate the original print method). Leave blank for mixed print methods."@en ;
   sh:in ( bdr:PrintMethod_Modern bdr:PrintMethod_Manuscript bdr:PrintMethod_Relief_WoodBlock bdr:PrintMethod_Xerography bdr:PrintMethod_Relief_Letterpress bdr:PrintMethod_ManuscriptStylus ) ;
   sh:name "instance print method"@en ;
 .
@@ -140,7 +140,7 @@ bds:InstanceShape-publisherName
   a sh:PropertyShape ;
   sh:path bdo:publisherName ;
   sh:uniqueLang true ;
-  sh:description "use only for modern publications, use [s.n.] in English for unknown publisher, when using Wylie, prefix with a star instead of putting in square brackets for reconstructed value"@en ;
+  sh:description "use only for modern publications, leave blank for unknown publisher, when using Wylie, prefix with a star instead of putting in square brackets for reconstructed value"@en ;
   sh:datatype rdf:langString ;
 .
 bds:InstanceShape-publisherLocation
@@ -148,7 +148,7 @@ bds:InstanceShape-publisherLocation
   sh:path bdo:publisherLocation ;
   sh:uniqueLang true ;
   sh:datatype rdf:langString ;
-  sh:description "use only for modern publications, use [s.l.] in English for unknown location, when using Wylie, prefix with a star instead of putting in square brackets for reconstructed value"@en ;
+  sh:description "use only for modern publications, leave blank for unknown location, when using Wylie, prefix with a star instead of putting in square brackets for reconstructed value"@en ;
 .
 bds:InstanceShape-editionStatement
   a sh:PropertyShape ;

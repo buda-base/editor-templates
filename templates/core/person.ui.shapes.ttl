@@ -123,7 +123,7 @@ bds:PersonShape-personEvent
 .
 bds:PersonEventShape-type
   dash:editor dash:EnumSelectEditor ;
-  sh:description "event type"@en ;
+  sh:description "event type ('founds monastery' is now only in the events of the place)"@en ;
   sh:name "type"@en ;
   sh:order "0"^^xsd:decimal ;
 .
