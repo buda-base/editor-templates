@@ -197,6 +197,12 @@ bds:defaultValue
   rdfs:domain sh:PropertyShape ;
   skos:definition "indicates the default value that the editor should display when there is no value"@en ;
 .
+bds:defaultLanguage
+  a owl:DatatypeProperty ;
+  rdfs:label "default language"@en ;
+  rdfs:domain sh:PropertyShape ;
+  skos:definition "indicates the default language that the editor should display for the values of a certain property"@en ;
+.
 bds:DateTimeOrDateOrgYear
   a rdf:List ;
   rdf:first [

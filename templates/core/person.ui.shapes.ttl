@@ -356,14 +356,14 @@ bds:PersonShape-kinWith
 ##
 bds:PersonShape-personStudentOf
   dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have zero or more teachers."@en ;
+  sh:description "use only for direct (physical) student/teacher relationships"@en ;
   sh:group bds:StudentTeacherPropertyGroup ;
   sh:name "student of"@en ;
   sh:order "0"^^xsd:decimal ;
 .
 bds:PersonShape-personTeacherOf
   dash:editor dash:InstancesSelectEditor ;
-  sh:description "this Person may have zero or more students."@en ;
+  sh:description "use only for direct (physical) teacher/student relationships"@en ;
   sh:group bds:StudentTeacherPropertyGroup ;
   sh:name "teacher of"@en ;
   sh:order "1"^^xsd:decimal ;

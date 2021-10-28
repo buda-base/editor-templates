@@ -83,7 +83,7 @@ bds:AgentAsCreatorShape-role
 bds:InstanceShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
-  sh:in ( bdo:Instance bdo:BundleInstance ) ;
+  sh:in ( bdo:Instance ) ;
   sh:message "A Person must have type person"@en ;
   sh:maxCount 1 ;
   sh:minCount 1 ;

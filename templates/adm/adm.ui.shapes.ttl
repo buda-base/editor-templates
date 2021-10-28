@@ -45,6 +45,7 @@ bdsa:AdmEntityShape-logMessage
       sh:order "1"^^xsd:decimal ;
       dash:editor dash:TextAreaWithLangEditor ;
       dash:singleLine true ;
+      bds:defaultLanguage "en" ;
 .
 bdsa:AdmEntityShape-logWho
       sh:name "user"@en ;
@@ -83,4 +84,5 @@ bdsa:AdmEntityShape-rdfsComment
       dash:editor   dash:TextAreaWithLangEditor ;
       sh:name       "admin note"@en ;
       sh:description "note not displayed to users"@en ;
+      bds:defaultLanguage "en" ;
 .
