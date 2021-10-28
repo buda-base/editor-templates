@@ -63,6 +63,7 @@ bds:RootShape-note
 bds:NoteShape-noteText
   dash:editor dash:TextAreaWithLangEditor ;
   sh:name "text"@en ;
+  bds:defaultLanguage "en" ;
   sh:order "0"^^xsd:decimal ;
 .
 bds:NoteShape-contentLocationStatement

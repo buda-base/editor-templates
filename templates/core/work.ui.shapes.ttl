@@ -87,6 +87,7 @@ bds:CommonShape-altLabel
 bds:WorkShape-catalogInfo
   sh:group bds:BasePropertyGroup ;
   dash:editor dash:TextAreaWithLangEditor ;
+  bds:defaultLanguage "en" ;
   sh:order "3"^^xsd:decimal ;
 .
 bds:WorkShape-language
