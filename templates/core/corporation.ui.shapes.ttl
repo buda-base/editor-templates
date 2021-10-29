@@ -74,7 +74,7 @@ bds:CorporationShape-hasMember
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:name "members"@en ;
-  sh:order "2"^^xsd:decimal ;
+  sh:order "4"^^xsd:decimal ;
 .
 bdsa:AdmShape-adminAbout 
   dash:editor dash:DetailsEditor ;
