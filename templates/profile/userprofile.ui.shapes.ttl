@@ -84,13 +84,13 @@ bds:BdouPicture
   sh:group bds:BasePropertyGroup ;
   sh:order "7"^^xsd:decimal ;
   sh:name "URL of picture"@en ;
-  dash:editor dash:TextAreaWithLangEditor ;
+  dash:editor dash:TextAreaEditor ;
   dash:singleLine true ;
 .
 bds:BdouLocalNameDefaultPrefix
   sh:group bds:BasePropertyGroup ;
   sh:order "8"^^xsd:decimal ;
   sh:name "RID prefix"@en ;
-  dash:editor dash:TextAreaWithLangEditor ;
+  dash:editor dash:TextAreaEditor ;
   dash:singleLine true ;
 .

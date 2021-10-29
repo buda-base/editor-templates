@@ -36,6 +36,7 @@ bdou:User
 UserProfileShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/PersonShapes/> ;
   owl:versionInfo "SHACL templates for User Profiles" ;
 .
 bds:UserProfileShape
@@ -72,11 +73,13 @@ bds:BdouMainResidenceArea
   a sh:PropertyShape ;
   sh:path bdou:mainResidenceArea ;
   sh:in ( tmp:outside  tmp:kham tmp:amdo tmp:uTsang tmp:other ) ;
+  sh:maxCount 1 ;
 .
 bds:BdouPicture
   a sh:PropertyShape ;
-  sh:path bdou:mainResidenceArea ;
+  sh:path bdou:image ;
   sh:datatype xsd:anyURI ;
+  sh:maxCount 1 ;
 .
 bds:BdouLocalNameDefaultPrefix
   a sh:PropertyShape ;
