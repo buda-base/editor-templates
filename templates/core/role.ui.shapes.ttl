@@ -106,3 +106,6 @@ bds:RootShape-note
 bdsa:AdmShape-adminAbout
       sh:minCount 1 ;
 .
+bdsa:AdmEntityShape-replaceWith 
+  bds:classIn ( bdo:Role bdo:Corporation ) ;
+.
