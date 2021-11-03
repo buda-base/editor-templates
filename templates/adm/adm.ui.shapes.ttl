@@ -32,7 +32,7 @@ AdminUiShapes:
   a owl:Ontology ;
   owl:versionInfo "SHACL UI constraints for admin data" ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
-  owl:imports <http://purl.bdrc.io/shapes/adm/RootUIShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
 .
 bdsa:AdmEntityShape-logDate
       bds:propertyShapeType bds:IgnoreShape ;
