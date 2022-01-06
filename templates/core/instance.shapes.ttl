@@ -87,6 +87,7 @@ bds:InstanceShape-type
   sh:message "A Person must have type person"@en ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
+  sh:nodeKind sh:IRI ;
 .
 
 bds:InstanceShape-serialInstanceOf
@@ -104,6 +105,7 @@ bds:InstanceShape-script
   sh:class bdo:Script ;
   sh:in ( bdr:ScriptDbuCan bdr:ScriptDbuMed bdr:ScriptKhyugYig bdr:ScriptHans bdr:ScriptHant bdr:ScriptDeva bdr:ScriptKhmr bdr:ScriptLatn bdr:ScriptMong bdr:ScriptMymr bdr:ScriptBeng bdr:ScriptCyrl bdr:ScriptKhar bdr:ScriptNepaleseHooked bdr:ScriptNewa bdr:ScriptRanj bdr:ScriptSinh ) ;
   sh:description "an instance may have one or more scripts"@en ;
+  sh:nodeKind sh:IRI ;
   sh:minCount 1 ;
 .
 bds:InstanceShape-binding
@@ -113,6 +115,7 @@ bds:InstanceShape-binding
   sh:description "type of binding"@en ;
   sh:maxCount 1 ;
   sh:in ( bdr:Binding_LooseLeaf_Pecha bdr:Binding_Codex_Perfect bdr:Binding_LooseLeaf_Pothi bdr:Binding_Codex_Sewn bdr:Binding_Continuous_Folded bdr:Binding_Continuous_Leporello bdr:Binding_Continuous_Scroll ) ;
+  sh:nodeKind sh:IRI ;
   sh:name "instance binding"@en ;
 .
 bds:InstanceShape-printMethod
@@ -122,6 +125,7 @@ bds:InstanceShape-printMethod
   sh:class bdo:PrintMethod ;
   sh:description "print method (in case of a reproduction, use this to indicate the original print method). Leave blank for mixed print methods."@en ;
   sh:in ( bdr:PrintMethod_Modern bdr:PrintMethod_Manuscript bdr:PrintMethod_Relief_WoodBlock bdr:PrintMethod_Xerography bdr:PrintMethod_Relief_Letterpress bdr:PrintMethod_ManuscriptStylus ) ;
+  sh:nodeKind sh:IRI ;
   sh:name "instance print method"@en ;
 .
 bds:InstanceShape-material
@@ -129,6 +133,7 @@ bds:InstanceShape-material
   sh:path bdo:material ;
   sh:class bdo:BaseMaterial ;
   sh:in ( bdr:MaterialPaper bdr:MaterialBirchBark bdr:MaterialCardboard bdr:MaterialCloth bdr:MaterialDeshog bdr:MaterialKhoiPaper bdr:MaterialLoktaPaper bdr:MaterialMultiLayerPaper bdr:MaterialPalmLeaf bdr:MaterialRicePaper bdr:MaterialSaPaper bdr:MaterialParchment bdr:MaterialDigital bdr:MaterialPalmyraPalmLeaf bdr:MaterialCoryphaPalmLeaf )
+  sh:nodeKind sh:IRI ;
 .
 bds:InstanceShape-appliedMaterial
   a sh:PropertyShape ;
@@ -136,6 +141,7 @@ bds:InstanceShape-appliedMaterial
   sh:class bdo:AppliedMaterial ;
   sh:description "both ink and (if present) paper dye"@en ;
   sh:in (bdr:AppliedMaterial_BlackInk bdr:AppliedMaterial_RedInk bdr:AppliedMaterial_GoldLeaf bdr:AppliedMaterial_SilverLeaf bdr:AppliedMaterial_IndigoDye bdr:AppliedMaterial_Poison) ;
+  sh:nodeKind sh:IRI ;
 .
 bds:InstanceShape-publisherName
   a sh:PropertyShape ;
@@ -253,6 +259,7 @@ bds:InstanceEventShape-type
   sh:path rdf:type ;
   sh:in ( bdo:PublishedEvent bdo:PrintedEvent bdo:CarvedEvent bdo:CompiledEvent bdo:EnscribedEvent bdo:OriginalCopyEvent ) ;
   sh:message "An instance event must have one type"@en ;
+  sh:nodeKind sh:IRI ;
   sh:class bdo:InstanceEvent ;
   sh:minCount 1 ;
   sh:maxCount 1 ;
@@ -262,6 +269,7 @@ bds:InstanceShape-partType
   sh:path bdo:partType ;
   sh:class bdo:AppliedMaterial ;
   sh:in ( bdr:PartTypeText bdr:PartTypeSection bdr:PartTypeVolume bdr:PartTypeCollection bdr:PartTypeCodex bdr:PartTypeDigitalCodex bdr:PartTypeReproductionCodex bdr:PartTypeChapter  bdr:PartTypeTableOfContent ) ;
+  sh:nodeKind sh:IRI ;
   sh:class bdo:PartType ;
 .
 bds:InstanceShape-contentLocation
@@ -278,4 +286,7 @@ bds:InstanceShape-contentLocationStatement
   sh:path bdo:contentLocationStatement ;
   sh:datatype xsd:string ;
   sh:maxCount 1 ;
+.
+bdsa:AdmEntityShape-replaceWith 
+  bds:classIn ( bdo:Instance ) ;
 .

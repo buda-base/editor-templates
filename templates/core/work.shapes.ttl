@@ -91,12 +91,14 @@ bds:WorkShape-language
   a sh:PropertyShape ;
   sh:path bdo:language ;
   sh:in ( bdr:LangBo bdr:LangZh bdr:LangKm bdr:LangMn bdr:LangMy bdr:LangNew bdr:LangPi bdr:LangSa bdr:LangDz ) ;
+  sh:nodeKind sh:IRI ;
   sh:minCount 1 ;
 .
 bds:WorkShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
   sh:in ( bdo:Work ) ;
+  sh:nodeKind sh:IRI ;
   sh:message "must have type work"@en ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
@@ -126,6 +128,7 @@ bds:WorkEventShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
   sh:in ( bdo:AuthoredEvent bdo:CompletedEvent bdo:OriginatedEvent bdo:RequestedEvent bdo:RevealedEvent bdo:RevisedEvent bdo:SecondRevisedEvent bdo:SecondTranslatedEvent bdo:ThirdRevisedEvent bdo:ThirdTranslatedEvent bdo:TranslatedEvent bdo:TranslationRevisedEvent ) ;
+  sh:nodeKind sh:IRI ;
   sh:message "A WorkEvent must have one type"@en ;
   sh:class bdo:WorkEvent ;
   sh:minCount 1 ;

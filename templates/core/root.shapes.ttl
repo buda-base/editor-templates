@@ -107,6 +107,7 @@ bds:AgentAsCreatorShape-role
   a sh:PropertyShape ;
   sh:path bdo:role ;
   sh:datatype xsd:string ;
+  sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
 .
@@ -344,6 +345,7 @@ bds:ContentLocationShape-contentPagination
   sh:path bdo:contentPagination ;
   sh:class bdo:PaginationType ;
   sh:in (bdr:PaginationAbsolute bdr:PaginationRelative) ;
+  sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
 .
 #
@@ -390,5 +392,6 @@ bds:InstanceShape-reproductionPrintMethod
   sh:class bdo:PrintMethod ;
   sh:description "print method of the reproduction (in the case of a facsimile, photocopy, etc.). Leave blank for originals."@en ;
   sh:in ( bdr:PrintMethod_Modern bdr:PrintMethod_Xerography bdr:PrintMethod_Microfilm ) ;
+  sh:nodeKind sh:IRI ;
   sh:name "reproduction print method"@en ;
 .

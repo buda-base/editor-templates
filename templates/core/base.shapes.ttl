@@ -220,3 +220,6 @@ bds:DateTimeOrDateOrgYear
   rdfs:comment "An rdf:List that can be used in property constraints as value for sh:or to indicate that all values of a property must be either xsd:gYear, xsd:date or xsd:dateTime." ;
   rdfs:label "Date or date time or year" ;
 .
+# defining the path to use in the list path pattern (https://www.topquadrant.com/constraints-on-rdflists-using-shacl/)
+bds:listPath rdf:first [ sh:zeroOrMorePath rdf:rest ] ;
+             rdf:rest rdf:first .

@@ -57,6 +57,7 @@ bds:TopicShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
   sh:in ( bdo:Topic) ;
+  sh:nodeKind sh:IRI ;
   sh:message "A topic must have type topic"@en ;
   sh:maxCount 1 ;
   sh:minCount 1 ;

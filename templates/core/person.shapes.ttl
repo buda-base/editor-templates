@@ -76,6 +76,7 @@ bds:PersonShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
   sh:in ( bdo:Person ) ;
+  sh:nodeKind sh:IRI ;
   sh:message "A Person must have type person"@en ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
@@ -93,6 +94,7 @@ bds:PersonShape-gender
   a sh:PropertyShape ;
   sh:path bdo:personGender ;
   sh:in ( bdr:GenderMale bdr:GenderFemale ) ;
+  sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
 .
@@ -303,6 +305,7 @@ bds:PersonNameShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
   sh:in (bdo:PersonPrimaryTitle bdo:PersonPrimaryName bdo:PersonPersonalName bdo:PersonCommonName bdo:PersonGterStonTitle bdo:PersonOfficeTitle bdo:PersonPenName bdo:PersonTitle bdo:PersonTulkuTitle bdo:PersonOtherName bdo:PersonBodhisattvaVowName bdo:PersonCorporateName bdo:PersonFamilyName bdo:PersonFinalOrdination bdo:PersonFinalOrdinationName bdo:PersonFirstOrdinationName bdo:PersonOfficialTitle bdo:PersonOriginName bdo:PersonResidenceName bdo:PersonMonasteryName bdo:PersonMonasticPositionName bdo:PersonDonorName bdo:PersonRabByungOrdination bdo:PersonReversal bdo:PersonSecretInitiatoryName bdo:PersonVariantOrthography) ;
+  sh:nodeKind sh:IRI ;
   sh:message "A PersonName must have one type"@en ;
   sh:minCount 1 ;
   sh:maxCount 1 ;
@@ -348,6 +351,7 @@ bds:PersonEventShape-type
   sh:path rdf:type ;
   sh:in ( bdo:PersonBirth bdo:PersonDeath bdo:PersonFlourished bdo:PersonAffiliation bdo:PersonOccupiesSeat bdo:PersonAssumesOffice bdo:PersonFinalOrdination bdo:PersonGterMaDiscovery bdo:PersonInResidence bdo:PersonLeavesOffice bdo:PersonLeavesSeat bdo:PersonMarriage bdo:PersonRabByungOrdination bdo:PersonDivorce bdo:PersonEventNotSpecified ) ;
   sh:message "A PersonEvent must have one type"@en ;
+  sh:nodeKind sh:IRI ;
   sh:class bdo:PersonEvent ;
   sh:minCount 1 ;
   sh:maxCount 1 ;

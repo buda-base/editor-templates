@@ -50,6 +50,7 @@ bds:ImagegroupShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
   sh:in ( bdo:ImageGroup ) ;
+  sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
 .

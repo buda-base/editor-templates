@@ -56,6 +56,7 @@ bds:CorporationShape-type
   sh:path rdf:type ;
   sh:in ( bdo:Corporation ) ;
   sh:message "Must have type corporation"@en ;
+  sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
 .

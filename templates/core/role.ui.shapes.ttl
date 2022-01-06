@@ -51,6 +51,7 @@ bds:RoleShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
   sh:in ( bdo:Role ) ;
+  sh:nodeKind sh:IRI ;
   sh:message "must have type role"@en ;
   sh:maxCount 1 ;
   sh:minCount 1 ;

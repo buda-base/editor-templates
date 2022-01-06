@@ -52,6 +52,8 @@ bds:UserProfileShape
   sh:property bds:BdouPicture ;
   sh:property bds:BdouLocalNameDefaultPrefix ;
   sh:property bds:PersonShape-gender ;
+  sh:property bds:BdouPpreferredUiLiteralLangs ;
+  sh:property bds:BdouPreferredUiLang ;
 .
 bds:FoafMbox
   a sh:PropertyShape ;
@@ -81,6 +83,26 @@ bds:BdouPicture
   sh:datatype xsd:anyURI ;
   sh:maxCount 1 ;
 .
+bds:BdouPreferredUiLang
+  a sh:PropertyShape ;
+  sh:path bdou:preferredUiLang ;
+  sh:node dash:ListShape ;
+  sh:property [
+    sh:path bds:listPath ;
+    sh:datatype xsd:string ;
+    sh:in ( "bo" "zh-Hans" "en" "km" "fr" )
+  ]
+.
+bds:BdouPreferredUiLiteralLangs
+  a sh:PropertyShape ;
+  sh:path bdou:preferredUiLiteralLangs ;
+  sh:node dash:ListShape ;
+  sh:property [
+    sh:path bds:listPath ;
+    sh:datatype xsd:string ;
+    sh:in ( "bo-x-ewts" "bo" "sa-Deva" "sa-x-iast" "zh-Hans" "zh-Hant" "zh-Latn-pinyin" "pi-x-iast" "en" )
+  ]
+.
 bds:BdouLocalNameDefaultPrefix
   a sh:PropertyShape ;
   sh:path bdou:localNameDefaultPrefix ;
@@ -93,6 +115,7 @@ bds:PersonShape-gender
   a sh:PropertyShape ;
   sh:path bdo:personGender ;
   sh:in ( bdr:GenderFemale bdr:GenderMale ) ;
+  sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
 .

@@ -68,6 +68,7 @@ bds:SerialWorkShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
   sh:in ( bdo:SerialWork ) ;
+  sh:nodeKind sh:IRI ;
   sh:message "must have type serial work"@en ;
   sh:maxCount 1 ;
   sh:minCount 1 ;

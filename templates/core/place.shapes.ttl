@@ -66,6 +66,7 @@ bds:PlaceShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
   sh:in ( bdo:Place ) ;
+  sh:nodeKind sh:IRI ;
   sh:message "must have type place"@en ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
@@ -90,6 +91,7 @@ bds:PlaceShape-placeType
   a sh:PropertyShape ;
   sh:path bdo:placeType ;
   sh:in ( bdr:PT0001 bdr:PT0002 bdr:PT0003 bdr:PT0004 bdr:PT0005 bdr:PT0006 bdr:PT0007 bdr:PT0008 bdr:PT0009 bdr:PT0010 bdr:PT0011 bdr:PT0012 bdr:PT0013 bdr:PT0014 bdr:PT0015 bdr:PT0016 bdr:PT0017 bdr:PT0018 bdr:PT0019 bdr:PT0020 bdr:PT0021 bdr:PT0022 bdr:PT0023 bdr:PT0024 bdr:PT0025 bdr:PT0026 bdr:PT0027 bdr:PT0028 bdr:PT0029 bdr:PT0030 bdr:PT0031 bdr:PT0032 bdr:PT0033 bdr:PT0034 bdr:PT0035 bdr:PT0036 bdr:PT0037 bdr:PT0038 bdr:PT0039 bdr:PT0040 bdr:PT0041 bdr:PT0042 bdr:PT0043 bdr:PT0044 bdr:PT0045 bdr:PT0046 bdr:PT0047 bdr:PT0048 bdr:PT0049 bdr:PT0050 bdr:PT0051 bdr:PT0052 bdr:PT0053 bdr:PT0054 bdr:PT0055 bdr:PT0056 bdr:PT0057 bdr:PT0058 bdr:PT0059 bdr:PT0060 bdr:PT0061 bdr:PT0062 bdr:PT0063 bdr:PT0064 bdr:PT0065 bdr:PT0066 bdr:PT0067 bdr:PT0068 bdr:PT0069 bdr:PT0070 bdr:PT0071 bdr:PT0072 bdr:PT0073 bdr:PT0074 bdr:PT0075 bdr:PT0076 bdr:PT0077 bdr:PT0078 bdr:PT0079 bdr:PT0080 bdr:PT0081 bdr:PT0082 bdr:PT0083 bdr:PT0084 bdr:PT0085 bdr:PT0086 ) ;
+  sh:nodeKind sh:IRI ;
   sh:message "A Place must have one place type"@en ;
   sh:minCount 1 ;
   sh:maxCount 1 ;
@@ -116,6 +118,7 @@ bds:PlaceEventShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
   sh:in ( bdo:PlaceFounded bdo:PlaceConverted bdo:PlaceDestroyed bdo:PlaceRebuilt bdo:PlaceAbandoned ) ;
+  sh:nodeKind sh:IRI ;
   sh:message "A PersonEvent must have one type"@en ;
   sh:class bdo:PersonEvent ;
   sh:minCount 1 ;

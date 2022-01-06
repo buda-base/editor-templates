@@ -87,6 +87,20 @@ bds:BdouPicture
   dash:editor dash:TextAreaEditor ;
   dash:singleLine true ;
 .
+bds:BdouPreferredUiLang
+  sh:group bds:BasePropertyGroup ;
+  sh:order "8"^^xsd:decimal ;
+  sh:name "preferred UI string langs"@en ;
+  sh:description "for the strings in the UI (menus, names of properties, etc.)"@en ;
+  dash:editor dash:EnumSelectEditor ;
+.
+bds:BdouPreferredUiLiteralLangs
+  sh:group bds:BasePropertyGroup ;
+  sh:order "8"^^xsd:decimal ;
+  sh:name "preferred UI literal langs"@en ;
+  sh:description "for the strings in the UI (menus, names of properties, etc.)"@en ;
+  dash:editor dash:EnumSelectEditor ;
+.
 bds:BdouLocalNameDefaultPrefix
   sh:group bds:BasePropertyGroup ;
   sh:order "8"^^xsd:decimal ;
