@@ -52,7 +52,7 @@ bds:UserProfileShape
   sh:property bds:BdouPicture ;
   sh:property bds:BdouLocalNameDefaultPrefix ;
   sh:property bds:PersonShape-gender ;
-  sh:property bds:BdouPpreferredUiLiteralLangs ;
+  sh:property bds:BdouPreferredUiLiteralLangs ;
   sh:property bds:BdouPreferredUiLang ;
 .
 bds:FoafMbox
