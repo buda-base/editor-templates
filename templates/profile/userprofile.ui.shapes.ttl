@@ -96,14 +96,14 @@ bds:BdouPreferredUiLang
 .
 bds:BdouPreferredUiLiteralLangs
   sh:group bds:BasePropertyGroup ;
-  sh:order "8"^^xsd:decimal ;
+  sh:order "9"^^xsd:decimal ;
   sh:name "preferred UI literal langs"@en ;
   sh:description "for the strings in the UI (menus, names of properties, etc.)"@en ;
   dash:editor dash:EnumSelectEditor ;
 .
 bds:BdouLocalNameDefaultPrefix
   sh:group bds:BasePropertyGroup ;
-  sh:order "8"^^xsd:decimal ;
+  sh:order "10"^^xsd:decimal ;
   sh:name "RID prefix"@en ;
   dash:editor dash:TextAreaEditor ;
   dash:singleLine true ;
