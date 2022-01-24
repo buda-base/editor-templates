@@ -54,7 +54,7 @@ bds:InstanceShape-isComplete
 .
 bds:InstanceShape-reproductionPrintMethod
   dash:editor dash:EnumSelectEditor ;
-  sh:group bds:PubPropertyGroup ;
+  sh:group bds:BasePropertyGroup ;
   sh:order "3"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .
