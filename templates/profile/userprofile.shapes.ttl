@@ -86,12 +86,8 @@ bds:BdouPicture
 bds:BdouPreferredUiLang
   a sh:PropertyShape ;
   sh:path bdou:preferredUiLang ;
-  sh:node dash:ListShape ;
-  sh:property [
-    sh:path bds:listPath ;
-    sh:datatype xsd:string ;
-    sh:in ( "bo" "zh-Hans" "en" "km" "fr" )
-  ]
+  sh:datatype xsd:string ;
+  sh:in ( "bo" "zh-Hans" "en" "km" "fr" )
 .
 bds:BdouPreferredUiLiteralLangs
   a sh:PropertyShape ;

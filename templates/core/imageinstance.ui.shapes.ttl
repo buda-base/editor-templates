@@ -1,4 +1,4 @@
-@prefix ImageInstanceShapes: <http://purl.bdrc.io/shapes/core/ImageInstanceShapes/> .
+@prefix ImageInstanceUIShapes: <http://purl.bdrc.io/shapes/core/ImageInstanceUIShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -24,7 +24,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ImageInstanceShapes:
+ImageInstanceUIShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/ImageInstanceShapes/> ;

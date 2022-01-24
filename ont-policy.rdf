@@ -248,6 +248,18 @@
     </OntologySpec>
 
     <OntologySpec>
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/ImageInstanceShapes/"/>
+        <altURL    rdf:resource="templates/core/imageinstance.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/ImageInstanceShapes"/>
+    </OntologySpec>
+
+    <OntologySpec>
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/ImageInstanceUIShapes/"/>
+        <altURL    rdf:resource="templates/core/imageinstance.ui.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/ImageInstanceUIShapes"/>
+    </OntologySpec>
+
+    <OntologySpec>
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/ImagegroupShapes/"/>
         <altURL    rdf:resource="templates/core/imagegroup.shapes.ttl"/>
         <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/ImagegroupShapes"/>

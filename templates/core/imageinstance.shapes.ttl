@@ -67,3 +67,7 @@ bds:ImageInstanceShape-scanInfo
 bdsa:AdmShape-adminAbout
       sh:minCount 1 ;
 .
+
+bdsa:AdmEntityShape-replaceWith 
+  bds:classIn ( bdo:ImageInstance bdo:Instance bdo:Work ) ;
+.
