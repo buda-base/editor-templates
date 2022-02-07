@@ -132,7 +132,7 @@ bds:InstanceShape-material
   a sh:PropertyShape ;
   sh:path bdo:material ;
   sh:class bdo:BaseMaterial ;
-  sh:in ( bdr:MaterialPaper bdr:MaterialBirchBark bdr:MaterialCardboard bdr:MaterialCloth bdr:MaterialDeshog bdr:MaterialKhoiPaper bdr:MaterialLoktaPaper bdr:MaterialMultiLayerPaper bdr:MaterialPalmLeaf bdr:MaterialRicePaper bdr:MaterialSaPaper bdr:MaterialParchment bdr:MaterialDigital bdr:MaterialPalmyraPalmLeaf bdr:MaterialCoryphaPalmLeaf )
+  sh:in ( bdr:MaterialPaper bdr:MaterialBirchBark bdr:MaterialCardboard bdr:MaterialCloth bdr:MaterialDeshog bdr:MaterialKhoiPaper bdr:MaterialLoktaPaper bdr:MaterialMultiLayerPaper bdr:MaterialPalmLeaf bdr:MaterialRicePaper bdr:MaterialSaPaper bdr:MaterialParchment bdr:MaterialDigital bdr:MaterialPalmyraPalmLeaf bdr:MaterialCoryphaPalmLeaf ) ;
   sh:nodeKind sh:IRI ;
 .
 bds:InstanceShape-appliedMaterial
