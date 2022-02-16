@@ -204,6 +204,8 @@ bds:defaultLanguage
   rdfs:range xsd:string ;
   skos:definition "indicates the default language that the editor should display for the values of a certain property"@en ;
 .
+# blank nodes make it so that if the same file is imported twice, things will go wrong...
+# what a wonderful format RDF is...
 bds:DateTimeOrDateOrgYear
   a rdf:List ;
   rdf:first [
@@ -221,5 +223,6 @@ bds:DateTimeOrDateOrgYear
   rdfs:label "Date or date time or year" ;
 .
 # defining the path to use in the list path pattern (https://www.topquadrant.com/constraints-on-rdflists-using-shacl/)
-bds:listPath rdf:first [ sh:zeroOrMorePath rdf:rest ] ;
+bds:listPathZeroOrMore sh:zeroOrMorePath rdf:rest .
+bds:listPath rdf:first bds:listPathZeroOrMore ;
              rdf:rest rdf:first .

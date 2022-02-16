@@ -39,10 +39,13 @@ bdsa:AdmEntityShape-rdfsComment
   sh:datatype rdf:langString ;
   sh:uniqueLang true ;
 .
+
+bdsa:AdmShape-adminAbout-path sh:inversePath adm:adminAbout .
+
 bdsa:AdmShape-adminAbout
       a sh:PropertyShape ;
       sh:maxCount 1 ;
-      sh:path [ sh:inversePath adm:adminAbout ] ;
+      sh:path bdsa:AdmShape-adminAbout-path ;
       bds:propertyShapeType  bds:FacetShape ;
       bds:readOnly true ;
 .

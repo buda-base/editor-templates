@@ -28,6 +28,7 @@ ImageInstanceShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/InstanceShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Instance and its subclasses" ;
 .
 bds:ImageInstanceShape
@@ -43,7 +44,7 @@ bds:ImageInstanceShape
   sh:property bds:ImageInstanceShape-scanInfo ;
   sh:property bds:ImageInstanceShape-type ;
   sh:property bds:InstanceShape-reproductionPrintMethod ;
-  sh:targetClass bdo:Instance ;
+  sh:targetClass bdo:ImageInstance ;
 .
 bds:ImageInstanceShape-type
   a sh:PropertyShape ;
@@ -67,7 +68,6 @@ bds:ImageInstanceShape-scanInfo
 bdsa:AdmShape-adminAbout
       sh:minCount 1 ;
 .
-
 bdsa:AdmEntityShape-replaceWith 
   bds:classIn ( bdo:ImageInstance bdo:Instance bdo:Work ) ;
 .
