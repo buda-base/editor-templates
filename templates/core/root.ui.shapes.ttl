@@ -83,6 +83,13 @@ bds:NoteShape-noteSource
   sh:order "3"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .
+bds:NoteShape-type
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:BasePropertyGroup ;
+  sh:name "type"@en ;
+  sh:order "4"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
 bds:ContentLocationShape-contentLocationInstance
   dash:editor dash:InstancesSelectEditor ;
   sh:name "source scans"@en ;

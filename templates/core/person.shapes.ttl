@@ -327,7 +327,6 @@ bds:PersonEventShape
   rdfs:label "Person Event Shape"@en ;
   sh:description "The events associated with a person. Note that 'Founds Monastery' is not only available as a place event. To represent a century, use this pattern: 12th c. = not before 1100, not after 1199"@en ;
   sh:property bds:PersonEventShape-personEventRole , bds:PersonEventShape-type , bds:PersonEventShape-personEventCorporation , bds:EventShape-notAfter , bds:EventShape-notBefore , bds:EventShape-onYear , bds:EventShape-onOrAbout , bds:EventShape-eventWhere ;
-  sh:targetClass bdo:PersonEvent ;
   sh:targetObjectsOf bdo:personEvent ;
 .
 bds:PersonEventShape-personEventRole
@@ -343,7 +342,6 @@ bds:PersonEventShape-personEventCorporation
   sh:path bdo:personEventCorporation ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:maxCount 1 ;
-  sh:class bdo:Corporation ;
   sh:message "At most one :personEventCorporation allowed"@en ;
 .
 bds:PersonEventShape-type
@@ -352,7 +350,6 @@ bds:PersonEventShape-type
   sh:in ( bdo:PersonBirth bdo:PersonDeath bdo:PersonFlourished bdo:PersonAffiliation bdo:PersonOccupiesSeat bdo:PersonAssumesOffice bdo:PersonFinalOrdination bdo:PersonGterMaDiscovery bdo:PersonInResidence bdo:PersonLeavesOffice bdo:PersonLeavesSeat bdo:PersonMarriage bdo:PersonRabByungOrdination bdo:PersonDivorce bdo:PersonEventNotSpecified ) ;
   sh:message "A PersonEvent must have one type"@en ;
   sh:nodeKind sh:IRI ;
-  sh:class bdo:PersonEvent ;
   sh:minCount 1 ;
   sh:maxCount 1 ;
 .

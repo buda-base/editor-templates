@@ -89,7 +89,6 @@ bds:RootShape-note
   sh:order "0"^^xsd:decimal ;
   dash:editor dash:DetailsEditor ;
 .
-
 bds:AdminPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Admin data"@en ;

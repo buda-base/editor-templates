@@ -147,10 +147,20 @@ bds:NoteShape
   sh:property bds:NoteShape-contentLocationStatement ;
   sh:property bds:NoteShape-noteText ;
   sh:property bds:NoteShape-noteSource ;
+  sh:property bds:NoteShape-type ;
 # there are no note types currently well defined
 #  sh:property bds:NoteShape-noteType ;
   sh:targetClass bdo:Note ;
   sh:targetObjectsOf bdo:note ;
+.
+bds:NoteShape-type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:in ( bdo:Note) ;
+  sh:nodeKind sh:IRI ;
+  sh:message "A note must have type bdo:Note"@en ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
 .
 bds:NoteShape-noteSource
   a sh:PropertyShape ;

@@ -47,6 +47,15 @@ bdsa:AdmEntityShape-logMessage
       dash:singleLine true ;
       bds:defaultLanguage "en" ;
 .
+bdsa:AdmEntityShape-logType
+     dash:editor dash:EnumSelectEditor ;
+     sh:order "2"^^xsd:decimal ;
+.
+bdsa:AdmEntityShape-logMethod
+      dash:editor dash:EnumSelectEditor ;
+      sh:order "3"^^xsd:decimal ;
+      bds:displayPriority 1 ;
+.
 bdsa:AdmEntityShape-logWho
       sh:name "user"@en ;
       sh:order "2"^^xsd:decimal ;
@@ -68,21 +77,32 @@ bdsa:AdmEntityShape-access
       sh:name "access"@en ;
       sh:order "1"^^xsd:decimal ;
 .
-bdsa:AdmEntityShape-replaceWith
-      sh:name "replace with (for withdrawn records only)"@en ;
+bdsa:AdmEntityShape-contentLegal
       dash:editor dash:EnumSelectEditor ;
-      sh:order "3"^^xsd:decimal ;
+      sh:name "copyright status"@en ;
+      sh:order "2"^^xsd:decimal ;
 .
 bdsa:AdmEntityShape-restrictedInChina
       dash:editor dash:BooleanSelectEditor ;
       sh:name "restricted in China"@en ;
-      sh:order "2"^^xsd:decimal ;
+      sh:order "3"^^xsd:decimal ;
       bds:defaultValue false ;
 .
-bdsa:AdmEntityShape-rdfsComment
+bdsa:AdmEntityShape-replaceWith
+      sh:name "replace with (for withdrawn records only)"@en ;
+      dash:editor dash:EnumSelectEditor ;
       sh:order "4"^^xsd:decimal ;
+.
+bdsa:AdmEntityShape-rdfsComment
+      sh:order "5"^^xsd:decimal ;
       dash:editor   dash:TextAreaWithLangEditor ;
       sh:name       "admin note"@en ;
       sh:description "note not displayed to users"@en ;
       bds:defaultLanguage "en" ;
+.
+bdsa:AdmEntityShape-metadataLegal
+      dash:editor dash:EnumSelectEditor ;
+      sh:name "copyright status"@en ;
+      sh:order "6"^^xsd:decimal ;
+      bds:displayPriority 1 ;
 .

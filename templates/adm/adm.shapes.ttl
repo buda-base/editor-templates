@@ -58,7 +58,9 @@ bdsa:AdmEntityShape
   sh:property bdsa:AdmEntityShape-replaceWith ;
   sh:property bdsa:AdmEntityShape-logEntry ;
   sh:property bdsa:AdmEntityShape-rdfsComment ;
-  sh:targetClass bdo:Entity ;
+  sh:property bdsa:AdmEntityShape-type ;
+  sh:property bdsa:AdmEntityShape-metadataLegal ;
+  sh:targetClass adm:AdminData ;
   sh:targetSubjectsOf adm:adminAbout ;
 .
 bdsa:LogEntryShape
@@ -71,7 +73,7 @@ bdsa:LogEntryShape
   sh:property bdsa:AdmEntityShape-logDate ;
   sh:property bdsa:AdmEntityShape-logMessage ;
   sh:property bdsa:AdmEntityShape-logWho ;
-  sh:targetClass adm:LogEntry ;
+  sh:property bdsa:AdmEntityShape-logType ;
 .
 bdsa:AdmEntityShape-logDate
       a sh:PropertyShape ;
@@ -91,17 +93,30 @@ bdsa:AdmEntityShape-logWho
       sh:path adm:logWho ;
       sh:nodeKind sh:IRI ;
 .
+bdsa:AdmEntityShape-logType
+      a sh:PropertyShape ;
+      bds:propertyShapeType bds:IgnoreShape ;
+      sh:path rdf:type ;
+      sh:nodeKind sh:IRI ;
+      sh:in ( adm:ContentQC adm:ImagesUpdated adm:Reordered adm:ScanRequested adm:Scanned adm:Synced adm:InitialDataCreation adm:InitialDataImport adm:MinorUpdateData adm:ReinstateData adm:UpdateData adm:UpdateOutlineData adm:WithdrawData ) ;
+      sh:maxCount 1 ;
+.
+bdsa:AdmEntityShape-logMethod
+      a sh:PropertyShape ;
+      bds:propertyShapeType bds:IgnoreShape ;
+      sh:path adm:logMethod ;
+      sh:nodeKind sh:IRI ;
+      sh:in ( bda:BatchMethod bda:ManualMethod ) ;
+.
 bdsa:AdmEntityShape-logEntry
       a sh:PropertyShape ;
       bds:propertyShapeType bds:FacetShape ;
       sh:path adm:logEntry ;
-      sh:class adm:LogEntry ;
       sh:nodeKind sh:IRI ;
 .
 bdsa:AdmEntityShape-status
       a sh:PropertyShape ;
       sh:path adm:status ;
-      sh:class adm:Status ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
       sh:in ( bda:StatusReleased bda:StatusWithdrawn bda:StatusEditing bda:StatusOnHold bda:StatusProvisional bda:StatusScanned bda:StatusSeekingOut bda:StatusAccessioned bda:StatusAcquiring ) ;
@@ -111,7 +126,22 @@ bdsa:AdmEntityShape-access
       a sh:PropertyShape ;
       sh:path adm:access ;
       sh:class adm:Access ;
-      sh:in (bda:AccessOpen bda:AccessFairUse bda:AccessRestrictedTemporarily bda:AccessRestrictedByTbrc bda:AccessRestrictedSealed bda:AccessRestrictedByQuality bda:AccessMixed ) ;
+      sh:in ( bda:AccessOpen bda:AccessFairUse bda:AccessRestrictedTemporarily bda:AccessRestrictedByTbrc bda:AccessRestrictedSealed bda:AccessRestrictedByQuality bda:AccessMixed ) ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:IRI ;
+.
+bdsa:AdmEntityShape-metadataLegal
+      a sh:PropertyShape ;
+      sh:path adm:metadataLegal ;
+      sh:in ( bda:LD_BDRC_CC0 ) ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:IRI ;
+.
+bdsa:AdmEntityShape-contentLegal
+      a sh:PropertyShape ;
+      sh:path adm:metadataLegal ;
+      sh:in ( bda:LD_BDRC_PD bda:LD_BDRC_Copyright ) ;
       sh:maxCount 1 ;
       sh:nodeKind sh:IRI ;
 .
@@ -126,5 +156,14 @@ bdsa:AdmEntityShape-restrictedInChina
       a sh:PropertyShape ;
       sh:path adm:restrictedInChina ;
       sh:datatype xsd:boolean ;
+      sh:maxCount 1 ;
+.
+bdsa:AdmEntityShape-type
+      a sh:PropertyShape ;
+      bds:propertyShapeType bds:IgnoreShape ;
+      sh:path rdf:type ;
+      sh:nodeKind sh:IRI ;
+      sh:in ( adm:AdminData ) ;
+      sh:minCount 1 ;
       sh:maxCount 1 ;
 .
