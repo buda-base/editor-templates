@@ -106,3 +106,8 @@ bdsa:AdmEntityShape-metadataLegal
       sh:order "6"^^xsd:decimal ;
       bds:displayPriority 1 ;
 .
+bdsa:AdmEntityShape-type
+     dash:editor dash:EnumSelectEditor ;
+     sh:order "7"^^xsd:decimal ;
+     bds:displayPriority 1 ;
+.
