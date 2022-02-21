@@ -160,7 +160,6 @@ bdsa:AdmEntityShape-restrictedInChina
 .
 bdsa:AdmEntityShape-type
       a sh:PropertyShape ;
-      bds:propertyShapeType bds:IgnoreShape ;
       sh:path rdf:type ;
       sh:nodeKind sh:IRI ;
       sh:in ( adm:AdminData ) ;
