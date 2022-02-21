@@ -63,7 +63,7 @@ bdsa:AdmEntityShape-logWho
 .
 bdsa:AdmEntityShape-logEntry
       sh:name "log entry"@en ;
-      sh:order "5"^^xsd:decimal ;
+      sh:order "6"^^xsd:decimal ;
       bds:readOnly true ;
       bds:sortBy adm:logDate ;
 .
