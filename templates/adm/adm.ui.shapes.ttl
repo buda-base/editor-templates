@@ -23,6 +23,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix swa: <http://topbraid.org/swa#> .
 @prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix bdou: <http://purl.bdrc.io/ontology/ext/user/> .
 @prefix tosh: <http://topbraid.org/tosh#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -47,19 +48,20 @@ bdsa:AdmEntityShape-logMessage
       dash:singleLine true ;
       bds:defaultLanguage "en" ;
 .
-bdsa:AdmEntityShape-logType
-     dash:editor dash:EnumSelectEditor ;
-     sh:order "2"^^xsd:decimal ;
-.
-bdsa:AdmEntityShape-logMethod
-      dash:editor dash:EnumSelectEditor ;
-      sh:order "3"^^xsd:decimal ;
-      bds:displayPriority 1 ;
-.
 bdsa:AdmEntityShape-logWho
       sh:name "user"@en ;
       sh:order "2"^^xsd:decimal ;
       bds:readOnly true ;
+      sh:class bdou:User ;
+.
+bdsa:AdmEntityShape-logType
+     dash:editor dash:EnumSelectEditor ;
+     sh:order "3"^^xsd:decimal ;
+.
+bdsa:AdmEntityShape-logMethod
+      dash:editor dash:EnumSelectEditor ;
+      sh:order "4"^^xsd:decimal ;
+      bds:displayPriority 1 ;
 .
 bdsa:AdmEntityShape-logEntry
       sh:name "log entry"@en ;

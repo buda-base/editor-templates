@@ -89,7 +89,7 @@ bdsa:AdmEntityShape-logMessage
 .
 bdsa:AdmEntityShape-logWho
       a sh:PropertyShape ;
-      bds:propertyShapeType bds:IgnoreShape ;
+      bds:propertyShapeType bds:ExternalShape ;
       sh:path adm:logWho ;
       sh:nodeKind sh:IRI ;
 .
