@@ -132,6 +132,9 @@ bds:EventShape-notAfter sh:order "4"^^xsd:decimal ;
 bds:EventShape-onOrAbout sh:order "5"^^xsd:decimal ;
    bds:displayPriority 1 ;
 .
+bds:EventShape-eventWho sh:order "6"^^xsd:decimal ;
+   bds:displayPriority 1 ;
+.
 bdsa:AdmShape-adminAbout 
   dash:editor dash:DetailsEditor ;
   sh:group bds:AdminPropertyGroup ;
