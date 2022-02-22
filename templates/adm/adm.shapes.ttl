@@ -86,7 +86,7 @@ bdsa:AdmEntityShape-logMessage
 .
 bdsa:AdmEntityShape-logWho
       a sh:PropertyShape ;
-      bds:propertyShapeType bds:IgnoreShape ;
+      bds:propertyShapeType bds:ExternalShape ;
       sh:path adm:logWho ;
       sh:nodeKind sh:IRI ;
 .
@@ -157,7 +157,6 @@ bdsa:AdmEntityShape-restrictedInChina
 .
 bdsa:AdmEntityShape-type
       a sh:PropertyShape ;
-      bds:propertyShapeType bds:IgnoreShape ;
       sh:path rdf:type ;
       sh:nodeKind sh:IRI ;
       sh:in ( adm:AdminData ) ;

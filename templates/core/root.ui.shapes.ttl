@@ -85,7 +85,6 @@ bds:NoteShape-noteSource
 .
 bds:NoteShape-type
   dash:editor dash:EnumSelectEditor ;
-  sh:group bds:BasePropertyGroup ;
   sh:name "type"@en ;
   sh:order "4"^^xsd:decimal ;
   bds:displayPriority 1 ;
