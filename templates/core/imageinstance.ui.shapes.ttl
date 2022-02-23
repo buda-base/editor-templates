@@ -97,7 +97,7 @@ bds:ImageInstanceShape-hasVolume
   dash:editor dash:DetailsEditor ;
   sh:group bds:VolumesPropertyGroup ;
   sh:order "0"^^xsd:decimal ;
-  bds:sortOnProperty bdo:instanceHasVolume ;
+  bds:sortOnProperty bdo:volumeNumber ;
 .
 bds:AdminPropertyGroup
   a sh:PropertyGroup ;
