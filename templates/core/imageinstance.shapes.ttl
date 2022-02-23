@@ -29,6 +29,7 @@ ImageInstanceShapes:
   owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/InstanceShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/ImagegroupShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Instance and its subclasses" ;
 .
 bds:ImageInstanceShape
@@ -42,6 +43,7 @@ bds:ImageInstanceShape
   sh:property bds:InstanceShape-instanceReproductionOf ;
   sh:property bds:InstanceShape-isComplete ;
   sh:property bds:ImageInstanceShape-scanInfo ;
+  sh:property bds:ImageInstanceShape-hasVolume ;
   sh:property bds:ImageInstanceShape-type ;
   sh:property bds:InstanceShape-reproductionPrintMethod ;
   sh:targetClass bdo:ImageInstance ;
@@ -70,4 +72,10 @@ bdsa:AdmShape-adminAbout
 .
 bdsa:AdmEntityShape-replaceWith 
   bds:classIn ( bdo:ImageInstance bdo:Instance bdo:Work ) ;
+.
+bds:ImageInstanceShape-hasVolume
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:FacetShape ;
+  sh:path bdo:instanceHasVolume ;
+  sh:nodeKind sh:IRI ;
 .

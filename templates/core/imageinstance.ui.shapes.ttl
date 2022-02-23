@@ -78,7 +78,6 @@ bds:InstanceShape-instanceReproductionOf
   sh:group bds:ConnectionsPropertyGroup ;
   sh:order "3"^^xsd:decimal ;
 .
-
 bds:NotesPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Notes"@en ;
@@ -89,14 +88,57 @@ bds:RootShape-note
   sh:order "0"^^xsd:decimal ;
   dash:editor dash:DetailsEditor ;
 .
+bds:VolumesPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Volumes"@en ;
+  sh:order "3"^^xsd:decimal ;
+.
+bds:ImageInstanceShape-hasVolume
+  dash:editor dash:DetailsEditor ;
+  sh:group bds:VolumesPropertyGroup ;
+  sh:order "0"^^xsd:decimal ;
+  bds:sortOnProperty bdo:instanceHasVolume ;
+.
 bds:AdminPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Admin data"@en ;
-  sh:order "3"^^xsd:decimal ;
+  sh:order "4"^^xsd:decimal ;
 .
 bdsa:AdmShape-adminAbout
   dash:editor dash:DetailsEditor ;
   sh:group bds:AdminPropertyGroup ;
   sh:name "admin data"@en ;
   sh:order "0"^^xsd:decimal ;
+.
+
+bds:ImagegroupShape-type
+  dash:editor dash:EnumSelectEditor ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:ImagegroupShape-volumeNumber
+  dash:editor dash:TextFieldEditor ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:CommonShape-prefLabel
+  sh:order "2"^^xsd:decimal ;
+.
+bds:CommonShape-altLabel
+  sh:order "3"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:ImagegroupShape-imagesMissing
+  dash:editor dash:TextFieldEditor ;
+  dash:singleLine true ;
+  sh:order "4"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:ImagegroupShape-volumePagesTbrcIntro
+  dash:editor dash:TextFieldEditor ;
+  sh:order "5"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:ImagegroupShape-volumeNote
+  dash:editor dash:TextFieldEditor ;
+  sh:order "6"^^xsd:decimal ;
+  bds:displayPriority 1 ;
 .

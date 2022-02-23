@@ -34,17 +34,17 @@ bds:ImagegroupShape
   a sh:NodeShape ;
   rdfs:label "Image Group Shape"@en ;
   bds:identifierPrefix "I" ;
+  bds:independentIdentifiers true ;
   sh:property bds:ImagegroupShape-type ;
   sh:property bds:CommonShape-prefLabel ;
   sh:property bds:CommonShape-altLabel ;
-  sh:property bds:ImagegroupShape-volumeOf ;
-  sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
   sh:property bds:ImagegroupShape-volumeNote ;
   sh:property bds:ImagegroupShape-volumeNumber ;
   sh:property bds:ImagegroupShape-volumePagesTbrcIntro ;
   sh:property bds:ImagegroupShape-imagesMissing ;
   sh:targetClass bdo:Instance ;
+  sh:targetObjectsOf bdo:instanceHasVolume ;
 .
 bds:ImagegroupShape-type
   a sh:PropertyShape ;
@@ -75,7 +75,7 @@ bds:ImagegroupShape-volumeNumber
   sh:datatype xsd:integer ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
-  sh:minInclusive 0  ;
+  sh:minInclusive 1  ;
   sh:maxInclusive 500 ;
 .
 bds:ImagegroupShape-volumeNote
@@ -86,7 +86,8 @@ bds:ImagegroupShape-volumeNote
 bds:ImagegroupShape-volumeOf
   a sh:PropertyShape ;
   sh:path bdo:volumeOf ;
-  sh:datatype rdf:langString ;
+  sh:nodeKind sh:IRI ;
+  sh:class bdo:ImageInstance ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
 .

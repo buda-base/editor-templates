@@ -109,6 +109,19 @@ bds:allowMarkDown
 bds:ShapeType
   a owl:Class ;
 .
+bds:independentIdentifiers
+  a owl:DatatypeProperty ;
+  rdfs:label "independent identifiers"@en ;
+  rdfs:domain sh:NodeShape ;
+  rdfs:range xsd:boolean ;
+  skos:definition "the identifiers for the resource are independent from its parent resource"@en ;
+.
+bds:sortOnProperty
+  a owl:ObjectProperty ;
+  rdfs:label "sort on property"@en ;
+  rdfs:domain sh:PropertyShape ;
+  skos:definition "sort the objects of the property shape by one of their property. This is for display purpose only and has no effect on the data."@en ;
+.
 bds:ExternalShape
   a bds:ShapeType ;
   rdfs:label "node shape refers to resource external to focus node graph"@en ;
