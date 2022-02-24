@@ -70,15 +70,20 @@ bds:KinshipPropertyGroup
   rdfs:label "Kinship"@en ;
   sh:order "4"^^xsd:decimal ;
 .
+bds:IncarnationPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Incarnation"@en ;
+  sh:order "5"^^xsd:decimal ;
+.
 bds:NotesPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Notes"@en ;
-  sh:order "5"^^xsd:decimal ;
+  sh:order "6"^^xsd:decimal ;
 .
 bds:AdminPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Admin data"@en ;
-  sh:order "6"^^xsd:decimal ;
+  sh:order "7"^^xsd:decimal ;
 .
 ##
 ## type
@@ -367,6 +372,89 @@ bds:PersonShape-personTeacherOf
   sh:group bds:StudentTeacherPropertyGroup ;
   sh:name "teacher of"@en ;
   sh:order "1"^^xsd:decimal ;
+.
+##
+## Incarnation
+##
+bds:PersonShape-hasIncarnationGeneral
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:IncarnationPropertyGroup ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:PersonShape-hasIncarnationYangtse
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:IncarnationPropertyGroup ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:PersonShape-hasIncarnationBody
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:IncarnationPropertyGroup ;
+  sh:order "2"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-hasIncarnationSpeech
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:IncarnationPropertyGroup ;
+  sh:order "3"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-hasIncarnationMind
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:IncarnationPropertyGroup ;
+  sh:order "4"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-hasIncarnationQualities
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:IncarnationPropertyGroup ;
+  sh:order "5"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-hasIncarnationActivities
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:IncarnationPropertyGroup ;
+  sh:order "6"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-incarnationGeneral
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:IncarnationPropertyGroup ;
+  sh:order "7"^^xsd:decimal ;
+.
+bds:PersonShape-incarnationYangtse
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:IncarnationPropertyGroup ;
+  sh:order "8"^^xsd:decimal ;
+.
+bds:PersonShape-incarnationBody
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:IncarnationPropertyGroup ;
+  sh:order "9"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-incarnationSpeech
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:IncarnationPropertyGroup ;
+  sh:order "10"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-incarnationMind
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:IncarnationPropertyGroup ;
+  sh:order "11"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-incarnationQualities
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:IncarnationPropertyGroup ;
+  sh:order "12"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
+bds:PersonShape-incarnationActivities
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:IncarnationPropertyGroup ;
+  sh:order "13"^^xsd:decimal ;
+  bds:displayPriority 1 ;
 .
 ##
 ## Notes

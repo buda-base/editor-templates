@@ -66,6 +66,20 @@ bds:PersonShape
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
   sh:property bds:PersonShape-type ;
+  sh:property bds:PersonShape-hasIncarnationGeneral ;
+  sh:property bds:PersonShape-hasIncarnationYangtse ;
+  sh:property bds:PersonShape-hasIncarnationBody ;
+  sh:property bds:PersonShape-hasIncarnationSpeech ;
+  sh:property bds:PersonShape-hasIncarnationMind ;
+  sh:property bds:PersonShape-hasIncarnationQualities ;
+  sh:property bds:PersonShape-hasIncarnationActivities ;
+  sh:property bds:PersonShape-incarnationGeneral ;
+  sh:property bds:PersonShape-incarnationYangtse ;
+  sh:property bds:PersonShape-incarnationBody ;
+  sh:property bds:PersonShape-incarnationSpeech ;
+  sh:property bds:PersonShape-incarnationMind ;
+  sh:property bds:PersonShape-incarnationQualities ;
+  sh:property bds:PersonShape-incarnationActivities ;
   # TODO: incarnation
   # TODO: missing kin properties
   sh:targetClass bdo:Person ;
@@ -260,7 +274,6 @@ bds:PersonShape-personStudentOf
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:personStudentOf ;
-  sh:class bdo:Person ;
   bds:classIn ( bdo:Person bdo:Topic )
 .
 bds:PersonShape-personTeacherOf
@@ -301,6 +314,7 @@ bds:PersonNameShape-personNameLabel
   sh:message "A PersonName must have exactly one rdfs:label"@en ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
+  bds:allowPushToTopLevelSkosPrefLabel true ;
 .
 bds:PersonNameShape-type
   a sh:PropertyShape ;
@@ -354,6 +368,97 @@ bds:PersonEventShape-type
   sh:minCount 1 ;
   sh:maxCount 1 ;
 .
+#
+# Incarnation
+#
+bds:PersonShape-hasIncarnationGeneral
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
+  sh:path bdo:hasIncarnationGeneral ;
+  sh:class bdo:Person ;
+.
+bds:PersonShape-hasIncarnationYangtse
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
+  sh:path bdo:hasIncarnationYangtse ;
+  sh:class bdo:Person ;
+.
+bds:PersonShape-hasIncarnationBody
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
+  sh:path bdo:hasIncarnationBody ;
+  sh:class bdo:Person ;
+.
+bds:PersonShape-hasIncarnationSpeech
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
+  sh:path bdo:hasIncarnationSpeech ;
+  sh:class bdo:Person ;
+.
+bds:PersonShape-hasIncarnationMind
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
+  sh:path bdo:hasIncarnationMind ;
+  sh:class bdo:Person ;
+.
+bds:PersonShape-hasIncarnationQualities
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
+  sh:path bdo:hasIncarnationQualities ;
+  sh:class bdo:Person ;
+.
+bds:PersonShape-hasIncarnationActivities
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
+  sh:path bdo:hasIncarnationGeneral ;
+  sh:class bdo:Person ;
+.
+
+
+bds:PersonShape-incarnationGeneral
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
+  sh:path bdo:incarnationGeneral ;
+  sh:class bdo:Person ;
+.
+bds:PersonShape-incarnationYangtse
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
+  sh:path bdo:incarnationYangtse ;
+  sh:class bdo:Person ;
+.
+bds:PersonShape-incarnationBody
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
+  sh:path bdo:incarnationBody ;
+  sh:class bdo:Person ;
+.
+bds:PersonShape-incarnationSpeech
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
+  sh:path bdo:incarnationSpeech ;
+  sh:class bdo:Person ;
+.
+bds:PersonShape-incarnationMind
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
+  sh:path bdo:incarnationMind ;
+  sh:class bdo:Person ;
+.
+bds:PersonShape-incarnationQualities
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
+  sh:path bdo:incarnationQualities ;
+  sh:class bdo:Person ;
+.
+bds:PersonShape-incarnationActivities
+  a sh:PropertyShape ;
+  bds:propertyShapeType bds:ExternalShape ;
+  sh:path bdo:incarnationActivities ;
+  sh:class bdo:Person ;
+.
+
+
 bdsa:AdmShape-adminAbout
       sh:minCount 1 ;
 .
