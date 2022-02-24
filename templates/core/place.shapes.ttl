@@ -46,6 +46,7 @@ bds:PlaceShape
   sh:property bds:PlaceShape-placeLong ;
   sh:property bds:PlaceShape-placeLocatedIn ;
   sh:property bds:PlaceShape-placeContains ;
+  sh:targetClass bdo:Place ;
 .
 bds:PlaceShape-placeLocatedIn
   a sh:PropertyShape ;

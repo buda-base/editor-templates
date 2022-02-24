@@ -68,6 +68,8 @@ bds:IdentifierShape
   bds:nodeShapeType bds:FacetShape ;
   sh:property bds:IdentifierShape-rdfType ;
   sh:property bds:IdentifierShape-rdfValue ;
+  sh:targetClass bf:Identifier ;
+  sh:targetObjectsOf bf:identifiedBy ;
 .
 bds:IdentifierShape-rdfValue
   a sh:PropertyShape ;

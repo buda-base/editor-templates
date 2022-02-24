@@ -34,10 +34,8 @@ IdentifierShapes:
   owl:versionInfo "Initial SHACL constraints for Identifiers such as ISBN and such" ;
 .
 bds:IsbnShape
-  a rdfs:Class ;
   a sh:NodeShape ;
   rdfs:label "ISBN shape"@en ;
-  rdfs:subClassOf rdfs:Resource ;
   rdfs:isDefinedBy "https://www.isbn-international.org/sites/default/files/ISBN%20Manual%202012%20-corr.pdf"^^xsd:anyURI ;
   sh:property bds:IsbnShape-rdf_value ;
   sh:targetClass bf:Isbn ;
@@ -54,10 +52,8 @@ bds:IsbnShape-rdf_value
   sh:pattern "^(97(8|9))?\\d{9}(\\d|X)$" ;
 .
 bds:LccnShape
-  a rdfs:Class ;
   a sh:NodeShape ;
   rdfs:label "LCCN shape"@en ;
-  rdfs:subClassOf rdfs:Resource ;
   rdfs:isDefinedBy <http://www.loc.gov/marc/lccn-namespace.html> ;
   sh:property bds:LccnShape-rdf_value ;
   sh:targetClass bf:Lccn ;

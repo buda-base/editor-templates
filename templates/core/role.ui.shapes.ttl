@@ -46,6 +46,7 @@ bds:RoleShape
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
   sh:property bds:RoleShape-type ;
+  sh:targetClass bdo:Role ;
 .
 bds:RoleShape-type
   a sh:PropertyShape ;

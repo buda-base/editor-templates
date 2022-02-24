@@ -46,6 +46,7 @@ bds:CollectionShape
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
   sh:property bds:CollectionShape-type ;
+  sh:targetClass bdo:Collection ;
 .
 bds:CollectionShape-type
   a sh:PropertyShape ;

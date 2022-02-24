@@ -43,7 +43,7 @@ bds:ImagegroupShape
   sh:property bds:ImagegroupShape-volumeNumber ;
   sh:property bds:ImagegroupShape-volumePagesTbrcIntro ;
   sh:property bds:ImagegroupShape-imagesMissing ;
-  sh:targetClass bdo:Instance ;
+  sh:targetClass bdo:ImageGroup ;
   sh:targetObjectsOf bdo:instanceHasVolume ;
 .
 bds:ImagegroupShape-type

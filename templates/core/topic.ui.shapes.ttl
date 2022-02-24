@@ -52,6 +52,7 @@ bds:TopicShape
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
   sh:property bds:TopicShape-type ;
+  sh:targetClass bdo:Topic ;
 .
 bds:TopicShape-type
   a sh:PropertyShape ;

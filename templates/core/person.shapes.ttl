@@ -68,6 +68,7 @@ bds:PersonShape
   sh:property bds:PersonShape-type ;
   # TODO: incarnation
   # TODO: missing kin properties
+  sh:targetClass bdo:Person ;
 .
 ##
 ## type
