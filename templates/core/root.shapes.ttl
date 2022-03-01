@@ -224,7 +224,7 @@ bds:ContentLocationShape
   sh:property bds:ContentLocationShape-contentLocationSide ;
   sh:property bds:ContentLocationShape-contentLocationVolume ;
   sh:property bds:ContentLocationShape-contentLocationVolumeName ;
-  sh:property bds:ContentLocationShape-contentPagination ;
+  #sh:property bds:ContentLocationShape-contentPagination ;
   sh:property bds:ContentLocationShape-contentLocationInstance ;
   sh:targetClass bdo:ContentLocation ;
   sh:targetObjectsOf bdo:contentLocation ;
@@ -357,7 +357,7 @@ bds:ContentLocationShape-contentPagination
   sh:message "a :ContentLocation may indicate, at most one, pagination type."@en ;
   sh:path bdo:contentPagination ;
   sh:class bdo:PaginationType ;
-  sh:in (bdr:PaginationAbsolute bdr:PaginationRelative) ;
+  sh:in ( bdr:PaginationAbsolute bdr:PaginationRelative ) ;
   sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
 .

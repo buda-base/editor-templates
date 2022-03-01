@@ -178,7 +178,7 @@ bds:ContentLocationShape-contentLocationSeqNum
 .
 bds:ContentLocationShape-contentPagination
   dash:editor dash:EnumSelectEditor ;
-  sh:name "seq num"@en ;
+  sh:name "pagination"@en ;
   sh:order "15"^^xsd:decimal ;
   bds:displayPriority 2 ;
 .
