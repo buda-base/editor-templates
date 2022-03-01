@@ -112,3 +112,4 @@ bdsa:AdmEntityShape-type
      dash:editor dash:EnumSelectEditor ;
      sh:order "7"^^xsd:decimal ;
 .
+bdsa:AdmEntityShape sh:property bdsa:AdmEntityShape-logEntry .

@@ -53,7 +53,6 @@ bdsa:AdmEntityShape
   sh:property bdsa:AdmEntityShape-status ;
   sh:property bdsa:AdmEntityShape-restrictedInChina ;
   sh:property bdsa:AdmEntityShape-replaceWith ;
-  sh:property bdsa:AdmEntityShape-logEntry ;
   sh:property bdsa:AdmEntityShape-rdfsComment ;
   sh:property bdsa:AdmEntityShape-type ;
   sh:property bdsa:AdmEntityShape-metadataLegal ;
