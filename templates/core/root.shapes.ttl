@@ -185,6 +185,7 @@ bds:NoteShape-contentLocation
   sh:path bdo:contentLocation ;
   sh:class bdo:ContentLocation ;
   sh:maxCount 1 ;
+  bds:propertyShapeType bds:FacetShape ;
 .
 bds:NoteShape-noteText
   a sh:PropertyShape ;
