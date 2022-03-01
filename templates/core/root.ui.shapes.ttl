@@ -66,20 +66,22 @@ bds:NoteShape-noteText
   bds:defaultLanguage "en" ;
   sh:order "0"^^xsd:decimal ;
 .
+bds:NoteShape-noteSource
+  dash:editor dash:InstancesSelectEditor ;
+  sh:name "source"@en ;
+  sh:order "1"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
 bds:NoteShape-contentLocationStatement
   dash:editor dash:TextAreaWithLangEditor ;
   sh:name "source statement"@en ;
-  sh:order "1"^^xsd:decimal ;
+  sh:order "2"^^xsd:decimal ;
   dash:singleLine true ;
+  bds:displayPriority 1 ;
 .
 bds:NoteShape-contentLocation
   dash:editor dash:DetailsEditor ;
   sh:name "source location"@en ;
-  sh:order "2"^^xsd:decimal ;
-.
-bds:NoteShape-noteSource
-  dash:editor dash:InstancesSelectEditor ;
-  sh:name "source"@en ;
   sh:order "3"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .
