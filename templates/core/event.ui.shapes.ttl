@@ -60,6 +60,8 @@ bds:EventShape-onDate
 bds:EventShape-onOrAbout
   sh:description "use this to give a complex date representation, in EDTF: https://www.loc.gov/standards/datetime/."@en ;
   sh:name "event occurred on or about"@en ;
+  sh:message """This field must be in EDTF format, see https://www.loc.gov/standards/datetime/ .""" ;
+  bds:specialPattern bds:PatternEDTF ;
 .
 bds:EventShape-onYear
   sh:name "event occurred during the year"@en ;

@@ -78,7 +78,6 @@ bds:EventShape-onOrAbout
   sh:message "there must be at most one :onOrAbout, and it must be an xsd:string"@en ;
   sh:path bdo:onOrAbout ;
   sh:datatype xsd:string ;
-  bds:specialPattern bds:PatternEDTF ;
   sh:maxCount 1 ;
 .
 bds:EventShape-onYear
