@@ -58,7 +58,7 @@ bds:EventShape-onDate
   sh:name "event occurred on"@en ;
 .
 bds:EventShape-onOrAbout
-  sh:description "this property should not be used. Use on of the other 4 forms instead."@en ;
+  sh:description "use this to give a complex date representation, in EDTF: https://www.loc.gov/standards/datetime/."@en ;
   sh:name "event occurred on or about"@en ;
 .
 bds:EventShape-onYear

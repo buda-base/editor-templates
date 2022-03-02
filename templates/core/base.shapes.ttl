@@ -239,3 +239,24 @@ bds:DateTimeOrDateOrgYear
 bds:listPathZeroOrMore sh:zeroOrMorePath rdf:rest .
 bds:listPath rdf:first bds:listPathZeroOrMore ;
              rdf:rest rdf:first .
+
+bds:specialPattern
+  a owl:ObjectProperty ;
+  rdfs:domain sh:PropertyShape ;
+  rdfs:range bds:SpecialPattern ;
+  skos:prefLabel "special pattern"@en ;
+.
+
+bds:SpecialPattern
+  a owl:Class ;
+.
+bds:PatternEDTF
+  a bds:SpecialPattern ;
+  skos:prefLabel "EDTF pattern"@en ;
+  skos:description "Extended Date/Time Format (EDTF) has been designed by the Library of Congress and integrated into ISO8601-2019"@en ;
+  rdfs:seeAlso <https://www.loc.gov/standards/datetime/> ;
+.
+bds:PatternISBN
+  a bds:SpecialPattern ;
+  skos:prefLabel "ISBN pattern"@en ;
+.
