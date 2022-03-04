@@ -89,6 +89,7 @@ bds:BdouPreferredUiLang
   sh:datatype xsd:string ;
   sh:in ( "bo" "zh-Hans" "en" "km" "fr" )
   sh:maxCount 1 ;
+  sh:minCount 1 ;
 .
 bds:BdouPreferredUiLiteralLangs
   a sh:PropertyShape ;
