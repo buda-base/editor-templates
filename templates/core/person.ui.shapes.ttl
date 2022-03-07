@@ -189,6 +189,7 @@ bds:PersonShape-hasFather
   sh:group bds:KinshipPropertyGroup ;
   sh:name "has father"@en ;
   sh:order "0"^^xsd:decimal ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasMother
   dash:editor dash:InstancesSelectEditor ;
@@ -196,6 +197,7 @@ bds:PersonShape-hasMother
   sh:group bds:KinshipPropertyGroup ;
   sh:name "has mother"@en ;
   sh:order "1"^^xsd:decimal ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasBrother
   dash:editor dash:InstancesSelectEditor ;
@@ -203,6 +205,7 @@ bds:PersonShape-hasBrother
   sh:group bds:KinshipPropertyGroup ;
   sh:name "has brother"@en ;
   sh:order "2"^^xsd:decimal ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasSister
   dash:editor dash:InstancesSelectEditor ;
@@ -210,6 +213,7 @@ bds:PersonShape-hasSister
   sh:group bds:KinshipPropertyGroup ;
   sh:name "has sister"@en ;
   sh:order "3"^^xsd:decimal ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasSon
   dash:editor dash:InstancesSelectEditor ;
@@ -217,6 +221,7 @@ bds:PersonShape-hasSon
   sh:group bds:KinshipPropertyGroup ;
   sh:name "has son"@en ;
   sh:order "4"^^xsd:decimal ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasDaughter
   dash:editor dash:InstancesSelectEditor ;
@@ -224,6 +229,7 @@ bds:PersonShape-hasDaughter
   sh:group bds:KinshipPropertyGroup ;
   sh:name "has daughter"@en ;
   sh:order "5"^^xsd:decimal ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasHusband
   dash:editor dash:InstancesSelectEditor ;
@@ -231,6 +237,7 @@ bds:PersonShape-hasHusband
   sh:group bds:KinshipPropertyGroup ;
   sh:name "has husband"@en ;
   sh:order "6"^^xsd:decimal ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasWife
   dash:editor dash:InstancesSelectEditor ;
@@ -238,6 +245,7 @@ bds:PersonShape-hasWife
   sh:group bds:KinshipPropertyGroup ;
   sh:name "has wife"@en ;
   sh:order "7"^^xsd:decimal ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasGranddaughter
   dash:editor dash:InstancesSelectEditor ;
@@ -246,6 +254,7 @@ bds:PersonShape-hasGranddaughter
   sh:name "has granddaughter"@en ;
   sh:order "8"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasSpouse
   dash:editor dash:InstancesSelectEditor ;
@@ -254,6 +263,7 @@ bds:PersonShape-hasSpouse
   sh:name "has spouse"@en ;
   sh:order "9"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasCousin
   dash:editor dash:InstancesSelectEditor ;
@@ -261,6 +271,7 @@ bds:PersonShape-hasCousin
   sh:name "has cousin"@en ;
   sh:order "10"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasGrandfather
   dash:editor dash:InstancesSelectEditor ;
@@ -269,6 +280,7 @@ bds:PersonShape-hasGrandfather
   sh:name "has grandfather"@en ;
   sh:order "11"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasGrandmother
   dash:editor dash:InstancesSelectEditor ;
@@ -277,6 +289,7 @@ bds:PersonShape-hasGrandmother
   sh:name "has grandmother"@en ;
   sh:order "12"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasGrandson
   dash:editor dash:InstancesSelectEditor ;
@@ -285,6 +298,7 @@ bds:PersonShape-hasGrandson
   sh:name "has grandson"@en ;
   sh:order "13"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasGrandChild
   dash:editor dash:InstancesSelectEditor ;
@@ -293,6 +307,7 @@ bds:PersonShape-hasGrandChild
   sh:name "has grandchild"@en ;
   sh:order "14"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasGrandParent
   dash:editor dash:InstancesSelectEditor ;
@@ -301,6 +316,7 @@ bds:PersonShape-hasGrandParent
   sh:name "has grandparent"@en ;
   sh:order "15"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasOlderBrother
   dash:editor dash:InstancesSelectEditor ;
@@ -309,6 +325,7 @@ bds:PersonShape-hasOlderBrother
   sh:name "has older brother"@en ;
   sh:order "16"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasOlderSister
   dash:editor dash:InstancesSelectEditor ;
@@ -317,6 +334,7 @@ bds:PersonShape-hasOlderSister
   sh:name "has older sister"@en ;
   sh:order "17"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasParent
   dash:editor dash:InstancesSelectEditor ;
@@ -325,6 +343,7 @@ bds:PersonShape-hasParent
   sh:name "has parent"@en ;
   sh:order "18"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasSibling
   dash:editor dash:InstancesSelectEditor ;
@@ -333,6 +352,7 @@ bds:PersonShape-hasSibling
   sh:name "has sibling"@en ;
   sh:order "19"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasYoungerBrother
   dash:editor dash:InstancesSelectEditor ;
@@ -341,6 +361,7 @@ sh:group bds:KinshipPropertyGroup ;
   sh:name "has younger brother"@en ;
   sh:order "20"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasYoungerSister
   dash:editor dash:InstancesSelectEditor ;
@@ -349,6 +370,7 @@ bds:PersonShape-hasYoungerSister
   sh:name "has younger sister"@en ;
   sh:order "21"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class      bdo:Person ;
 .
 bds:PersonShape-kinWith
   dash:editor dash:InstancesSelectEditor ;
@@ -357,6 +379,7 @@ bds:PersonShape-kinWith
   sh:name "has kin"@en ;
   sh:order "22"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class      bdo:Person ;
 .
 ##
 ## Student/Teacher
@@ -367,6 +390,7 @@ bds:PersonShape-personStudentOf
   sh:group bds:StudentTeacherPropertyGroup ;
   sh:name "teachers"@en ;
   sh:order "0"^^xsd:decimal ;
+  bds:classIn ( bdo:Person bdo:Topic )
 .
 bds:PersonShape-personTeacherOf
   dash:editor dash:InstancesSelectEditor ;
@@ -374,6 +398,7 @@ bds:PersonShape-personTeacherOf
   sh:group bds:StudentTeacherPropertyGroup ;
   sh:name "students"@en ;
   sh:order "1"^^xsd:decimal ;
+  sh:class      bdo:Person ;
 .
 ##
 ## Incarnation
@@ -382,81 +407,95 @@ bds:PersonShape-hasIncarnationGeneral
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:IncarnationPropertyGroup ;
   sh:order "0"^^xsd:decimal ;
+  sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationYangtse
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:IncarnationPropertyGroup ;
   sh:order "1"^^xsd:decimal ;
+  sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationBody
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:IncarnationPropertyGroup ;
   sh:order "2"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationSpeech
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:IncarnationPropertyGroup ;
   sh:order "3"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationMind
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:IncarnationPropertyGroup ;
   sh:order "4"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationQualities
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:IncarnationPropertyGroup ;
   sh:order "5"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationActivities
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:IncarnationPropertyGroup ;
   sh:order "6"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class bdo:Person ;
 .
 bds:PersonShape-incarnationGeneral
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:IncarnationPropertyGroup ;
   sh:order "7"^^xsd:decimal ;
+  sh:class bdo:Person ;
 .
 bds:PersonShape-incarnationYangtse
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:IncarnationPropertyGroup ;
   sh:order "8"^^xsd:decimal ;
+  sh:class bdo:Person ;
 .
 bds:PersonShape-incarnationBody
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:IncarnationPropertyGroup ;
   sh:order "9"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class bdo:Person ;
 .
 bds:PersonShape-incarnationSpeech
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:IncarnationPropertyGroup ;
   sh:order "10"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class bdo:Person ;
 .
 bds:PersonShape-incarnationMind
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:IncarnationPropertyGroup ;
   sh:order "11"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class bdo:Person ;
 .
 bds:PersonShape-incarnationQualities
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:IncarnationPropertyGroup ;
   sh:order "12"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class bdo:Person ;
 .
 bds:PersonShape-incarnationActivities
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:IncarnationPropertyGroup ;
   sh:order "13"^^xsd:decimal ;
   bds:displayPriority 1 ;
+  sh:class bdo:Person ;
 .
 ##
 ## Notes

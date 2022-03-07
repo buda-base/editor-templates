@@ -120,38 +120,32 @@ bds:PersonShape-hasBrother
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasBrother ;
-  sh:class      bdo:Person ;
 .
 bds:PersonShape-hasCousin
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasCousin ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasDaughter
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasDaughter ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasFather
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasFather ;
   sh:maxCount 1 ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasGrandChild
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasGrandChild ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasGrandParent
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasGrandParent ;
-  sh:class bdo:Person ;
   sh:message "A person may have at most 4 grandparents"@en ;
   sh:maxCount 4 ;
 .
@@ -159,7 +153,6 @@ bds:PersonShape-hasGranddaughter
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasGranddaughter ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasGrandfather
   a sh:PropertyShape ;
@@ -167,7 +160,6 @@ bds:PersonShape-hasGrandfather
   sh:path bdo:hasGrandfather ;
   sh:maxCount 2 ;
   sh:message "A person may have at most 2 grandfathers"@en ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasGrandmother
   a sh:PropertyShape ;
@@ -175,21 +167,18 @@ bds:PersonShape-hasGrandmother
   sh:path bdo:hasGrandmother ;
   sh:maxCount 2 ;
   sh:message "A person may have at most 2 grandmothers"@en ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasGrandson
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasGrandson ;
   sh:message "A grandson must be Male"@en ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasHusband
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasHusband ;
   sh:message "A husband must be Male"@en ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasMother
   a sh:PropertyShape ;
@@ -197,25 +186,21 @@ bds:PersonShape-hasMother
   sh:path bdo:hasMother ;
   sh:maxCount 1 ;
   sh:message "There is at most one mother"@en ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasOlderBrother
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasOlderBrother ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasOlderSister
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasOlderSister ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasParent
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasParent ;
-  sh:class bdo:Person ;
   sh:maxCount 2 ;
   sh:message "A person may have at most 2 parents"@en ;
 .
@@ -223,49 +208,41 @@ bds:PersonShape-hasSibling
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasSibling ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasSister
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasSister ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasSon
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasSon ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasSpouse
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasSpouse ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasWife
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasWife ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasYoungerBrother
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasYoungerBrother ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasYoungerSister
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasYoungerSister ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-kinWith
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:kinWith ;
-  sh:class bdo:Person ;
 .
 ##
 ## Student/Teacher
@@ -274,13 +251,11 @@ bds:PersonShape-personStudentOf
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:personStudentOf ;
-  bds:classIn ( bdo:Person bdo:Topic )
 .
 bds:PersonShape-personTeacherOf
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:personTeacherOf ;
-  sh:class bdo:Person ;
 .
 bds:CommonShape-prefLabel
   sh:message "There must be at least one skos:prefLabel"@en ;
@@ -375,43 +350,36 @@ bds:PersonShape-hasIncarnationGeneral
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasIncarnationGeneral ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationYangtse
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasIncarnationYangtse ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationBody
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasIncarnationBody ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationSpeech
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasIncarnationSpeech ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationMind
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasIncarnationMind ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationQualities
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasIncarnationQualities ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationActivities
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:hasIncarnationGeneral ;
-  sh:class bdo:Person ;
 .
 
 
@@ -419,43 +387,36 @@ bds:PersonShape-incarnationGeneral
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:incarnationGeneral ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-incarnationYangtse
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:incarnationYangtse ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-incarnationBody
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:incarnationBody ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-incarnationSpeech
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:incarnationSpeech ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-incarnationMind
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:incarnationMind ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-incarnationQualities
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:incarnationQualities ;
-  sh:class bdo:Person ;
 .
 bds:PersonShape-incarnationActivities
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:incarnationActivities ;
-  sh:class bdo:Person ;
 .
 
 
