@@ -63,7 +63,7 @@ bds:EventShape-onDate
   bds:displayPriority 3 ;
   bds:readOnly true ;
 .
-bds:EventShape-onOrAbout
+bds:EventShape-eventWhen
   sh:description "use this to give a complex date representation, in EDTF: https://www.loc.gov/standards/datetime/."@en ;
   sh:name "date indication (extended format)"@en ;
   sh:message """This field must be in EDTF format, see https://www.loc.gov/standards/datetime/ .""" ;

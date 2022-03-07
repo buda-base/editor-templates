@@ -132,7 +132,7 @@ bds:PersonEventShape-type
   sh:name "type"@en ;
   sh:order "0"^^xsd:decimal ;
 .
-bds:EventShape-onOrAbout sh:order "1"^^xsd:decimal .
+bds:EventShape-eventWhen sh:order "1"^^xsd:decimal .
 bds:EventShape-eventWhere sh:order "2"^^xsd:decimal ; 
   bds:displayPriority 1 ;
 .

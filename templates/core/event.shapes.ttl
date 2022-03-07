@@ -42,7 +42,7 @@ bds:EventShape
   sh:property bds:EventShape-notAfter ;
   sh:property bds:EventShape-notBefore ;
   sh:property bds:EventShape-onDate ;
-  sh:property bds:EventShape-onOrAbout ;
+  sh:property bds:EventShape-eventWhen ;
   sh:property bds:EventShape-onYear ;
   sh:property bds:EventShape-eventWhere ;
   sh:property bds:EventShape-eventWho ;
@@ -73,11 +73,11 @@ bds:EventShape-onDate
   sh:datatype xsd:date ;
   sh:maxCount 1 ;
 .
-bds:EventShape-onOrAbout
+bds:EventShape-eventWhen
   a sh:PropertyShape ;
-  sh:message "there must be at most one :onOrAbout, and it must be an xsd:string"@en ;
+  sh:message "there must be at most one :eventWhen"@en ;
   sh:path bdo:onOrAbout ;
-  sh:datatype xsd:string ;
+  sh:datatype <http://id.loc.gov/datatypes/edtf> ;
   sh:maxCount 1 ;
 .
 bds:EventShape-onYear

@@ -136,16 +136,10 @@ bds:InstanceEventShape-type
   sh:name "type"@en ;
   sh:order "0"^^xsd:decimal ;
 .
-bds:EventShape-onYear sh:order "1"^^xsd:decimal .
-bds:EventShape-notAfter sh:order "3"^^xsd:decimal ;
-   bds:displayPriority 1 ;
-.
-bds:EventShape-notBefore sh:order "2"^^xsd:decimal ;
-   bds:displayPriority 1 ;
-.
-bds:EventShape-onOrAbout sh:order "4"^^xsd:decimal ;
-   bds:displayPriority 1 ;
-.
+bds:EventShape-eventWhen sh:order "1"^^xsd:decimal .
+bds:EventShape-onYear sh:order "2"^^xsd:decimal .
+bds:EventShape-notBefore sh:order "3"^^xsd:decimal .
+bds:EventShape-notAfter sh:order "4"^^xsd:decimal .
 ##
 ## textual features
 ##
