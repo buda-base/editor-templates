@@ -77,7 +77,7 @@ bds:displayPriority
   rdfs:label "display priority"@en ;
   rdfs:range xsd:integer ;
   rdfs:domain sh:PropertyShape ;
-  skos:definition "indicates if a property should be displayed or hidden, using a number between 0 and 2 where 0 means the property should always be displayed, 1 means the property can be hidden behind a see more button if necessary, 2 means the property should be hidden."@en ;
+  skos:definition "indicates if a property should be displayed or hidden, using a number between 0 and 2 where 0 means the property should always be displayed, 1 means the property can be hidden behind a see more button if necessary, 2 means the property should be hidden unless there's an associated value, and 3 means that the property should always be hidden (use for inferred fields for instance)."@en ;
 .
 bds:classIn
   a owl:DatatypeProperty ;

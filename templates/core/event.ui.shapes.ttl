@@ -47,23 +47,31 @@ bds:EventShape-eventWho
 .
 bds:EventShape-notAfter
   sh:name "event occurred not after"@en ;
-  dash:editor bds:TextFieldEditor ;
+  dash:editor bds:gYearEditor ;
+  bds:displayPriority 3 ;
+  bds:readOnly true ;
 .
 bds:EventShape-notBefore
   sh:name "event occurred not before"@en ;
-  dash:editor bds:TextFieldEditor ;
+  dash:editor bds:gYearEditor ;
+  bds:displayPriority 3 ;
+  bds:readOnly true ;
 .
 bds:EventShape-onDate
   dash:editor dash:DatePickerEditor ;
   sh:name "event occurred on"@en ;
+  bds:displayPriority 3 ;
+  bds:readOnly true ;
 .
 bds:EventShape-onOrAbout
   sh:description "use this to give a complex date representation, in EDTF: https://www.loc.gov/standards/datetime/."@en ;
-  sh:name "event occurred on or about"@en ;
+  sh:name "date indication (extended format)"@en ;
   sh:message """This field must be in EDTF format, see https://www.loc.gov/standards/datetime/ .""" ;
   bds:specialPattern bds:PatternEDTF ;
 .
 bds:EventShape-onYear
   sh:name "event occurred during the year"@en ;
   dash:editor bds:gYearEditor ;
+  bds:displayPriority 3 ;
+  bds:readOnly true ;
 .
