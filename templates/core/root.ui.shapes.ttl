@@ -74,14 +74,14 @@ bds:NoteShape-noteSource
 .
 bds:NoteShape-contentLocationStatement
   dash:editor dash:TextAreaWithLangEditor ;
-  sh:name "source statement"@en ;
+  sh:name "location statement"@en ;
   sh:order "2"^^xsd:decimal ;
   dash:singleLine true ;
   bds:displayPriority 1 ;
 .
 bds:NoteShape-contentLocation
   dash:editor dash:DetailsEditor ;
-  sh:name "source location"@en ;
+  sh:name "location"@en ;
   sh:order "3"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .

@@ -388,7 +388,7 @@ bds:PersonShape-personStudentOf
   dash:editor dash:InstancesSelectEditor ;
   sh:description "use only for direct (physical) student/teacher relationships"@en ;
   sh:group bds:StudentTeacherPropertyGroup ;
-  sh:name "teachers"@en ;
+  sh:name "student of"@en ;
   sh:order "0"^^xsd:decimal ;
   bds:classIn ( bdo:Person bdo:Topic )
 .
@@ -396,7 +396,7 @@ bds:PersonShape-personTeacherOf
   dash:editor dash:InstancesSelectEditor ;
   sh:description "use only for direct (physical) teacher/student relationships"@en ;
   sh:group bds:StudentTeacherPropertyGroup ;
-  sh:name "students"@en ;
+  sh:name "teacher of"@en ;
   sh:order "1"^^xsd:decimal ;
   sh:class      bdo:Person ;
 .
