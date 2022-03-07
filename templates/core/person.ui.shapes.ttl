@@ -62,7 +62,7 @@ bds:EventPropertyGroup
 .
 bds:StudentTeacherPropertyGroup
   a sh:PropertyGroup ;
-  rdfs:label "Students/Teachers"@en ;
+  rdfs:label "Teachers and Students"@en ;
   sh:order "3"^^xsd:decimal ;
 .
 bds:KinshipPropertyGroup
@@ -365,14 +365,14 @@ bds:PersonShape-personStudentOf
   dash:editor dash:InstancesSelectEditor ;
   sh:description "use only for direct (physical) student/teacher relationships"@en ;
   sh:group bds:StudentTeacherPropertyGroup ;
-  sh:name "student of"@en ;
+  sh:name "teachers"@en ;
   sh:order "0"^^xsd:decimal ;
 .
 bds:PersonShape-personTeacherOf
   dash:editor dash:InstancesSelectEditor ;
   sh:description "use only for direct (physical) teacher/student relationships"@en ;
   sh:group bds:StudentTeacherPropertyGroup ;
-  sh:name "teacher of"@en ;
+  sh:name "students"@en ;
   sh:order "1"^^xsd:decimal ;
 .
 ##
