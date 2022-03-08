@@ -148,15 +148,9 @@ bds:PersonEventShape-personEventCorporation
   sh:order "4"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .
-bds:EventShape-onYear sh:order "5"^^xsd:decimal ;
-  bds:displayPriority 1 ;
-.
-bds:EventShape-notBefore sh:order "6"^^xsd:decimal ;
-   bds:displayPriority 1 ;
-.
-bds:EventShape-notAfter sh:order "7"^^xsd:decimal ;
-   bds:displayPriority 1 ;
-.
+bds:EventShape-onYear sh:order "5"^^xsd:decimal .
+bds:EventShape-notBefore sh:order "6"^^xsd:decimal.
+bds:EventShape-notAfter sh:order "7"^^xsd:decimal .
 ##
 ## PersonNames
 ##
