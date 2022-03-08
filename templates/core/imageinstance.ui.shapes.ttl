@@ -135,7 +135,6 @@ bds:ImagegroupShape-imagesMissing
 bds:ImagegroupShape-volumePagesTbrcIntro
   dash:editor dash:TextFieldEditor ;
   sh:order "5"^^xsd:decimal ;
-  bds:displayPriority 1 ;
 .
 bds:ImagegroupShape-volumeNote
   dash:editor dash:TextFieldEditor ;
