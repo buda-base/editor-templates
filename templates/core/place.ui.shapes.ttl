@@ -109,6 +109,12 @@ bds:PlaceShape-placeContains
   sh:name "contains"@en ;
   sh:order "1"^^xsd:decimal ;
 .
+bds:CommonShape-associatedTradition
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:PlaceAssociatedPropertyGroup ;
+  sh:name "associated tradition"@en ;
+  sh:order "2"^^xsd:decimal ;
+.
 
 bds:PlaceShape-placeEvent
   sh:group bds:PlaceEventPropertyGroup ;

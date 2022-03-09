@@ -80,6 +80,7 @@ bds:PersonShape
   sh:property bds:PersonShape-incarnationMind ;
   sh:property bds:PersonShape-incarnationQualities ;
   sh:property bds:PersonShape-incarnationActivities ;
+  sh:property bds:CommonShape-associatedTradition ;
   # TODO: incarnation
   # TODO: missing kin properties
   sh:targetClass bdo:Person ;

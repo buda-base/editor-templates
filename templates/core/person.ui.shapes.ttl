@@ -117,6 +117,15 @@ bds:PersonShape-gender
   sh:order "2"^^xsd:decimal ;
 .
 ##
+## Tradition
+##
+bds:CommonShape-associatedTradition
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:BasePropertyGroup ;
+  sh:name "associated tradition"@en ;
+  sh:order "3"^^xsd:decimal ;
+.
+##
 ## PersonEvents
 ##
 bds:PersonShape-personEvent
