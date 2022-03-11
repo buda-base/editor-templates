@@ -57,9 +57,11 @@ bds:ImageInstanceShape-type
   sh:minCount 1 ;
 .
 
-bds:InstanceShape-instanceReproductionOf
-  sh:minCount 1 ;
-.
+# temporarily disabling so that we can test independently of the instance
+
+#bds:InstanceShape-instanceReproductionOf
+#  sh:minCount 1 ;
+#.
 
 bds:ImageInstanceShape-scanInfo
   a sh:PropertyShape ;
