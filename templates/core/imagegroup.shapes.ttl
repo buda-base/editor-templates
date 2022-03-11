@@ -38,7 +38,7 @@ bds:ImagegroupShape
   sh:property bds:ImagegroupShape-type ;
   sh:property bds:CommonShape-prefLabel ;
   sh:property bds:CommonShape-altLabel ;
-  sh:property bdsa:AdmShape-adminAbout ;
+  # sh:property bdsa:AdmShape-adminAbout ;
   sh:property bds:ImagegroupShape-volumeNote ;
   sh:property bds:ImagegroupShape-volumeNumber ;
   sh:property bds:ImagegroupShape-volumePagesTbrcIntro ;
