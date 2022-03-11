@@ -36,7 +36,7 @@ bds:ImagegroupShape
   bds:identifierPrefix "I" ;
   bds:independentIdentifiers true ;
   sh:property bds:ImagegroupShape-type ;
-  sh:property bds:CommonShape-prefLabel ;
+  sh:property bds:ImagegroupShape-prefLabel ;
   sh:property bds:CommonShape-altLabel ;
   # sh:property bdsa:AdmShape-adminAbout ;
   sh:property bds:ImagegroupShape-volumeNote ;
@@ -45,6 +45,13 @@ bds:ImagegroupShape
   sh:property bds:ImagegroupShape-imagesMissing ;
   sh:targetClass bdo:ImageGroup ;
   sh:targetObjectsOf bdo:instanceHasVolume ;
+.
+# an optional version of prefLabel
+bds:ImagegroupShape-prefLabel
+  a sh:PropertyShape ;
+  sh:path skos:prefLabel ;
+  sh:datatype rdf:langString ;
+  sh:uniqueLang true ;
 .
 bds:ImagegroupShape-type
   a sh:PropertyShape ;

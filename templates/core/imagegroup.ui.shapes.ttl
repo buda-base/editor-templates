@@ -51,9 +51,13 @@ bds:ImagegroupShape-volumeNumber
   sh:group bds:BasePropertyGroup ;
   sh:order "2"^^xsd:decimal ;
 .
-bds:CommonShape-prefLabel
+bds:ImagegroupShape-prefLabel
   sh:group bds:BasePropertyGroup ;
   sh:order "3"^^xsd:decimal ;
+  sh:description "preferred label, will be displayed when the person is referred to: as the top title in the web page, in search results, in other records, etc."@en ;
+  sh:name "Pref. label"@en ;
+  dash:editor dash:TextAreaWithLangEditor ;
+  dash:singleLine true ;
 .
 bds:CommonShape-altLabel
   sh:group bds:BasePropertyGroup ;
