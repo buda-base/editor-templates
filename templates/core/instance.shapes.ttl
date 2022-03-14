@@ -43,6 +43,7 @@ bds:InstanceShape
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
   sh:property bds:InstanceShape-binding ;
+  sh:property bds:InstanceShape-hasTitle ;
   sh:property bds:InstanceShape-script ;
   sh:property bds:InstanceShape-printMethod ;
   sh:property bds:InstanceShape-reproductionPrintMethod ;
@@ -289,4 +290,41 @@ bds:InstanceShape-contentLocationStatement
 .
 bdsa:AdmEntityShape-replaceWith 
   bds:classIn ( bdo:Instance ) ;
+.
+#
+# titles
+#
+bds:InstanceShape-hasTitle
+  a sh:PropertyShape ;
+  sh:path bdo:hasTitle ;
+  sh:nodeKind sh:IRI ;
+  bds:propertyShapeType bds:FacetShape ;
+.
+bds:TitleShape
+  a sh:NodeShape ;
+  bds:identifierPrefix "TT" ;
+  bds:nodeShapeType bds:FacetShape ;
+  rdfs:label "Title Shape"@en ;
+  sh:targetObjectsOf bdo:hasTitle ;
+  sh:property bds:TitleShape-value ;
+  sh:property bds:TitleShape-type ;
+  sh:targetClass bdo:Title ;
+.
+bds:TitleShape-value
+  a sh:PropertyShape ;
+  sh:path rdfs:label ;
+  sh:datatype rdf:langString ;
+  sh:message "A title must have exactly one rdfs:label"@en ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  bds:allowPushToTopLevelSkosPrefLabel true ;
+.
+bds:TitleShape-type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:in ( bdo:TitlePageTitle bdo:IncipitTitle bdo:ColophonTitle bdo:RunningTitle bdo:ToCTitle bdo:SpineTitle bdo:ReconstructedTitle bdo:Subtitle bdo:CopyrightPageTitle bdo:CoverTitle bdo:TitlePortion bdo:FullTitle bdo:HalfTitle bdo:OtherTitle bdo:BibliographicalTitle ) ;
+  sh:nodeKind sh:IRI ;
+  sh:message "A title must have one type"@en ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
 .

@@ -71,12 +71,39 @@ bds:CommonShape-identifiedBy
   bds:displayPriority 1 ;
 .
 ##
+## Titles
+##
+bds:TitlesPropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Titles"@en ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:InstanceShape-hasTitle
+  sh:description "this Person may have one or more names."@en ;
+  sh:name "title"@en ;
+  sh:group bds:TitlesPropertyGroup ;
+  dash:editor dash:DetailsEditor ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:TitleShape-type
+  dash:editor dash:EnumSelectEditor ;
+  sh:description "name type"@en ;
+  sh:name "type"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:TitleShape-value
+  dash:editor dash:TextAreaWithLangEditor ;
+  dash:singleLine true ;
+  sh:name "title value"@en ;
+  sh:order "1"^^xsd:decimal ;
+.
+##
 ## Publishers and printery
 ##
 bds:PubPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Publication/Printery"@en ;
-  sh:order "1"^^xsd:decimal ;
+  sh:order "2"^^xsd:decimal ;
 .
 bds:InstanceShape-printMethod
   dash:editor dash:EnumSelectEditor ;
@@ -87,6 +114,7 @@ bds:InstanceShape-reproductionPrintMethod
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:PubPropertyGroup ;
   sh:order "1"^^xsd:decimal ;
+  bds:displayPriority 1 ;
 .
 bds:InstanceShape-publisherName
   dash:editor dash:TextAreaWithLangEditor ;
@@ -146,7 +174,7 @@ bds:EventShape-notAfter sh:order "4"^^xsd:decimal .
 bds:TextPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Textual features"@en ;
-  sh:order "2"^^xsd:decimal ;
+  sh:order "3"^^xsd:decimal ;
 .
 bds:InstanceShape-colophon
   dash:editor dash:TextAreaWithLangEditor ;
@@ -170,7 +198,7 @@ bds:InstanceShape-authorshipStatement
 bds:PhysicalPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Physical features"@en ;
-  sh:order "3"^^xsd:decimal ;
+  sh:order "4"^^xsd:decimal ;
 .
 bds:InstanceShape-numberOfVolumes
   dash:editor dash:TextFieldEditor ;
@@ -225,7 +253,7 @@ bds:InstanceShape-isDamaged
 bds:SerialPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Properties of serials"@en ;
-  sh:order "4"^^xsd:decimal ;
+  sh:order "5"^^xsd:decimal ;
 .
 bds:InstanceShape-serialInstanceOf
   dash:editor dash:InstancesSelectEditor ;
@@ -244,7 +272,7 @@ bds:InstanceShape-seriesNumber
 bds:PartsPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Properties of parts (ex-outline nodes)"@en ;
-  sh:order "5"^^xsd:decimal ;
+  sh:order "6"^^xsd:decimal ;
 .
 bds:InstanceShape-partType
   dash:editor dash:EnumSelectEditor ;
@@ -268,7 +296,7 @@ bds:InstanceShape-contentLocationStatement
 bds:NotesPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Notes"@en ;
-  sh:order "6"^^xsd:decimal ;
+  sh:order "7"^^xsd:decimal ;
 .
 bds:RootShape-note
   sh:group bds:NotesPropertyGroup ;
@@ -281,7 +309,7 @@ bds:RootShape-note
 bds:AdminPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Admin data"@en ;
-  sh:order "7"^^xsd:decimal ;
+  sh:order "8"^^xsd:decimal ;
 .
 bdsa:AdmShape-adminAbout 
   dash:editor dash:DetailsEditor ;

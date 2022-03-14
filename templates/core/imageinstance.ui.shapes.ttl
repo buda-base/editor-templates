@@ -141,3 +141,6 @@ bds:ImagegroupShape-volumeNote
   sh:order "6"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .
+bdsa:AdmEntityShape-access
+  sh:minCount 1 ;
+.

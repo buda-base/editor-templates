@@ -42,7 +42,7 @@ bds:WorkShape
   sh:property bds:WorkShape-hasInstance ;
   sh:property bds:WorkShape-hasTranslation ;
   sh:property bds:WorkShape-workEvent ;
-  sh:property bds:CommonShape-identifiedBy ;
+  # sh:property bds:CommonShape-identifiedBy ;
   sh:property bds:BiblioShape-creator ;
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
