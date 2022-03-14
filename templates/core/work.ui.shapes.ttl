@@ -158,3 +158,6 @@ bds:RootShape-note
   sh:order "0"^^xsd:decimal ;
   dash:editor dash:DetailsEditor ;
 .
+bds:IdentifierShape-rdfType
+  sh:in ( bdr:RefrKTsIdentifier ) ;
+.

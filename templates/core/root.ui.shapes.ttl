@@ -184,3 +184,28 @@ bds:ContentLocationShape-contentPagination
   sh:order "15"^^xsd:decimal ;
   bds:displayPriority 2 ;
 .
+bds:AgentAsCreatorShape-role
+  dash:editor dash:EnumSelectEditor ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:AgentAsCreatorShape-agent
+  dash:editor dash:InstancesSelectEditor ;
+  sh:order "1"^^xsd:decimal ;
+.
+bds:AgentAsCreatorShape-sourceIndication
+  dash:editor dash:TextFieldEditor ;
+  sh:name "indication in source"@en ;
+  sh:order "2"^^xsd:decimal ;
+  dash:singleLine true ;
+  bds:displayPriority 1 ;
+.
+bds:IdentifierShape-rdfType
+  dash:editor dash:EnumSelectEditor ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:IdentifierShape-rdfValue
+  dash:editor dash:TextFieldEditor ;
+  sh:name "value"@en ;
+  sh:order "1"^^xsd:decimal ;
+  dash:singleLine true ;
+.

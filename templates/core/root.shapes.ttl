@@ -102,13 +102,13 @@ bds:AgentAsCreatorShape
   bds:nodeShapeType bds:FacetShape ;
   sh:property bds:AgentAsCreatorShape-role ;
   sh:property bds:AgentAsCreatorShape-agent ;
+  sh:property bds:AgentAsCreatorShape-sourceIndication ;
   sh:targetClass bdo:AgentAsCreator ;
   sh:targetObjectsOf bdo:creator ;
 .
 bds:AgentAsCreatorShape-role
   a sh:PropertyShape ;
   sh:path bdo:role ;
-  sh:datatype xsd:string ;
   sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
@@ -118,9 +118,14 @@ bds:AgentAsCreatorShape-agent
   sh:path bdo:agent ;
   sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
-  sh:minCount 1 ;
   bds:propertyShapeType bds:ExternalShape ;
   bds:classIn ( bdo:Person bdo:Topic ) ;
+.
+bds:AgentAsCreatorShape-sourceIndication
+  a sh:PropertyShape ;
+  sh:path rdfs:label ;
+  sh:datatype rdf:langString ;
+  sh:maxCount 1 ;
 .
 ##
 ## Associated Tradition
