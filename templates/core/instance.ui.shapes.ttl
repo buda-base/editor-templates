@@ -64,10 +64,15 @@ bds:InstanceShape-script
   sh:group bds:BasePropertyGroup ;
   sh:order "4"^^xsd:decimal ;
 .
+bds:InstanceShape-instanceOf
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:BasePropertyGroup ;
+  sh:order "5"^^xsd:decimal ;
+.
 bds:CommonShape-identifiedBy
   sh:name "identifier"@en ;
   sh:group bds:BasePropertyGroup ;
-  sh:order "5"^^xsd:decimal ;
+  sh:order "6"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .
 ##
