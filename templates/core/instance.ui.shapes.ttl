@@ -324,3 +324,6 @@ bdsa:AdmShape-adminAbout
 bds:AgentAsCreatorShape-agent
   sh:minCount 1 ;
 .
+bds:IdentifierShape-rdfType
+  sh:in ( bf:Isbn bf:Lccn bdr:OclcControlNumber bdr:PL480 bdr:HollisId ) ;
+.
