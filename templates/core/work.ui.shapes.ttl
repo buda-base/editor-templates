@@ -161,3 +161,6 @@ bds:RootShape-note
 bds:IdentifierShape-rdfType
   sh:in ( bdr:RefrKTsIdentifier ) ;
 .
+bds:AgentAsCreatorShape-agent
+  sh:minCount 1 ;
+.

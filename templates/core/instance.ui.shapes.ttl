@@ -59,20 +59,15 @@ bds:InstanceShape-biblioNote
   sh:group bds:BasePropertyGroup ;
   sh:order "3"^^xsd:decimal ;
 .
-bds:InstanceShape-script
-  dash:editor dash:EnumSelectEditor ;
-  sh:group bds:BasePropertyGroup ;
-  sh:order "4"^^xsd:decimal ;
-.
 bds:InstanceShape-instanceOf
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:BasePropertyGroup ;
-  sh:order "5"^^xsd:decimal ;
+  sh:order "4"^^xsd:decimal ;
 .
 bds:CommonShape-identifiedBy
   sh:name "identifier"@en ;
   sh:group bds:BasePropertyGroup ;
-  sh:order "6"^^xsd:decimal ;
+  sh:order "5"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .
 ##
@@ -205,51 +200,55 @@ bds:PhysicalPropertyGroup
   rdfs:label "Physical features"@en ;
   sh:order "4"^^xsd:decimal ;
 .
-bds:InstanceShape-numberOfVolumes
-  dash:editor dash:TextFieldEditor ;
+bds:InstanceShape-script
+  dash:editor dash:EnumSelectEditor ;
   sh:group bds:PhysicalPropertyGroup ;
   sh:order "0"^^xsd:decimal ;
-  dash:singleLine true ;
 .
 bds:InstanceShape-binding
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:PhysicalPropertyGroup ;
   sh:order "1"^^xsd:decimal ;
 .
+bds:InstanceShape-material
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:PhysicalPropertyGroup ;
+  sh:order "2"^^xsd:decimal ;
+.
+bds:InstanceShape-numberOfVolumes
+  dash:editor dash:TextFieldEditor ;
+  sh:group bds:PhysicalPropertyGroup ;
+  sh:order "3"^^xsd:decimal ;
+  dash:singleLine true ;
+.
 bds:InstanceShape-instanceExtentStatement
   dash:editor dash:TextAreaWithLangEditor ;
   dash:singleLine true ;
   sh:group bds:PhysicalPropertyGroup ;
-  sh:order "2"^^xsd:decimal ;
-.
-bds:InstanceShape-material
-  dash:editor dash:EnumSelectEditor ;
-  sh:group bds:PhysicalPropertyGroup ;
-  sh:order "3"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  sh:order "4"^^xsd:decimal ;
 .
 bds:InstanceShape-dimWidth
-  dash:editor dash:TextFieldEditor ;
-  sh:group bds:PhysicalPropertyGroup ;
-  sh:order "4"^^xsd:decimal ;
-  bds:displayPriority 1 ;
-.
-bds:InstanceShape-dimLength
   dash:editor dash:TextFieldEditor ;
   sh:group bds:PhysicalPropertyGroup ;
   sh:order "5"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .
-bds:InstanceShape-dimHeight
+bds:InstanceShape-dimLength
   dash:editor dash:TextFieldEditor ;
   sh:group bds:PhysicalPropertyGroup ;
   sh:order "6"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .
+bds:InstanceShape-dimHeight
+  dash:editor dash:TextFieldEditor ;
+  sh:group bds:PhysicalPropertyGroup ;
+  sh:order "7"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
 bds:InstanceShape-isDamaged
   dash:editor dash:BooleanSelectEditor ;
   sh:group bds:PhysicalPropertyGroup ;
-  sh:order "7"^^xsd:decimal ;
+  sh:order "8"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .
 ##
@@ -321,4 +320,7 @@ bdsa:AdmShape-adminAbout
   sh:group bds:AdminPropertyGroup ;
   sh:name "admin data"@en ;
   sh:order "0"^^xsd:decimal ;
+.
+bds:AgentAsCreatorShape-agent
+  sh:minCount 1 ;
 .
