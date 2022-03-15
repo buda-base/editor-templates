@@ -116,6 +116,7 @@ bds:WorkShape-isAbout
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:RelationsPropertyGroup ;
   sh:order "0"^^xsd:decimal ;
+  sh:description "indicate topic, place, person (for biographies) or work (for commentaries)"@en ;
 .
 bds:WorkShape-genre
   dash:editor dash:InstancesSelectEditor ;
@@ -126,6 +127,7 @@ bds:WorkShape-hasTranslation
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:RelationsPropertyGroup ;
   sh:order "2"^^xsd:decimal ;
+  bds:displayPriority 1 ;
 .
 bds:WorkShape-workEvent
   sh:group bds:EventsPropertyGroup ;
