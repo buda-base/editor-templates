@@ -319,3 +319,6 @@ bds:TitleShape-type
   sh:minCount 1 ;
   sh:maxCount 1 ;
 .
+bdsa:AdmShape-adminAbout
+      sh:minCount 1 ;
+.
