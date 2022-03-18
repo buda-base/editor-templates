@@ -64,10 +64,15 @@ bds:InstanceShape-instanceOf
   sh:group bds:BasePropertyGroup ;
   sh:order "4"^^xsd:decimal ;
 .
+bds:InstanceShape-instanceHasReproduction
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:BasePropertyGroup ;
+  sh:order "5"^^xsd:decimal ;
+.
 bds:CommonShape-identifiedBy
   sh:name "identifier"@en ;
   sh:group bds:BasePropertyGroup ;
-  sh:order "5"^^xsd:decimal ;
+  sh:order "6"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .
 ##
@@ -323,6 +328,9 @@ bdsa:AdmShape-adminAbout
 .
 bds:AgentAsCreatorShape-agent
   sh:minCount 1 ;
+.
+bds:AgentAsCreatorShape-sourceIndication
+  bds:displayPriority 2 ;
 .
 bds:IdentifierShape-rdfType
   sh:in ( bf:Isbn bf:Lccn bdr:OclcControlNumber bdr:PL480 bdr:HollisId ) ;

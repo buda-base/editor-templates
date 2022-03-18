@@ -36,7 +36,7 @@ bds:ImageInstanceShape
   a sh:NodeShape ;
   rdfs:label "Image Instance Shape"@en ;
   bds:identifierPrefix "W" ;
-  sh:property bds:InstanceShape-instanceOf ;
+  # sh:property bds:InstanceShape-instanceOf ;
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
   sh:property bds:InstanceShape-instanceHasReproduction ;
@@ -59,9 +59,9 @@ bds:ImageInstanceShape-type
 
 # temporarily disabling so that we can test independently of the instance
 
-#bds:InstanceShape-instanceReproductionOf
-#  sh:minCount 1 ;
-#.
+bds:InstanceShape-instanceReproductionOf
+  sh:minCount 1 ;
+.
 
 bds:ImageInstanceShape-scanInfo
   a sh:PropertyShape ;

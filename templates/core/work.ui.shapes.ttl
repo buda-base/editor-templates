@@ -166,3 +166,6 @@ bds:IdentifierShape-rdfType
 bds:AgentAsCreatorShape-agent
   sh:minCount 1 ;
 .
+bds:AgentAsCreatorShape-sourceIndication
+  bds:displayPriority 2 ;
+.

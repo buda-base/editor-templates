@@ -382,14 +382,13 @@ bds:InstanceShape-instanceHasReproduction
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:instanceHasReproduction ;
-  bds:classIn ( bdo:ImageInstance bdo:EtextInstance bdo:Instance ) ;
-  sh:maxCount 1 ;
+  bds:classIn ( bdo:ImageInstance bdo:EtextInstance ) ;
 .
 bds:InstanceShape-instanceReproductionOf
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:instanceReproductionOf ;
-  bds:classIn ( bdo:Instance bdo:ImageInstance ) ;
+  sh:class bdo:Instance ;
   sh:maxCount 1 ;
 .
 bds:InstanceShape-isComplete

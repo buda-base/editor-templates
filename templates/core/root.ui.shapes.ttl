@@ -197,7 +197,6 @@ bds:AgentAsCreatorShape-sourceIndication
   sh:name "indication in source"@en ;
   sh:order "2"^^xsd:decimal ;
   dash:singleLine true ;
-  bds:displayPriority 1 ;
 .
 bds:IdentifierShape-rdfType
   dash:editor dash:EnumSelectEditor ;

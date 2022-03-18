@@ -62,7 +62,7 @@ bds:InstanceShape
   sh:property bds:InstanceShape-type ;
   sh:property bds:InstanceShape-instanceEvent ;
   sh:property bds:InstanceShape-instanceHasReproduction ;
-  sh:property bds:InstanceShape-instanceReproductionOf ;
+  # sh:property bds:InstanceShape-instanceReproductionOf ;
   sh:property bds:InstanceShape-isComplete ;
   sh:property bds:InstanceShape-isDamaged ;
   sh:property bds:InstanceShape-numberOfVolumes ;
