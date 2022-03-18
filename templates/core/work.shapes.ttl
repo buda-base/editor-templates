@@ -127,7 +127,7 @@ bds:WorkEventShape
 bds:WorkEventShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
-  sh:in ( bdo:AuthoredEvent bdo:CompletedEvent bdo:OriginatedEvent bdo:RequestedEvent bdo:RevealedEvent bdo:RevisedEvent bdo:SecondRevisedEvent bdo:SecondTranslatedEvent bdo:ThirdRevisedEvent bdo:ThirdTranslatedEvent bdo:TranslatedEvent bdo:TranslationRevisedEvent ) ;
+  sh:in ( bdo:AuthoredEvent bdo:OriginatedEvent bdo:CompletedEvent bdo:RequestedEvent bdo:RevealedEvent bdo:RevisedEvent bdo:SecondRevisedEvent bdo:ThirdRevisedEvent bdo:TranslatedEvent bdo:SecondTranslatedEvent bdo:ThirdTranslatedEvent  bdo:TranslationRevisedEvent ) ;
   sh:nodeKind sh:IRI ;
   sh:message "A WorkEvent must have one type"@en ;
   sh:minCount 1 ;

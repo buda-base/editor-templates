@@ -115,44 +115,43 @@ bds:InstanceShape-printMethod
   sh:group bds:PubPropertyGroup ;
   sh:order "0"^^xsd:decimal ;
 .
+bds:InstanceShape-script
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:PhysicalPropertyGroup ;
+  sh:order "1"^^xsd:decimal ;
+.
 bds:InstanceShape-reproductionPrintMethod
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:PubPropertyGroup ;
-  sh:order "1"^^xsd:decimal ;
+  sh:order "2"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .
 bds:InstanceShape-publisherName
   dash:editor dash:TextAreaWithLangEditor ;
   dash:singleLine true ;
   sh:group bds:PubPropertyGroup ;
-  sh:order "2"^^xsd:decimal ;
+  sh:order "3"^^xsd:decimal ;
 .
 bds:InstanceShape-instanceEvent
   dash:editor dash:DetailsEditor ;
   sh:group bds:PubPropertyGroup ;
-  sh:order "3"^^xsd:decimal ;
+  sh:order "4"^^xsd:decimal ;
 .
 bds:InstanceShape-publisherLocation
   dash:editor dash:TextAreaWithLangEditor ;
   dash:singleLine true ;
   sh:group bds:PubPropertyGroup ;
-  sh:order "4"^^xsd:decimal ;
+  sh:order "5"^^xsd:decimal ;
 .
 bds:InstanceShape-hasSourcePrintery
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:PubPropertyGroup ;
-  sh:order "5"^^xsd:decimal ;
+  sh:order "6"^^xsd:decimal ;
 .
 bds:InstanceShape-editionStatement
   dash:editor dash:TextAreaWithLangEditor ;
   dash:singleLine true ;
   sh:group bds:PubPropertyGroup ;
-  sh:order "6"^^xsd:decimal ;
-.
-bds:InstanceShape-appliedMaterial
-  dash:editor dash:EnumSelectEditor ;
-  sh:group bds:PubPropertyGroup ;
-  bds:displayPriority 1 ;
   sh:order "7"^^xsd:decimal ;
 .
 bds:BiblioShape-creator
@@ -205,19 +204,20 @@ bds:PhysicalPropertyGroup
   rdfs:label "Physical features"@en ;
   sh:order "4"^^xsd:decimal ;
 .
-bds:InstanceShape-script
+bds:InstanceShape-binding
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:PhysicalPropertyGroup ;
   sh:order "0"^^xsd:decimal ;
 .
-bds:InstanceShape-binding
+bds:InstanceShape-material
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:PhysicalPropertyGroup ;
   sh:order "1"^^xsd:decimal ;
 .
-bds:InstanceShape-material
+bds:InstanceShape-appliedMaterial
   dash:editor dash:EnumSelectEditor ;
-  sh:group bds:PhysicalPropertyGroup ;
+  sh:group bds:PubPropertyGroup ;
+  bds:displayPriority 1 ;
   sh:order "2"^^xsd:decimal ;
 .
 bds:InstanceShape-numberOfVolumes
