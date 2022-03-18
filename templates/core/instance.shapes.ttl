@@ -94,7 +94,7 @@ bds:InstanceShape-type
 bds:InstanceShape-serialInstanceOf
   a sh:PropertyShape ;
   sh:path bdo:serialInstanceOf ;
-  sh:class bdo:SerialWork ;
+  bds:classIn ( bdo:SerialWork ) ;
   sh:description "An instance can be a member of a serial"@en ;
   sh:name "serial instance of"@en ;
   bds:propertyShapeType bds:ExternalShape ;
@@ -103,7 +103,6 @@ bds:InstanceShape-serialInstanceOf
 bds:InstanceShape-script
   a sh:PropertyShape ;
   sh:path bdo:script ;
-  sh:class bdo:Script ;
   sh:in ( bdr:ScriptDbuCan bdr:ScriptDbuMed bdr:ScriptKhyugYig bdr:ScriptHans bdr:ScriptHant bdr:ScriptDeva bdr:ScriptKhmr bdr:ScriptLatn bdr:ScriptMong bdr:ScriptMymr bdr:ScriptBeng bdr:ScriptCyrl bdr:ScriptKhar bdr:ScriptNepaleseHooked bdr:ScriptNewa bdr:ScriptRanj bdr:ScriptSinh ) ;
   sh:description "an instance may have one or more scripts"@en ;
   sh:nodeKind sh:IRI ;
@@ -112,7 +111,6 @@ bds:InstanceShape-script
 bds:InstanceShape-binding
   a sh:PropertyShape ;
   sh:path bdo:binding ;
-  sh:class bdo:Binding ;
   sh:description "type of binding"@en ;
   sh:maxCount 1 ;
   sh:in ( bdr:Binding_LooseLeaf_Pecha bdr:Binding_Codex_Perfect bdr:Binding_LooseLeaf_Pothi bdr:Binding_Codex_Sewn bdr:Binding_Continuous_Folded bdr:Binding_Continuous_Leporello bdr:Binding_Continuous_Scroll ) ;
@@ -123,7 +121,6 @@ bds:InstanceShape-printMethod
   a sh:PropertyShape ;
   sh:minCount 1 ;
   sh:path bdo:printMethod ;
-  sh:class bdo:PrintMethod ;
   sh:description "print method (in case of a reproduction, use this to indicate the original print method). Leave blank for mixed print methods."@en ;
   sh:in ( bdr:PrintMethod_Modern bdr:PrintMethod_Manuscript bdr:PrintMethod_Relief_WoodBlock bdr:PrintMethod_Xerography bdr:PrintMethod_Relief_Letterpress bdr:PrintMethod_ManuscriptStylus ) ;
   sh:nodeKind sh:IRI ;
@@ -133,16 +130,14 @@ bds:InstanceShape-material
   a sh:PropertyShape ;
   sh:path bdo:material ;
   bds:defaultValue bdr:MaterialPaper ;
-  sh:class bdo:BaseMaterial ;
   sh:in ( bdr:MaterialPaper bdr:MaterialDigital bdr:MaterialDeshog bdr:MaterialRicePaper bdr:MaterialBirchBark bdr:MaterialCardboard bdr:MaterialCloth  bdr:MaterialKhoiPaper bdr:MaterialLoktaPaper bdr:MaterialMultiLayerPaper bdr:MaterialPalmLeaf bdr:MaterialSaPaper bdr:MaterialParchment  bdr:MaterialPalmyraPalmLeaf bdr:MaterialCoryphaPalmLeaf ) ;
   sh:nodeKind sh:IRI ;
 .
 bds:InstanceShape-appliedMaterial
   a sh:PropertyShape ;
   sh:path bdo:appliedMaterial ;
-  sh:class bdo:AppliedMaterial ;
   sh:description "both ink and (if present) paper dye"@en ;
-  sh:in (bdr:AppliedMaterial_BlackInk bdr:AppliedMaterial_RedInk bdr:AppliedMaterial_GoldLeaf bdr:AppliedMaterial_SilverLeaf bdr:AppliedMaterial_IndigoDye bdr:AppliedMaterial_Poison) ;
+  sh:in ( bdr:AppliedMaterial_BlackInk bdr:AppliedMaterial_RedInk bdr:AppliedMaterial_GoldLeaf bdr:AppliedMaterial_SilverLeaf bdr:AppliedMaterial_IndigoDye bdr:AppliedMaterial_Poison ) ;
   sh:nodeKind sh:IRI ;
 .
 bds:InstanceShape-publisherName
@@ -168,7 +163,7 @@ bds:InstanceShape-editionStatement
 bds:InstanceShape-hasSourcePrintery
   a sh:PropertyShape ;
   sh:path bdo:hasSourcePrintery ;
-  sh:class bdo:Place ;
+  bds:classIn ( bdo:Place ) ;
   sh:maxCount 1 ;
   bds:propertyShapeType bds:ExternalShape ;
 .
@@ -262,26 +257,21 @@ bds:InstanceEventShape-type
   sh:in ( bdo:PublishedEvent bdo:PrintedEvent bdo:CarvedEvent bdo:CompiledEvent bdo:EnscribedEvent bdo:OriginalCopyEvent ) ;
   sh:message "An instance event must have one type"@en ;
   sh:nodeKind sh:IRI ;
-  sh:class bdo:InstanceEvent ;
   sh:minCount 1 ;
   sh:maxCount 1 ;
 .
 bds:InstanceShape-partType
   a sh:PropertyShape ;
   sh:path bdo:partType ;
-  sh:class bdo:AppliedMaterial ;
   sh:in ( bdr:PartTypeText bdr:PartTypeSection bdr:PartTypeVolume bdr:PartTypeCollection bdr:PartTypeCodex bdr:PartTypeDigitalCodex bdr:PartTypeReproductionCodex bdr:PartTypeChapter  bdr:PartTypeTableOfContent ) ;
   sh:nodeKind sh:IRI ;
-  sh:class bdo:PartType ;
 .
 bds:InstanceShape-contentLocation
   a sh:PropertyShape ;
   sh:message "a note may have at most one :contentLocation"@en ;
   sh:path bdo:contentLocation ;
-  sh:class bdo:ContentLocation ;
   sh:maxCount 1 ;
 .
-
 bds:InstanceShape-contentLocationStatement
   a sh:PropertyShape ;
   sh:message "a note may have at most one :contentLocationStatement"@en ;

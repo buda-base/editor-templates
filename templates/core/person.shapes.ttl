@@ -325,7 +325,7 @@ bds:PersonEventShape-personEventRole
   sh:path bdo:personEventRole ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:maxCount 1 ;
-  sh:class bdo:Role ;
+  bds:classIn ( bdo:Role ) ;
   sh:message "At most one :personEventRole allowed"@en ;
 .
 bds:PersonEventShape-personEventCorporation

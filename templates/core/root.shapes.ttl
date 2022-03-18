@@ -91,7 +91,6 @@ bds:IdentifierShape-rdfType
 bds:BiblioShape-creator
   a sh:PropertyShape ;
   sh:path bdo:creator ;
-  sh:class bdo:AgentAsCreator ;
   sh:nodeKind sh:IRI ;
   bds:propertyShapeType bds:FacetShape ;
 .
@@ -188,7 +187,6 @@ bds:NoteShape-contentLocation
   a sh:PropertyShape ;
   sh:message "a note may have at most one :contentLocation"@en ;
   sh:path bdo:contentLocation ;
-  sh:class bdo:ContentLocation ;
   sh:maxCount 1 ;
   bds:propertyShapeType bds:FacetShape ;
 .
@@ -240,7 +238,7 @@ bds:ContentLocationShape-contentLocationInstance
   bds:propertyShapeType bds:ExternalShape ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
-  sh:class bdo:ImageInstance ;
+  bds:classIn ( bdo:ImageInstance ) ;
   sh:message "At most one instance allowed"@en ;
 .
 bds:ContentLocationShape-contentLocationByFolio
@@ -361,7 +359,6 @@ bds:ContentLocationShape-contentPagination
   a sh:PropertyShape ;
   sh:message "a :ContentLocation may indicate, at most one, pagination type."@en ;
   sh:path bdo:contentPagination ;
-  sh:class bdo:PaginationType ;
   sh:in ( bdr:PaginationAbsolute bdr:PaginationRelative ) ;
   sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
@@ -373,7 +370,7 @@ bds:InstanceShape-instanceOf
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:instanceOf ;
-  sh:class bdo:Work ;
+  bds:classIn ( bdo:Work ) ;
   sh:description "All instances should have one work, except bundles containing unrelated texts"@en ;
   sh:name "instance of"@en ;
   sh:maxCount 1 ;
@@ -388,7 +385,7 @@ bds:InstanceShape-instanceReproductionOf
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:instanceReproductionOf ;
-  sh:class bdo:Instance ;
+  bds:classIn ( bdo:Instance ) ;
   sh:maxCount 1 ;
 .
 bds:InstanceShape-isComplete
@@ -406,7 +403,6 @@ bds:InstanceShape-sourceNote
 bds:InstanceShape-reproductionPrintMethod
   a sh:PropertyShape ;
   sh:path bdo:reproductionPrintMethod ;
-  sh:class bdo:PrintMethod ;
   sh:description "print method of the reproduction (in the case of a facsimile, photocopy, etc.). Leave blank for originals."@en ;
   sh:in ( bdr:PrintMethod_Modern bdr:PrintMethod_Xerography bdr:PrintMethod_Microfilm ) ;
   sh:nodeKind sh:IRI ;

@@ -53,13 +53,13 @@ bds:PlaceShape-placeLocatedIn
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:placeLocatedIn ;
-  sh:class bdo:Place ;
+  bds:classIn ( bdo:Place ) ;
 .
 bds:PlaceShape-placeContains
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:placeContains ;
-  sh:class bdo:Place ;
+  bds:classIn ( bdo:Place ) ;
 .
 ##
 ## type
@@ -121,8 +121,7 @@ bds:PlaceEventShape-type
   sh:path rdf:type ;
   sh:in ( bdo:PlaceFounded bdo:PlaceConverted bdo:PlaceDestroyed bdo:PlaceRebuilt bdo:PlaceAbandoned ) ;
   sh:nodeKind sh:IRI ;
-  sh:message "A PersonEvent must have one type"@en ;
-  sh:class bdo:PersonEvent ;
+  sh:message "A PlaceEvent must have one type"@en ;
   sh:minCount 1 ;
   sh:maxCount 1 ;
 .

@@ -44,7 +44,7 @@ bds:IsbnShape
 bds:IsbnShape-rdf_value
   a sh:PropertyShape ;
   sh:path rdf:value ;
-  sh:class xsd:string ;
+  sh:datatype xsd:string ;
   sh:description "this ISBN should conform to the pattern"@en ;
   sh:maxCount 1 ;
   sh:minCount 0 ;
@@ -62,7 +62,7 @@ bds:LccnShape
 bds:LccnShape-rdf_value
   a sh:PropertyShape ;
   sh:path rdf:value ;
-  sh:class xsd:string ;
+  sh:datatype xsd:string ;
   sh:description "this LCCN should conform to the pattern"@en ;
   sh:maxCount 1 ;
   sh:minCount 0 ;

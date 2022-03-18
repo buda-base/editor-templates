@@ -72,7 +72,7 @@ bds:WorkShape-hasInstance
 bds:WorkShape-hasTranslation
   a sh:PropertyShape ;
   sh:path bdo:workHasTranslation ;
-  sh:class bdo:Work ;
+  bds:classIn ( bdo:Work ) ;
   bds:propertyShapeType bds:ExternalShape ;
 .
 bds:WorkShape-isAbout
@@ -84,7 +84,7 @@ bds:WorkShape-isAbout
 bds:WorkShape-genre
   a sh:PropertyShape ;
   sh:path bdo:workGenre ;
-  sh:class bdo:Topic ;
+  bds:classIn ( bdo:Topic ) ;
   bds:propertyShapeType bds:ExternalShape ;
 .
 bds:WorkShape-language
@@ -130,7 +130,6 @@ bds:WorkEventShape-type
   sh:in ( bdo:AuthoredEvent bdo:CompletedEvent bdo:OriginatedEvent bdo:RequestedEvent bdo:RevealedEvent bdo:RevisedEvent bdo:SecondRevisedEvent bdo:SecondTranslatedEvent bdo:ThirdRevisedEvent bdo:ThirdTranslatedEvent bdo:TranslatedEvent bdo:TranslationRevisedEvent ) ;
   sh:nodeKind sh:IRI ;
   sh:message "A WorkEvent must have one type"@en ;
-  sh:class bdo:WorkEvent ;
   sh:minCount 1 ;
   sh:maxCount 1 ;
 .
