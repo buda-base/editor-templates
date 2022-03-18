@@ -121,7 +121,6 @@ bdsa:AdmEntityShape-status
 bdsa:AdmEntityShape-access
       a sh:PropertyShape ;
       sh:path adm:access ;
-      sh:class adm:Access ;
       sh:in ( bda:AccessOpen bda:AccessFairUse bda:AccessRestrictedTemporarily bda:AccessRestrictedByTbrc bda:AccessRestrictedSealed bda:AccessRestrictedByQuality bda:AccessMixed ) ;
       sh:maxCount 1 ;
       sh:nodeKind sh:IRI ;
