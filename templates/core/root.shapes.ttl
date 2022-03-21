@@ -404,7 +404,7 @@ bds:InstanceShape-reproductionPrintMethod
   a sh:PropertyShape ;
   sh:path bdo:reproductionPrintMethod ;
   sh:description "print method of the reproduction (in the case of a facsimile, photocopy, etc.). Leave blank for originals."@en ;
-  sh:in ( bdr:PrintMethod_Modern bdr:PrintMethod_Xerography bdr:PrintMethod_Microfilm ) ;
+  sh:in ( bdr:PrintMethod_Xerography bdr:PrintMethod_Mimeography bdr:PrintMethod_Microfilm ) ;
   sh:nodeKind sh:IRI ;
   sh:name "reproduction print method"@en ;
 .
