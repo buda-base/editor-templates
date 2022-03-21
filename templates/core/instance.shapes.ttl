@@ -122,7 +122,7 @@ bds:InstanceShape-printMethod
   sh:minCount 1 ;
   sh:path bdo:printMethod ;
   sh:description "print method (in case of a reproduction, use this to indicate the original print method). Leave blank for mixed print methods."@en ;
-  sh:in ( bdr:PrintMethod_Modern bdr:PrintMethod_Manuscript bdr:PrintMethod_Relief_WoodBlock bdr:PrintMethod_Xerography bdr:PrintMethod_Relief_Letterpress bdr:PrintMethod_ManuscriptStylus ) ;
+  sh:in ( bdr:PrintMethod_Modern bdr:PrintMethod_Manuscript bdr:PrintMethod_Relief_WoodBlock bdr:PrintMethod_Xerography bdr:PrintMethod_Mimeography bdr:PrintMethod_Relief_Letterpress bdr:PrintMethod_Intaglio_Copper bdr:PrintMethod_ManuscriptStylus ) ;
   sh:nodeKind sh:IRI ;
   sh:name "instance print method"@en ;
 .
