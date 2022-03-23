@@ -66,22 +66,13 @@ bds:PersonShape
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
   sh:property bds:PersonShape-type ;
-  sh:property bds:PersonShape-hasIncarnationGeneral ;
-  sh:property bds:PersonShape-hasIncarnationYangtse ;
-  sh:property bds:PersonShape-hasIncarnationBody ;
-  sh:property bds:PersonShape-hasIncarnationSpeech ;
-  sh:property bds:PersonShape-hasIncarnationMind ;
-  sh:property bds:PersonShape-hasIncarnationQualities ;
-  sh:property bds:PersonShape-hasIncarnationActivities ;
   sh:property bds:PersonShape-incarnationGeneral ;
-  sh:property bds:PersonShape-incarnationYangtse ;
   sh:property bds:PersonShape-incarnationBody ;
   sh:property bds:PersonShape-incarnationSpeech ;
   sh:property bds:PersonShape-incarnationMind ;
   sh:property bds:PersonShape-incarnationQualities ;
   sh:property bds:PersonShape-incarnationActivities ;
   sh:property bds:CommonShape-associatedTradition ;
-  # TODO: incarnation
   # TODO: missing kin properties
   sh:targetClass bdo:Person ;
 .
