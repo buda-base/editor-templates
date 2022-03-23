@@ -68,6 +68,7 @@ bds:WorkShape-hasInstance
   sh:path bdo:workHasInstance ;
   bds:classIn ( bdo:Instance bdo:EtextInstance ) ;
   bds:propertyShapeType bds:ExternalShape ;
+  bds:connectIDs true ;
 .
 bds:WorkShape-hasTranslation
   a sh:PropertyShape ;

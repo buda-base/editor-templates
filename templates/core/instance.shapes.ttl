@@ -99,6 +99,7 @@ bds:InstanceShape-serialInstanceOf
   sh:name "serial instance of"@en ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:maxCount 1 ;
+  bds:connectIDs true ;
 .
 bds:InstanceShape-script
   a sh:PropertyShape ;

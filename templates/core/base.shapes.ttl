@@ -260,3 +260,17 @@ bds:PatternISBN
   a bds:SpecialPattern ;
   skos:prefLabel "ISBN pattern"@en ;
 .
+bds:connectIDs
+  a bds:ShapeType ;
+  rdfs:label "connect IDs"@en ;
+  rdfs:domain sh:PropertyShape ;
+  rdfs:range xsd:boolean ;
+  skos:definition "when creating a new object of this (external) property, the URI should be connected to the one of the current subject."@en ;
+.
+bds:copyObjectsOfProperty
+  a bds:ShapeType ;
+  rdfs:label "connect IDs"@en ;
+  rdfs:domain sh:PropertyShape ;
+  rdfs:range rdf:Property ;
+  skos:definition "when creating a new object of this (external) property, automatically copy triples with the object of this property (typically skos:prefLabel) as predicates"@en ;
+.
