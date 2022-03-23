@@ -408,48 +408,48 @@ bds:PersonShape-personTeacherOf
 ##
 bds:PersonShape-hasIncarnationGeneral
   dash:editor dash:InstancesSelectEditor ;
-  sh:group bds:IncarnationPropertyGroup ;
-  sh:order "0"^^xsd:decimal ;
+  #sh:group bds:IncarnationPropertyGroup ;
+  #sh:order "0"^^xsd:decimal ;
   sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationYangtse
   dash:editor dash:InstancesSelectEditor ;
-  sh:group bds:IncarnationPropertyGroup ;
-  sh:order "1"^^xsd:decimal ;
+  #sh:group bds:IncarnationPropertyGroup ;
+  #sh:order "1"^^xsd:decimal ;
   sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationBody
   dash:editor dash:InstancesSelectEditor ;
-  sh:group bds:IncarnationPropertyGroup ;
-  sh:order "2"^^xsd:decimal ;
+  #sh:group bds:IncarnationPropertyGroup ;
+  #sh:order "2"^^xsd:decimal ;
   bds:displayPriority 1 ;
   sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationSpeech
   dash:editor dash:InstancesSelectEditor ;
-  sh:group bds:IncarnationPropertyGroup ;
-  sh:order "3"^^xsd:decimal ;
+  #sh:group bds:IncarnationPropertyGroup ;
+  #sh:order "3"^^xsd:decimal ;
   bds:displayPriority 1 ;
   sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationMind
   dash:editor dash:InstancesSelectEditor ;
-  sh:group bds:IncarnationPropertyGroup ;
-  sh:order "4"^^xsd:decimal ;
+  #sh:group bds:IncarnationPropertyGroup ;
+  #sh:order "4"^^xsd:decimal ;
   bds:displayPriority 1 ;
   sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationQualities
   dash:editor dash:InstancesSelectEditor ;
-  sh:group bds:IncarnationPropertyGroup ;
-  sh:order "5"^^xsd:decimal ;
+  #sh:group bds:IncarnationPropertyGroup ;
+  #sh:order "5"^^xsd:decimal ;
   bds:displayPriority 1 ;
   sh:class bdo:Person ;
 .
 bds:PersonShape-hasIncarnationActivities
   dash:editor dash:InstancesSelectEditor ;
-  sh:group bds:IncarnationPropertyGroup ;
-  sh:order "6"^^xsd:decimal ;
+  #sh:group bds:IncarnationPropertyGroup ;
+  #sh:order "6"^^xsd:decimal ;
   bds:displayPriority 1 ;
   sh:class bdo:Person ;
 .
@@ -461,8 +461,8 @@ bds:PersonShape-incarnationGeneral
 .
 bds:PersonShape-incarnationYangtse
   dash:editor dash:InstancesSelectEditor ;
-  sh:group bds:IncarnationPropertyGroup ;
-  sh:order "8"^^xsd:decimal ;
+  #sh:group bds:IncarnationPropertyGroup ;
+  #sh:order "8"^^xsd:decimal ;
   sh:class bdo:Person ;
 .
 bds:PersonShape-incarnationBody
