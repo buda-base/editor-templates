@@ -380,7 +380,7 @@ bds:PersonShape-hasIncarnationQualities
 bds:PersonShape-hasIncarnationActivities
   a sh:PropertyShape ;
   bds:propertyShapeType bds:ExternalShape ;
-  sh:path bdo:hasIncarnationGeneral ;
+  sh:path bdo:hasIncarnationActivities ;
 .
 
 
