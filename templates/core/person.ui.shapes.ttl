@@ -62,7 +62,7 @@ bds:EventPropertyGroup
 .
 bds:StudentTeacherPropertyGroup
   a sh:PropertyGroup ;
-  rdfs:label "Teachers and Students"@en ;
+  rdfs:label "Teachers"@en ;
   sh:order "3"^^xsd:decimal ;
 .
 bds:KinshipPropertyGroup

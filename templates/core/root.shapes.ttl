@@ -372,7 +372,7 @@ bds:InstanceShape-instanceOf
   sh:path bdo:instanceOf ;
   bds:classIn ( bdo:Work ) ;
   sh:description "All instances should have one work, except bundles containing unrelated texts"@en ;
-  sh:name "instance of"@en ;
+  sh:name "instance of (work)"@en ;
   sh:maxCount 1 ;
   bds:connectIDs true ;
   bds:copyObjectsOfProperty skos:prefLabel , skos:altLabel ;
@@ -382,6 +382,7 @@ bds:InstanceShape-instanceHasReproduction
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:instanceHasReproduction ;
   bds:connectIDs true ;
+  sh:name "has reproduction (scans or etext)"
   bds:classIn ( bdo:ImageInstance bdo:EtextInstance ) ;
 .
 bds:InstanceShape-instanceReproductionOf

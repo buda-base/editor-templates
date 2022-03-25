@@ -96,7 +96,7 @@ bds:InstanceShape-serialInstanceOf
   sh:path bdo:serialInstanceOf ;
   bds:classIn ( bdo:SerialWork ) ;
   sh:description "An instance can be a member of a serial"@en ;
-  sh:name "serial instance of"@en ;
+  sh:name "serial work"@en ;
   bds:propertyShapeType bds:ExternalShape ;
   sh:maxCount 1 ;
   bds:connectIDs true ;

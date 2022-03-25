@@ -39,7 +39,7 @@ bds:ImageInstanceShape
   # sh:property bds:InstanceShape-instanceOf ;
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
-  sh:property bds:InstanceShape-instanceHasReproduction ;
+  # sh:property bds:InstanceShape-instanceHasReproduction ;
   # sh:property bds:InstanceShape-instanceReproductionOf ;
   sh:property bds:InstanceShape-isComplete ;
   sh:property bds:ImageInstanceShape-scanInfo ;

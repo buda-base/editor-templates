@@ -58,11 +58,11 @@ bds:InstanceShape-reproductionPrintMethod
   sh:order "3"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .
-bds:ConnectionsPropertyGroup
-  a sh:PropertyGroup ;
-  rdfs:label "Connections"@en ;
-  sh:order "1"^^xsd:decimal ;
-.
+#bds:ConnectionsPropertyGroup
+#  a sh:PropertyGroup ;
+#  rdfs:label "Connections"@en ;
+#  sh:order "1"^^xsd:decimal ;
+#.
 bds:InstanceShape-instanceOf
 #  sh:group bds:ConnectionsPropertyGroup ;
 #  sh:order "1"^^xsd:decimal ;
@@ -70,8 +70,8 @@ bds:InstanceShape-instanceOf
 .
 bds:InstanceShape-instanceHasReproduction
   dash:editor dash:InstancesSelectEditor ;
-  sh:group bds:ConnectionsPropertyGroup ;
-  sh:order "2"^^xsd:decimal ;
+#  sh:group bds:ConnectionsPropertyGroup ;
+#  sh:order "2"^^xsd:decimal ;
 .
 bds:InstanceShape-instanceReproductionOf
   dash:editor dash:InstancesSelectEditor ;
