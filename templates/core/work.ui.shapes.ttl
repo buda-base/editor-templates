@@ -50,11 +50,11 @@ bds:EventsPropertyGroup
   rdfs:label "Events"@en ;
   sh:order "2"^^xsd:decimal ;
 .
-bds:InstancesPropertyGroup
-  a sh:PropertyGroup ;
-  rdfs:label "Instances"@en ;
-  sh:order "3"^^xsd:decimal ;
-.
+#bds:InstancesPropertyGroup
+#  a sh:PropertyGroup ;
+#  rdfs:label "Instances"@en ;
+#  sh:order "3"^^xsd:decimal ;
+#.
 bds:RelationsPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Relations"@en ;
@@ -109,8 +109,8 @@ bds:BiblioShape-creator
 .
 bds:WorkShape-hasInstance
   dash:editor dash:InstancesSelectEditor ;
-  sh:group bds:InstancesPropertyGroup ;
-  sh:order "0"^^xsd:decimal ;
+  #sh:group bds:InstancesPropertyGroup ;
+  #sh:order "0"^^xsd:decimal ;
 .
 bds:WorkShape-isAbout
   dash:editor dash:InstancesSelectEditor ;

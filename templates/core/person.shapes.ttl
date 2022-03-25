@@ -61,8 +61,7 @@ bds:PersonShape
   sh:property bds:PersonShape-hasYoungerSister ;
   sh:property bds:PersonShape-kinWith ;
   sh:property bds:PersonShape-personStudentOf ;
-  sh:property bds:PersonShape-personTeacherOf ;
-  sh:property bds:PersonShape-personTeacherOf ;
+  # sh:property bds:PersonShape-personTeacherOf ;
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
   sh:property bds:PersonShape-type ;

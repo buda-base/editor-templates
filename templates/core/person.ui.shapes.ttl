@@ -385,7 +385,7 @@ bds:PersonShape-kinWith
   sh:class      bdo:Person ;
 .
 ##
-## Student/Teacher
+## Teacher
 ##
 bds:PersonShape-personStudentOf
   dash:editor dash:InstancesSelectEditor ;
@@ -398,9 +398,9 @@ bds:PersonShape-personStudentOf
 bds:PersonShape-personTeacherOf
   dash:editor dash:InstancesSelectEditor ;
   sh:description "use only for direct (physical) teacher/student relationships"@en ;
-  sh:group bds:StudentTeacherPropertyGroup ;
+  #sh:group bds:StudentTeacherPropertyGroup ;
   sh:name "teacher of"@en ;
-  sh:order "1"^^xsd:decimal ;
+  #sh:order "1"^^xsd:decimal ;
   sh:class      bdo:Person ;
 .
 ##

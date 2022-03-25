@@ -85,9 +85,9 @@ bds:BiblioShape-creator
 .
 bds:WorkShape-serialHasInstance
   dash:editor dash:InstancesSelectEditor ;
-  sh:group bds:SerialInstancesPropertyGroup ;
-  sh:name "creators"@en ;
-  sh:order "0"^^xsd:decimal ;
+#  sh:group bds:SerialInstancesPropertyGroup ;
+  sh:name "instances"@en ;
+#  sh:order "0"^^xsd:decimal ;
 .
 bdsa:AdmShape-adminAbout 
   dash:editor dash:DetailsEditor ;

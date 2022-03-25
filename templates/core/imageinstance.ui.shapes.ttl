@@ -64,8 +64,8 @@ bds:ConnectionsPropertyGroup
   sh:order "1"^^xsd:decimal ;
 .
 bds:InstanceShape-instanceOf
-  sh:group bds:ConnectionsPropertyGroup ;
-  sh:order "1"^^xsd:decimal ;
+#  sh:group bds:ConnectionsPropertyGroup ;
+#  sh:order "1"^^xsd:decimal ;
   dash:editor dash:InstancesSelectEditor ;
 .
 bds:InstanceShape-instanceHasReproduction
@@ -75,8 +75,8 @@ bds:InstanceShape-instanceHasReproduction
 .
 bds:InstanceShape-instanceReproductionOf
   dash:editor dash:InstancesSelectEditor ;
-  sh:group bds:ConnectionsPropertyGroup ;
-  sh:order "3"^^xsd:decimal ;
+#  sh:group bds:ConnectionsPropertyGroup ;
+#  sh:order "3"^^xsd:decimal ;
 .
 bds:NotesPropertyGroup
   a sh:PropertyGroup ;
