@@ -382,7 +382,7 @@ bds:InstanceShape-instanceHasReproduction
   bds:propertyShapeType bds:ExternalShape ;
   sh:path bdo:instanceHasReproduction ;
   bds:connectIDs true ;
-  sh:name "has reproduction (scans or etext)"
+  sh:name "has reproduction (scans or etext)"@en ;
   bds:classIn ( bdo:ImageInstance bdo:EtextInstance ) ;
 .
 bds:InstanceShape-instanceReproductionOf
