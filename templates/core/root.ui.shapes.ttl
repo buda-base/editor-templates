@@ -204,7 +204,7 @@ bds:IdentifierShape-rdfType
 .
 bds:IdentifierShape-rdfValue
   dash:editor dash:TextFieldEditor ;
-  sh:name "value"@en ;
+  sh:name "number"@en ;
   sh:order "1"^^xsd:decimal ;
   dash:singleLine true ;
 .
