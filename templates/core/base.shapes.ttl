@@ -261,16 +261,23 @@ bds:PatternISBN
   skos:prefLabel "ISBN pattern"@en ;
 .
 bds:connectIDs
-  a bds:ShapeType ;
+  a owl:DatatypeProperty ;
   rdfs:label "connect IDs"@en ;
   rdfs:domain sh:PropertyShape ;
   rdfs:range xsd:boolean ;
   skos:definition "when creating a new object of this (external) property, the URI should be connected to the one of the current subject."@en ;
 .
 bds:copyObjectsOfProperty
-  a bds:ShapeType ;
+  a owl:ObjectProperty ;
   rdfs:label "connect IDs"@en ;
   rdfs:domain sh:PropertyShape ;
   rdfs:range rdf:Property ;
   skos:definition "when creating a new object of this (external) property, automatically copy triples with the object of this property (typically skos:prefLabel) as predicates"@en ;
+.
+bds:allowBatchManagement
+  a owl:DatatypeProperty ;
+  rdfs:label "allow batch management"@en ;
+  rdfs:domain sh:PropertyShape ;
+  rdfs:range xsd:boolean ;
+  skos:definition "instructs the UI to allow batch creation / removal of objects of this property"@en ;
 .

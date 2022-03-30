@@ -98,6 +98,7 @@ bds:ImageInstanceShape-hasVolume
   sh:group bds:VolumesPropertyGroup ;
   sh:order "0"^^xsd:decimal ;
   bds:sortOnProperty bdo:volumeNumber ;
+  bds:allowBatchManagement true ;
 .
 bds:AdminPropertyGroup
   a sh:PropertyGroup ;
