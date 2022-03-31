@@ -39,6 +39,7 @@ bds:CommonShape-prefLabel
   sh:path skos:prefLabel ;
   sh:datatype rdf:langString ;
   sh:uniqueLang true ;
+  sh:minCount 1 ;
 .
 bds:CommonShape-altLabel
   a sh:PropertyShape ;
