@@ -63,7 +63,7 @@ BaseShapes
 These shapes are served by LDSPDI, to renew the cache:
 
 ```
-
+curl -XPOST 'http://ldspdi.bdrc.io/callbacks/github/shapes' -H 'Content-Type: application/json' -d '{}'
 ```
 
 ## Prior work

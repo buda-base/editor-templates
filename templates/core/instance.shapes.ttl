@@ -87,10 +87,6 @@ bdsa:AdmEntityShape
   sh:targetSubjectsOf adm:adminAbout ;
 .
 
-# adding access in AdminData
-
-bdsa:AdmEntityShape sh:property bdsa:AdmEntityShape-access .
-
 bds:InstanceShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
