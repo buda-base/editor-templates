@@ -46,19 +46,6 @@ bdsa:AdmShape-adminAbout
       bds:propertyShapeType  bds:FacetShape ;
       bds:readOnly true ;
 .
-bdsa:AdmEntityShape
-  a sh:NodeShape ;
-  sh:namespace "http://purl.bdrc.io/admindata/" ;
-  rdfs:label "Admin Entity shape"@en ;
-  sh:property bdsa:AdmEntityShape-status ;
-  sh:property bdsa:AdmEntityShape-restrictedInChina ;
-  sh:property bdsa:AdmEntityShape-replaceWith ;
-  sh:property bdsa:AdmEntityShape-rdfsComment ;
-  sh:property bdsa:AdmEntityShape-type ;
-  sh:property bdsa:AdmEntityShape-metadataLegal ;
-  sh:targetClass adm:AdminData ;
-  sh:targetSubjectsOf adm:adminAbout ;
-.
 bdsa:LogEntryShape
   a sh:NodeShape ;
   bds:identifierPrefix "LG" ;
@@ -148,6 +135,12 @@ bdsa:AdmEntityShape-replaceWith
       sh:maxCount 1 ;
 .
 bdsa:AdmEntityShape-restrictedInChina
+      a sh:PropertyShape ;
+      sh:path adm:restrictedInChina ;
+      sh:datatype xsd:boolean ;
+      sh:maxCount 1 ;
+.
+bdsa:AdmEntityShape-restrictedInChinaDefaultsTrue
       a sh:PropertyShape ;
       sh:path adm:restrictedInChina ;
       sh:datatype xsd:boolean ;

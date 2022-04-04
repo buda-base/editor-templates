@@ -28,7 +28,6 @@ ImageInstanceShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
-  owl:imports <http://purl.bdrc.io/shapes/core/InstanceShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/ImagegroupShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Instance and its subclasses" ;
 .
@@ -55,6 +54,22 @@ bds:ImageInstanceShape-type
   sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
+.
+
+bdsa:AdmEntityShapeForImageInstance
+  a sh:NodeShape ;
+  sh:namespace "http://purl.bdrc.io/admindata/" ;
+  rdfs:label "Admin Entity shape"@en ;
+  sh:property bdsa:AdmEntityShape-status ;
+  sh:property bdsa:AdmEntityShape-restrictedInChinaDefaultsTrue ;
+  sh:property bdsa:AdmEntityShape-replaceWith ;
+  sh:property bdsa:AdmEntityShape-contentLegal ;
+  sh:property bdsa:AdmEntityShape-rdfsComment ;
+  sh:property bdsa:AdmEntityShape-type ;
+  sh:property bdsa:AdmEntityShape-access ;
+  sh:property bdsa:AdmEntityShape-metadataLegal ;
+  sh:targetClass adm:AdminData ;
+  sh:targetSubjectsOf adm:adminAbout ;
 .
 
 # temporarily disabling so that we can test independently of the instance

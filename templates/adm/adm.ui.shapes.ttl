@@ -90,6 +90,12 @@ bdsa:AdmEntityShape-restrictedInChina
       sh:order "3"^^xsd:decimal ;
       bds:defaultValue false ;
 .
+bdsa:AdmEntityShape-restrictedInChinaDefaultsTrue
+      dash:editor dash:BooleanSelectEditor ;
+      sh:name "restricted in China"@en ;
+      sh:order "3"^^xsd:decimal ;
+      bds:defaultValue true ;
+.
 bdsa:AdmEntityShape-replaceWith
       sh:name "replace with (for withdrawn records only)"@en ;
       dash:editor dash:EnumSelectEditor ;

@@ -27,7 +27,7 @@
 ImagegroupShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
-  owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
+  # owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
   owl:versionInfo "Initial SHACL constraints for image group and its subclasses" ;
 .
 bds:ImagegroupShape

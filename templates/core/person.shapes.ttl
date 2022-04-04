@@ -75,6 +75,21 @@ bds:PersonShape
   # TODO: missing kin properties
   sh:targetClass bdo:Person ;
 .
+
+bdsa:AdmEntityShape
+  a sh:NodeShape ;
+  sh:namespace "http://purl.bdrc.io/admindata/" ;
+  rdfs:label "Admin Entity shape"@en ;
+  sh:property bdsa:AdmEntityShape-status ;
+  sh:property bdsa:AdmEntityShape-restrictedInChina ;
+  sh:property bdsa:AdmEntityShape-replaceWith ;
+  sh:property bdsa:AdmEntityShape-rdfsComment ;
+  sh:property bdsa:AdmEntityShape-type ;
+  sh:property bdsa:AdmEntityShape-metadataLegal ;
+  sh:targetClass adm:AdminData ;
+  sh:targetSubjectsOf adm:adminAbout ;
+.
+
 ##
 ## type
 ##

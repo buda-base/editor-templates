@@ -73,6 +73,20 @@ bds:InstanceShape
   sh:targetClass bdo:Instance ;
 .
 
+bdsa:AdmEntityShape
+  a sh:NodeShape ;
+  sh:namespace "http://purl.bdrc.io/admindata/" ;
+  rdfs:label "Admin Entity shape"@en ;
+  sh:property bdsa:AdmEntityShape-status ;
+  sh:property bdsa:AdmEntityShape-restrictedInChina ;
+  sh:property bdsa:AdmEntityShape-replaceWith ;
+  sh:property bdsa:AdmEntityShape-rdfsComment ;
+  sh:property bdsa:AdmEntityShape-type ;
+  sh:property bdsa:AdmEntityShape-metadataLegal ;
+  sh:targetClass adm:AdminData ;
+  sh:targetSubjectsOf adm:adminAbout ;
+.
+
 # adding access in AdminData
 
 bdsa:AdmEntityShape sh:property bdsa:AdmEntityShape-access .
