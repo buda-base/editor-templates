@@ -122,7 +122,7 @@ bdsa:AdmEntityShape-metadataLegal
 .
 bdsa:AdmEntityShape-contentLegal
       a sh:PropertyShape ;
-      sh:path adm:metadataLegal ;
+      sh:path adm:contentLegal ;
       sh:in ( bda:LD_BDRC_PD bda:LD_BDRC_Copyright ) ;
       sh:maxCount 1 ;
       sh:nodeKind sh:IRI ;

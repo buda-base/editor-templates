@@ -63,7 +63,7 @@ bdsa:AdmEntityShapeForImageInstance
   sh:property bdsa:AdmEntityShape-status ;
   sh:property bdsa:AdmEntityShape-restrictedInChinaDefaultsTrue ;
   sh:property bdsa:AdmEntityShape-replaceWith ;
-  sh:property bdsa:AdmEntityShape-contentLegal ;
+  #sh:property bdsa:AdmEntityShape-contentLegal ;
   sh:property bdsa:AdmEntityShape-rdfsComment ;
   sh:property bdsa:AdmEntityShape-type ;
   sh:property bdsa:AdmEntityShape-access ;
