@@ -58,6 +58,7 @@ bds:InstanceShape-biblioNote
   dash:editor dash:TextAreaWithLangEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:order "3"^^xsd:decimal ;
+  bds:defaultLanguage "en" ;
 .
 bds:InstanceShape-instanceOf
   dash:editor dash:InstancesSelectEditor ;
