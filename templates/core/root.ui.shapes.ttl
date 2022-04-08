@@ -56,6 +56,10 @@ bds:CommonShape-associatedTradition
   dash:editor dash:EnumSelectEditor ;
   sh:name "associated tradition" ;
 .
+bds:InstanceShape-copyrightStatus
+  dash:editor dash:EnumSelectEditor ;
+  sh:name "copyright status" ;
+.
 bds:RootShape-note
   sh:name "notes"@en ;
   dash:editor dash:DetailsEditor ;

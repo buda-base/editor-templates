@@ -70,10 +70,15 @@ bds:InstanceShape-instanceHasReproduction
   sh:group bds:BasePropertyGroup ;
   sh:order "5"^^xsd:decimal ;
 .
+bds:InstanceShape-copyrightStatus
+  sh:group bds:BasePropertyGroup ;
+  sh:order "6"^^xsd:decimal ;
+  sh:minCount 1 ;
+.
 bds:CommonShape-identifiedBy
   sh:name "identifier"@en ;
   sh:group bds:BasePropertyGroup ;
-  sh:order "6"^^xsd:decimal ;
+  sh:order "7"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .
 ##

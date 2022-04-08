@@ -394,6 +394,13 @@ bds:InstanceShape-instanceReproductionOf
   sh:maxCount 1 ;
   bds:connectIDs true ;
 .
+bds:InstanceShape-copyrightStatus
+  a sh:PropertyShape ;
+  sh:path bdo:copyrightStatus ;
+  sh:in ( bdr:CopyrightUndetermined bdr:CopyrightPublicDomain bdr:CopyrightInCopyright bdr:CopyrightClaimed ) ;
+  sh:nodeKind sh:IRI ;
+  sh:maxCount 1 ;
+.
 bds:InstanceShape-isComplete
   a sh:PropertyShape ;
   sh:path bdo:isComplete ;
