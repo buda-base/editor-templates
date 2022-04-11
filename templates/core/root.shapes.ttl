@@ -102,9 +102,19 @@ bds:AgentAsCreatorShape
   bds:nodeShapeType bds:FacetShape ;
   sh:property bds:AgentAsCreatorShape-role ;
   sh:property bds:AgentAsCreatorShape-agent ;
+  sh:property bds:AgentAsCreatorShape-type ;
   sh:property bds:AgentAsCreatorShape-sourceIndication ;
   sh:targetClass bdo:AgentAsCreator ;
   sh:targetObjectsOf bdo:creator ;
+.
+bds:AgentAsCreatorShape-type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:in ( bdo:AgentAsCreator) ;
+  sh:nodeKind sh:IRI ;
+  sh:message "A creator must have type bdo:AgentAsCreator"@en ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
 .
 bds:AgentAsCreatorShape-role
   a sh:PropertyShape ;
@@ -363,6 +373,14 @@ bds:ContentLocationShape-contentPagination
   sh:in ( bdr:PaginationAbsolute bdr:PaginationRelative ) ;
   sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
+.
+bds:ContentLocationShape-type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:in ( bdo:ContentLocation ) ;
+  sh:nodeKind sh:IRI ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
 .
 #
 # Instance properties
