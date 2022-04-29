@@ -31,8 +31,8 @@
 
 CorporationShapes:
   a owl:Ontology ;
-  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/SimpleShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Corporations and their members" ;
 .
 bdo:Corporation 
@@ -66,20 +66,4 @@ bds:CorporationShape-hasMember
   bds:propertyShapeType bds:ExternalShape ;
   bds:classIn ( bdo:Person bdo:CorporationMember ) ;
   sh:nodeKind sh:IRI ;
-.
-bdsa:AdmShape-adminAbout
-      sh:minCount 1 ;
-.
-bdsa:AdmEntityShape
-  a sh:NodeShape ;
-  sh:namespace "http://purl.bdrc.io/admindata/" ;
-  rdfs:label "Admin Entity shape"@en ;
-  sh:property bdsa:AdmEntityShape-status ;
-  sh:property bdsa:AdmEntityShape-restrictedInChina ;
-  sh:property bdsa:AdmEntityShape-replaceWith ;
-  sh:property bdsa:AdmEntityShape-rdfsComment ;
-  sh:property bdsa:AdmEntityShape-type ;
-  sh:property bdsa:AdmEntityShape-metadataLegal ;
-  sh:targetClass adm:AdminData ;
-  sh:targetSubjectsOf adm:adminAbout ;
 .

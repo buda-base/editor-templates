@@ -33,6 +33,7 @@ RoleUIShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/SimpleShapes/> ;
   owl:versionInfo "SHACL UI templates for Role" ;
 .
 bds:RoleShape
@@ -104,9 +105,6 @@ bds:RootShape-note
   sh:group bds:NotesPropertyGroup ;
   sh:order "0"^^xsd:decimal ;
   dash:editor dash:DetailsEditor ;
-.
-bdsa:AdmShape-adminAbout
-      sh:minCount 1 ;
 .
 bdsa:AdmEntityShape-replaceWith 
   bds:classIn ( bdo:Role bdo:Corporation ) ;

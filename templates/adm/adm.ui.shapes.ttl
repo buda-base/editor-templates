@@ -88,7 +88,6 @@ bdsa:AdmEntityShape-restrictedInChina
       dash:editor dash:BooleanSelectEditor ;
       sh:name "restricted in China"@en ;
       sh:order "3"^^xsd:decimal ;
-      bds:defaultValue false ;
 .
 bdsa:AdmEntityShape-restrictedInChinaDefaultsTrue
       dash:editor dash:BooleanSelectEditor ;

@@ -106,6 +106,13 @@
     <!-- ======== supporting shapes ======== -->
 
     <OntologySpec>
+        <!-- Simple / Common shapes -->
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/SimpleShapes/"/>
+        <altURL    rdf:resource="templates/core/simple.shapes.ttl"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/SimpleShapes"/>
+    </OntologySpec>
+
+    <OntologySpec>
         <!-- Corporation shapes -->
         <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/CorporationUIShapes/"/>
         <altURL    rdf:resource="templates/core/corporation.ui.shapes.ttl"/>

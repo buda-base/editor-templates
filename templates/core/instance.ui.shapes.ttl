@@ -113,7 +113,7 @@ bds:TitleShape-value
 ##
 bds:PubPropertyGroup
   a sh:PropertyGroup ;
-  rdfs:label "Publication/Printery"@en ;
+  rdfs:label "Publisher / Printery"@en ;
   sh:order "2"^^xsd:decimal ;
 .
 bds:InstanceShape-printMethod

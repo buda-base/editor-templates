@@ -57,7 +57,7 @@ bds:EventsPropertyGroup
 #.
 bds:RelationsPropertyGroup
   a sh:PropertyGroup ;
-  rdfs:label "Relations"@en ;
+  rdfs:label "Genre / Subject"@en ;
   sh:order "4"^^xsd:decimal ;
 .
 bds:NotesPropertyGroup
@@ -95,6 +95,12 @@ bds:WorkShape-language
   sh:order "4"^^xsd:decimal ;
   dash:editor dash:EnumSelectEditor ;
 .
+bds:WorkShape-hasTranslation
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:BasePropertyGroup ;
+  sh:order "5"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
 #bds:CommonShape-identifiedBy
 #  sh:name "identifier" ;
 #  dash:editor dash:DetailsEditor ;
@@ -122,12 +128,6 @@ bds:WorkShape-genre
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:RelationsPropertyGroup ;
   sh:order "1"^^xsd:decimal ;
-.
-bds:WorkShape-hasTranslation
-  dash:editor dash:InstancesSelectEditor ;
-  sh:group bds:RelationsPropertyGroup ;
-  sh:order "2"^^xsd:decimal ;
-  bds:displayPriority 1 ;
 .
 bds:WorkShape-workEvent
   sh:group bds:EventsPropertyGroup ;

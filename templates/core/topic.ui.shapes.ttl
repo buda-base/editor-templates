@@ -32,6 +32,7 @@
 TopicUIShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/SimpleShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
   owl:versionInfo "SHACL UI templates for Topic" ;
 .
@@ -115,9 +116,6 @@ bds:RootShape-note
   sh:group bds:NotesPropertyGroup ;
   sh:order "0"^^xsd:decimal ;
   dash:editor dash:DetailsEditor ;
-.
-bdsa:AdmShape-adminAbout
-      sh:minCount 1 ;
 .
 bdsa:AdmEntityShape-replaceWith 
   bds:classIn ( bdo:Topic bdo:Person bdo:Place bdo:Work bdo:Corporation bdo:Lineage ) ;
