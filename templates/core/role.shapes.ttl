@@ -1,0 +1,74 @@
+# baseURI: http://purl.bdrc.io/shapes/core/RoleShapes/
+
+@prefix RoleShapes: <http://purl.bdrc.io/shapes/core/RoleShapes/> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admin.data/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
+@prefix bdsa: <http://purl.bdrc.io/ontology/shapes/adm/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tbr: <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+RoleShapes:
+  a owl:Ontology ;
+  owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
+  owl:versionInfo "SHACL UI templates for Role" ;
+.
+bds:RoleShape
+  a sh:NodeShape ;
+  bds:identifierPrefix "R" ;
+  sh:namespace "http://purl.bdrc.io/resource/" ;
+  rdfs:label "Role Shape"@en ;
+  sh:property bds:CommonShape-prefLabel ;
+  sh:property bds:CommonShape-altLabel ;
+  sh:property bds:CommonShape-rdfsComment ;
+  sh:property bds:RootShape-note ;
+  sh:property bdsa:AdmShape-adminAbout ;
+  sh:property bds:RoleShape-type ;
+  sh:targetClass bdo:Role ;
+.
+bds:RoleShape-type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:in ( bdo:Role ) ;
+  sh:nodeKind sh:IRI ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+.
+bdsa:AdmEntityShape
+  a sh:NodeShape ;
+  sh:namespace "http://purl.bdrc.io/admindata/" ;
+  rdfs:label "Admin Entity shape"@en ;
+  sh:property bdsa:AdmEntityShape-status ;
+  sh:property bdsa:AdmEntityShape-restrictedInChina ;
+  sh:property bdsa:AdmEntityShape-replaceWith ;
+  sh:property bdsa:AdmEntityShape-rdfsComment ;
+  sh:property bdsa:AdmEntityShape-type ;
+  sh:property bdsa:AdmEntityShape-metadataLegal ;
+  sh:targetClass adm:AdminData ;
+  sh:targetSubjectsOf adm:adminAbout ;
+.
+bdsa:AdmShape-adminAbout
+      sh:minCount 1 ;
+.

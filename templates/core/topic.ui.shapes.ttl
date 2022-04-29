@@ -32,7 +32,7 @@
 TopicUIShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
-  owl:imports <http://purl.bdrc.io/shapes/core/SimpleShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/TopicShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
   owl:versionInfo "SHACL UI templates for Topic" ;
 .
@@ -42,27 +42,8 @@ bdo:Topic
   bds:uiShapeGraph bdg:TopicUIShapes ;
 .
 
-bds:TopicShape
-  a sh:NodeShape ;
-  bds:identifierPrefix "T" ;
-  sh:namespace "http://purl.bdrc.io/resource/" ;
-  rdfs:label "Topic Shape"@en ;
-  sh:property bds:CommonShape-prefLabel ;
-  sh:property bds:CommonShape-altLabel ;
-  sh:property bds:CommonShape-rdfsComment ;
-  sh:property bds:RootShape-note ;
-  sh:property bdsa:AdmShape-adminAbout ;
-  sh:property bds:TopicShape-type ;
-  sh:targetClass bdo:Topic ;
-.
 bds:TopicShape-type
-  a sh:PropertyShape ;
-  sh:path rdf:type ;
-  sh:in ( bdo:Topic) ;
-  sh:nodeKind sh:IRI ;
   sh:message "A topic must have type topic"@en ;
-  sh:maxCount 1 ;
-  sh:minCount 1 ;
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:name "type"@en ;
@@ -82,17 +63,6 @@ bds:AdminPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Admin data"@en ;
   sh:order "2"^^xsd:decimal ;
-.
-bds:TopicShape-type
-  dash:editor dash:EnumSelectEditor ;
-  sh:group bds:BasePropertyGroup ;
-  sh:name "type"@en ;
-  sh:order "0"^^xsd:decimal ;
-  sh:path rdf:type ;
-  sh:in ( bdo:Topic ) ;
-  sh:message "must have type topic"@en ;
-  sh:maxCount 1 ;
-  sh:minCount 1 ;
 .
 bds:CommonShape-prefLabel
   sh:group bds:BasePropertyGroup ;

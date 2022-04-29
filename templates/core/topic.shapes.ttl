@@ -1,20 +1,21 @@
-# baseURI: http://purl.bdrc.io/shapes/core/SimpleShapes/
-# prefix: SimpleShapes
+# baseURI: http://purl.bdrc.io/shapes/core/TopicShapes/
 
-@prefix SimpleShapes: <http://purl.bdrc.io/shapes/core/SimpleShapes/> .
+@prefix TopicShapes: <http://purl.bdrc.io/shapes/core/TopicShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
-@prefix bdd: <http://purl.bdrc.io/data/> .
+@prefix bda: <http://purl.bdrc.io/admin.data/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
 @prefix bds: <http://purl.bdrc.io/ontology/shapes/core/> .
-@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix bdsa: <http://purl.bdrc.io/ontology/shapes/adm/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix iiif2: <http://iiif.io/api/presentation/2#> .
 @prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -27,16 +28,41 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-##
-## Entity and generic property shapes for external refs outside a given graph
-##
-SimpleShapes:
+
+TopicShapes:
   a owl:Ontology ;
-  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
-  owl:versionInfo "Initial SHACL constraints" ;
+  owl:imports <http://purl.bdrc.io/shapes/core/SimpleShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
+  owl:versionInfo "SHACL templates for Topic" ;
 .
 
+bdo:Topic
+  bds:topShapeGraph bdg:TopicShape ;
+  bds:uiShapeGraph bdg:TopicShapes ;
+.
+
+bds:TopicShape
+  a sh:NodeShape ;
+  bds:identifierPrefix "T" ;
+  sh:namespace "http://purl.bdrc.io/resource/" ;
+  rdfs:label "Topic Shape"@en ;
+  sh:property bds:CommonShape-prefLabel ;
+  sh:property bds:CommonShape-altLabel ;
+  sh:property bds:CommonShape-rdfsComment ;
+  sh:property bds:RootShape-note ;
+  sh:property bdsa:AdmShape-adminAbout ;
+  sh:property bds:TopicShape-type ;
+  sh:targetClass bdo:Topic ;
+.
+bds:TopicShape-type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:in ( bdo:Topic) ;
+  sh:nodeKind sh:IRI ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+.
 bdsa:AdmEntityShape
   a sh:NodeShape ;
   sh:namespace "http://purl.bdrc.io/admindata/" ;

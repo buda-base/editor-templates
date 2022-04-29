@@ -33,30 +33,11 @@ RoleUIShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
-  owl:imports <http://purl.bdrc.io/shapes/core/SimpleShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RoleShapes/> ;
   owl:versionInfo "SHACL UI templates for Role" ;
 .
-bds:RoleShape
-  a sh:NodeShape ;
-  bds:identifierPrefix "R" ;
-  sh:namespace "http://purl.bdrc.io/resource/" ;
-  rdfs:label "Role Shape"@en ;
-  sh:property bds:CommonShape-prefLabel ;
-  sh:property bds:CommonShape-altLabel ;
-  sh:property bds:CommonShape-rdfsComment ;
-  sh:property bds:RootShape-note ;
-  sh:property bdsa:AdmShape-adminAbout ;
-  sh:property bds:RoleShape-type ;
-  sh:targetClass bdo:Role ;
-.
 bds:RoleShape-type
-  a sh:PropertyShape ;
-  sh:path rdf:type ;
-  sh:in ( bdo:Role ) ;
-  sh:nodeKind sh:IRI ;
   sh:message "must have type role"@en ;
-  sh:maxCount 1 ;
-  sh:minCount 1 ;
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:name "type"@en ;
