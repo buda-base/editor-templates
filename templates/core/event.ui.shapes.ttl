@@ -37,12 +37,12 @@ EventUIShapes:
 .
 bds:EventShape-eventWhere
   dash:editor dash:InstancesSelectEditor ;
-  sh:name "where event occurred"@en ;
+  sh:name "event location"@en ;
   sh:class bdo:Place ;
 .
 bds:EventShape-eventWho
   dash:editor dash:InstancesSelectEditor ;
-  sh:name "who was involved in the event"@en ;
+  sh:name "associated person"@en ;
   sh:class bdo:Person ;
 .
 bds:EventShape-notAfter
