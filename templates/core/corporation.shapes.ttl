@@ -32,7 +32,7 @@
 CorporationShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
-  owl:imports <http://purl.bdrc.io/shapes/core/SimpleShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
   owl:versionInfo "Initial SHACL constraints for Corporations and their members" ;
 .
 bdo:Corporation 
