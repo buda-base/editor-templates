@@ -52,6 +52,10 @@ bds:CommonShape-rdfsComment
   sh:name "description"@en ;
   dash:editor dash:TextAreaWithLangEditor ;
 .
+bds:CommonShape-inCollection
+  dash:editor dash:EnumSelectEditor ;
+  sh:description "collection or the place where the scanned copy comes from"@en ;
+.
 bds:CommonShape-associatedTradition
   dash:editor dash:EnumSelectEditor ;
   sh:name "associated tradition" ;

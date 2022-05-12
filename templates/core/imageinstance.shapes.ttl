@@ -41,6 +41,7 @@ bds:ImageInstanceShape
   # sh:property bds:InstanceShape-instanceHasReproduction ;
   # sh:property bds:InstanceShape-instanceReproductionOf ;
   sh:property bds:InstanceShape-isComplete ;
+  sh:property bds:CommonShape-inCollection ;
   sh:property bds:ImageInstanceShape-scanInfo ;
   sh:property bds:ImageInstanceShape-hasVolume ;
   sh:property bds:ImageInstanceShape-type ;

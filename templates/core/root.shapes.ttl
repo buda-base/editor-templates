@@ -53,6 +53,13 @@ bds:CommonShape-rdfsComment
   bds:allowMarkDown true ;
   sh:uniqueLang true ;
 .
+bds:CommonShape-inCollection
+  a sh:PropertyShape ;
+  sh:path bdo:inCollection ;
+  sh:nodeKind sh:IRI ;
+  bds:propertyShapeType bds:ExternalShape ;
+  bds:classIn ( bdo:Collection bdo:Place ) ;
+.
 ##
 ## identifiers
 ##
@@ -106,6 +113,7 @@ bds:AgentAsCreatorShape
   sh:property bds:AgentAsCreatorShape-sourceIndication ;
   sh:targetClass bdo:AgentAsCreator ;
   sh:targetObjectsOf bdo:creator ;
+  skos:prefLabel "creator"@en ;
 .
 bds:AgentAsCreatorShape-type
   a sh:PropertyShape ;

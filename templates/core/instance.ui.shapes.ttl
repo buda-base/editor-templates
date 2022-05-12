@@ -138,33 +138,42 @@ bds:InstanceShape-publisherName
   sh:group bds:PubPropertyGroup ;
   sh:order "3"^^xsd:decimal ;
 .
-bds:InstanceShape-instanceEvent
-  dash:editor dash:DetailsEditor ;
-  sh:group bds:PubPropertyGroup ;
-  sh:order "4"^^xsd:decimal ;
-.
 bds:InstanceShape-publisherLocation
   dash:editor dash:TextAreaWithLangEditor ;
   dash:singleLine true ;
   sh:group bds:PubPropertyGroup ;
+  sh:order "4"^^xsd:decimal ;
+.
+bds:InstanceShape-instanceEvent
+  dash:editor dash:DetailsEditor ;
+  sh:group bds:PubPropertyGroup ;
   sh:order "5"^^xsd:decimal ;
+.
+bds:BiblioShape-creator
+  dash:editor dash:DetailsEditor ;
+  sh:group bds:PubPropertyGroup ;
+  sh:order "6"^^xsd:decimal ;
+  sh:name "creator"@en ;
 .
 bds:InstanceShape-hasSourcePrintery
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:PubPropertyGroup ;
-  sh:order "6"^^xsd:decimal ;
+  sh:order "7"^^xsd:decimal ;
 .
 bds:InstanceShape-editionStatement
   dash:editor dash:TextAreaWithLangEditor ;
   dash:singleLine true ;
   sh:group bds:PubPropertyGroup ;
-  sh:order "7"^^xsd:decimal ;
+  sh:order "8"^^xsd:decimal ;
 .
 bds:BiblioShape-creator
   dash:editor dash:DetailsEditor ;
   sh:group bds:PubPropertyGroup ;
   bds:displayPriority 1 ;
-  sh:order "8"^^xsd:decimal ;
+  sh:order "9"^^xsd:decimal ;
+.
+bds:AgentAsCreatorShape-role
+  sh:in ( bdr:R0ER0015 bdr:R0ER0010 bdr:R0ER0013 bdr:R0ER0024 bdr:R0ER0028 bdr:R0ER0030 bdr:R0ER0031 bdr:R0ER0033 bdr:R0ER0034 )
 .
 ##
 ## events
@@ -175,6 +184,10 @@ bds:InstanceEventShape-type
   sh:order "0"^^xsd:decimal ;
 .
 bds:EventShape-eventWhen sh:order "1"^^xsd:decimal .
+bds:EventShape-eventWhere 
+  sh:order "1"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
 bds:EventShape-onYear sh:order "2"^^xsd:decimal .
 bds:EventShape-notBefore sh:order "3"^^xsd:decimal .
 bds:EventShape-notAfter sh:order "4"^^xsd:decimal .
@@ -195,12 +208,14 @@ bds:InstanceShape-incipit
   dash:editor dash:TextAreaWithLangEditor ;
   sh:group bds:TextPropertyGroup ;
   sh:order "1"^^xsd:decimal ;
+  sh:description "first phrases of a text, used for SEA text to ease their identification"@en ;
 .
 bds:InstanceShape-authorshipStatement
   dash:editor dash:TextAreaWithLangEditor ;
   dash:singleLine true ;
   sh:group bds:TextPropertyGroup ;
   sh:order "2"^^xsd:decimal ;
+  sh:description "use only in the case of collective authorship, unidentified author or notable statement"@en ;
 .
 ##
 ## physical properties
@@ -342,5 +357,5 @@ bds:IdentifierShape-rdfType
   sh:in ( bf:Isbn bf:Lccn bdr:OclcControlNumber bdr:PL480 bdr:HollisId bdr:HarvardShelfId ) ;
 .
 bds:AgentAsCreatorShape-role
-  sh:in ( bdr:R0ER0010 bdr:R0ER0013 bdr:R0ER0015 bdr:R0ER0024 bdr:R0ER0030 bdr:R0ER0033 bdr:R0ER0034 )
+  sh:in ( bdr:R0ER0015 bdr:R0ER0010 bdr:R0ER0013 bdr:R0ER0024 bdr:R0ER0030 bdr:R0ER0033 bdr:R0ER0034 )
 .

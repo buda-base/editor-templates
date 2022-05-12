@@ -52,6 +52,7 @@ bds:InstanceShape
   sh:property bds:InstanceShape-publisherName ;
   sh:property bds:InstanceShape-publisherLocation ;
   sh:property bds:InstanceShape-seriesNumber ;
+  sh:property bds:InstanceShape-hasSourcePrintery ;
   sh:property bds:InstanceShape-dimWidth ;
   sh:property bds:InstanceShape-dimLength ;
   sh:property bds:InstanceShape-dimHeight ;
@@ -257,7 +258,7 @@ bds:InstanceEventShape
   bds:identifierPrefix "EV" ;
   bds:nodeShapeType bds:FacetShape ;
   rdfs:label "Instance Event Shape"@en ;
-  sh:property bds:InstanceEventShape-type , bds:EventShape-notAfter , bds:EventShape-notBefore , bds:EventShape-onYear , bds:EventShape-eventWhen , bds:EventShape-eventWhere , bds:EventShape-eventWho ;
+  sh:property bds:InstanceEventShape-type , bds:EventShape-notAfter , bds:EventShape-notBefore , bds:EventShape-onYear , bds:EventShape-eventWhen , bds:EventShape-eventWhere ;
   sh:targetClass bdo:InstanceEvent ;
   sh:targetObjectsOf bdo:instanceEvent ;
 .
