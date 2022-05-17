@@ -65,6 +65,7 @@ bds:InstanceShape
   sh:property bds:InstanceShape-type ;
   sh:property bds:InstanceShape-copyrightStatus ;
   sh:property bds:InstanceShape-instanceEvent ;
+  sh:property bds:InstanceShape-serialInstanceOf ;
   sh:property bds:InstanceShape-instanceHasReproduction ;
   # sh:property bds:InstanceShape-instanceReproductionOf ;
   sh:property bds:InstanceShape-isComplete ;
