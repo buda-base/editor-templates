@@ -46,6 +46,7 @@ bds:ImageInstanceShape-scanInfo
   dash:editor dash:TextAreaWithLangEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:order "1"^^xsd:decimal ;
+  bds:defaultLanguage "en" ;
 .
 bds:InstanceShape-isComplete
   dash:editor dash:BooleanSelectEditor ;
