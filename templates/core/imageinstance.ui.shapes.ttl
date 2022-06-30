@@ -124,6 +124,7 @@ bds:ImagegroupShape-type
 bds:ImagegroupShape-volumeNumber
   dash:editor dash:TextFieldEditor ;
   sh:order "1"^^xsd:decimal ;
+  bds:uniqueValueAmongSiblings true ;
 .
 bds:CommonShape-prefLabel
   sh:order "2"^^xsd:decimal ;
