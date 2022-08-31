@@ -98,7 +98,7 @@ bds:BdouPreferredUiLiteralLangs
   sh:property [
     sh:path bds:listPath ;
     sh:datatype xsd:string ;
-    sh:in ( "bo" "bo-x-ewts" "zh-hani" "zh-hans" "zh-hant" "zh-latn-pinyin" "inc-deva" "inc-newa" "inc-sinh" "inc-x-iast" "km" "km-x-twktt" "km-x-iast" "en" )
+    sh:in ( "bo" "bo-x-ewts" "zh-hani" "zh-hans" "zh-hant" "zh-latn-pinyin" "inc-deva" "inc-newa" "inc-sinh" "inc-x-iast" "km" "km-x-twktt" "km-x-iast" "pi-khmer" "pi-x-iast" "en" )
   ]
 .
 bds:BdouLocalNameDefaultPrefix
