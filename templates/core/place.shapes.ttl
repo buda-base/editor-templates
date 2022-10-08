@@ -4,7 +4,7 @@
 
 @prefix PlaceShapes: <http://purl.bdrc.io/shapes/core/PlaceShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
-@prefix bda: <http://purl.bdrc.io/admin.data/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
 @prefix bdg: <http://purl.bdrc.io/graph/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr: <http://purl.bdrc.io/resource/> .
