@@ -39,11 +39,7 @@ bds:EventShape
   sh:namespace "http://purl.bdrc.io/resource/" ;
   bds:nodeShapeType bds:FacetShape ;
   rdfs:label "Event Shape"@en ;
-  sh:property bds:EventShape-notAfter ;
-  sh:property bds:EventShape-notBefore ;
-  sh:property bds:EventShape-onDate ;
   sh:property bds:EventShape-eventWhen ;
-  sh:property bds:EventShape-onYear ;
   sh:property bds:EventShape-eventWhere ;
   sh:property bds:EventShape-eventWho ;
   sh:targetClass bdo:Event ;

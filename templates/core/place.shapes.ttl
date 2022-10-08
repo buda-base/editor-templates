@@ -127,7 +127,7 @@ bds:PlaceEventShape
   bds:identifierPrefix "EV" ;
   bds:nodeShapeType bds:FacetShape ;
   rdfs:label "Place Event Shape"@en ;
-  sh:property bds:PlaceEventShape-type , bds:CommonShape-associatedTradition , bds:EventShape-notAfter , bds:EventShape-notBefore , bds:EventShape-onYear , bds:EventShape-eventWhen , bds:EventShape-eventWho ;
+  sh:property bds:PlaceEventShape-type , bds:CommonShape-associatedTradition , bds:EventShape-eventWhen , bds:EventShape-eventWho ;
   sh:targetClass bdo:PlaceEvent ;
   sh:targetObjectsOf bdo:placeEvent ;
 .

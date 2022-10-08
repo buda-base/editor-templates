@@ -259,7 +259,7 @@ bds:InstanceEventShape
   bds:identifierPrefix "EV" ;
   bds:nodeShapeType bds:FacetShape ;
   rdfs:label "Instance Event Shape"@en ;
-  sh:property bds:InstanceEventShape-type , bds:EventShape-notAfter , bds:EventShape-notBefore , bds:EventShape-onYear , bds:EventShape-eventWhen , bds:EventShape-eventWhere ;
+  sh:property bds:InstanceEventShape-type , bds:EventShape-eventWhen , bds:EventShape-eventWhere ;
   sh:targetClass bdo:InstanceEvent ;
   sh:targetObjectsOf bdo:instanceEvent ;
 .
