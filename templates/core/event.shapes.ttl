@@ -73,7 +73,7 @@ bds:EventShape-eventWhen
   a sh:PropertyShape ;
   sh:message "there must be at most one :eventWhen"@en ;
   sh:path bdo:eventWhen ;
-  sh:datatype <http://id.loc.gov/datatypes/edtf> ;
+  sh:datatype <http://id.loc.gov/datatypes/edtf/EDTF> ;
   sh:maxCount 1 ;
 .
 bds:EventShape-onYear
