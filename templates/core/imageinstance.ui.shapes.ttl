@@ -57,10 +57,16 @@ bds:CommonShape-inCollection
   sh:group bds:BasePropertyGroup ;
   sh:order "3"^^xsd:decimal ;
 .
+bds:ImageInstanceShape-digitalLendingPossible
+  dash:editor dash:BooleanSelectEditor ;
+  sh:group bds:BasePropertyGroup ;
+  sh:order "4"^^xsd:decimal ;
+  bds:displayPriority 1 ;
+.
 bds:InstanceShape-reproductionPrintMethod
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:BasePropertyGroup ;
-  sh:order "4"^^xsd:decimal ;
+  sh:order "5"^^xsd:decimal ;
   bds:displayPriority 1 ;
 .
 #bds:ConnectionsPropertyGroup

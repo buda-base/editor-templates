@@ -46,6 +46,7 @@ bds:ImageInstanceShape
   sh:property bds:ImageInstanceShape-hasVolume ;
   sh:property bds:ImageInstanceShape-type ;
   sh:property bds:InstanceShape-reproductionPrintMethod ;
+  sh:property bds:ImageInstanceShape-digitalLendingPossible ;
   sh:targetClass bdo:ImageInstance ;
 .
 bds:ImageInstanceShape-type
@@ -78,12 +79,17 @@ bdsa:AdmEntityShapeForImageInstance
 bds:InstanceShape-instanceReproductionOf
   sh:minCount 1 ;
 .
-
 bds:ImageInstanceShape-scanInfo
   a sh:PropertyShape ;
   sh:path bdo:scanInfo ;
   sh:datatype rdf:langString ;
   sh:uniqueLang true ;
+.
+bds:ImageInstanceShape-digitalLendingPossible
+  a sh:PropertyShape ;
+  sh:path bdo:digitalLendingPossible ;
+  sh:datatype xsd:boolean ;
+  sh:maxCount 1 ;
 .
 bdsa:AdmShape-adminAbout
       sh:minCount 1 ;

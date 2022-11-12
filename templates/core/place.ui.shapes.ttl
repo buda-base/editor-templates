@@ -103,12 +103,6 @@ bds:PlaceShape-placeLocatedIn
   sh:name "located in"@en ;
   sh:order "0"^^xsd:decimal ;
 .
-bds:PlaceShape-placeContains
-  dash:editor dash:InstancesSelectEditor ;
-  sh:group bds:PlaceAssociatedPropertyGroup ;
-  sh:name "contains"@en ;
-  sh:order "1"^^xsd:decimal ;
-.
 bds:CommonShape-associatedTradition
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:PlaceAssociatedPropertyGroup ;
