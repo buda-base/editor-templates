@@ -60,7 +60,7 @@ bds:UserProfileShape
 bds:UserProfileShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
-  sh:in ( bdou:UserProfile ) ;
+  sh:in ( bdou:User ) ;
   sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
