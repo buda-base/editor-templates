@@ -45,7 +45,7 @@ bds:BasePropertyGroup
   rdfs:label "General Properties"@en ;
   sh:order "0"^^xsd:decimal ;
 .
-bds:RoleShape-type
+bds:UserProfileShape-type
   sh:message "must have type role"@en ;
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:BasePropertyGroup ;
