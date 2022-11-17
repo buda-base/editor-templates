@@ -50,15 +50,15 @@ bds:CommonShape-rdfsComment
   a sh:PropertyShape ;
   sh:path rdfs:comment ;
   sh:datatype rdf:langString ;
-  bds:allowMarkDown true ;
+  rde:allowMarkDown true ;
   sh:uniqueLang true ;
 .
 bds:CommonShape-inCollection
   a sh:PropertyShape ;
   sh:path bdo:inCollection ;
   sh:nodeKind sh:IRI ;
-  bds:propertyShapeType bds:ExternalShape ;
-  bds:classIn ( bdo:Collection bdo:Place ) ;
+  rde:propertyShapeType rde:ExternalShape ;
+  rde:classIn ( bdo:Collection bdo:Place ) ;
 .
 ##
 ## identifiers
@@ -67,13 +67,13 @@ bds:CommonShape-identifiedBy
   a sh:PropertyShape ;
   sh:path bf:identifiedBy ;
   sh:nodeKind sh:IRI ;
-  bds:propertyShapeType bds:FacetShape ;
+  rde:propertyShapeType rde:InternalShape ;
 .
 bds:IdentifierShape
   a sh:NodeShape ;
-  bds:identifierPrefix "ID" ;
+  rde:identifierPrefix "ID" ;
   sh:namespace "http://purl.bdrc.io/resource/" ;
-  bds:nodeShapeType bds:FacetShape ;
+  rde:nodeShapeType rde:InternalShape ;
   sh:property bds:IdentifierShape-rdfType ;
   sh:property bds:IdentifierShape-rdfValue ;
   sh:targetClass bf:Identifier ;
@@ -100,13 +100,13 @@ bds:BiblioShape-creator
   a sh:PropertyShape ;
   sh:path bdo:creator ;
   sh:nodeKind sh:IRI ;
-  bds:propertyShapeType bds:FacetShape ;
+  rde:propertyShapeType rde:InternalShape ;
 .
 bds:AgentAsCreatorShape
   a sh:NodeShape ;
-  bds:identifierPrefix "CR" ;
+  rde:identifierPrefix "CR" ;
   sh:namespace "http://purl.bdrc.io/resource/" ;
-  bds:nodeShapeType bds:FacetShape ;
+  rde:nodeShapeType rde:InternalShape ;
   sh:property bds:AgentAsCreatorShape-role ;
   sh:property bds:AgentAsCreatorShape-agent ;
   sh:property bds:AgentAsCreatorShape-type ;
@@ -136,8 +136,8 @@ bds:AgentAsCreatorShape-agent
   sh:path bdo:agent ;
   sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
-  bds:propertyShapeType bds:ExternalShape ;
-  bds:classIn ( bdo:Person bdo:Topic ) ;
+  rde:propertyShapeType rde:ExternalShape ;
+  rde:classIn ( bdo:Person bdo:Topic ) ;
 .
 bds:AgentAsCreatorShape-sourceIndication
   a sh:PropertyShape ;
@@ -161,13 +161,13 @@ bds:RootShape-note
   a sh:PropertyShape ;
   sh:path bdo:note ;
   sh:nodeKind sh:IRI ;
-  bds:propertyShapeType bds:FacetShape ;
+  rde:propertyShapeType rde:InternalShape ;
 .
 bds:NoteShape
   a sh:NodeShape ;
-  bds:identifierPrefix "NT" ;
+  rde:identifierPrefix "NT" ;
   sh:namespace "http://purl.bdrc.io/resource/" ;
-  bds:nodeShapeType bds:FacetShape ;
+  rde:nodeShapeType rde:InternalShape ;
   sh:property bds:NoteShape-contentLocation ;
   sh:property bds:NoteShape-contentLocationStatement ;
   sh:property bds:NoteShape-noteText ;
@@ -192,8 +192,8 @@ bds:NoteShape-noteSource
   sh:message "a note may have at most one :noteSource"@en ;
   sh:path bdo:noteSource ;
   sh:maxCount 1 ;
-  bds:propertyShapeType bds:ExternalShape ;
-  bds:classIn ( bdo:Instance bdo:Work ) ;
+  rde:propertyShapeType rde:ExternalShape ;
+  rde:classIn ( bdo:Instance bdo:Work ) ;
 .
 bds:NoteShape-contentLocationStatement
   a sh:PropertyShape ;
@@ -207,14 +207,14 @@ bds:NoteShape-contentLocation
   sh:message "a note may have at most one :contentLocation"@en ;
   sh:path bdo:contentLocation ;
   sh:maxCount 1 ;
-  bds:propertyShapeType bds:FacetShape ;
+  rde:propertyShapeType rde:InternalShape ;
 .
 bds:NoteShape-noteText
   a sh:PropertyShape ;
   sh:message "a note may have at most one :noteText"@en ;
   sh:path bdo:noteText ;
   sh:datatype rdf:langString ;
-  bds:allowMarkDown true ;
+  rde:allowMarkDown true ;
   sh:maxCount 1 ;
 .
 bds:NoteShape-noteType
@@ -229,7 +229,7 @@ bds:NoteShape-noteType
 ##
 bds:ContentLocationShape
   a sh:NodeShape ;
-  bds:identifierPrefix "CL" ;
+  rde:identifierPrefix "CL" ;
   sh:namespace "http://purl.bdrc.io/resource/" ;
   rdfs:label "ContentLocation Shape"@en ;
   sh:property bds:ContentLocationShape-contentLocationByFolio ;
@@ -254,10 +254,10 @@ bds:ContentLocationShape
 bds:ContentLocationShape-contentLocationInstance 
   a sh:PropertyShape ;
   sh:path bdo:contentLocationInstance ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
-  bds:classIn ( bdo:ImageInstance ) ;
+  rde:classIn ( bdo:ImageInstance ) ;
   sh:message "At most one instance allowed"@en ;
 .
 bds:ContentLocationShape-contentLocationByFolio
@@ -395,30 +395,30 @@ bds:ContentLocationShape-type
 #
 bds:InstanceShape-instanceOf
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:instanceOf ;
-  bds:classIn ( bdo:Work ) ;
+  rde:classIn ( bdo:Work ) ;
   sh:description "All instances should have one work, except bundles containing unrelated texts"@en ;
   sh:name "instance of (work)"@en ;
   sh:maxCount 1 ;
-  bds:connectIDs true ;
-  bds:copyObjectsOfProperty skos:prefLabel , skos:altLabel ;
+  rde:connectIDs true ;
+  rde:copyObjectsOfProperty skos:prefLabel , skos:altLabel ;
 .
 bds:InstanceShape-instanceHasReproduction
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:instanceHasReproduction ;
-  bds:connectIDs true ;
+  rde:connectIDs true ;
   sh:name "has reproduction (scans or etext)"@en ;
-  bds:classIn ( bdo:ImageInstance bdo:EtextInstance ) ;
+  rde:classIn ( bdo:ImageInstance bdo:EtextInstance ) ;
 .
 bds:InstanceShape-instanceReproductionOf
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:instanceReproductionOf ;
-  bds:classIn ( bdo:Instance ) ;
+  rde:classIn ( bdo:Instance ) ;
   sh:maxCount 1 ;
-  bds:connectIDs true ;
+  rde:connectIDs true ;
 .
 bds:InstanceShape-copyrightStatus
   a sh:PropertyShape ;

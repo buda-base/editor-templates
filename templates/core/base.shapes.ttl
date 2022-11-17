@@ -65,84 +65,14 @@ bds:BDR
         sh:namespace "http://purl.bdrc.io/resource/"^^xsd:anyURI ;
     ] ;
 .
-bds:identifierPrefix
-  a owl:DatatypeProperty ;
-  rdfs:label "prefix for resource id"@en ;
-  rdfs:range xsd:string ;
-  skos:definition "prefix to use when generating identifier for a resource"@en ;
-.
-# TODO: some properties should be displayed conditionally, for instance eventWho on a personEvent only makes sense if the type of personEvent is a marriage or divorce
-bds:displayPriority
-  a owl:DatatypeProperty ;
-  rdfs:label "display priority"@en ;
-  rdfs:range xsd:integer ;
-  rdfs:domain sh:PropertyShape ;
-  skos:definition "indicates if a property should be displayed or hidden, using a number between 0 and 2 where 0 means the property should always be displayed, 1 means the property can be hidden behind a see more button if necessary, 2 means the property should be hidden unless there's an associated value, and 3 means that the property should always be hidden (use for inferred fields for instance)."@en ;
-.
-bds:classIn
-  a owl:DatatypeProperty ;
-  rdfs:label "expected object type"@en ;
-  rdfs:domain rdfs:Resource ;
-  skos:definition "this is similar to sh:class except that the constraint is that the type must be any of the listed types instead of the conjuction of all listed types. The object should be a rdf:list."@en ;
-.
-bds:nodeShapeType
-  a owl:ObjectProperty ;
-  rdfs:label "node shape type"@en ;
-  rdfs:domain sh:NodeShape ;
-  rdfs:range bds:ShapeType ;
-  skos:definition "type of a node shape to discriminate among fact shapes, internal shapes, and so on"@en ;
-.
-bds:propertyShapeType
-  a owl:ObjectProperty ;
-  rdfs:label "node shape type"@en ;
-  rdfs:domain sh:PropertyShape ;
-  rdfs:range bds:ShapeType ;
-  skos:definition "type of a node shape to discriminate among fact shapes, internal shapes, and so on"@en ;
-.
-bds:allowMarkDown
-  a owl:DatatypeProperty ;
-  rdfs:label "node shape type"@en ;
-  rdfs:domain sh:PropertyShape ;
-  rdfs:range xsd:boolean ;
-  skos:definition "the object of the property can be in markdown"@en ;
-.
-bds:ShapeType
-  a owl:Class ;
-.
-bds:independentIdentifiers
-  a owl:DatatypeProperty ;
-  rdfs:label "independent identifiers"@en ;
-  rdfs:domain sh:NodeShape ;
-  rdfs:range xsd:boolean ;
-  skos:definition "the identifiers for the resource are independent from its parent resource"@en ;
-.
-bds:sortOnProperty
-  a owl:ObjectProperty ;
-  rdfs:label "sort on property"@en ;
-  rdfs:domain sh:PropertyShape ;
-  skos:definition "sort the objects of the property shape by one of their property. This is for display purpose only and has no effect on the data."@en ;
-.
-bds:ExternalShape
-  a bds:ShapeType ;
-  rdfs:label "node shape refers to resource external to focus node graph"@en ;
-  skos:definition "this shape indicates external resource that is not contained in the focus node graph"@en ;
-.
-bds:FacetShape
-  a bds:ShapeType ;
-  rdfs:label "node shape is a facet"@en ;
-  skos:definition "this shape applies to a resource contained in the graph of root Resource that is a facet of the containing resource"@en ;
-.
+
 bds:IgnoreShape
-  a bds:ShapeType ;
+  a rde:ShapeType ;
   rdfs:label "node shape is ignored for editing"@en ;
   skos:definition "this shape indicates internal resource that is not editable"@en ;
 .
-bds:InternalShape
-  a bds:ShapeType ;
-  rdfs:label "node shape is internal"@en ;
-  skos:definition "this shape applies to internal resources such as Volumes in an Imagegroup"@en ;
-.
-bds:increment
+
+rde:increment
   a owl:DatatypeProperty ;
   rdfs:label "increment by"@en ;
   rdfs:domain sh:PropertyShape ;
@@ -197,26 +127,6 @@ bds:uiShapeGraph
   rdfs:domain bdo:Entity ;
   rdfs:range xsd:anyURI ;
 .
-bds:readOnly
-  a owl:DatatypeProperty ;
-  rdfs:label "read only"@en ;
-  rdfs:domain sh:PropertyShape ;
-  rdfs:range xsd:boolean ;
-  skos:definition "true indicates that the editor should not allow the user to change the property"@en ;
-.
-bds:defaultValue
-  a owl:DatatypeProperty ;
-  rdfs:label "editor default value"@en ;
-  rdfs:domain sh:PropertyShape ;
-  skos:definition "indicates the default value that the editor should display when there is no value"@en ;
-.
-bds:defaultLanguage
-  a owl:DatatypeProperty ;
-  rdfs:label "default language"@en ;
-  rdfs:domain sh:PropertyShape ;
-  rdfs:range xsd:string ;
-  skos:definition "indicates the default language that the editor should display for the values of a certain property"@en ;
-.
 # blank nodes make it so that if the same file is imported twice, things will go wrong...
 # what a wonderful format RDF is...
 bds:DateTimeOrDateOrgYear
@@ -234,50 +144,4 @@ bds:DateTimeOrDateOrgYear
     ) ;
   rdfs:comment "An rdf:List that can be used in property constraints as value for sh:or to indicate that all values of a property must be either xsd:gYear, xsd:date or xsd:dateTime." ;
   rdfs:label "Date or date time or year" ;
-.
-# defining the path to use in the list path pattern (https://www.topquadrant.com/constraints-on-rdflists-using-shacl/)
-bds:listPathZeroOrMore sh:zeroOrMorePath rdf:rest .
-bds:listPath rdf:first bds:listPathZeroOrMore ;
-             rdf:rest rdf:first .
-
-bds:specialPattern
-  a owl:ObjectProperty ;
-  rdfs:domain sh:PropertyShape ;
-  rdfs:range bds:SpecialPattern ;
-  skos:prefLabel "special pattern"@en ;
-.
-
-bds:SpecialPattern
-  a owl:Class ;
-.
-bds:PatternEDTF
-  a bds:SpecialPattern ;
-  skos:prefLabel "EDTF pattern"@en ;
-  skos:description "Extended Date/Time Format (EDTF) has been designed by the Library of Congress and integrated into ISO8601-2019"@en ;
-  rdfs:seeAlso <https://www.loc.gov/standards/datetime/> ;
-.
-bds:PatternISBN
-  a bds:SpecialPattern ;
-  skos:prefLabel "ISBN pattern"@en ;
-.
-bds:connectIDs
-  a owl:DatatypeProperty ;
-  rdfs:label "connect IDs"@en ;
-  rdfs:domain sh:PropertyShape ;
-  rdfs:range xsd:boolean ;
-  skos:definition "when creating a new object of this (external) property, the URI should be connected to the one of the current subject."@en ;
-.
-bds:copyObjectsOfProperty
-  a owl:ObjectProperty ;
-  rdfs:label "connect IDs"@en ;
-  rdfs:domain sh:PropertyShape ;
-  rdfs:range rdf:Property ;
-  skos:definition "when creating a new object of this (external) property, automatically copy triples with the object of this property (typically skos:prefLabel) as predicates"@en ;
-.
-bds:allowBatchManagement
-  a owl:DatatypeProperty ;
-  rdfs:label "allow batch management"@en ;
-  rdfs:domain sh:PropertyShape ;
-  rdfs:range xsd:boolean ;
-  skos:definition "instructs the UI to allow batch creation / removal of objects of this property"@en ;
 .

@@ -58,7 +58,7 @@ bds:InstanceShape-biblioNote
   dash:editor dash:TextAreaWithLangEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:order "3"^^xsd:decimal ;
-  bds:defaultLanguage "en" ;
+  rde:defaultLanguage "en" ;
 .
 bds:InstanceShape-instanceOf
   dash:editor dash:InstancesSelectEditor ;
@@ -79,7 +79,7 @@ bds:CommonShape-identifiedBy
   sh:name "identifier"@en ;
   sh:group bds:BasePropertyGroup ;
   sh:order "7"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 ##
 ## Titles
@@ -130,7 +130,7 @@ bds:InstanceShape-reproductionPrintMethod
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:PubPropertyGroup ;
   sh:order "2"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bds:InstanceShape-publisherName
   dash:editor dash:TextAreaWithLangEditor ;
@@ -169,7 +169,7 @@ bds:InstanceShape-editionStatement
 bds:BiblioShape-creator
   dash:editor dash:DetailsEditor ;
   sh:group bds:PubPropertyGroup ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
   sh:order "9"^^xsd:decimal ;
 .
 bds:AgentAsCreatorShape-role
@@ -186,7 +186,7 @@ bds:InstanceEventShape-type
 bds:EventShape-eventWhen sh:order "1"^^xsd:decimal .
 bds:EventShape-eventWhere 
   sh:order "1"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bds:EventShape-onYear sh:order "2"^^xsd:decimal .
 bds:EventShape-notBefore sh:order "3"^^xsd:decimal .
@@ -238,7 +238,7 @@ bds:InstanceShape-material
 bds:InstanceShape-appliedMaterial
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:PubPropertyGroup ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
   sh:order "2"^^xsd:decimal ;
 .
 bds:InstanceShape-numberOfVolumes
@@ -257,25 +257,25 @@ bds:InstanceShape-dimWidth
   dash:editor dash:TextFieldEditor ;
   sh:group bds:PhysicalPropertyGroup ;
   sh:order "5"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bds:InstanceShape-dimLength
   dash:editor dash:TextFieldEditor ;
   sh:group bds:PhysicalPropertyGroup ;
   sh:order "6"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bds:InstanceShape-dimHeight
   dash:editor dash:TextFieldEditor ;
   sh:group bds:PhysicalPropertyGroup ;
   sh:order "7"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bds:InstanceShape-isDamaged
   dash:editor dash:BooleanSelectEditor ;
   sh:group bds:PhysicalPropertyGroup ;
   sh:order "8"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 ##
 ## Properties of members of serial works
@@ -351,7 +351,7 @@ bds:AgentAsCreatorShape-agent
   sh:minCount 1 ;
 .
 bds:AgentAsCreatorShape-sourceIndication
-  bds:displayPriority 2 ;
+  rde:displayPriority 2 ;
 .
 bds:IdentifierShape-rdfType
   sh:in ( bf:Isbn bf:Lccn bdr:OclcControlNumber bdr:PL480 bdr:HollisId bdr:HarvardShelfId ) ;

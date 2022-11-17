@@ -34,7 +34,7 @@ WorkShapes:
 bds:WorkShape
   a sh:NodeShape ;
   rdfs:label "Work shape"@en ;
-  bds:identifierPrefix "WA" ;
+  rde:identifierPrefix "WA" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:property bds:CommonShape-prefLabel ;
   sh:property bds:CommonShape-altLabel ;
@@ -54,7 +54,7 @@ bds:WorkShape
   sh:targetClass bdo:Work ;
 .
 bdsa:AdmEntityShape-replaceWith 
-  bds:classIn ( bdo:Work bdo:SerialWork ) ;
+  rde:classIn ( bdo:Work bdo:SerialWork ) ;
 .
 bds:WorkShape-catalogInfo
   a sh:PropertyShape ;
@@ -66,27 +66,27 @@ bds:WorkShape-catalogInfo
 bds:WorkShape-hasInstance
   a sh:PropertyShape ;
   sh:path bdo:workHasInstance ;
-  bds:classIn ( bdo:Instance bdo:EtextInstance ) ;
-  bds:propertyShapeType bds:ExternalShape ;
-  bds:connectIDs true ;
+  rde:classIn ( bdo:Instance bdo:EtextInstance ) ;
+  rde:propertyShapeType rde:ExternalShape ;
+  rde:connectIDs true ;
 .
 bds:WorkShape-hasTranslation
   a sh:PropertyShape ;
   sh:path bdo:workHasTranslation ;
-  bds:classIn ( bdo:Work ) ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:classIn ( bdo:Work ) ;
+  rde:propertyShapeType rde:ExternalShape ;
 .
 bds:WorkShape-isAbout
   a sh:PropertyShape ;
   sh:path bdo:workIsAbout ;
-  bds:classIn ( bdo:Topic bdo:Person bdo:Work bdo:Place ) ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:classIn ( bdo:Topic bdo:Person bdo:Work bdo:Place ) ;
+  rde:propertyShapeType rde:ExternalShape ;
 .
 bds:WorkShape-genre
   a sh:PropertyShape ;
   sh:path bdo:workGenre ;
-  bds:classIn ( bdo:Topic ) ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:classIn ( bdo:Topic ) ;
+  rde:propertyShapeType rde:ExternalShape ;
 .
 bds:WorkShape-language
   a sh:PropertyShape ;
@@ -111,12 +111,12 @@ bds:WorkShape-workEvent
   a sh:PropertyShape ;
   sh:path bdo:workEvent ;
   sh:nodeKind sh:IRI ;
-  bds:propertyShapeType bds:FacetShape ;
+  rde:propertyShapeType rde:InternalShape ;
 .
 bds:WorkEventShape
   a sh:NodeShape ;
-  bds:identifierPrefix "EV" ;
-  bds:nodeShapeType bds:FacetShape ;
+  rde:identifierPrefix "EV" ;
+  rde:nodeShapeType rde:InternalShape ;
   rdfs:label "Work Event Shape"@en ;
   sh:property bds:WorkEventShape-type , bds:EventShape-eventWhen , bds:EventShape-eventWhere ;
   sh:targetClass bdo:WorkEvent ;

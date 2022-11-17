@@ -124,7 +124,7 @@ bds:PlaceEventShape-type
 bds:EventShape-eventWhen sh:order "1"^^xsd:decimal .
 bds:CommonShape-associatedTradition sh:order "2"^^xsd:decimal .
 bds:EventShape-eventWho sh:order "3"^^xsd:decimal ;
-   bds:displayPriority 1 ;
+   rde:displayPriority 1 ;
 .
 bds:EventShape-onYear sh:order "4"^^xsd:decimal .
 bds:EventShape-notBefore sh:order "5"^^xsd:decimal .

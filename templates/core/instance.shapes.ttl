@@ -34,7 +34,7 @@ InstanceShapes:
 bds:InstanceShape
   a sh:NodeShape ;
   rdfs:label "Instance Shape"@en ;
-  bds:identifierPrefix "MW" ;
+  rde:identifierPrefix "MW" ;
   sh:property bds:CommonShape-prefLabel ;
   sh:property bds:CommonShape-altLabel ;
   sh:property bds:BiblioShape-creator ;
@@ -105,12 +105,12 @@ bds:InstanceShape-type
 bds:InstanceShape-serialInstanceOf
   a sh:PropertyShape ;
   sh:path bdo:serialInstanceOf ;
-  bds:classIn ( bdo:SerialWork ) ;
+  rde:classIn ( bdo:SerialWork ) ;
   sh:description "An instance can be a member of a serial"@en ;
   sh:name "serial work"@en ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:maxCount 1 ;
-  bds:connectIDs true ;
+  rde:connectIDs true ;
 .
 bds:InstanceShape-script
   a sh:PropertyShape ;
@@ -141,7 +141,7 @@ bds:InstanceShape-printMethod
 bds:InstanceShape-material
   a sh:PropertyShape ;
   sh:path bdo:material ;
-  bds:defaultValue bdr:MaterialPaper ;
+  rde:defaultValue bdr:MaterialPaper ;
   sh:in ( bdr:MaterialPaper bdr:MaterialDigital bdr:MaterialDeshog bdr:MaterialRicePaper bdr:MaterialBirchBark bdr:MaterialCardboard bdr:MaterialCloth  bdr:MaterialKhoiPaper bdr:MaterialLoktaPaper bdr:MaterialMultiLayerPaper bdr:MaterialPalmLeaf bdr:MaterialSaPaper bdr:MaterialParchment  bdr:MaterialPalmyraPalmLeaf bdr:MaterialCoryphaPalmLeaf ) ;
   sh:nodeKind sh:IRI ;
 .
@@ -175,9 +175,9 @@ bds:InstanceShape-editionStatement
 bds:InstanceShape-hasSourcePrintery
   a sh:PropertyShape ;
   sh:path bdo:hasSourcePrintery ;
-  bds:classIn ( bdo:Place ) ;
+  rde:classIn ( bdo:Place ) ;
   sh:maxCount 1 ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
 .
 bds:InstanceShape-seriesNumber
   a sh:PropertyShape ;
@@ -252,12 +252,12 @@ bds:InstanceShape-instanceEvent
   a sh:PropertyShape ;
   sh:path bdo:instanceEvent ;
   sh:nodeKind sh:IRI ;
-  bds:propertyShapeType bds:FacetShape ;
+  rde:propertyShapeType rde:InternalShape ;
 .
 bds:InstanceEventShape
   a sh:NodeShape ;
-  bds:identifierPrefix "EV" ;
-  bds:nodeShapeType bds:FacetShape ;
+  rde:identifierPrefix "EV" ;
+  rde:nodeShapeType rde:InternalShape ;
   rdfs:label "Instance Event Shape"@en ;
   sh:property bds:InstanceEventShape-type , bds:EventShape-eventWhen , bds:EventShape-eventWhere ;
   sh:targetClass bdo:InstanceEvent ;
@@ -292,7 +292,7 @@ bds:InstanceShape-contentLocationStatement
   sh:maxCount 1 ;
 .
 bdsa:AdmEntityShape-replaceWith 
-  bds:classIn ( bdo:Instance ) ;
+  rde:classIn ( bdo:Instance ) ;
 .
 #
 # titles
@@ -301,12 +301,12 @@ bds:InstanceShape-hasTitle
   a sh:PropertyShape ;
   sh:path bdo:hasTitle ;
   sh:nodeKind sh:IRI ;
-  bds:propertyShapeType bds:FacetShape ;
+  rde:propertyShapeType rde:InternalShape ;
 .
 bds:TitleShape
   a sh:NodeShape ;
-  bds:identifierPrefix "TT" ;
-  bds:nodeShapeType bds:FacetShape ;
+  rde:identifierPrefix "TT" ;
+  rde:nodeShapeType rde:InternalShape ;
   rdfs:label "Title Shape"@en ;
   sh:targetObjectsOf bdo:hasTitle ;
   sh:property bds:TitleShape-value ;
@@ -320,7 +320,7 @@ bds:TitleShape-value
   sh:message "A title must have exactly one rdfs:label"@en ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
-  bds:allowPushToTopLevelSkosPrefLabel true ;
+  rde:allowPushToTopLevelLabel true ;
 .
 bds:TitleShape-type
   a sh:PropertyShape ;

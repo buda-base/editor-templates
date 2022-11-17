@@ -50,7 +50,7 @@ bds:IsbnShape-rdf_value
   sh:minCount 0 ;
   sh:name "ISBN shape"@en ;
   sh:pattern "^(97(8|9))?\\d{9}(\\d|X)$" ;
-  bds:specialPattern bds:PatternISBN ;
+  rde:SpecialPattern rde:PatternISBN ;
 .
 bds:LccnShape
   a sh:NodeShape ;

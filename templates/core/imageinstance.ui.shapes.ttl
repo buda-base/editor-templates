@@ -46,7 +46,7 @@ bds:ImageInstanceShape-scanInfo
   dash:editor dash:TextAreaWithLangEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:order "1"^^xsd:decimal ;
-  bds:defaultLanguage "en" ;
+  rde:defaultLanguage "en" ;
 .
 bds:InstanceShape-isComplete
   dash:editor dash:BooleanSelectEditor ;
@@ -61,13 +61,13 @@ bds:ImageInstanceShape-digitalLendingPossible
   dash:editor dash:BooleanSelectEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:order "4"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bds:InstanceShape-reproductionPrintMethod
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:order "5"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 #bds:ConnectionsPropertyGroup
 #  a sh:PropertyGroup ;
@@ -108,8 +108,8 @@ bds:ImageInstanceShape-hasVolume
   dash:editor dash:DetailsEditor ;
   sh:group bds:VolumesPropertyGroup ;
   sh:order "0"^^xsd:decimal ;
-  bds:sortOnProperty bdo:volumeNumber ;
-  bds:allowBatchManagement true ;
+  rde:sortOnProperty bdo:volumeNumber ;
+  rde:allowBatchManagement true ;
 .
 bds:AdminPropertyGroup
   a sh:PropertyGroup ;
@@ -130,20 +130,20 @@ bds:ImagegroupShape-type
 bds:ImagegroupShape-volumeNumber
   dash:editor dash:TextFieldEditor ;
   sh:order "1"^^xsd:decimal ;
-  bds:uniqueValueAmongSiblings true ;
+  rde:uniqueValueAmongSiblings true ;
 .
 bds:CommonShape-prefLabel
   sh:order "2"^^xsd:decimal ;
 .
 bds:CommonShape-altLabel
   sh:order "3"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bds:ImagegroupShape-imagesMissing
   dash:editor dash:TextFieldEditor ;
   dash:singleLine true ;
   sh:order "4"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bds:ImagegroupShape-volumePagesTbrcIntro
   dash:editor dash:TextFieldEditor ;
@@ -152,7 +152,7 @@ bds:ImagegroupShape-volumePagesTbrcIntro
 bds:ImagegroupShape-volumeNote
   dash:editor dash:TextFieldEditor ;
   sh:order "6"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bdsa:AdmEntityShape-access
   sh:minCount 1 ;

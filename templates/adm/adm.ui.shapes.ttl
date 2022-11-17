@@ -36,22 +36,22 @@ AdminUiShapes:
   owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
 .
 bdsa:AdmEntityShape-logDate
-      bds:propertyShapeType bds:IgnoreShape ;
+      rde:propertyShapeType bds:IgnoreShape ;
       sh:name "time"@en ;
       sh:order "0"^^xsd:decimal ;
-      bds:readOnly true ;
+      rde:readOnly true ;
 .
 bdsa:AdmEntityShape-logMessage
       sh:name "message"@en ;
       sh:order "1"^^xsd:decimal ;
       dash:editor dash:TextAreaWithLangEditor ;
       dash:singleLine true ;
-      bds:defaultLanguage "en" ;
+      rde:defaultLanguage "en" ;
 .
 bdsa:AdmEntityShape-logWho
       sh:name "user"@en ;
       sh:order "2"^^xsd:decimal ;
-      bds:readOnly true ;
+      rde:readOnly true ;
       sh:class bdou:User ;
 .
 bdsa:AdmEntityShape-logType
@@ -61,12 +61,12 @@ bdsa:AdmEntityShape-logType
 bdsa:AdmEntityShape-logMethod
       dash:editor dash:EnumSelectEditor ;
       sh:order "4"^^xsd:decimal ;
-      bds:displayPriority 1 ;
+      rde:displayPriority 1 ;
 .
 bdsa:AdmEntityShape-logEntry
       sh:name "log entry"@en ;
       sh:order "8"^^xsd:decimal ;
-      bds:readOnly true ;
+      rde:readOnly true ;
       bds:sortBy adm:logDate ;
 .
 bdsa:AdmEntityShape-status
@@ -93,7 +93,7 @@ bdsa:AdmEntityShape-restrictedInChinaDefaultsTrue
       dash:editor dash:BooleanSelectEditor ;
       sh:name "restricted in China"@en ;
       sh:order "3"^^xsd:decimal ;
-      bds:defaultValue true ;
+      rde:defaultValue true ;
 .
 bdsa:AdmEntityShape-replaceWith
       sh:name "replace with (for withdrawn records only)"@en ;
@@ -105,13 +105,13 @@ bdsa:AdmEntityShape-rdfsComment
       dash:editor   dash:TextAreaWithLangEditor ;
       sh:name       "admin note"@en ;
       sh:description "note not displayed to users"@en ;
-      bds:defaultLanguage "en" ;
+      rde:defaultLanguage "en" ;
 .
 bdsa:AdmEntityShape-metadataLegal
       dash:editor dash:EnumSelectEditor ;
       sh:name "copyright status"@en ;
       sh:order "6"^^xsd:decimal ;
-      bds:displayPriority 1 ;
+      rde:displayPriority 1 ;
 .
 bdsa:AdmEntityShape-type
      dash:editor dash:EnumSelectEditor ;

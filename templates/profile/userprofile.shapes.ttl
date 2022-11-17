@@ -41,7 +41,7 @@ UserProfileShapes:
 .
 bds:UserProfileShape
   a sh:NodeShape ;
-  bds:identifierPrefix "U" ;
+  rde:identifierPrefix "U" ;
   sh:namespace "http://purl.bdrc.io/resource-nc/user/"^^xsd:anyURI ;
   rdfs:label "User Profile Shape"@en ;
   sh:property bds:CommonShape-prefLabel ;
@@ -96,7 +96,7 @@ bds:BdouPreferredUiLiteralLangs
   sh:path bdou:preferredUiLiteralLangs ;
   sh:node dash:ListShape ;
   sh:property [
-    sh:path bds:listPath ;
+    sh:path rde:listPath ;
     sh:datatype xsd:string ;
     sh:in ( "bo" "bo-x-ewts" "zh-hani" "zh-hans" "zh-hant" "zh-latn-pinyin" "inc-deva" "inc-newa" "inc-sinh" "inc-x-iast" "km" "km-x-twktt" "km-x-iast" "pi-khmr" "pi-x-iast" "en" )
   ]

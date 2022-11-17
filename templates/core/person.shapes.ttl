@@ -32,7 +32,7 @@ PersonShapes:
 .
 bds:PersonShape
   a sh:NodeShape ;
-  bds:identifierPrefix "P" ;
+  rde:identifierPrefix "P" ;
   sh:namespace "http://purl.bdrc.io/resource/" ;
   rdfs:label "Person Shape"@en ;
   sh:property bds:PersonShape-personEvent ;
@@ -106,7 +106,7 @@ bds:PersonShape-type
 ## Admin data
 ##
 bdsa:AdmEntityShape-replaceWith 
-  bds:classIn ( bdo:Person bdo:Topic ) ;
+  rde:classIn ( bdo:Person bdo:Topic ) ;
 .
 ##
 ## Gender defns for kinship
@@ -124,130 +124,130 @@ bds:PersonShape-gender
 ##
 bds:PersonShape-hasBrother
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasBrother ;
 .
 bds:PersonShape-hasCousin
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasCousin ;
 .
 bds:PersonShape-hasDaughter
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasDaughter ;
 .
 bds:PersonShape-hasFather
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasFather ;
   sh:maxCount 1 ;
 .
 bds:PersonShape-hasGrandChild
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasGrandChild ;
 .
 bds:PersonShape-hasGrandParent
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasGrandParent ;
   sh:message "A person may have at most 4 grandparents"@en ;
   sh:maxCount 4 ;
 .
 bds:PersonShape-hasGranddaughter
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasGranddaughter ;
 .
 bds:PersonShape-hasGrandfather
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasGrandfather ;
   sh:maxCount 2 ;
   sh:message "A person may have at most 2 grandfathers"@en ;
 .
 bds:PersonShape-hasGrandmother
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasGrandmother ;
   sh:maxCount 2 ;
   sh:message "A person may have at most 2 grandmothers"@en ;
 .
 bds:PersonShape-hasGrandson
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasGrandson ;
   sh:message "A grandson must be Male"@en ;
 .
 bds:PersonShape-hasHusband
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasHusband ;
   sh:message "A husband must be Male"@en ;
 .
 bds:PersonShape-hasMother
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasMother ;
   sh:maxCount 1 ;
   sh:message "There is at most one mother"@en ;
 .
 bds:PersonShape-hasOlderBrother
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasOlderBrother ;
 .
 bds:PersonShape-hasOlderSister
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasOlderSister ;
 .
 bds:PersonShape-hasParent
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasParent ;
   sh:maxCount 2 ;
   sh:message "A person may have at most 2 parents"@en ;
 .
 bds:PersonShape-hasSibling
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasSibling ;
 .
 bds:PersonShape-hasSister
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasSister ;
 .
 bds:PersonShape-hasSon
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasSon ;
 .
 bds:PersonShape-hasSpouse
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasSpouse ;
 .
 bds:PersonShape-hasWife
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasWife ;
 .
 bds:PersonShape-hasYoungerBrother
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasYoungerBrother ;
 .
 bds:PersonShape-hasYoungerSister
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasYoungerSister ;
 .
 bds:PersonShape-kinWith
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:kinWith ;
 .
 ##
@@ -255,12 +255,12 @@ bds:PersonShape-kinWith
 ##
 bds:PersonShape-personStudentOf
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:personStudentOf ;
 .
 bds:PersonShape-personTeacherOf
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:personTeacherOf ;
 .
 bds:CommonShape-prefLabel
@@ -276,12 +276,12 @@ bds:PersonShape-personName
   sh:message "There must be at least one :personName object and each must be an IRI - no blank nodes"@en ;
   sh:minCount 1 ;
   sh:nodeKind sh:IRI ;
-  bds:propertyShapeType bds:FacetShape ;
+  rde:propertyShapeType rde:InternalShape ;
 .
 bds:PersonNameShape
   a sh:NodeShape ;
-  bds:identifierPrefix "NM" ;
-  bds:nodeShapeType bds:FacetShape ;
+  rde:identifierPrefix "NM" ;
+  rde:nodeShapeType rde:InternalShape ;
   rdfs:label "Person Name Shape"@en ;
   sh:targetObjectsOf bdo:personName ;
   sh:property bds:PersonNameShape-personNameLabel ;
@@ -295,7 +295,7 @@ bds:PersonNameShape-personNameLabel
   sh:message "A PersonName must have exactly one rdfs:label"@en ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
-  bds:allowPushToTopLevelSkosPrefLabel true ;
+  rde:allowPushToTopLevelLabel true ;
 .
 bds:PersonNameShape-type
   a sh:PropertyShape ;
@@ -314,12 +314,12 @@ bds:PersonShape-personEvent
   sh:path bdo:personEvent ;
   sh:message ":personEvent object must be an IRI - no blank nodes"@en ;
   sh:nodeKind sh:IRI ;
-  bds:propertyShapeType bds:FacetShape ;
+  rde:propertyShapeType rde:InternalShape ;
 .
 bds:PersonEventShape
   a sh:NodeShape ;
-  bds:identifierPrefix "EV" ;
-  bds:nodeShapeType bds:FacetShape ;
+  rde:identifierPrefix "EV" ;
+  rde:nodeShapeType rde:InternalShape ;
   rdfs:label "Person Event Shape"@en ;
   sh:description "The events associated with a person. Note that 'Founds Monastery' is not only available as a place event. To represent a century, use this pattern: 12th c. = not before 1100, not after 1199"@en ;
   sh:property bds:PersonEventShape-personEventRole , bds:PersonEventShape-type , bds:PersonEventShape-personEventCorporation , bds:EventShape-eventWhen , bds:EventShape-eventWhere ;
@@ -328,15 +328,15 @@ bds:PersonEventShape
 bds:PersonEventShape-personEventRole
   a sh:PropertyShape ;
   sh:path bdo:role ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:maxCount 1 ;
-  bds:classIn ( bdo:Role ) ;
+  rde:classIn ( bdo:Role ) ;
   sh:message "At most one :personEventRole allowed"@en ;
 .
 bds:PersonEventShape-personEventCorporation
   a sh:PropertyShape ;
   sh:path bdo:corporation ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:maxCount 1 ;
   sh:message "At most one :personEventCorporation allowed"@en ;
 .
@@ -354,74 +354,74 @@ bds:PersonEventShape-type
 #
 bds:PersonShape-hasIncarnationGeneral
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasIncarnationGeneral ;
 .
 bds:PersonShape-hasIncarnationYangtse
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasIncarnationYangtse ;
 .
 bds:PersonShape-hasIncarnationBody
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasIncarnationBody ;
 .
 bds:PersonShape-hasIncarnationSpeech
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasIncarnationSpeech ;
 .
 bds:PersonShape-hasIncarnationMind
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasIncarnationMind ;
 .
 bds:PersonShape-hasIncarnationQualities
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasIncarnationQualities ;
 .
 bds:PersonShape-hasIncarnationActivities
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:hasIncarnationActivities ;
 .
 
 
 bds:PersonShape-incarnationGeneral
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:incarnationGeneral ;
 .
 bds:PersonShape-incarnationYangtse
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:incarnationYangtse ;
 .
 bds:PersonShape-incarnationBody
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:incarnationBody ;
 .
 bds:PersonShape-incarnationSpeech
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:incarnationSpeech ;
 .
 bds:PersonShape-incarnationMind
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:incarnationMind ;
 .
 bds:PersonShape-incarnationQualities
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:incarnationQualities ;
 .
 bds:PersonShape-incarnationActivities
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:incarnationActivities ;
 .
 

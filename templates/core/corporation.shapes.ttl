@@ -40,7 +40,7 @@ bdo:Corporation
 .
 bds:CorporationShape
   a sh:NodeShape ;
-  bds:identifierPrefix "C" ;
+  rde:identifierPrefix "C" ;
   rdfs:label "Corporation shape"@en ;
   sh:property bds:CorporationShape-hasMember ;
   sh:property bds:CommonShape-prefLabel ;
@@ -63,7 +63,7 @@ bds:CorporationShape-type
 bds:CorporationShape-hasMember
   a sh:PropertyShape ;
   sh:path bdo:hasMember ;
-  bds:propertyShapeType bds:ExternalShape ;
-  bds:classIn ( bdo:Person bdo:CorporationMember ) ;
+  rde:propertyShapeType rde:ExternalShape ;
+  rde:classIn ( bdo:Person bdo:CorporationMember ) ;
   sh:nodeKind sh:IRI ;
 .

@@ -37,7 +37,7 @@ RoleShapes:
 .
 bds:RoleShape
   a sh:NodeShape ;
-  bds:identifierPrefix "R" ;
+  rde:identifierPrefix "R" ;
   sh:namespace "http://purl.bdrc.io/resource/" ;
   rdfs:label "Role Shape"@en ;
   sh:property bds:CommonShape-prefLabel ;

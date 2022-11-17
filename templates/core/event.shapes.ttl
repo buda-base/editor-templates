@@ -35,9 +35,9 @@ EventShapes:
 .
 bds:EventShape
   a sh:NodeShape ;
-  bds:identifierPrefix "EV" ;
+  rde:identifierPrefix "EV" ;
   sh:namespace "http://purl.bdrc.io/resource/" ;
-  bds:nodeShapeType bds:FacetShape ;
+  rde:nodeShapeType rde:InternalShape ;
   rdfs:label "Event Shape"@en ;
   sh:property bds:EventShape-eventWhen ;
   sh:property bds:EventShape-eventWhere ;
@@ -87,12 +87,12 @@ bds:EventShape-onYear
 .
 bds:EventShape-eventWhere
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:eventWhere ;
   sh:maxCount 1 ;
 .
 bds:EventShape-eventWho
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:eventWho ;
 .

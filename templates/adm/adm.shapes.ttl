@@ -43,14 +43,14 @@ bdsa:AdmShape-adminAbout
       a sh:PropertyShape ;
       sh:maxCount 1 ;
       sh:path [ sh:inversePath adm:adminAbout ] ;
-      bds:propertyShapeType  bds:FacetShape ;
-      bds:readOnly true ;
+      rde:propertyShapeType  rde:InternalShape ;
+      rde:readOnly true ;
 .
 bdsa:LogEntryShape
   a sh:NodeShape ;
-  bds:identifierPrefix "LG" ;
+  rde:identifierPrefix "LG" ;
   sh:namespace "http://purl.bdrc.io/admindata/" ;
-  bds:nodeShapeType bds:FacetShape ;
+  rde:nodeShapeType rde:InternalShape ;
   rdfs:label "Log Entry"@en ;
   sh:targetObjectsOf adm:logEntry ;
   sh:property bdsa:AdmEntityShape-logDate ;
@@ -72,13 +72,13 @@ bdsa:AdmEntityShape-logMessage
 .
 bdsa:AdmEntityShape-logWho
       a sh:PropertyShape ;
-      bds:propertyShapeType bds:ExternalShape ;
+      rde:propertyShapeType rde:ExternalShape ;
       sh:path adm:logWho ;
       sh:nodeKind sh:IRI ;
 .
 bdsa:AdmEntityShape-logType
       a sh:PropertyShape ;
-      bds:propertyShapeType bds:IgnoreShape ;
+      rde:propertyShapeType bds:IgnoreShape ;
       sh:path rdf:type ;
       sh:nodeKind sh:IRI ;
       sh:in ( adm:ContentQC adm:ImagesUpdated adm:Reordered adm:ScanRequested adm:Scanned adm:Synced adm:InitialDataCreation adm:InitialDataImport adm:MinorUpdateData adm:ReinstateData adm:UpdateData adm:UpdateOutlineData adm:WithdrawData ) ;
@@ -86,14 +86,14 @@ bdsa:AdmEntityShape-logType
 .
 bdsa:AdmEntityShape-logMethod
       a sh:PropertyShape ;
-      bds:propertyShapeType bds:IgnoreShape ;
+      rde:propertyShapeType bds:IgnoreShape ;
       sh:path adm:logMethod ;
       sh:nodeKind sh:IRI ;
       sh:in ( bda:BatchMethod bda:ManualMethod ) ;
 .
 bdsa:AdmEntityShape-logEntry
       a sh:PropertyShape ;
-      bds:propertyShapeType bds:FacetShape ;
+      rde:propertyShapeType rde:InternalShape ;
       sh:path adm:logEntry ;
       sh:nodeKind sh:IRI ;
 .
@@ -129,7 +129,7 @@ bdsa:AdmEntityShape-contentLegal
 .
 bdsa:AdmEntityShape-replaceWith
       a sh:PropertyShape ;
-      bds:propertyShapeType bds:ExternalShape ;
+      rde:propertyShapeType rde:ExternalShape ;
       sh:path adm:replaceWith ;
       sh:nodeKind sh:IRI ;
       sh:maxCount 1 ;

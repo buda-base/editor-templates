@@ -88,5 +88,5 @@ bds:RootShape-note
   dash:editor dash:DetailsEditor ;
 .
 bdsa:AdmEntityShape-replaceWith 
-  bds:classIn ( bdo:Collection bdo:Work ) ;
+  rde:classIn ( bdo:Collection bdo:Work ) ;
 .

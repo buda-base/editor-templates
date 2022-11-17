@@ -43,7 +43,7 @@ bdo:Topic
 
 bds:TopicShape
   a sh:NodeShape ;
-  bds:identifierPrefix "T" ;
+  rde:identifierPrefix "T" ;
   sh:namespace "http://purl.bdrc.io/resource/" ;
   rdfs:label "Topic Shape"@en ;
   sh:property bds:CommonShape-prefLabel ;

@@ -37,7 +37,7 @@ SerialWorkShapes:
 bds:SerialWorkShape
   a sh:NodeShape ;
   rdfs:label "Serial Work shape"@en ;
-  bds:identifierPrefix "WAS" ;
+  rde:identifierPrefix "WAS" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:property bds:CommonShape-prefLabel ;
   sh:property bds:CommonShape-altLabel ;
@@ -52,8 +52,8 @@ bds:SerialWorkShape
 bds:WorkShape-serialHasInstance
   a sh:PropertyShape ;
   sh:path bdo:serialHasInstance ;
-  bds:propertyShapeType bds:ExternalShape ;
-  bds:classIn ( bdo:Instance bdo:EtextInstance )
+  rde:propertyShapeType rde:ExternalShape ;
+  rde:classIn ( bdo:Instance bdo:EtextInstance )
 .
 bds:SerialWorkShape-catalogInfo
   a sh:PropertyShape ;

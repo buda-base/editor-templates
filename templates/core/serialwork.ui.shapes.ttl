@@ -96,7 +96,7 @@ bdsa:AdmShape-adminAbout
   sh:order "0"^^xsd:decimal ;
 .
 bdsa:AdmEntityShape-replaceWith 
-  bds:classIn ( bdo:SerialWork bdo:Work ) ;
+  rde:classIn ( bdo:SerialWork bdo:Work ) ;
 .
 bds:RootShape-note
   sh:group bds:NotesPropertyGroup ;

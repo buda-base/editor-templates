@@ -37,7 +37,7 @@ CollectionShapes:
 .
 bds:CollectionShape
   a sh:NodeShape ;
-  bds:identifierPrefix "PR" ;
+  rde:identifierPrefix "PR" ;
   sh:namespace "http://purl.bdrc.io/resource/" ;
   rdfs:label "Collection Shape"@en ;
   sh:property bds:CommonShape-prefLabel ;

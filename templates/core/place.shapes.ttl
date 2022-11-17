@@ -32,7 +32,7 @@ PlaceShapes:
 .
 bds:PlaceShape
   a sh:NodeShape ;
-  bds:identifierPrefix "G" ;
+  rde:identifierPrefix "G" ;
   sh:namespace "http://purl.bdrc.io/resource/" ;
   rdfs:label "Place Shape"@en ;
   sh:property bds:PlaceShape-type ;
@@ -50,15 +50,15 @@ bds:PlaceShape
 .
 bds:PlaceShape-placeLocatedIn
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:placeLocatedIn ;
-  bds:classIn ( bdo:Place ) ;
+  rde:classIn ( bdo:Place ) ;
 .
 bds:PlaceShape-placeContains
   a sh:PropertyShape ;
-  bds:propertyShapeType bds:ExternalShape ;
+  rde:propertyShapeType rde:ExternalShape ;
   sh:path bdo:placeContains ;
-  bds:classIn ( bdo:Place ) ;
+  rde:classIn ( bdo:Place ) ;
 .
 
 bdsa:AdmEntityShape
@@ -91,7 +91,7 @@ bds:PlaceShape-type
 ## Admin data
 ##
 bdsa:AdmEntityShape-replaceWith 
-  bds:classIn ( bdo:Place bdo:Topic ) ;
+  rde:classIn ( bdo:Place bdo:Topic ) ;
 .
 bds:PlaceShape-placeLat
   a sh:PropertyShape ;
@@ -119,12 +119,12 @@ bds:PlaceShape-placeEvent
   a sh:PropertyShape ;
   sh:path bdo:placeEvent ;
   sh:nodeKind sh:IRI ;
-  bds:propertyShapeType bds:FacetShape ;
+  rde:propertyShapeType rde:InternalShape ;
 .
 bds:PlaceEventShape
   a sh:NodeShape ;
-  bds:identifierPrefix "EV" ;
-  bds:nodeShapeType bds:FacetShape ;
+  rde:identifierPrefix "EV" ;
+  rde:nodeShapeType rde:InternalShape ;
   rdfs:label "Place Event Shape"@en ;
   sh:property bds:PlaceEventShape-type , bds:CommonShape-associatedTradition , bds:EventShape-eventWhen , bds:EventShape-eventWho ;
   sh:targetClass bdo:PlaceEvent ;

@@ -71,33 +71,33 @@ bds:RootShape-note
 bds:NoteShape-noteText
   dash:editor dash:TextAreaWithLangEditor ;
   sh:name "note content"@en ;
-  bds:defaultLanguage "en" ;
+  rde:defaultLanguage "en" ;
   sh:order "0"^^xsd:decimal ;
 .
 bds:NoteShape-noteSource
   dash:editor dash:InstancesSelectEditor ;
   sh:name "source"@en ;
   sh:order "1"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bds:NoteShape-contentLocationStatement
   dash:editor dash:TextAreaWithLangEditor ;
   sh:name "location statement"@en ;
   sh:order "2"^^xsd:decimal ;
   dash:singleLine true ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bds:NoteShape-contentLocation
   dash:editor dash:DetailsEditor ;
   sh:name "location"@en ;
   sh:order "3"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bds:NoteShape-type
   dash:editor dash:EnumSelectEditor ;
   sh:name "type"@en ;
   sh:order "4"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bds:ContentLocationShape-contentLocationInstance
   dash:editor dash:InstancesSelectEditor ;
@@ -130,73 +130,73 @@ bds:ContentLocationShape-contentLocationLine
   dash:editor dash:TextFieldEditor ;
   sh:name "line"@en ;
   sh:order "5"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bds:ContentLocationShape-contentLocationEndLine
   dash:editor dash:TextFieldEditor ;
   sh:name "end line"@en ;
   sh:order "6"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bds:ContentLocationShape-contentLocationByFolio
   dash:editor dash:BooleanSelectEditor ;
   sh:name "by folio"@en ;
   sh:order "7"^^xsd:decimal ;
-  bds:displayPriority 2 ;
+  rde:displayPriority 2 ;
 .
 bds:ContentLocationShape-contentLocationPhrase
   dash:editor dash:TextFieldEditor ;
   sh:name "phrase"@en ;
   sh:order "8"^^xsd:decimal ;
-  bds:displayPriority 2 ;
+  rde:displayPriority 2 ;
 .
 bds:ContentLocationShape-contentLocationEndPhrase
   dash:editor dash:TextFieldEditor ;
   sh:name "end phrase"@en ;
   sh:order "9"^^xsd:decimal ;
-  bds:displayPriority 2 ;
+  rde:displayPriority 2 ;
 .
 bds:ContentLocationShape-contentLocationVolumeName
   dash:editor dash:TextFieldEditor ;
   sh:name "volume name"@en ;
   sh:order "10"^^xsd:decimal ;
-  bds:displayPriority 2 ;
+  rde:displayPriority 2 ;
 .
 bds:ContentLocationShape-contentLocationEndVolumeName
   dash:editor dash:TextFieldEditor ;
   sh:name "end volume name"@en ;
   sh:order "11"^^xsd:decimal ;
-  bds:displayPriority 2 ;
+  rde:displayPriority 2 ;
 .
 bds:ContentLocationShape-contentLocationSide
   dash:editor dash:TextFieldEditor ;
   sh:name "side"@en ;
   sh:order "12"^^xsd:decimal ;
-  bds:displayPriority 2 ;
+  rde:displayPriority 2 ;
 .
 bds:ContentLocationShape-contentLocationEndSide
   dash:editor dash:TextFieldEditor ;
   sh:name "end side"@en ;
   sh:order "13"^^xsd:decimal ;
-  bds:displayPriority 2 ;
+  rde:displayPriority 2 ;
 .
 bds:ContentLocationShape-contentLocationSeqNum
   dash:editor dash:TextFieldEditor ;
   sh:name "seq num"@en ;
   sh:order "14"^^xsd:decimal ;
-  bds:displayPriority 2 ;
+  rde:displayPriority 2 ;
 .
 bds:ContentLocationShape-contentPagination
   dash:editor dash:EnumSelectEditor ;
   sh:name "pagination"@en ;
   sh:order "15"^^xsd:decimal ;
-  bds:displayPriority 2 ;
+  rde:displayPriority 2 ;
 .
 bds:ContentLocationShape-type
   dash:editor dash:EnumSelectEditor ;
   sh:name "type"@en ;
   sh:order "16"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bds:AgentAsCreatorShape-role
   dash:editor dash:EnumSelectEditor ;
@@ -216,7 +216,7 @@ bds:AgentAsCreatorShape-type
   dash:editor dash:EnumSelectEditor ;
   sh:name "type"@en ;
   sh:order "3"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 bds:IdentifierShape-rdfType
   dash:editor dash:EnumSelectEditor ;

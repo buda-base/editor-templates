@@ -87,7 +87,7 @@ bds:CommonShape-altLabel
 bds:WorkShape-catalogInfo
   sh:group bds:BasePropertyGroup ;
   dash:editor dash:TextAreaWithLangEditor ;
-  bds:defaultLanguage "en" ;
+  rde:defaultLanguage "en" ;
   sh:order "3"^^xsd:decimal ;
 .
 bds:WorkShape-language
@@ -99,7 +99,7 @@ bds:WorkShape-hasTranslation
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:order "5"^^xsd:decimal ;
-  bds:displayPriority 1 ;
+  rde:displayPriority 1 ;
 .
 #bds:CommonShape-identifiedBy
 #  sh:name "identifier" ;
@@ -145,7 +145,7 @@ bds:EventShape-eventWhen sh:order "1"^^xsd:decimal .
 bds:EventShape-onYear sh:order "2"^^xsd:decimal .
 bds:EventShape-notAfter sh:order "3"^^xsd:decimal .
 bds:EventShape-notBefore sh:order "4"^^xsd:decimal .
-bds:EventShape-eventWhere sh:order "5"^^xsd:decimal ; bds:displayPriority 1 .
+bds:EventShape-eventWhere sh:order "5"^^xsd:decimal ; rde:displayPriority 1 .
 bdsa:AdmShape-adminAbout 
   dash:editor dash:DetailsEditor ;
   sh:group bds:AdminPropertyGroup ;
@@ -153,7 +153,7 @@ bdsa:AdmShape-adminAbout
   sh:order "0"^^xsd:decimal ;
 .
 bdsa:AdmEntityShape-replaceWith 
-  bds:classIn ( bdo:SerialWork bdo:Work ) ;
+  rde:classIn ( bdo:SerialWork bdo:Work ) ;
 .
 bds:RootShape-note
   sh:group bds:NotesPropertyGroup ;
@@ -167,7 +167,7 @@ bds:AgentAsCreatorShape-agent
   sh:minCount 1 ;
 .
 bds:AgentAsCreatorShape-sourceIndication
-  bds:displayPriority 2 ;
+  rde:displayPriority 2 ;
 .
 bds:AgentAsCreatorShape-role
   sh:in ( bdr:R0ER0019 bdr:R0ER0014 bdr:R0ER0025 bdr:R0ER0016 bdr:R0ER0011 bdr:R0ER0032 bdr:R0ER0028 bdr:R0ER0012 bdr:R0ER0015  bdr:R0ER0017 bdr:R0ER0018  bdr:R0ER0020 bdr:R0ER0021 bdr:R0ER0022 bdr:R0ER0023  bdr:R0ER0026 bdr:R0ER0027  bdr:R0ER0030 bdr:R0ER0031 bdr:R0ER0009 )
