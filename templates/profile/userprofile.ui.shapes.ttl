@@ -40,10 +40,16 @@ UserProfileUIShapes:
   owl:imports <http://purl.bdrc.io/shapes/profile/UserProfileShapes/> ;
   owl:versionInfo "SHACL UI templates for User Profiles" ;
 .
-
 bds:BasePropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "General Properties"@en ;
+  sh:order "0"^^xsd:decimal ;
+.
+bds:RoleShape-type
+  sh:message "must have type role"@en ;
+  dash:editor dash:EnumSelectEditor ;
+  sh:group bds:BasePropertyGroup ;
+  sh:name "type"@en ;
   sh:order "0"^^xsd:decimal ;
 .
 bds:CommonShape-prefLabel

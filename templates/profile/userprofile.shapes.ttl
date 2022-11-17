@@ -45,6 +45,7 @@ bds:UserProfileShape
   rde:identifierPrefix "U" ;
   sh:namespace "http://purl.bdrc.io/resource-nc/user/"^^xsd:anyURI ;
   rdfs:label "User Profile Shape"@en ;
+  sh:property bds:UserProfileShape-type ;
   sh:property bds:CommonShape-prefLabel ;
   sh:property bds:FoafMbox ;
   sh:property bds:TmpAgreeEmail ;
@@ -55,6 +56,14 @@ bds:UserProfileShape
   sh:property bds:PersonShape-gender ;
   sh:property bds:BdouPreferredUiLiteralLangs ;
   sh:property bds:BdouPreferredUiLang ;
+.
+bds:UserProfileShape-type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:in ( bdou:UserProfile ) ;
+  sh:nodeKind sh:IRI ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
 .
 bds:FoafMbox
   a sh:PropertyShape ;
