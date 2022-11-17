@@ -20,6 +20,7 @@
 @prefix tosh: <http://topbraid.org/tosh#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rde: <https://github.com/buda-base/rdf-document-editor/> .
 
 bdo:Place
   bds:topShapeGraph bdg:PlaceShapes ;
