@@ -94,7 +94,7 @@ bds:WorkShape-genre
 bds:WorkShape-language
   a sh:PropertyShape ;
   sh:path bdo:language ;
-  sh:in ( bdr:LangBo bdr:LangZh bdr:LangKm bdr:LangMn bdr:LangMy bdr:LangNew bdr:LangPi bdr:LangSa bdr:LangDz ) ;
+  sh:in ( bdr:LangBo bdr:LangZh bdr:LangKm bdr:LangMn bdr:LangEn bdr:LangMy bdr:LangNew bdr:LangPi bdr:LangSa bdr:LangDz ) ;
   sh:nodeKind sh:IRI ;
   sh:minCount 1 ;
 .
