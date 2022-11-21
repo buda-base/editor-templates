@@ -54,6 +54,13 @@ bds:CommonShape-rdfsComment
   rde:allowMarkDown true ;
   sh:uniqueLang true ;
 .
+bds:CommonShape-skosDescription
+  a sh:PropertyShape ;
+  sh:path skos:description ;
+  sh:datatype rdf:langString ;
+  rde:allowMarkDown true ;
+  sh:uniqueLang true ;
+.
 bds:CommonShape-inCollection
   a sh:PropertyShape ;
   sh:path bdo:inCollection ;
