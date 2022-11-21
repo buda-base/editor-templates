@@ -40,6 +40,7 @@ bds:WorkShape
   sh:property bds:CommonShape-prefLabel ;
   sh:property bds:CommonShape-altLabel ;
   sh:property bds:CommonShape-skosDescription ;
+  sh:property bds:CommonShape-inCollection ;
   sh:property bds:WorkShape-catalogInfo ;
   # sh:property bds:WorkShape-hasInstance ;
   sh:property bds:WorkShape-hasTranslation ;

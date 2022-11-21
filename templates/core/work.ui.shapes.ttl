@@ -101,10 +101,15 @@ bds:CommonShape-skosDescription
   rde:defaultLanguage "en" ;
   sh:order "5"^^xsd:decimal ;
 .
+bds:CommonShape-inCollection
+  sh:group bds:BasePropertyGroup ;
+  sh:order "6"^^xsd:decimal ;
+  rde:displayPriority 1 ;
+.
 bds:WorkShape-hasTranslation
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:BasePropertyGroup ;
-  sh:order "6"^^xsd:decimal ;
+  sh:order "7"^^xsd:decimal ;
   rde:displayPriority 1 ;
 .
 #bds:CommonShape-identifiedBy
