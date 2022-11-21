@@ -98,7 +98,6 @@ bds:WorkShape-language
 .
 bds:CommonShape-skosDescription
   sh:group bds:BasePropertyGroup ;
-  dash:editor dash:TextAreaWithLangEditor ;
   rde:defaultLanguage "en" ;
   sh:order "5"^^xsd:decimal ;
 .
