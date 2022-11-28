@@ -99,12 +99,14 @@ bds:PlaceShape-placeLat
   sh:path bdo:placeLat ;
   sh:datatype xsd:string ;
   sh:pattern "^[+-]?(?:90(?:(?:[.]0{1,6})?)|(?:[0-9]|[1-8][0-9])(?:(?:[.][0-9]{1,6})?))$" ;
+  sh:message "GIS coordinates must be in the decimal form, with no + and between 1 and 6 decimals (ex: 79.001794)"@en ;
 .
 bds:PlaceShape-placeLong
   a sh:PropertyShape ;
   sh:path bdo:placeLong ;
   sh:datatype xsd:string ;
   sh:pattern "^[+-]?(?:180(?:(?:[.]0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:[.][0-9]{1,6})?))$" ;
+  sh:message "GIS coordinates must be in the decimal form, with no + and between 1 and 6 decimals (ex: 79.001794)"@en ;
 .
 bds:PlaceShape-placeType
   a sh:PropertyShape ;
