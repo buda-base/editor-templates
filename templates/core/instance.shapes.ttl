@@ -116,7 +116,7 @@ bds:InstanceShape-serialInstanceOf
 bds:InstanceShape-script
   a sh:PropertyShape ;
   sh:path bdo:script ;
-  sh:in ( bdr:ScriptDbuCan bdr:ScriptDbuMed bdr:ScriptKhyugYig bdr:ScriptHans bdr:ScriptHant bdr:ScriptDeva bdr:ScriptKhmr bdr:ScriptLatn bdr:ScriptMong bdr:ScriptMymr bdr:ScriptBeng bdr:ScriptCyrl bdr:ScriptKhar bdr:ScriptNepaleseHooked bdr:ScriptNewa bdr:ScriptRanj bdr:ScriptSinh ) ;
+  sh:in ( bdr:ScriptDbuCan bdr:ScriptDbuMed bdr:ScriptKhyugYig bdr:ScriptHans bdr:ScriptHant bdr:ScriptDeva bdr:ScriptKhmr bdr:ScriptLatn bdr:ScriptMong bdr:ScriptMymr bdr:ScriptBeng bdr:ScriptCyrl bdr:ScriptKhar bdr:ScriptNepaleseHooked bdr:ScriptNewa bdr:ScriptRanj bdr:ScriptSinh bdr:ScriptTang ) ;
   sh:description "an instance may have one or more scripts"@en ;
   sh:nodeKind sh:IRI ;
   sh:minCount 1 ;
