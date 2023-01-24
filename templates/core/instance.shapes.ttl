@@ -111,7 +111,6 @@ bds:InstanceShape-serialInstanceOf
   sh:name "serial work"@en ;
   rde:propertyShapeType rde:ExternalShape ;
   sh:maxCount 1 ;
-  rde:connectIDs true ;
 .
 bds:InstanceShape-script
   a sh:PropertyShape ;
