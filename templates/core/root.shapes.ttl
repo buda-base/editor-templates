@@ -68,6 +68,12 @@ bds:CommonShape-inCollection
   rde:propertyShapeType rde:ExternalShape ;
   rde:classIn ( bdo:Collection bdo:Place ) ;
 .
+bds:CommonShape-rdfsSeeAlso
+  a sh:PropertyShape ;
+  sh:path rdfs:seeAlso ;
+  sh:nodeKind sh:IRI ;
+  sh:datatype xsd:anyURI ;
+.
 ##
 ## identifiers
 ##

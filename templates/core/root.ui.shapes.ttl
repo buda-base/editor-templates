@@ -53,6 +53,10 @@ bds:CommonShape-rdfsComment
   sh:name "description"@en ;
   dash:editor dash:TextAreaWithLangEditor ;
 .
+bds:CommonShape-rdfsSeeAlso
+  sh:name "See Also (URL)"@en ;
+  dash:editor dash:URIEditor ;
+.
 bds:CommonShape-skosDescription
   sh:name "description"@en ;
   dash:editor dash:TextAreaWithLangEditor ;

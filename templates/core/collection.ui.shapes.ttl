@@ -77,6 +77,10 @@ bds:CommonShape-rdfsComment
   sh:group bds:BasePropertyGroup ;
   sh:order "3"^^xsd:decimal ;
 .
+bds:CommonShape-rdfsSeeAlso
+  sh:group bds:BasePropertyGroup ;
+  sh:order "4"^^xsd:decimal ;
+.
 bdsa:AdmShape-adminAbout 
   dash:editor dash:DetailsEditor ;
   sh:group bds:AdminPropertyGroup ;
