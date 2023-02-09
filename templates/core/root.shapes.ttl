@@ -71,7 +71,6 @@ bds:CommonShape-inCollection
 bds:CommonShape-rdfsSeeAlso
   a sh:PropertyShape ;
   sh:path rdfs:seeAlso ;
-  sh:nodeKind sh:IRI ;
   sh:datatype xsd:anyURI ;
 .
 ##
