@@ -72,6 +72,7 @@ bds:InstanceShape
   sh:property bds:InstanceShape-isComplete ;
   sh:property bds:InstanceShape-isDamaged ;
   sh:property bds:InstanceShape-numberOfVolumes ;
+  sh:property bds:CommonShape-rdfsSeeAlso ;
   # sh:property bds:InstanceShape-sourceNote ;
   # sh:property bds:InstanceShape-partType ;
   # sh:property bds:InstanceShape-contentLocation ;

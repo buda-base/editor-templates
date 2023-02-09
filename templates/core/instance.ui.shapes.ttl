@@ -82,6 +82,11 @@ bds:CommonShape-identifiedBy
   sh:order "7"^^xsd:decimal ;
   rde:displayPriority 1 ;
 .
+bds:CommonShape-rdfsSeeAlso
+  sh:group bds:BasePropertyGroup ;
+  sh:order "8"^^xsd:decimal ;
+  rde:displayPriority 1 ;
+.
 ##
 ## Titles
 ##
