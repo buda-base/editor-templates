@@ -116,7 +116,7 @@ bdsa:AdmEntityShape-access
 bdsa:AdmEntityShape-metadataLegal
       a sh:PropertyShape ;
       sh:path adm:metadataLegal ;
-      sh:in ( bda:LD_BDRC_CC0 ) ;
+      sh:in ( bda:LD_BDRC_CC0 bda:LD_EAP_metadata ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
       sh:nodeKind sh:IRI ;

@@ -112,7 +112,7 @@ bdsa:AdmEntityShape-metadataLegal
       dash:editor dash:EnumSelectEditor ;
       sh:name "copyright status"@en ;
       sh:order "6"^^xsd:decimal ;
-      rde:displayPriority 1 ;
+      rde:displayPriority 3 ;
 .
 bdsa:AdmEntityShape-type
      dash:editor dash:EnumSelectEditor ;
