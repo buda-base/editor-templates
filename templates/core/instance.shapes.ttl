@@ -188,7 +188,7 @@ bds:InstanceShape-seriesNumber
 .
 bds:InstanceShape-instanceExtentStatement
   a sh:PropertyShape ;
-  sh:path bdo:instanceExtentStatement ;
+  sh:path bdo:extentStatement ;
   sh:maxCount 1 ;
   sh:datatype xsd:string ;
 .
