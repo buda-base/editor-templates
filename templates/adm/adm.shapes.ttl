@@ -103,7 +103,7 @@ bdsa:AdmEntityShape-status
       sh:path adm:status ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
-      sh:in ( bda:StatusReleased bda:StatusWithdrawn bda:StatusEditing bda:StatusOnHold bda:StatusProvisional bda:StatusScanned bda:StatusSeekingOut bda:StatusAccessioned bda:StatusAcquiring ) ;
+      sh:in ( bda:StatusReleased bda:StatusWithdrawn bda:StatusEditing bda:StatusHidden bda:StatusOnHold bda:StatusProvisional bda:StatusScanned bda:StatusSeekingOut bda:StatusAccessioned bda:StatusAcquiring ) ;
       sh:nodeKind sh:IRI ;
 .
 bdsa:AdmEntityShape-access
