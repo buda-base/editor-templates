@@ -54,20 +54,28 @@ bds:InstanceShape-isComplete
   sh:group bds:BasePropertyGroup ;
   sh:order "2"^^xsd:decimal ;
 .
-bds:CommonShape-inCollection
+bds:ImageInstanceShape-qualityGrade
+  dash:editor dash:EnumSelectEditor ;
+  sh:in ( "5"^^xsd:integer "4"^^xsd:integer "3"^^xsd:integer "2"^^xsd:integer "1"^^xsd:integer "0"^^xsd:integer  ) ;
+  sh:name "Digitization quality"@en ;
+  sh:description "Quality of the scans (not quality of the original). 0 is barely readable, 5 is full color high res scans."@en ;
   sh:group bds:BasePropertyGroup ;
   sh:order "3"^^xsd:decimal ;
+.
+bds:CommonShape-inCollection
+  sh:group bds:BasePropertyGroup ;
+  sh:order "4"^^xsd:decimal ;
 .
 bds:ImageInstanceShape-digitalLendingPossible
   dash:editor dash:BooleanSelectEditor ;
   sh:group bds:BasePropertyGroup ;
-  sh:order "4"^^xsd:decimal ;
+  sh:order "5"^^xsd:decimal ;
   rde:displayPriority 1 ;
 .
 bds:InstanceShape-reproductionPrintMethod
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:BasePropertyGroup ;
-  sh:order "5"^^xsd:decimal ;
+  sh:order "6"^^xsd:decimal ;
   rde:displayPriority 1 ;
 .
 #bds:ConnectionsPropertyGroup

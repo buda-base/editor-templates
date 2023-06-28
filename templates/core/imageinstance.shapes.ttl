@@ -45,6 +45,7 @@ bds:ImageInstanceShape
   sh:property bds:CommonShape-inCollection ;
   sh:property bds:ImageInstanceShape-scanInfo ;
   sh:property bds:ImageInstanceShape-hasVolume ;
+  sh:property bds:ImageInstanceShape-qualityGrade ;
   sh:property bds:ImageInstanceShape-type ;
   sh:property bds:InstanceShape-reproductionPrintMethod ;
   sh:property bds:ImageInstanceShape-digitalLendingPossible ;
@@ -85,6 +86,14 @@ bds:ImageInstanceShape-scanInfo
   sh:path bdo:scanInfo ;
   sh:datatype rdf:langString ;
   sh:uniqueLang true ;
+.
+bds:ImageInstanceShape-qualityGrade
+  a sh:PropertyShape ;
+  sh:path bdo:qualityGrade ;
+  sh:datatype xsd:integer ;
+  sh:maxCount 1 ;
+  sh:minInclusive "0"^^xsd:integer ;
+  sh:maxInclusive "5"^^xsd:integer ;
 .
 bds:ImageInstanceShape-digitalLendingPossible
   a sh:PropertyShape ;
