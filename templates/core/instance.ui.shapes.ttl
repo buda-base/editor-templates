@@ -80,7 +80,6 @@ bds:CommonShape-identifiedBy
   sh:name "identifier"@en ;
   sh:group bds:BasePropertyGroup ;
   sh:order "7"^^xsd:decimal ;
-  rde:displayPriority 1 ;
 .
 bds:CommonShape-rdfsSeeAlso
   sh:group bds:BasePropertyGroup ;

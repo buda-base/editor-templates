@@ -240,8 +240,9 @@ bds:InstanceShape-biblioNote
 bds:InstanceShape-numberOfVolumes
   a sh:PropertyShape ;
   sh:path bdo:numberOfVolumes ;
+  sh:minExclusive "0"^^xsd:integer ;
   sh:datatype xsd:integer ;
-  sh:uniqueLang true ;
+  sh:maxCount 1 ;
 .
 bds:InstanceShape-isDamaged
   a sh:PropertyShape ;
