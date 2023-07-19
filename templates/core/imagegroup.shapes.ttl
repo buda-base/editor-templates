@@ -75,7 +75,7 @@ bds:ImagegroupShape-volumePagesTbrcIntro
   sh:maxCount 1 ;
   sh:minCount 1 ;
   sh:minInclusive 0  ;
-  sh:maxInclusive 2 ;
+  sh:maxInclusive 3 ;
   rde:defaultValue 0 ;
 .
 bds:ImagegroupShape-volumeNumber
