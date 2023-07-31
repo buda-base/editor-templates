@@ -42,6 +42,13 @@ bds:CommonShape-prefLabel
   dash:editor dash:TextAreaWithLangEditor ;
   dash:singleLine true ;
 .
+bds:CommonShape-optionalPrefLabel
+  a sh:PropertyShape ;
+  sh:description "preferred label, will be displayed when the person is referred to: as the top title in the web page, in search results, in other records, etc."@en ;
+  sh:name "Pref. label"@en ;
+  dash:editor dash:TextAreaWithLangEditor ;
+  dash:singleLine true ;
+.
 bds:CommonShape-altLabel
   a sh:PropertyShape ;
   sh:description "alternative (other) labels, that will be displayed on the web page"@en ;

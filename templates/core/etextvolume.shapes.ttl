@@ -1,4 +1,4 @@
-@prefix ImagegroupShapes: <http://purl.bdrc.io/shapes/core/ImagegroupShapes/> .
+@prefix EtextVolumeShapes: <http://purl.bdrc.io/shapes/core/EtextVolumeShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -25,49 +25,31 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rde: <https://github.com/buda-base/rdf-document-editor/> .
 
-ImagegroupShapes:
+EtextVolumeShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
   # owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
-  owl:versionInfo "Initial SHACL constraints for image group and its subclasses" ;
+  owl:versionInfo "Initial SHACL constraints for etext volumes" ;
 .
-bds:ImagegroupShape
+bds:EtextVolumeShape
   a sh:NodeShape ;
-  rdfs:label "Image Group Shape"@en ;
-  rde:identifierPrefix "I" ;
+  rdfs:label "EtextVolume Shape"@en ;
+  rde:identifierPrefix "VE" ;
   rde:independentIdentifiers true ;
-  sh:property bds:ImagegroupShape-type ;
+  sh:property bds:EtextVolume-type ;
   sh:property bds:CommonShape-optionalPrefLabel ;
   sh:property bds:CommonShape-altLabel ;
   # sh:property bdsa:AdmShape-adminAbout ;
   sh:property bds:VolumeShape-volumeNote ;
   sh:property bds:VolumeShape-volumeNumber ;
-  sh:property bds:ImagegroupShape-volumePagesTbrcIntro ;
-  sh:property bds:ImagegroupShape-imagesMissing ;
-  sh:targetClass bdo:ImageGroup ;
+  sh:targetClass bdo:EtextVolume ;
   sh:targetObjectsOf bdo:instanceHasVolume ;
 .
-bds:ImagegroupShape-type
+bds:EtextVolumeShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
-  sh:in ( bdo:ImageGroup ) ;
+  sh:in ( bdo:EtextVolume ) ;
   sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
-.
-bds:ImagegroupShape-imagesMissing
-  a sh:PropertyShape ;
-  sh:path bdo:imagesMissing ;
-  sh:datatype xsd:string ;
-  sh:maxCount 1 ;
-.
-bds:ImagegroupShape-volumePagesTbrcIntro
-  a sh:PropertyShape ;
-  sh:path bdo:volumePagesTbrcIntro ;
-  sh:datatype xsd:integer ;
-  sh:maxCount 1 ;
-  sh:minCount 1 ;
-  sh:minInclusive 0  ;
-  sh:maxInclusive 3 ;
-  rde:defaultValue 0 ;
 .

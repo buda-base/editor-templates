@@ -42,6 +42,13 @@ bds:CommonShape-prefLabel
   sh:uniqueLang true ;
   sh:minCount 1 ;
 .
+# an optional version of prefLabel
+bds:CommonShape-optionalPrefLabel
+  a sh:PropertyShape ;
+  sh:path skos:prefLabel ;
+  sh:datatype rdf:langString ;
+  sh:uniqueLang true ;
+.
 bds:CommonShape-altLabel
   a sh:PropertyShape ;
   sh:path skos:altLabel ;
@@ -433,6 +440,14 @@ bds:InstanceShape-instanceReproductionOf
   sh:maxCount 1 ;
   rde:connectIDs true ;
 .
+bds:InstanceShape-instanceReproductionOf
+  a sh:PropertyShape ;
+  rde:propertyShapeType rde:ExternalShape ;
+  sh:path bdo:instanceReproductionOf ;
+  rde:classIn ( bdo:Instance ) ;
+  sh:maxCount 1 ;
+  rde:connectIDs true ;
+.
 bds:InstanceShape-copyrightStatus
   a sh:PropertyShape ;
   sh:path bdo:copyrightStatus ;
@@ -459,4 +474,18 @@ bds:InstanceShape-reproductionPrintMethod
   sh:in ( bdr:PrintMethod_Xerography bdr:PrintMethod_Mimeography bdr:PrintMethod_Microfilm ) ;
   sh:nodeKind sh:IRI ;
   sh:name "reproduction print method"@en ;
+.
+bds:VolumeShape-volumeNumber
+  a sh:PropertyShape ;
+  sh:path bdo:volumeNumber ;
+  sh:datatype xsd:integer ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:minInclusive 1  ;
+  sh:maxInclusive 500 ;
+.
+bds:VolumeShape-volumeNote
+  a sh:PropertyShape ;
+  sh:path bdo:volumeNote ;
+  sh:datatype rdf:langString ;
 .

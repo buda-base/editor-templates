@@ -135,6 +135,12 @@ bdsa:AdmEntityShape-replaceWith
       sh:nodeKind sh:IRI ;
       sh:maxCount 1 ;
 .
+bdsa:AdmEntityShape-sourcesAccessible
+      a sh:PropertyShape ;
+      sh:path adm:sourcesAccessible ;
+      sh:datatype xsd:boolean ;
+      sh:maxCount 1 ;
+.
 bdsa:AdmEntityShape-restrictedInChina
       a sh:PropertyShape ;
       sh:path adm:restrictedInChina ;

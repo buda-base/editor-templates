@@ -96,13 +96,18 @@ bdsa:AdmEntityShape-restrictedInChinaDefaultsTrue
       sh:order "3"^^xsd:decimal ;
       rde:defaultValue true ;
 .
+bdsa:AdmEntityShape-sourcesAccessible
+      dash:editor dash:BooleanSelectEditor ;
+      sh:name "Set to true if the source files should be made accessible to the users"@en ;
+      sh:order "4"^^xsd:decimal ;
+.
 bdsa:AdmEntityShape-replaceWith
       sh:name "replace with (for withdrawn records only)"@en ;
       dash:editor dash:EnumSelectEditor ;
-      sh:order "4"^^xsd:decimal ;
+      sh:order "5"^^xsd:decimal ;
 .
 bdsa:AdmEntityShape-rdfsComment
-      sh:order "5"^^xsd:decimal ;
+      sh:order "6"^^xsd:decimal ;
       dash:editor   dash:TextAreaWithLangEditor ;
       sh:name       "admin note"@en ;
       sh:description "note not displayed to users"@en ;
@@ -111,11 +116,11 @@ bdsa:AdmEntityShape-rdfsComment
 bdsa:AdmEntityShape-metadataLegal
       dash:editor dash:EnumSelectEditor ;
       sh:name "copyright status"@en ;
-      sh:order "6"^^xsd:decimal ;
+      sh:order "7"^^xsd:decimal ;
       rde:displayPriority 3 ;
 .
 bdsa:AdmEntityShape-type
      dash:editor dash:EnumSelectEditor ;
-     sh:order "7"^^xsd:decimal ;
+     sh:order "8"^^xsd:decimal ;
 .
 bdsa:AdmEntityShape sh:property bdsa:AdmEntityShape-logEntry .

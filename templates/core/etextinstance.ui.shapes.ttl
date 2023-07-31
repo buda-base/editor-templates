@@ -1,4 +1,4 @@
-@prefix ImageInstanceUIShapes: <http://purl.bdrc.io/shapes/core/ImageInstanceUIShapes/> .
+@prefix ImageInstanceUIShapes: <http://purl.bdrc.io/shapes/core/EtextInstanceUIShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -25,12 +25,12 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rde: <https://github.com/buda-base/rdf-document-editor/> .
 
-ImageInstanceUIShapes:
+EtextInstanceUIShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminUiShapes/> ;
-  owl:imports <http://purl.bdrc.io/shapes/core/ImageInstanceShapes/> ;
+  owl:imports <http://purl.bdrc.io/shapes/core/EtextInstanceShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootUIShapes/> ;
-  owl:versionInfo "Initial SHACL constraints for image Instance and its subclasses" ;
+  owl:versionInfo "Initial SHACL constraints for Etext Instances" ;
 .
 
 bds:BasePropertyGroup
@@ -38,65 +38,34 @@ bds:BasePropertyGroup
   rdfs:label "General Properties"@en ;
   sh:order "0"^^xsd:decimal ;
 .
-bds:ImageInstanceShape-type 
+bds:EtextInstanceShape-type 
   dash:editor dash:EnumSelectEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:order "0"^^xsd:decimal ;
 .
-bds:ImageInstanceShape-scanInfo
+bds:EtextInstanceShape-etextInfo
   dash:editor dash:TextAreaWithLangEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:order "1"^^xsd:decimal ;
   rde:defaultLanguage "en" ;
 .
-bds:InstanceShape-isComplete
-  dash:editor dash:BooleanSelectEditor ;
+bds:CommonShape-inCollection
   sh:group bds:BasePropertyGroup ;
   sh:order "2"^^xsd:decimal ;
 .
-bds:ImageInstanceShape-qualityGrade
+bds:EtextInstanceShape-contentMethod
   dash:editor dash:EnumSelectEditor ;
-  sh:in ( "5"^^xsd:integer "4"^^xsd:integer "3"^^xsd:integer "2"^^xsd:integer "1"^^xsd:integer "0"^^xsd:integer  ) ;
-  sh:name "Digitization quality"@en ;
-  sh:description "Quality of the scans (not quality of the original). 0 is barely readable, 5 is full color high res scans."@en ;
   sh:group bds:BasePropertyGroup ;
   sh:order "3"^^xsd:decimal ;
 .
-bds:CommonShape-inCollection
+bds:EtextInstanceShape-qualityGrade
+  dash:editor dash:EnumSelectEditor ;
+  sh:in ( "5"^^xsd:integer "4"^^xsd:integer "3"^^xsd:integer "2"^^xsd:integer "1"^^xsd:integer "0"^^xsd:integer  ) ;
+  sh:name "Digitization quality"@en ;
+  sh:description "Quality of the etext (OCR or input). 0 is barely readable, 5 is no errors detectable."@en ;
   sh:group bds:BasePropertyGroup ;
   sh:order "4"^^xsd:decimal ;
-.
-bds:ImageInstanceShape-digitalLendingPossible
-  dash:editor dash:BooleanSelectEditor ;
-  sh:group bds:BasePropertyGroup ;
-  sh:order "5"^^xsd:decimal ;
   rde:displayPriority 1 ;
-.
-bds:InstanceShape-reproductionPrintMethod
-  dash:editor dash:EnumSelectEditor ;
-  sh:group bds:BasePropertyGroup ;
-  sh:order "6"^^xsd:decimal ;
-  rde:displayPriority 1 ;
-.
-#bds:ConnectionsPropertyGroup
-#  a sh:PropertyGroup ;
-#  rdfs:label "Connections"@en ;
-#  sh:order "1"^^xsd:decimal ;
-#.
-bds:InstanceShape-instanceOf
-#  sh:group bds:ConnectionsPropertyGroup ;
-#  sh:order "1"^^xsd:decimal ;
-  dash:editor dash:InstancesSelectEditor ;
-.
-bds:InstanceShape-instanceHasReproduction
-  dash:editor dash:InstancesSelectEditor ;
-#  sh:group bds:ConnectionsPropertyGroup ;
-#  sh:order "2"^^xsd:decimal ;
-.
-bds:InstanceShape-instanceReproductionOf
-  dash:editor dash:InstancesSelectEditor ;
-#  sh:group bds:ConnectionsPropertyGroup ;
-#  sh:order "3"^^xsd:decimal ;
 .
 bds:NotesPropertyGroup
   a sh:PropertyGroup ;
@@ -113,7 +82,7 @@ bds:VolumesPropertyGroup
   rdfs:label "Volumes"@en ;
   sh:order "3"^^xsd:decimal ;
 .
-bds:ImageInstanceShape-hasVolume
+bds:EtextInstanceShape-hasVolume
   dash:editor dash:DetailsEditor ;
   sh:group bds:VolumesPropertyGroup ;
   sh:order "0"^^xsd:decimal ;
@@ -131,7 +100,6 @@ bdsa:AdmShape-adminAbout
   sh:name "admin data"@en ;
   sh:order "0"^^xsd:decimal ;
 .
-
 bds:ImagegroupShape-type
   dash:editor dash:EnumSelectEditor ;
   sh:order "0"^^xsd:decimal ;
@@ -149,19 +117,9 @@ bds:CommonShape-altLabel
   sh:order "3"^^xsd:decimal ;
   rde:displayPriority 1 ;
 .
-bds:ImagegroupShape-imagesMissing
-  dash:editor dash:TextFieldEditor ;
-  dash:singleLine true ;
-  sh:order "4"^^xsd:decimal ;
-  rde:displayPriority 1 ;
-.
-bds:ImagegroupShape-volumePagesTbrcIntro
-  dash:editor dash:TextFieldEditor ;
-  sh:order "5"^^xsd:decimal ;
-.
 bds:VolumeShape-volumeNote
   dash:editor dash:TextFieldEditor ;
-  sh:order "6"^^xsd:decimal ;
+  sh:order "4"^^xsd:decimal ;
   rde:displayPriority 1 ;
 .
 bdsa:AdmEntityShape-access

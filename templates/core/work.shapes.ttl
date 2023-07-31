@@ -69,7 +69,7 @@ bds:WorkShape-catalogInfo
 bds:WorkShape-hasInstance
   a sh:PropertyShape ;
   sh:path bdo:workHasInstance ;
-  rde:classIn ( bdo:Instance bdo:EtextInstance ) ;
+  rde:classIn ( bdo:Instance ) ;
   rde:propertyShapeType rde:ExternalShape ;
   rde:connectIDs true ;
 .

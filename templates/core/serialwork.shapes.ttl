@@ -54,7 +54,7 @@ bds:WorkShape-serialHasInstance
   a sh:PropertyShape ;
   sh:path bdo:serialHasInstance ;
   rde:propertyShapeType rde:ExternalShape ;
-  rde:classIn ( bdo:Instance bdo:EtextInstance )
+  rde:classIn ( bdo:Instance )
 .
 bds:SerialWorkShape-catalogInfo
   a sh:PropertyShape ;

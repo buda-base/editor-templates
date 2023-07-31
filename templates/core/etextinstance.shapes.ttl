@@ -1,4 +1,4 @@
-@prefix ImageInstanceShapes: <http://purl.bdrc.io/shapes/core/ImageInstanceShapes/> .
+@prefix EtextInstanceShapes: <http://purl.bdrc.io/shapes/core/EtextInstanceShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
@@ -25,17 +25,17 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rde: <https://github.com/buda-base/rdf-document-editor/> .
 
-ImageInstanceShapes:
+EtextInstanceShapes:
   a owl:Ontology ;
   owl:imports <http://purl.bdrc.io/shapes/core/RootShapes/> ;
   owl:imports <http://purl.bdrc.io/shapes/adm/AdminShapes/> ;
-  owl:imports <http://purl.bdrc.io/shapes/core/ImagegroupShapes/> ;
-  owl:versionInfo "SHACL shapes for Image Instances" ;
+  owl:imports <http://purl.bdrc.io/shapes/core/EtextVolumeShapes/> ;
+  owl:versionInfo "SHACL shapes for Etext Instances" ;
 .
-bds:ImageInstanceShape
+bds:EtextInstanceShape
   a sh:NodeShape ;
-  rdfs:label "Image Instance Shape"@en ;
-  rde:identifierPrefix "W" ;
+  rdfs:label "Etext Instance Shape"@en ;
+  rde:identifierPrefix "IE" ;
   # sh:property bds:InstanceShape-instanceOf ;
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
@@ -43,18 +43,17 @@ bds:ImageInstanceShape
   # sh:property bds:InstanceShape-instanceReproductionOf ;
   sh:property bds:InstanceShape-isComplete ;
   sh:property bds:CommonShape-inCollection ;
-  sh:property bds:ImageInstanceShape-scanInfo ;
-  sh:property bds:ImageInstanceShape-hasVolume ;
-  sh:property bds:ImageInstanceShape-qualityGrade ;
-  sh:property bds:ImageInstanceShape-type ;
-  sh:property bds:InstanceShape-reproductionPrintMethod ;
-  sh:property bds:ImageInstanceShape-digitalLendingPossible ;
-  sh:targetClass bdo:ImageInstance ;
+  sh:property bds:EtextInstanceShape-etextInfo ;
+  sh:property bds:EtextInstanceShape-hasVolume ;
+  sh:property bds:EtextInstanceShape-qualityGrade ;
+  sh:property bds:EtextInstanceShape-type ;
+  sh:property bds:EtextInstanceShape-contentMethod ;
+  sh:targetClass bdo:EtextInstance ;
 .
-bds:ImageInstanceShape-type
+bds:EtextInstanceShape-type
   a sh:PropertyShape ;
   sh:path rdf:type ;
-  sh:in ( bdo:ImageInstance ) ;
+  sh:in ( bdo:EtextInstance ) ;
   sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
@@ -77,18 +76,28 @@ bdsa:AdmEntityShapeForDigitalInstance
   sh:targetSubjectsOf adm:adminAbout ;
 .
 
+bds:EtextInstanceShape-contentMethod
+  a sh:PropertyShape ;
+  sh:path bdo:binding ;
+  sh:description "content production method"@en ;
+  sh:maxCount 1 ;
+  sh:in ( bdr:ContentMethod_ComputerInput bdr:ContentMethod_OCR ) ;
+  sh:nodeKind sh:IRI ;
+  sh:name "content production method"@en ;
+.
+
 # temporarily disabling so that we can test independently of the instance
 
 bds:InstanceShape-instanceReproductionOf
   sh:minCount 1 ;
 .
-bds:ImageInstanceShape-scanInfo
+bds:EtextInstanceShape-etextInfo
   a sh:PropertyShape ;
-  sh:path bdo:scanInfo ;
+  sh:path bdo:etextInfo ;
   sh:datatype rdf:langString ;
   sh:uniqueLang true ;
 .
-bds:ImageInstanceShape-qualityGrade
+bds:EtextInstanceShape-qualityGrade
   a sh:PropertyShape ;
   sh:path bdo:qualityGrade ;
   sh:datatype xsd:integer ;
@@ -96,19 +105,13 @@ bds:ImageInstanceShape-qualityGrade
   sh:minInclusive "0"^^xsd:integer ;
   sh:maxInclusive "5"^^xsd:integer ;
 .
-bds:ImageInstanceShape-digitalLendingPossible
-  a sh:PropertyShape ;
-  sh:path bdo:digitalLendingPossible ;
-  sh:datatype xsd:boolean ;
-  sh:maxCount 1 ;
-.
 bdsa:AdmShape-adminAbout
       sh:minCount 1 ;
 .
 bdsa:AdmEntityShape-replaceWith 
   rde:classIn ( bdo:ImageInstance bdo:EtextInstance bdo:Instance bdo:Work ) ;
 .
-bds:ImageInstanceShape-hasVolume
+bds:EtextInstanceShape-hasVolume
   a sh:PropertyShape ;
   rde:propertyShapeType rde:InternalShape ;
   sh:path bdo:instanceHasVolume ;
