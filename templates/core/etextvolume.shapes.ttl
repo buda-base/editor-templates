@@ -36,7 +36,7 @@ bds:EtextVolumeShape
   rdfs:label "EtextVolume Shape"@en ;
   rde:identifierPrefix "VE" ;
   rde:independentIdentifiers true ;
-  sh:property bds:EtextVolume-type ;
+  sh:property bds:EtextVolumeShape-type ;
   sh:property bds:CommonShape-optionalPrefLabel ;
   sh:property bds:CommonShape-altLabel ;
   # sh:property bdsa:AdmShape-adminAbout ;
