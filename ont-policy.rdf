@@ -305,9 +305,9 @@
     </OntologySpec>
 
     <OntologySpec>
-        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/EtextVolumeShape/"/>
+        <publicURI rdf:resource="http://purl.bdrc.io/shapes/core/EtextVolumeShapes/"/>
         <altURL    rdf:resource="templates/core/etextvolume.shapes.ttl"/>
-        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/EtextVolumeShape"/>
+        <adm:ontGraph     rdf:resource="http://purl.bdrc.io/graph/EtextVolumeShapes"/>
     </OntologySpec>
 
 </rdf:RDF>
