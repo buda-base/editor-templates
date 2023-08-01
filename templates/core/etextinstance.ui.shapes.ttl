@@ -1,4 +1,4 @@
-@prefix ImageInstanceUIShapes: <http://purl.bdrc.io/shapes/core/EtextInstanceUIShapes/> .
+@prefix EtextInstanceUIShapes: <http://purl.bdrc.io/shapes/core/EtextInstanceUIShapes/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdd: <http://purl.bdrc.io/data/> .
 @prefix bdo: <http://purl.bdrc.io/ontology/core/> .
