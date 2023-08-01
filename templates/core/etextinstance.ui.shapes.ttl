@@ -100,7 +100,7 @@ bdsa:AdmShape-adminAbout
   sh:name "admin data"@en ;
   sh:order "0"^^xsd:decimal ;
 .
-bds:ImagegroupShape-type
+bds:EtextVolumeShape-type
   dash:editor dash:EnumSelectEditor ;
   sh:order "0"^^xsd:decimal ;
 .
