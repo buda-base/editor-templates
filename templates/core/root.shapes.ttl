@@ -451,7 +451,7 @@ bds:InstanceShape-instanceReproductionOf
 bds:InstanceShape-copyrightStatus
   a sh:PropertyShape ;
   sh:path bdo:copyrightStatus ;
-  sh:in ( bdr:CopyrightUndetermined bdr:CopyrightPublicDomain bdr:CopyrightInCopyright bdr:CopyrightClaimed ) ;
+  sh:in ( bdr:CopyrightUndetermined bdr:CopyrightPublicDomain bdr:CopyrightInCopyright bdr:CopyrightClaimed bdr:CopyrightWaived ) ;
   sh:nodeKind sh:IRI ;
   sh:maxCount 1 ;
 .
