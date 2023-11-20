@@ -40,7 +40,7 @@ bds:IsbnShape
   rdfs:isDefinedBy "https://www.isbn-international.org/sites/default/files/ISBN%20Manual%202012%20-corr.pdf"^^xsd:anyURI ;
   sh:property bds:IsbnShape-rdf_value ;
   sh:targetClass bf:Isbn ;
-  skos:editorialNote "The regex is does not take into account opitional blank, ' ', or dash, '-', chars separating the various groups. Also there is no spec for calculating the check digit"@en ;
+  skos:editorialNote "The regex does not take into account opitional blank, ' ', or dash, '-', chars separating the various groups. Also there is no spec for calculating the check digit"@en ;
 .
 bds:IsbnShape-rdf_value
   a sh:PropertyShape ;
@@ -52,6 +52,24 @@ bds:IsbnShape-rdf_value
   sh:name "ISBN shape"@en ;
   sh:pattern "^(97(8|9))?\\d{9}(\\d|X)$" ;
   rde:SpecialPattern rde:PatternISBN ;
+.
+bds:IssnShape
+  a sh:NodeShape ;
+  rdfs:label "ISSN shape"@en ;
+  sh:property bds:IssnShape-rdf_value ;
+  sh:targetClass bf:Issn ;
+  skos:editorialNote "The regex does not take into account opitional blank, ' ', or dash, '-', chars separating the various groups. Also there is no spec for calculating the check digit"@en ;
+.
+bds:IssnShape-rdf_value
+  a sh:PropertyShape ;
+  sh:path rdf:value ;
+  sh:datatype xsd:string ;
+  sh:description "this ISSN should conform to the pattern"@en ;
+  sh:maxCount 1 ;
+  sh:minCount 0 ;
+  sh:name "ISSN shape"@en ;
+  sh:pattern "^\\d{8}(\\d|X)$" ;
+  rde:SpecialPattern rde:PatternISSN ;
 .
 bds:LccnShape
   a sh:NodeShape ;
