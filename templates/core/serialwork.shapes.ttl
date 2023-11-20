@@ -44,6 +44,7 @@ bds:SerialWorkShape
   sh:property bds:CommonShape-altLabel ;
   sh:property bds:CommonShape-rdfsComment ;
   # sh:property bds:WorkShape-serialHasInstance ;
+  sh:property bds:CommonShape-identifiedBy ;
   sh:property bds:BiblioShape-creator ;
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;

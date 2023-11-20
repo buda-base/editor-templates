@@ -78,6 +78,11 @@ bds:CommonShape-rdfsComment
   sh:group bds:BasePropertyGroup ;
   sh:order "3"^^xsd:decimal ;
 .
+bds:CommonShape-identifiedBy
+  sh:name "identifier"@en ;
+  sh:group bds:BasePropertyGroup ;
+  sh:order "4"^^xsd:decimal ;
+.
 bds:BiblioShape-creator
   dash:editor dash:DetailsEditor ;
   sh:group bds:CreatorsPropertyGroup ;
@@ -103,4 +108,7 @@ bds:RootShape-note
   sh:group bds:NotesPropertyGroup ;
   sh:order "0"^^xsd:decimal ;
   dash:editor dash:DetailsEditor ;
+.
+bds:IdentifierShape-rdfType
+  sh:in ( bf:Issn bf:Isbn ) ;
 .
