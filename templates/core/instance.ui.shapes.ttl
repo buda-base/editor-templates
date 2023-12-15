@@ -65,6 +65,7 @@ bds:InstanceShape-instanceOf
   dash:editor dash:InstancesSelectEditor ;
   sh:group bds:BasePropertyGroup ;
   sh:order "4"^^xsd:decimal ;
+  sh:name "work"
 .
 bds:InstanceShape-instanceHasReproduction
   dash:editor dash:InstancesSelectEditor ;
@@ -77,7 +78,7 @@ bds:InstanceShape-copyrightStatus
   sh:minCount 1 ;
 .
 bds:CommonShape-identifiedBy
-  sh:name "identifier"@en ;
+  sh:name "identifier (ISBN, etc.)"@en ;
   sh:group bds:BasePropertyGroup ;
   sh:order "7"^^xsd:decimal ;
 .
@@ -153,6 +154,7 @@ bds:InstanceShape-instanceEvent
   dash:editor dash:DetailsEditor ;
   sh:group bds:PubPropertyGroup ;
   sh:order "5"^^xsd:decimal ;
+  sh:name "event (publication date)"
 .
 bds:BiblioShape-creator
   dash:editor dash:DetailsEditor ;
@@ -209,18 +211,19 @@ bds:InstanceShape-colophon
   sh:group bds:TextPropertyGroup ;
   sh:order "0"^^xsd:decimal ;
 .
-bds:InstanceShape-incipit
-  dash:editor dash:TextAreaWithLangEditor ;
-  sh:group bds:TextPropertyGroup ;
-  sh:order "1"^^xsd:decimal ;
-  sh:description "first phrases of a text, used for SEA text to ease their identification"@en ;
-.
 bds:InstanceShape-authorshipStatement
   dash:editor dash:TextAreaWithLangEditor ;
   dash:singleLine true ;
   sh:group bds:TextPropertyGroup ;
-  sh:order "2"^^xsd:decimal ;
+  sh:order "1"^^xsd:decimal ;
   sh:description "use only in the case of collective authorship, unidentified author or notable statement"@en ;
+.
+bds:InstanceShape-incipit
+  dash:editor dash:TextAreaWithLangEditor ;
+  sh:group bds:TextPropertyGroup ;
+  sh:order "2"^^xsd:decimal ;
+  sh:description "first phrases of a text, used for SEA text to ease their identification"@en ;
+  rde:displayPriority 1 ;
 .
 ##
 ## physical properties
