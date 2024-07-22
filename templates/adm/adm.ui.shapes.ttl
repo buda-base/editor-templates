@@ -123,4 +123,12 @@ bdsa:AdmEntityShape-type
      dash:editor dash:EnumSelectEditor ;
      sh:order "8"^^xsd:decimal ;
 .
+
 bdsa:AdmEntityShape sh:property bdsa:AdmEntityShape-logEntry .
+
+bdsa:AdmEntityShape-publicityLevel
+  sh:in ( "5"^^xsd:integer "4"^^xsd:integer "3"^^xsd:integer "2"^^xsd:integer "1"^^xsd:integer "0"^^xsd:integer  ) ;
+  sh:name "publicity level"@en ;
+  sh:description "Anything below 3 will not be visible in the filters on the left"@en ;
+  sh:order "9"^^xsd:decimal ;
+.

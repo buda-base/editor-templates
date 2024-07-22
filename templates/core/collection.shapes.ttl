@@ -68,6 +68,7 @@ bdsa:AdmEntityShape
   sh:property bdsa:AdmEntityShape-rdfsComment ;
   sh:property bdsa:AdmEntityShape-type ;
   sh:property bdsa:AdmEntityShape-metadataLegal ;
+  sh:property bdsa:AdmEntityShape-publicityLevel ;
   sh:targetClass adm:AdminData ;
   sh:targetSubjectsOf adm:adminAbout ;
 .

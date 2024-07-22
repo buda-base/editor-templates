@@ -161,3 +161,11 @@ bdsa:AdmEntityShape-type
       sh:minCount 1 ;
       sh:maxCount 1 ;
 .
+bdsa:AdmEntityShape-publicityLevel
+  a sh:PropertyShape ;
+  sh:path adm:publicityLevel ;
+  sh:datatype xsd:integer ;
+  sh:maxCount 1 ;
+  sh:minInclusive "0"^^xsd:integer ;
+  sh:maxInclusive "5"^^xsd:integer ;
+.
