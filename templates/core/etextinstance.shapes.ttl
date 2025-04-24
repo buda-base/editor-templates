@@ -65,20 +65,21 @@ bdsa:AdmEntityShapeForDigitalInstance
   rdfs:label "Admin Entity shape"@en ;
   sh:property bdsa:AdmEntityShape-status ;
   sh:property bdsa:AdmEntityShape-restrictedInChinaDefaultsTrue ;
+  sh:property bdsa:AdmEntityShape-archiveFilesAccess ;
+  sh:property bdsa:AdmEntityShape-sourceFilesAccess ;
   sh:property bdsa:AdmEntityShape-replaceWith ;
   #sh:property bdsa:AdmEntityShape-contentLegal ;
   sh:property bdsa:AdmEntityShape-rdfsComment ;
   sh:property bdsa:AdmEntityShape-type ;
   sh:property bdsa:AdmEntityShape-access ;
   sh:property bdsa:AdmEntityShape-metadataLegal ;
-  sh:property bdsa:AdmEntityShape-sourcesAccessible ;
   sh:targetClass adm:AdminData ;
   sh:targetSubjectsOf adm:adminAbout ;
 .
 
 bds:EtextInstanceShape-contentMethod
   a sh:PropertyShape ;
-  sh:path bdo:binding ;
+  sh:path bdo:contentMethod ;
   sh:description "content production method"@en ;
   sh:maxCount 1 ;
   sh:in ( bdr:ContentMethod_ComputerInput bdr:ContentMethod_OCR ) ;

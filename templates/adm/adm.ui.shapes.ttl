@@ -132,3 +132,13 @@ bdsa:AdmEntityShape-publicityLevel
   sh:description "Anything below 3 will not be visible in the filters on the left"@en ;
   sh:order "9"^^xsd:decimal ;
 .
+bdsa:AdmEntityShape-archiveFilesAccess
+  sh:name "archive file access"@en ;
+  sh:description "For image and etexts only"@en ;
+  sh:order "10"^^xsd:decimal ;
+.
+bdsa:AdmEntityShape-sourceFilesAccess
+  sh:name "source file access"@en ;
+  sh:description "For image and etexts only"@en ;
+  sh:order "11"^^xsd:decimal ;
+.

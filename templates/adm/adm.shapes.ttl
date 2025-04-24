@@ -103,13 +103,27 @@ bdsa:AdmEntityShape-status
       sh:path adm:status ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
-      sh:in ( bda:StatusReleased bda:StatusWithdrawn bda:StatusEditing bda:StatusHidden bda:StatusOnHold bda:StatusProvisional bda:StatusScanned bda:StatusSeekingOut bda:StatusAccessioned bda:StatusAcquiring ) ;
+      sh:in ( bda:StatusReleased bda:StatusWithdrawn bda:StatusEditing bda:StatusHidden ) ;
       sh:nodeKind sh:IRI ;
 .
 bdsa:AdmEntityShape-access
       a sh:PropertyShape ;
       sh:path adm:access ;
-      sh:in ( bda:AccessOpen bda:AccessFairUse bda:AccessRestrictedTemporarily bda:AccessRestrictedByTbrc bda:AccessRestrictedSealed bda:AccessRestrictedByQuality bda:AccessMixed ) ;
+      sh:in ( bda:AccessOpen bda:AccessFairUse bda:AccessRestrictedTemporarily bda:AccessRestrictedByTbrc bda:AccessRestrictedSealed ) ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:IRI ;
+.
+bdsa:AdmEntityShape-sourceFilesAccess
+      a sh:PropertyShape ;
+      sh:path adm:sourceFilesAccess ;
+      sh:in ( bda:AccessSameAsOnline bda:AccessRestrictedTemporarily bda:AccessRestrictedByTbrc ) ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:IRI ;
+.
+bdsa:AdmEntityShape-archiveFilesAccess
+      a sh:PropertyShape ;
+      sh:path adm:archiveFilesAccess ;
+      sh:in ( bda:AccessSameAsOnline bda:AccessRestrictedTemporarily bda:AccessRestrictedByTbrc ) ;
       sh:maxCount 1 ;
       sh:nodeKind sh:IRI ;
 .
