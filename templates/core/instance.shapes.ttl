@@ -57,6 +57,7 @@ bds:InstanceShape
   sh:property bds:InstanceShape-dimWidth ;
   sh:property bds:InstanceShape-dimLength ;
   sh:property bds:InstanceShape-dimHeight ;
+  sh:property bds:CommonShape-inCollection ;
   sh:property bds:InstanceShape-authorshipStatement ;
   sh:property bds:InstanceShape-instanceExtentStatement ;
   sh:property bds:InstanceShape-editionStatement ;

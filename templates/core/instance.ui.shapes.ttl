@@ -82,9 +82,14 @@ bds:CommonShape-identifiedBy
   sh:group bds:BasePropertyGroup ;
   sh:order "7"^^xsd:decimal ;
 .
-bds:CommonShape-rdfsSeeAlso
+bds:CommonShape-inCollection
   sh:group bds:BasePropertyGroup ;
   sh:order "8"^^xsd:decimal ;
+  rde:displayPriority 1 ;
+.
+bds:CommonShape-rdfsSeeAlso
+  sh:group bds:BasePropertyGroup ;
+  sh:order "9"^^xsd:decimal ;
   rde:displayPriority 1 ;
 .
 ##
