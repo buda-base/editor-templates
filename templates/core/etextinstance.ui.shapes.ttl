@@ -67,6 +67,13 @@ bds:EtextInstanceShape-qualityGrade
   sh:order "4"^^xsd:decimal ;
   rde:displayPriority 1 ;
 .
+bds:EtextInstanceShape-instanceReproductionOf
+  dash:editor dash:InstancesSelectEditor ;
+  sh:group bds:BasePropertyGroup ;
+  sh:description "Use this property to point to an image instance that has the exact same content, same volumes and same pagination"@en ;
+  sh:order "5"^^xsd:decimal ;
+  rde:displayPriority 1 ;
+.
 bds:NotesPropertyGroup
   a sh:PropertyGroup ;
   rdfs:label "Notes"@en ;

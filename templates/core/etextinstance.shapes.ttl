@@ -40,7 +40,7 @@ bds:EtextInstanceShape
   sh:property bds:RootShape-note ;
   sh:property bdsa:AdmShape-adminAbout ;
   # sh:property bds:InstanceShape-instanceHasReproduction ;
-  # sh:property bds:InstanceShape-instanceReproductionOf ;
+  sh:property bds:EtextInstanceShape-instanceReproductionOf ;
   sh:property bds:InstanceShape-isComplete ;
   sh:property bds:CommonShape-inCollection ;
   sh:property bds:EtextInstanceShape-etextInfo ;
@@ -87,10 +87,14 @@ bds:EtextInstanceShape-contentMethod
   sh:name "content production method"@en ;
 .
 
-# temporarily disabling so that we can test independently of the instance
 
-bds:InstanceShape-instanceReproductionOf
-  sh:minCount 1 ;
+bds:EtextInstanceShape-instanceReproductionOf
+  a sh:PropertyShape ;
+  rde:propertyShapeType rde:ExternalShape ;
+  sh:path bdo:instanceReproductionOf ;
+  rde:classIn ( bdo:ImageInstance ) ;
+  sh:maxCount 1 ;
+  rde:connectIDs true ;
 .
 bds:EtextInstanceShape-etextInfo
   a sh:PropertyShape ;
