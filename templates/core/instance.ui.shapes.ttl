@@ -367,7 +367,7 @@ bds:AgentAsCreatorShape-sourceIndication
   rde:displayPriority 2 ;
 .
 bds:IdentifierShape-rdfType
-  sh:in ( bf:Isbn bf:Lccn bdr:OclcControlNumber bdr:PL480 bdr:HollisId bdr:HarvardShelfId bdr:IDNGMPP bdr:RefIsIAO bdr:RefCPN bdr:RefNCLK bdr:NLMId bdr:LTWAId bf:ShelfMarkLcc bf:Issn bf:Ean ) ;
+  sh:in ( bf:Isbn bf:Lccn bdr:OclcControlNumber bdr:PL480 bdr:HollisId bdr:HarvardShelfId bdr:IDNGMPP bdr:RefIsIAO bdr:RefCPN bdr:RefNCLK bdr:NLMId bdr:LTWAId bf:ShelfMarkLcc bf:Issn bf:Ean bdr:KaTenSiglaA bdr:KaTenSiglaBon bdr:KaTenSiglaC bdr:KaTenSiglaCx bdr:KaTenSiglaD bdr:KaTenSiglaDo bdr:KaTenSiglaEg bdr:KaTenSiglaF bdr:KaTenSiglaG bdr:KaTenSiglaH bdr:KaTenSiglaHe bdr:KaTenSiglaJ bdr:KaTenSiglaN bdr:KaTenSiglaQ bdr:KaTenSiglaS bdr:KaTenSiglaU bdr:KaTenSiglaV bdr:KaTenSiglaZ ) ;
 .
 bds:AgentAsCreatorShape-role
   sh:in ( bdr:R0ER0015 bdr:R0ER0010 bdr:R0ER0013 bdr:R0ER0024 bdr:R0ER0030 bdr:R0ER0033 bdr:R0ER0034 )
